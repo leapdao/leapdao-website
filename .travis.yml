@@ -8,4 +8,4 @@ deploy:
   acl: public_read
 addons:
   artifacts:
-    s3_region: 'us-east-1' # defaults to "us-east-1"
+    s3_region: 'eu-west-1'
