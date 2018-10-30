@@ -5,7 +5,7 @@ deploy:
   secret_access_key:
     secure: QSyC8qqelXgieguyLvVD3VPgJHH1pS1jXnKxKoX4MCGLoN1N4VXClvg+2Gc8+AS/uNa02bRWtC16/AIasRQexrTjEE36KK/M4HWCZyzRyCg3ZauvVzL4unHhsycwkHLPKSEDlAZmtPajctCEXa1cpteqrXGiBnY0PvAs0Br+Iq2AxJpRGmoDvyY0YIeWRyth+bV6OXW1JaYHb1rs+3cAEda5WbgVfd8JxMf+BhgOMXDs5Ywf636FukqWV/psgb9B2y8gqyYFfuGrzeq63BFd23vhwqYwVMIi2RvrAFjjw3IoVTn+iPLs/JkDhrRmtDKwzHBXl9Q0ci+zTAGQXLQG0Z2UtcQa24cuQAGQ7BFBtq+4gfvbUfz0Q3Kwiw5gcvvG9FhJk7/atv6OhdgqCo/bCwnBzsBa9T/S9RTlyhxCUVBjPxHSPH7lBaUSUkzuMaU0Goo9VG9HrgbaMv5XqQVE3Sfr4lu1lmfZPJQjspkDAdo7dT1lizdK/LpjDXrYPixsG00q1ppR4cCzml8Md8LOZv4xeRXf91XPktqoL0l3nvgNHW0kR1dNaDV+myv3EI+HDdLkXu//9M7FGcjBtbTAj9Pvo3esv8eRGwLMmiF8BlOEv0WrrDsXeZTyI2b3eGBV3KYxTcU/C7cAAn6cZDchW3/nRnzzO29iX2EdJWuB9VE=
   bucket: leapdao.org
-  endpoint: leapdao.org.s3-website-eu-west-1.amazonaws.com
+  endpoint: http://leapdao.org.s3-website-eu-west-1.amazonaws.com
   acl: public_read
 addons:
   artifacts:
