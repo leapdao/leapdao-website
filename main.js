@@ -10,7 +10,7 @@ const svgCircles = Array.from(document.querySelectorAll('circle'));
 const check = document.getElementById('check');
 const svgRoot = document.getElementById('amoebe');
 
-const speed = 1.4;
+const speed = 1.7;
 
 circles.forEach((circle, i) => {
   const svgCircle = svgCircles[i];
