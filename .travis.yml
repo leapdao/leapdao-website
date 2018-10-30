@@ -7,9 +7,9 @@ deploy:
   bucket: leapdao.org
   endpoint: http://leapdao.org.s3-website-eu-west-1.amazonaws.com
   acl: public_read
+  local_dir: '.'
+  skip_cleanup: true
 addons:
   artifacts:
     debug: true
     s3_region: 'eu-west-1'
-    paths:
-      - ./index.html:./main.js
