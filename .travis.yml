@@ -8,3 +8,5 @@ deploy:
   local_dir: '.'
   skip_cleanup: true
   region: 'eu-west-1'
+  on:
+    branch: master
