@@ -11,3 +11,5 @@ addons:
   artifacts:
     debug: true
     s3_region: 'eu-west-1'
+    paths:
+      - ./index.html:./main.js
