@@ -7,7 +7,4 @@ deploy:
   acl: public_read
   local_dir: '.'
   skip_cleanup: true
-addons:
-  artifacts:
-    debug: true
-    s3_region: 'eu-west-1'
+  region: 'eu-west-1'
