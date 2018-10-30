@@ -4,7 +4,6 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: leapdao.org
-  endpoint: http://leapdao.org.s3-website-eu-west-1.amazonaws.com
   acl: public_read
   local_dir: '.'
   skip_cleanup: true
