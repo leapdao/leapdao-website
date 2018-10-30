@@ -9,4 +9,5 @@ deploy:
   acl: public_read
 addons:
   artifacts:
+    debug: true
     s3_region: 'eu-west-1'
