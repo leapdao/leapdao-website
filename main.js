@@ -36,7 +36,7 @@ function draw(t) {
       3;
     svgCircles[i].setAttribute('transform', `translate(${x} ${y})`);
     const rFn = i % 2 ? Math.cos : Math.sin;
-    svgCircles[i].setAttribute('r', circle.radius + rFn((t / 300) * speed) * 5);
+    svgCircles[i].setAttribute('r', circle.radius + rFn((t / 500) * speed) * 5);
   });
 }
 
