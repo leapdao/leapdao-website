@@ -1,22 +1,21 @@
 const circles = [
-  { color: [0, 255, 175], radius: 80, x: 271, y: 260, dir: 1 },
-  { color: [0, 255, 175], radius: 140, x: 196, y: 230, dir: 1 },
-  { color: [0, 255, 175], radius: 100, x: 216, y: 170, dir: -1 },
-  { color: [0, 175, 255], radius: 120, x: 226, y: 260, dir: 1 },
-  { color: [0, 175, 255], radius: 60, x: 286, y: 220, dir: -1 }
+  { color: [0, 255, 170], radius: 120, x: 231, y: 220, dir: 1 },
+  { color: [0, 255, 170], radius: 120, x: 236, y: 230, dir: 1 },
+  { color: [0, 255, 170], radius: 120, x: 256, y: 250, dir: -1 },
+  { color: [255, 255, 0], radius: 120, x: 226, y: 260, dir: 1 },
+  { color: [255, 255, 0], radius: 120, x: 290, y: 330, dir: 1 }
 ];
 
 const svgCircles = Array.from(document.querySelectorAll('circle'));
 const check = document.getElementById('check');
 const svgRoot = document.getElementById('amoebe');
 
-const speed = 1.7;
+const speed = 1.1;
 
 circles.forEach((circle, i) => {
   const svgCircle = svgCircles[i];
   svgCircle.setAttribute('cx', circle.x);
   svgCircle.setAttribute('cy', circle.y);
-  svgCircle.setAttribute('r', circle.radius);
   svgCircle.setAttribute(
     'fill',
     `rgb(${circle.color.map(Math.round).join(',')})`
@@ -31,27 +30,38 @@ function draw(t) {
         circle.dir) /
       3;
     const y =
-      (Math.sin(((t / 53) * speed) / circle.radius) *
+      (Math.sin(((t / 50) * speed) / circle.radius) *
         circle.radius *
         circle.dir) /
       3;
     svgCircles[i].setAttribute('transform', `translate(${x} ${y})`);
+    const rFn = i % 2 ? Math.cos : Math.sin;
+    svgCircles[i].setAttribute('r', circle.radius + rFn((t / 300) * speed) * 5);
   });
 }
-const fps = 30;
-const interval = 1000 / fps;
-let then = Date.now();
 
-function runDraw() {
-  requestAnimationFrame(runDraw);
+const runWithFps = (fn, fps) => {
+  const interval = 1000 / fps;
+  let then = Date.now();
+  let stopped = false;
 
-  const now = Date.now();
-  const delta = now - then;
+  const run = () => {
+    requestAnimationFrame(run);
 
-  if (delta > interval) {
-    then = now - (delta % interval);
-    draw(now);
-  }
-}
+    const now = Date.now();
+    const delta = now - then;
 
-runDraw();
+    if (delta > interval && !stopped) {
+      then = now - (delta % interval);
+      fn(now);
+    }
+  };
+
+  run();
+
+  return () => {
+    stopped = true;
+  };
+};
+
+runWithFps(draw, 30);

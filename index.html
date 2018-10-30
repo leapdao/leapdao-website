@@ -25,6 +25,14 @@
       color: #000;
     }
 
+    .page {
+      position: relative;
+      max-width: 110rem;
+      padding: 45vh 5rem 40rem 10rem;
+      z-index: 1;
+      transform: translateZ(0.01px);
+    }
+
     *::selection {
       color: #FFF;
       background: rgba(0, 0, 0, .99);
@@ -32,7 +40,9 @@
     }
 
     a {
-      color: #00f;
+      background-color: rgb(64, 253, 169);
+      color: #000;
+      transition: background-color 0.2s;
     }
 
     h1 {
@@ -48,27 +58,15 @@
 
     }
 
-    h1,
-    p {
-
-      position: relative;
-      z-index: 10;
-    }
-
     p a {
       color: inherit;
       text-decoration: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      background-color: transparent;
     }
 
     p a:hover {
       border-bottom-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .page {
-      position: relative;
-      max-width: 110rem;
-      padding: 45vh 5rem 40rem 10rem;
     }
 
     .links {
@@ -82,7 +80,7 @@
     }
 
     .links li::after {
-      margin: 0 10px;
+      margin: 0 5px;
       content: '\2022';
     }
 
@@ -90,11 +88,20 @@
       display: none;
     }
 
+    .links a {
+      padding: 5px;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      background-color: rgb(163, 253, 143);
+    }
+
     svg {
       position: absolute;
       top: calc(50vh - 30rem);
       left: -3rem;
-      transform: scale(0.8), translate3d(0, 0, 0.01);
+      transform: translateZ(0.01px);
     }
 
     @media screen and (max-width: 900px) {
@@ -124,7 +131,7 @@
         position: absolute;
         top: calc(20vh - 30rem);
         left: -14rem;
-        transform: scale(0.5);
+        transform: scale(0.5) translateZ(0.01px);
       }
     }
   </style>
@@ -132,22 +139,6 @@
 
 <body>
   <div class="page">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="530" height="545" id="amoebe">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="35" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" result="mat" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -19" />
-        </filter>
-      </defs>
-
-      <g filter="url(#goo)">
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-      </g>
-    </svg>
     <h1>LEAPDAO</h1>
     <p>Ethereum’s capacity is limited*. We exist to&nbsp;create and maintain a public good Plasma&nbsp;chain to scale
       Ethereum on&nbsp;layer&nbsp;2.</p>
@@ -176,6 +167,22 @@
     </ul>
     </p>
   </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="530" height="545" id="amoebe">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="35" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" result="mat" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -19" />
+      </filter>
+    </defs>
+
+    <g filter="url(#goo)">
+      <circle cx="0" cy="0" r="30" />
+      <circle cx="0" cy="0" r="30" />
+      <circle cx="0" cy="0" r="30" />
+      <circle cx="0" cy="0" r="30" />
+      <circle cx="0" cy="0" r="30" />
+    </g>
+  </svg>
 
   <script src="main.js" async></script>
 </body>
