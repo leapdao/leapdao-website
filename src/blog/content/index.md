@@ -1,4 +1,4 @@
 ---
 template: post-index.html
-title: Parsec Labs Blog
+title: Leap DAO Blog
 ---
