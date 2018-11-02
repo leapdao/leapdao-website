@@ -1,33 +1,52 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js blog" lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>LEAPDAO</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Blog | Leap DAO</title>
+  <meta name="description" content="PARSEC Labs blog. Articles on blockchains, ethereum scaling and plasma">
+  <meta name="keywords" content="leap, blockchain, plasma, ethereum, scaling, proof of stake">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@leapdao" />
+  <meta name="twitter:title" content="Blog | Leap DAO" />
+  <meta name="twitter:image" content="" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="http://leapdao.org/blog/" />
+  <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>
   <menu class="menu">
     <ul>
-      <li><a href="/blog">Blog</a></li>
+      <li><a href="/">~</a></li>
     </ul>
   </menu>
   <div class="page">
-    <div class="content">
-      <h1>LEAP&hairsp;DAO</h1>
-      <p>Ethereum’s capacity is limited*. We exist to&nbsp;create and maintain a public good Plasma&nbsp;chain to scale
-        Ethereum on&nbsp;layer&nbsp;2.</p>
-      <p>We are a Decentralized Adaptive Organization (DAO). We&nbsp;combine Holacracy and Decentralized Organizations
-        (DO) to&nbsp;build a global, self-managing and purpose-driven community. We&nbsp;reward contribution using <a
-          href="https://parseclabs.org/blog/Our-Taconomy-Model/" target="_blank">taconomy</a> and&nbsp;bounties.</p>
-      <p>We develop Plasma Leap, a scaling technology allowing Dapps to&nbsp;run on a&nbsp;sidechain but stay secured
-        by
-        Ethereum PoW. We&nbsp;launch and operate a&nbsp;Plasma Leap chain to deliver Ethereum scalability as
-        a&nbsp;global public utility.</p>
-    </div>
+    <h1>LEAP&hairsp;DAO&hairsp;BLOG</h1>
+
+    <ul class="blog-index">
+      {% for post in (page.collection | latestFirst) %}
+      <div class="blog-item">
+        <h2><a href="/blog{{ post.path }}/">{{ post.title }}</a></h2>
+        <p>
+          {{ post.date | formatdate }}
+          {% if post.authorName %}
+          by {{ post.authorName }}
+          {% endif %}
+        </p>
+      </div>
+      {% endfor %}
+    </ul>
+
     <ul class="links">
       <li>
         <a href="https://docs.google.com/document/d/1vStTjqvqZGyiI5AVtpwCIMlHFnzC_4bbixsCfs27-M8/edit" target="_blank">Read</a>
@@ -45,7 +64,9 @@
         <a href="https://github.com/parsec-labs" target="_blank">Contribute</a>
       </li>
     </ul>
+
   </div>
+
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="530" height="545" id="amoebe">
     <defs>
       <filter id="goo">
@@ -63,7 +84,7 @@
     </g>
   </svg>
 
-  <script src="main.js" async></script>
+  <script src="/main.js" async></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128351135-1"></script>

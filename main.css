@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  font-family: 'Chivo', Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.menu {
+  font-size: 2rem;
+  position: fixed;
+  z-index: 10;
+  right: 10rem;
+  top: 6rem;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.menu li {
+  padding: 0 10px;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.menu a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+.page {
+  position: relative;
+  max-width: 110rem;
+  padding: 45vh 5rem 40rem 10rem;
+  z-index: 1;
+  transform: translateZ(0.01px);
+}
+
+*::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+a {
+  background-color: rgb(64, 253, 169);
+  color: #000;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(163, 253, 143) !important;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 10rem;
+  letter-spacing: 1rem;
+}
+
+.content p {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-top: 6rem;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.content a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+.content h2 {
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: bold;
+
+  margin-top: 6rem;
+  margin-bottom: -4rem;
+}
+
+.content ul,
+.content ol {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-top: 6rem;
+}
+
+.content ol ol,
+.content ul ol,
+.content ul ul,
+.content ol ul {
+  margin-top: 2rem;
+  margin-left: 6rem;
+}
+
+.content li + li {
+  margin-top: 4rem;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.links {
+  font-size: 2.5rem;
+  margin-top: 6rem;
+  line-height: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.links li::after {
+  margin: 0 5px;
+  content: '\2022';
+}
+
+.links li:last-child::after {
+  display: none;
+}
+
+.links a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+svg {
+  position: absolute;
+  top: calc(50vh - 25rem);
+  left: 10rem;
+  transform: translateZ(0.01px);
+}
+
+.blog-item {
+  margin-top: 6rem;
+}
+
+.blog-item h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  line-height: 1.15;
+}
+
+.blog-item h2 a {
+  text-decoration: none;
+}
+
+.blog-item p {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.blog-post header h1 {
+  font-size: 7rem;
+  letter-spacing: 0;
+}
+
+.blog-post header p {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: calc(20vh - 6rem);
+    padding-bottom: 10rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+  }
+
+  .content p,
+  .content ul,
+  .content ol {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+  }
+
+  .content ol ol,
+  .content ul ol,
+  .content ul ul,
+  .content ol ul {
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+
+  .content li + li {
+    margin-top: 2rem;
+  }
+
+  .links {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+  }
+
+  svg {
+    position: absolute;
+    top: calc(20vh - 32rem);
+    left: -11.5rem;
+    transform: scale(0.5) translateZ(0.01px);
+  }
+
+  .blog-post header h1 {
+    font-size: 4rem;
+  }
+
+  .blog-post header p {
+    font-size: 2rem;
+  }
+
+  .blog-item {
+    margin-top: 3rem;
+  }
+
+  .blog-item h2 {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+
+  .blog-item p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
