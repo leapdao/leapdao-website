@@ -29,5 +29,8 @@
     "through2": "^2.0.3",
     "tinytime": "^0.2.6",
     "vinyl": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests\" && exit 0"
   }
 }
