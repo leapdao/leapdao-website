@@ -262,4 +262,11 @@ svg {
     font-size: 1.5rem;
     margin-top: 1rem;
   }
+
+  .menu {
+    font-size: 1.5rem;
+
+    right: 1rem;
+    top: 1rem;
+  }
 }
