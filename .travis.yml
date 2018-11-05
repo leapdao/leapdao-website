@@ -11,6 +11,8 @@ script: gulp
 
 cache: yarn
 
+before_deploy: 'rm -R node_modules'
+
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
