@@ -120,6 +120,6 @@ After every meeting the secretary is responsible for posting the meeting notes. 
 
 <h2>Conclusion</h2>
 
-Our team was struggling for many months to find an organizational structure that can best fit us. At the beginning of 2018 we applied Holacracy to our team and now we can honestly say that it helped us to build an efficient, self-driven and open source community. If you like our new methods and organizational structure, feel free to - <a href="https://parseclabs.org/blog/Join-PARSEC-Labs/">join us</a>.
+Our team was struggling for many months to find an organizational structure that can best fit us. At the beginning of 2018 we applied Holacracy to our team and now we can honestly say that it helped us to build an efficient, self-driven and open source community. If you like our new methods and organizational structure, feel free to - <a href="http://join.leapdao.org">join us</a>.
 
 That is all for now. In the next article, I will share the story about how we switched our organizational model from anarchy, to a scrum and then to Holacracy, so you will be able to compare them all and determine what you think will work best for your team. I hope you have enjoyed this article and don’t forget to follow PARSEC Labs on social media:

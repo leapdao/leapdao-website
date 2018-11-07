@@ -31,6 +31,10 @@
     "vinyl": "^2.1.0"
   },
   "scripts": {
-    "test": "echo \"No tests\" && exit 0"
+    "test": "echo \"No tests\" && exit 0",
+    "precommit": "gulp && git add blog"
+  },
+  "dependencies": {
+    "husky": "^1.1.3"
   }
 }

@@ -96,7 +96,7 @@ You can find the full bounty description <a href="https://github.com/parsec-labs
 <b><a href="https://github.com/sunify">Alex</a></b> switched over <a href="http://alice.parseclabs.org/">Project Alice</a> from the Ethereum Testnet to the Parsec Testnet using <a href="https://github.com/parsec-labs/parsec-node/issues/10">JSON RPC Server</a> implementation with Web3.
 You can find the full bounty description <a href="https://github.com/parsec-labs/PIPs/wiki/Bounty_011">here</a>.
 
-Feel free to join our <a href="https://join.slack.com/t/acebusters/shared_invite/enQtNDA2NDE4MjE0NzQzLTVhYzIzOTcyMThjNWEzNjlhMzlkMjU4ZGZlZjg3OTAwNDQ1OWJjMWI2ZTU5ZWQ3OGRmNTQ0M2IyN2VlYTg0ZWY">Slack</a> and start working on our open <a href="https://github.com/parsec-labs/PIPs/wiki/Bounties">Bounties</a>. We are an open community, which means that anyone can try to deliver a bounty and if you will pass a validation, just send your wallet address to receive ETH.
+Feel free to join our <a href="http://join.leapdao.org">Slack</a> and start working on our open <a href="https://github.com/parsec-labs/PIPs/wiki/Bounties">Bounties</a>. We are an open community, which means that anyone can try to deliver a bounty and if you will pass a validation, just send your wallet address to receive ETH.
 
 <h2>Parsec Faucet</h2>
 

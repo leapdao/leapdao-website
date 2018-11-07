@@ -28,4 +28,4 @@ Well, guess what?! We have delivered on all milestones and are able to demonstra
 
 With [Plasma Leap](https://goo.gl/h8Th6d) we hope to have considerably widened the scope of decentralized applications that can be implemented on layers-2 scaling solutions. We have plans to continue development and bring the technology to main-net. Expect more details in our upcoming roadmap blog post.
 
-If are interested to contribute to Plasma development, [Join us](http://join.parseclabs.org)!
+If are interested to contribute to Plasma development, [Join us](http://join.leapdao.org)!
