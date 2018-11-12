@@ -118,10 +118,21 @@ h1 {
   z-index: 1;
 }
 
-.content p {
+.content header {
+  /* margin-left: 5rem; */
+  margin-bottom: 5rem;
+}
+
+.content header p {
   font-size: 3.5rem;
   line-height: 5rem;
   margin-top: 6rem;
+}
+
+.content p {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-top: 3.5rem;
 }
 
 .content a {
@@ -136,12 +147,12 @@ h1 {
 }
 
 .content h2 {
-  font-size: 5rem;
-  line-height: 6rem;
+  font-size: 4rem;
+  line-height: 5rem;
   font-weight: bold;
 
-  margin-top: 6rem;
-  margin-bottom: -4rem;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
 }
 
 .content h3 {
@@ -156,26 +167,26 @@ h1 {
 
   line-height: 5rem;
   margin-top: 6rem;
-  margin-bottom: -6rem;
+  margin-bottom: -3rem;
 }
 
 .content ul,
 .content ol {
-  font-size: 3.5rem;
-  line-height: 5rem;
-  margin-top: 6rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-top: 3.5rem;
 }
 
 .content ol ol,
 .content ul ol,
 .content ul ul,
 .content ol ul {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: 6rem;
 }
 
 .content li + li {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .content img {
