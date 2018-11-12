@@ -150,6 +150,15 @@ h1 {
   margin-bottom: -4rem;
 }
 
+.content h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+
+  line-height: 5rem;
+  margin-top: 6rem;
+  margin-bottom: -6rem;
+}
+
 .content ul,
 .content ol {
   font-size: 3.5rem;
