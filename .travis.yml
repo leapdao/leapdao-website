@@ -4,6 +4,10 @@ node_js:
   - 'node'
   - '8.11'
 
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
 before_script:
   - yarn global add gulp-cli
 
