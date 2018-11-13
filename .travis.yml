@@ -22,3 +22,8 @@ deploy:
   local_dir: '.'
   skip_cleanup: true
   region: 'eu-west-1'
+
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID_1 --paths "/*"
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID_2 --paths "/*"
