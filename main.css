@@ -52,7 +52,7 @@ body {
 .page {
   position: relative;
   max-width: 110rem;
-  padding: 45vh 5rem 40rem 10rem;
+  padding: 45vh 5rem 0 10rem;
   z-index: 1;
   transform: translateZ(0.01px);
 }
@@ -189,12 +189,92 @@ svg {
   font-size: 2.5rem;
 }
 
+.subscribe {
+  position: relative;
+  height: 80vh;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subscribe * {
+  flex-shrink: 0;
+}
+
+.subscribe h3 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.subscribe p {
+  font-size: 3rem;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+}
+
+.subscribe .alert {
+  font-size: 2rem;
+  width: 50rem;
+  max-width: 100%;
+  line-height: 3rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+.subscribe .alert a {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input {
+  font: inherit;
+  font-size: 3rem;
+
+  padding: 0.5rem 0;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+  border-bottom-color: #4cfbab;
+}
+
+button {
+  background: 0;
+  font: inherit;
+
+  font-size: 3rem;
+  display: inline-block;
+  padding: 0.5em 2rem;
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+button:hover,
+button:focus {
+  background-color: #4cfbab;
+}
+
+.subscribe button {
+  margin-top: 2rem;
+}
+
+.subscribe input {
+  width: 60rem;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 900px) {
   .page {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: calc(20vh - 6rem);
-    padding-bottom: 10rem;
   }
 
   h1 {
@@ -268,5 +348,40 @@ svg {
 
     right: 1rem;
     top: 1rem;
+  }
+
+  .subscribe {
+    height: auto;
+  }
+
+  .subscribe h3 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .subscribe p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .subscribe .alert {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  input {
+    font-size: 2rem;
+
+    padding: 0.5rem 0;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+
+  .subscribe button {
+    margin-top: 0;
   }
 }
