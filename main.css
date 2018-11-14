@@ -76,7 +76,6 @@ a:hover {
 h1 {
   font-weight: 900;
   font-size: 10rem;
-  letter-spacing: 1rem;
 }
 
 .content p {
@@ -181,7 +180,6 @@ svg {
 
 .blog-post header h1 {
   font-size: 7rem;
-  letter-spacing: 0;
 }
 
 .blog-post header p {
