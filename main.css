@@ -189,7 +189,7 @@ svg {
 
 .subscribe {
   position: relative;
-  height: 80vh;
+  min-height: 80vh;
   padding: 10rem 0;
   display: flex;
   flex-direction: column;
