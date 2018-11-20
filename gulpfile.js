@@ -146,6 +146,13 @@ gulp.task('bounties', () => {
   return pageTask(files.bounties, 'bounties/index.html', 'LeapDAO Bounties');
 });
 
+gulp.task('coc', () => {
+  if (!fs.existsSync('coc')) {
+    fs.mkdirSync('coc');
+  }
+  return pageTask(files.coc, 'coc/index.html', 'LeapDAO Code Of Conduct');
+});
+
 // gulp.task('critical:blog', (cb) => {
 //   setTimeout(() => {
 //     glob('blog/**/*.html', (err, matches) => {
@@ -175,4 +182,4 @@ gulp.task('dev', ['blog'], () => {
   watch(files.blog, batch((events, done) => gulp.start('blog', done)));
 });
 
-gulp.task('default', ['blog', 'bounties']);
+gulp.task('default', ['blog', 'bounties', 'coc']);
