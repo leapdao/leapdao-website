@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const watch = require('gulp-watch');
 const batch = require('gulp-batch');
@@ -14,7 +15,9 @@ const files = {
   js: ['main.js'],
   css: ['main.css'],
   html: '*/*.html',
-  blog: 'src/blog/**/*'
+  blog: 'src/blog/**/*',
+  coc: 'leapdao-bounties/CODE_OF_CONDUCT.md',
+  bounties: 'leapdao-bounties/README.md'
 };
 
 gulp.task('js', () =>
@@ -54,6 +57,27 @@ gulp.task('html', () =>
 //     height: 700,
 //   })
 // );
+
+const pageTask = (src, dest, options) => {
+  const marked = require('marked');
+  const tmplData = {
+    page: {}
+  };
+
+  tmplData.page.template = 'page-template.html';
+  Object.assign(tmplData.page, options);
+  tmplData.page.body = fs.readFileSync(src, 'UTF-8');
+  const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'), {
+    noCache: true
+  });
+
+  env.addFilter('markdown', function(str) {
+    if (!str) return str;
+    return new nunjucks.runtime.SafeString(marked(str));
+  });
+
+  fs.writeFileSync(dest, env.render('page-template.html', tmplData));
+};
 
 gulp.task('blog', () => {
   return gulp
@@ -115,6 +139,30 @@ gulp.task('blog', () => {
     .pipe(livereload());
 });
 
+gulp.task('bounties', () => {
+  if (!fs.existsSync('bounties')) {
+    fs.mkdirSync('bounties');
+  }
+  return pageTask(files.bounties, 'bounties/index.html', {
+    title: 'LeapDAO Bounties',
+    menu: [{ url: '/', title: '~' }, { url: '/blog', title: 'Blog' }]
+  });
+});
+
+gulp.task('coc', () => {
+  if (!fs.existsSync('coc')) {
+    fs.mkdirSync('coc');
+  }
+  return pageTask(files.coc, 'coc/index.html', {
+    title: 'LeapDAO Code Of Conduct',
+    menu: [
+      { url: '/', title: '~' },
+      { url: '/blog', title: 'Blog' },
+      { url: '/bounties', title: 'Bounties' }
+    ]
+  });
+});
+
 // gulp.task('critical:blog', (cb) => {
 //   setTimeout(() => {
 //     glob('blog/**/*.html', (err, matches) => {
@@ -144,4 +192,4 @@ gulp.task('dev', ['blog'], () => {
   watch(files.blog, batch((events, done) => gulp.start('blog', done)));
 });
 
-gulp.task('default', ['blog']);
+gulp.task('default', ['blog', 'bounties', 'coc']);

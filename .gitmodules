@@ -1,0 +1,3 @@
+[submodule "bounties"]
+	path = leapdao-bounties
+	url = https://github.com/leapdao/leapdao-bounties.git
