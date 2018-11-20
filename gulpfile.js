@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const watch = require('gulp-watch');
 const batch = require('gulp-batch');
@@ -14,7 +15,9 @@ const files = {
   js: ['main.js'],
   css: ['main.css'],
   html: '*/*.html',
-  blog: 'src/blog/**/*'
+  blog: 'src/blog/**/*',
+  coc: 'leapdao-bounties/CODE_OF_CONDUCT.md',
+  bounties: 'leapdao-bounties/README.md'
 };
 
 gulp.task('js', () =>
@@ -54,6 +57,27 @@ gulp.task('html', () =>
 //     height: 700,
 //   })
 // );
+
+const pageTask = (src, dest, title) => {
+  const marked = require('marked');
+  const tmplData = {
+    page: {}
+  };
+
+  tmplData.page.template = 'page-template.html';
+  tmplData.page.title = title;
+  tmplData.page.body = fs.readFileSync(src, 'UTF-8');
+  const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'), {
+    noCache: true
+  });
+
+  env.addFilter('markdown', function(str) {
+    if (!str) return str;
+    return new nunjucks.runtime.SafeString(marked(str));
+  });
+
+  fs.writeFileSync(dest, env.render('page-template.html', tmplData));
+};
 
 gulp.task('blog', () => {
   return gulp
@@ -115,6 +139,13 @@ gulp.task('blog', () => {
     .pipe(livereload());
 });
 
+gulp.task('bounties', () => {
+  if (!fs.existsSync('bounties')) {
+    fs.mkdirSync('bounties');
+  }
+  return pageTask(files.bounties, 'bounties/index.html', 'LeapDAO Bounties');
+});
+
 // gulp.task('critical:blog', (cb) => {
 //   setTimeout(() => {
 //     glob('blog/**/*.html', (err, matches) => {
@@ -144,4 +175,4 @@ gulp.task('dev', ['blog'], () => {
   watch(files.blog, batch((events, done) => gulp.start('blog', done)));
 });
 
-gulp.task('default', ['blog']);
+gulp.task('default', ['blog', 'bounties']);

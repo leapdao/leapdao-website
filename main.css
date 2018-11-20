@@ -104,6 +104,11 @@ h1 {
   margin-bottom: -4rem;
 }
 
+.content h3 {
+  font-size: 4rem;
+  margin-top: 6rem;
+}
+
 .content ul,
 .content ol {
   font-size: 3.5rem;
@@ -126,6 +131,22 @@ h1 {
 .content img {
   max-width: 100%;
   height: auto;
+}
+
+.content table {
+  font-size: 2rem;
+  margin-top: 6rem;
+  border-collapse: collapse;
+}
+
+.content th,
+.content td {
+  text-align: left;
+  vertical-align: top;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid #efefef;
 }
 
 .links {
@@ -287,6 +308,10 @@ button:focus {
     margin-bottom: -2rem;
   }
 
+  .content h3 {
+    font-size: 2rem;
+  }
+
   .content p,
   .content ul,
   .content ol {
@@ -305,6 +330,19 @@ button:focus {
 
   .content li + li {
     margin-top: 2rem;
+  }
+
+  .content table {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    border-collapse: collapse;
+  }
+
+  .content th,
+  .content td {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #efefef;
   }
 
   .links {
