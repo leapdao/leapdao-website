@@ -58,14 +58,14 @@ gulp.task('html', () =>
 //   })
 // );
 
-const pageTask = (src, dest, title) => {
+const pageTask = (src, dest, options) => {
   const marked = require('marked');
   const tmplData = {
     page: {}
   };
 
   tmplData.page.template = 'page-template.html';
-  tmplData.page.title = title;
+  Object.assign(tmplData.page, options);
   tmplData.page.body = fs.readFileSync(src, 'UTF-8');
   const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'), {
     noCache: true
@@ -143,14 +143,24 @@ gulp.task('bounties', () => {
   if (!fs.existsSync('bounties')) {
     fs.mkdirSync('bounties');
   }
-  return pageTask(files.bounties, 'bounties/index.html', 'LeapDAO Bounties');
+  return pageTask(files.bounties, 'bounties/index.html', {
+    title: 'LeapDAO Bounties',
+    menu: [{ url: '/', title: '~' }, { url: '/blog', title: 'Blog' }]
+  });
 });
 
 gulp.task('coc', () => {
   if (!fs.existsSync('coc')) {
     fs.mkdirSync('coc');
   }
-  return pageTask(files.coc, 'coc/index.html', 'LeapDAO Code Of Conduct');
+  return pageTask(files.coc, 'coc/index.html', {
+    title: 'LeapDAO Code Of Conduct',
+    menu: [
+      { url: '/', title: '~' },
+      { url: '/blog', title: 'Blog' },
+      { url: '/bounties', title: 'Bounties' }
+    ]
+  });
 });
 
 // gulp.task('critical:blog', (cb) => {
