@@ -14,7 +14,12 @@ script: gulp
 
 cache: yarn
 
-before_deploy: 'rm -R node_modules'
+before_deploy:
+  - rm -R node_modules
+  - rm -R src
+  - rm gulpfile.js
+  - rm yarn.lock
+  - rm package.json
 
 deploy:
   - provider: s3
