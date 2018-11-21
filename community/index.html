@@ -32,112 +32,150 @@
       href="https://fonts.googleapis.com/css?family=Chivo:400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="spectre.min.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
 
   <body>
-    <menu class="menu">
-      <ul>
-        <li><a href="/">~</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </menu>
-    <div class="page">
-      <div class="content">
-        <header>
-          <h1>LeapDAO Community</h1>
-          <p>
-            We are a passionate group of devs that aim to grow as professionals
-            and have fun at the same time. We want to help blockchain developers
-            to build scalable apps. For that we build a fast, cheap and secure
-            network while posting memes.
-          </p>
-        </header>
-        <h3>Alexander Lunyov - Dapp Development Lead Link</h3>
+    <header class="navbar">
+      <section class="navbar-section">
+      </section>
+      <section class="navbar-section">
+        <a href="/" class="navbar-brand mr-2">~</a>
+        <a href="/blog" class="btn btn-link">Blog</a>
+        <a href="/bounties" class="btn btn-link">Bounties</a>
+      </section>
+    </header>
+    <div class="section section-hero">
+      <div class="grid-hero container grid-lg text-center">
+        <h1>The Leap Community</h1>
         <p>
-          Alexander is a full-stack blockchain and web developer with ≈10 years
-          experience. He holds a degree of information technologies in
-          economics. Alexander will be managing the development and technical
-          infrastructure. Alexander's passion is animation and generative art.
+          A community of Plasma Chain & Dapp developers.
         </p>
-        <h3>Hasan Özdemir - Developer Link</h3>
+        <p><a class="btn btn-primary btn-lg mr-2" href="getting-started.html">Join Us!</a></p>
         <p>
-          With his background in BSc and MSc in Computer Science and 10 years
-          corporate software consulting, Hasan holds in-depth knowledge in IT
-          Business, Marketing & Product Management. As founder of LedgerZ,
-          Europe's largest blockchain-agnostic DLT developers community, he will
-          take care of network launch, business development, developers network
-          building, product research and development. Hasan is a music composer,
-          problem solver and idea creator.
+          The Leap community is passionate about building scalable Dapps and giving them a home to live in. All members are here to grow as professionals and have fun at the same time. We run Plasma chains while posting memes. Join Us!
         </p>
-        <h3>Jan Kremser - Developer</h3>
-        <p>
-          Jan is a whole-blood software engineer and self-learning tech
-          enthusiast. He recently completed his electrical engineering studies,
-          previously working as software engineering intern at Amazon. Jan's
-          passion is DLT and cryptography.
-        </p>
-        <h3>Johann Barbie - Research Lead Link</h3>
-        <p>
-          Being a research lead and meditating development guru, Johann has the
-          track record of founding VC backed silicon valley startup 37coins and
-          he is active in blockchain development since 2012.
-        </p>
-        <h3>Kosta Korenkov - Odd Hand: Developer, Treasurer</h3>
-        <p>
-          Kosta is a tea drunkard and fullstack developer. He is interested in
-          lean living, brutal honesty (still apprentice) and helping people
-          around.
-        </p>
-      </div>
-      <ul class="links">
-        <li>
-          <a
-            href="https://docs.google.com/document/d/1vStTjqvqZGyiI5AVtpwCIMlHFnzC_4bbixsCfs27-M8/edit"
-            target="_blank"
-            >Read</a
-          >
-        </li>
-        <li>
-          <a href="https://twitter.com/leapdao" target="_blank">Follow</a>
-        </li>
-        <li><a href="mailto:mail@leapdao.org" target="_blank">Contact</a></li>
-        <li><a href="http://join.leapdao.org" target="_blank">Join</a></li>
-        <li>
-          <a href="https://github.com/leapdao" target="_blank">Contribute</a>
-        </li>
-      </ul>
-
-      <form
-        id="mc-embedded-subscribe-form"
-        action="https://leapdao.us19.list-manage.com/subscribe/post-json?u=6a1b0204c404c1a1c4b498537&amp;id=f12a24a1f3&amp;c=?"
-        method="post"
-        class="subscribe"
-      >
-        <h3>Stay in touch</h3>
-        <p>
-          We will notify you only about important <br />things, like a mainnet
-          launch
-        </p>
-        <input
-          type="email"
-          value=""
-          name="EMAIL"
-          placeholder="Email address"
-          class="email"
-        />
-        <p class="alert"></p>
-        <button class="submit">Subscribe</button>
-
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input
-            type="text"
-            name="b_6a1b0204c404c1a1c4b498537_f12a24a1f3"
-            tabindex="-1"
-            value=""
-          />
+        <div class="columns">
+          <div class="column col-4 col-xs-12">
+            <div class="card text-center">
+              <div class="card-header"><span class="card-title">2000</span></div>
+              <div class="card-body">Montly active UTXOs</div>
+            </div>
+          </div>
+          <div class="column col-4 col-xs-12">
+            <div class="card text-center">
+              <div class="card-header"><span class="card-title">67</span></div>
+              <div class="card-body">Members</div>
+            </div>
+          </div>
+          <div class="column col-4 col-xs-12">
+            <div class="card text-center">
+              <div class="card-header"><span class="card-title">10</span></div>
+              <div class="card-body">Contributers</div>
+            </div>
+          </div>
         </div>
-      </form>
+      </div>
+    </div>
+    <div class="section section-features bg-primary text-light">
+      <div class="container grid-lg">
+        <div class="columns">
+          <div class="column">
+            <h2>Why Join?</h2>
+            <ul>
+              <li>Get help with your Dapp or use-case</li>
+              <li>Make contributions to scalability research</li>
+              <li>Bring in ideas for activities and  projects</li>
+              <li>Become a Leap Peep!</li>
+            </ul>
+          </div>
+          <div class="column">
+            <div>
+              <h3>leap-core</h3>
+              <a class="github-button" href="https://github.com/leapdao/leap-core" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-core on GitHub">Star</a>
+            </div>
+            <div>
+              <h3>leap-node</h3>
+              <a class="github-button" href="https://github.com/leapdao/leap-node" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-node on GitHub">Star</a>
+            </div>
+            <div>
+              <h3>leap-contracts</h3>
+              <a class="github-button" href="https://github.com/leapdao/leap-contracts" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-contracts on GitHub">Star</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-updates bg-gray">
+      <div class="container grid-lg">
+        <div class="text-center">
+          <h2>Get Involved!</h2>
+          <p>
+            As an open source software community operating a global public utility, LeapDAO thrives from the efforts of its members. Whatever your interests and skills are, there is ample opportunity to make the live of Dapps  better!
+          </p>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title h5">Contribute Code</div>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>Check out GitHub issues with the tags Good first issue or bounty.</li>
+                  <li>Report a bug and find a solution for it.</li>
+                  <li>Propose new features or solve design challenges.</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn">Github</button>
+                <button class="btn">Bounties</button>
+              </div>
+            </div>
+          </div>
+          <div class="divider-vert" data-content="OR"></div>
+          <div class="column">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title h5">Contribute Support</div>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>Facilitate holacracy meetings or be a secretary.</li>
+                  <li>Help writing documentation.</li>
+                  <li>become a bounty gardener or reviewer.</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn">Get in Contact</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-features bg-primary text-light">
+      <div class="container grid-lg">
+        <div class="columns">
+          <div class="column">
+            <h2>Leap Peeps</h2>
+            <p>Leap Peeps are members who have made a significant contribution to the community and have given Dapps a happy long live. Perks of being a Leap Peep:</p>
+            <ul>
+              <li>Get memed by our Memezier!</li>
+              <li>Be in the ins about latest features.</li>
+              <li>That warm and fuzzy feeling.</li>
+            </ul>
+          </div>
+          <div class="column">
+            <div style="margin-top: 30px;">
+              <div class="github-card" data-github="leapdao" data-width="400" data-height="150" data-theme="default"></div>
+              <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
