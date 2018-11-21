@@ -8,6 +8,7 @@ before_install:
   - export PATH=$PATH:$HOME/.local/bin
 
 before_script:
+  - cd leapdao-bounties && git pull origin master && cd ..
   - yarn global add gulp-cli
 
 script: gulp
