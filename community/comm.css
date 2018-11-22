@@ -1,0 +1,146 @@
+.section-stats {
+    padding: 6rem .5rem;
+}
+.section-why {
+    padding: 4.5rem .5rem;
+}
+.section-how {
+    padding: 4.5rem .5rem;
+}
+.section-who {
+    padding: 1.5rem .5rem;
+}
+.section-what {
+    padding: 4.5rem .5rem;
+}
+.grid-hero h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+html,
+body {
+  font-family: 'Chivo', Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+
+*::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+a {
+  background-color: rgb(64, 253, 169);
+  color: #000;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(163, 253, 143) !important;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+
+.links {
+  font-size: 2.5rem;
+  margin-top: 6rem;
+  line-height: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.links li::after {
+  margin: 0 5px;
+  content: '\2022';
+}
+
+.links li:last-child::after {
+  display: none;
+}
+
+.links a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0.01px);
+}
+
+
+.menu-leap {
+	font-size: 1.1rem;
+  position: fixed;
+  z-index: 10;
+  right: 7rem;
+  top: 2.5rem;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: -10px;
+  margin-right: -10px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.menu-leap ul {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.menu-leap li {
+  padding: 0 10px;
+}
+
+.menu-leap a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.menu-leap a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+
+svg {
+  position: absolute;
+  top: calc(50vh - 22rem);
+  left: 10rem;
+  transform: scale(0.8) translateZ(0.01px);
+}
+
+@media screen and (max-width: 900px) {
+  svg {
+    position: absolute;
+    top: calc(20vh - 32rem);
+    left: -11.5rem;
+    transform: scale(0.5) translateZ(0.01px);
+  }
+
+
+  .menu-leap {
+  	font-size: 0.9rem;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    right: 1rem;
+    top: 1rem;
+  }
+}

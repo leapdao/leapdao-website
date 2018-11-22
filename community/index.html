@@ -33,123 +33,141 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="spectre.min.css">
+    <link rel="stylesheet" href="comm.css" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css">
   </head>
 
   <body>
-    <header class="navbar">
-      <section class="navbar-section">
-      </section>
-      <section class="navbar-section">
-        <a href="/" class="navbar-brand mr-2">~</a>
-        <a href="/blog" class="btn btn-link">Blog</a>
-        <a href="/bounties" class="btn btn-link">Bounties</a>
-      </section>
-    </header>
-    <div class="section">
+    <menu class="menu-leap">
+      <ul>
+        <li><a href="/">~</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/bounties">Bounties</a></li>
+      </ul>
+    </menu>
+    <div class="section section-stats">
       <div class="grid-hero container grid-lg text-center">
         <h1>The Leap Community</h1>
+        <h2>
+          A community of Plasma chain & Dapp developers
+        </h2>
+        <p><a class="btn btn-primary btn-md mr-2" href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Join us!</a></p>
         <p>
-          A community of Plasma Chain & Dapp developers.
-        </p>
-        <p><a class="btn btn-primary btn-lg mr-2" href="getting-started.html">Join Us!</a></p>
-        <p>
-          The Leap community is passionate about building scalable Dapps and giving them a home to live in. All members are here to grow as professionals and have fun at the same time. We run Plasma chains while posting memes. Join Us!
+          The Leap community is passionate about building scalable Dapps and giving them a home to live in. All members are here to grow as professionals and have fun at the same time. We run Plasma chains while posting memes. Join us!
         </p>
         <div class="columns">
-          <div class="column col-4 col-xs-12">
+          <div class="column col-2 col-sm-12"></div>
+          <div class="column col-2 col-sm-12">
             <div class="card text-center">
-              <div class="card-header"><span class="card-title">2000</span></div>
-              <div class="card-body">Montly active UTXOs</div>
+              <div class="card-header">
+                <span class="card-title"><i class="icon icon-flag"></i></span>
+              </div>
+              <div class="card-body">2000 monthly active UTXOs</div>
             </div>
           </div>
-          <div class="column col-4 col-xs-12">
+          <div class="column col-1 col-sm-12"></div>
+          <div class="column col-2 col-sm-12">
             <div class="card text-center">
-              <div class="card-header"><span class="card-title">67</span></div>
-              <div class="card-body">Members</div>
+              <div class="card-header">
+                <span class="card-title"><i class="icon icon-message"></i></span>
+              </div>
+              <div class="card-body">67<br/>members<br/><br/><br/></div>
             </div>
           </div>
-          <div class="column col-4 col-xs-12">
+          <div class="column col-1 col-sm-12"></div>
+          <div class="column col-2 col-sm-12">
             <div class="card text-center">
-              <div class="card-header"><span class="card-title">10</span></div>
-              <div class="card-body">Contributers</div>
+              <div class="card-header">
+                <span class="card-title"><i class="icon icon-people"></i></span>
+              </div>
+              <div class="card-body">10 contributers<br/><br/><br/></div>
             </div>
           </div>
+          <div class="column col-2 col-sm-12"></div>
         </div>
-        <div class="columns">
-            <div class="column col-4 col-xs-12">
-              <h4>leap-core</h4>
+        <div class="columns" style="padding: 2.5rem .1rem;">
+            <div class="column col-3 col-xs-12">
+              <h5>leap-core</h5>
               <a class="github-button" href="https://github.com/leapdao/leap-core" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-core on GitHub">Star</a>
             </div>
-            <div class="column col-4 col-xs-12">
-              <h4>leap-node</h4>
-              <a class="github-button" href="https://github.com/leapdao/leap-node" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-node on GitHub">Star</a>
+            <div class="column col-3 col-xs-12">
+              <h5>solEVM-enforcer</h5>
+              <a class="github-button" href="https://github.com/leapdao/solEVM-enforcer" data-size="large" data-show-count="true" aria-label="Star leapdao/solEVM-enforcer on GitHub">Star</a>
             </div>
-            <div class="column col-4 col-xs-12">
-              <h4>leap-contracts</h4>
-              <a class="github-button" href="https://github.com/leapdao/leap-contracts" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-contracts on GitHub">Star</a>
+            <div class="column col-3 col-xs-12">
+              <h5>mobile-wallet</h5>
+              <a class="github-button" href="https://github.com/leapdao/mobile-plasma-wallet" data-size="large" data-show-count="true" aria-label="Star leapdao/mobile-plasma-wallet on GitHub">Star</a>
+            </div>
+            <div class="column col-3 col-xs-12">
+              <h5>leap-node</h5>
+              <a class="github-button" href="https://github.com/leapdao/leap-node" data-size="large" data-show-count="true" aria-label="Star leapdao/leap-node on GitHub">Star</a>
             </div>
         </div>
       </div>
     </div>
-    <div class="section bg-primary text-light">
+    <div class="section section-why bg-primary text-light">
       <div class="container grid-lg">
         <div class="columns">
-          <div class="column">
-            <h2>Why Join the Leap Community?</h2>
+          <div class="column col-md-12">
+            <h2>Why join the Leap community?</h2>
             <ul>
               <li>Jump into blockchain development.</li>
               <li>Get help with your Dapp or use-case.</li>
-              <li>Experience a self-managing holacratic organization.</li>
+              <li>Experience a self-managing holacratic<sup>*</sup> organization.</li>
               <li>Make the life of a Dapp better!</li>
             </ul>
           </div>
-          <div class="column text-right">
+          <div class="column col-md-12 text-right">
             <img src="/img/hola.png" class="img-responsive" alt="holacracy">
-            *learn about <a target="_blank" rel="noopener noreferrer" href="https://www.holacracy.org/webinar-recording">holacracy</a>.
+            <sup>*</sup>learn about <a target="_blank" rel="noopener noreferrer" href="https://www.holacracy.org/webinar-recording">holacracy</a>.
           </div>
         </div>
       </div>
     </div>
-    <div class="section bg-gray">
+    <div class="section section-how bg-gray">
       <div class="container grid-lg">
         <div class="columns">
-          <div class="column">
-            <h2>How Leap rolls:</h2>
+          <div class="column col-1 col-md-12"></div>
+          <div class="column col-5 col-md-12">
+            <h3>How Leap rolls:</h3>
             <p>
-              The community has evolved from working on <a target="_blank" rel="noopener noreferrer" href="https://github.com/leapdao/acebusters-yellowpaper">blockchain gaming</a> to <a target="_blank" rel="noopener noreferrer" href="https://parseclabs.org/">researching Plasma</a> to delivering scalability as a <a target="_blank" rel="noopener noreferrer" href="https://leapdao.org/">global public utility</a>. Its flexibility has created an adaptive decentralized organization with Leap Peeps at its core. 
+              The community has evolved from working on <a target="_blank" rel="noopener noreferrer" href="https://github.com/leapdao/acebusters-yellowpaper">blockchain gaming</a> to <a target="_blank" rel="noopener noreferrer" href="https://parseclabs.org/">researching Plasma</a> to delivering scalability as a <a target="_blank" rel="noopener noreferrer" href="https://leapdao.org/">global public utility</a>. Its flexibility has created an adaptive decentralized organization with Leap peeps at its core. 
             </p>
           </div>
-          <div class="column">
-            <p>The Leap community values:</p>
+          <div class="column col-1 col-md-12"></div>
+          <div class="column col-4 col-md-12">
+            <h3>The Leap community values:</h3>
             <ul>
-              <li>Running code.</li>
-              <li>Self-management over hierarchy.</li>
-              <li>Rough consensus over voting.</li>
-              <li>Community over market cap.</li>
+              <li>Running code</li>
+              <li>Self-management over hierarchy</li>
+              <li>Rough consensus over voting</li>
+              <li>Community over market cap</li>
             </ul>
           </div>
+          <div class="column col-1 col-md-12"></div>
         </div>
       </div>
     </div>
-    <div class="section bg-primary text-light">
-      <div class="container grid-lg">
+    <div class="section section-who bg-primary text-light">
+      <div class="container grid-lg  text-center">
+        <h2>Leap peeps around the world:</h2>
         <div style="width: 100%; height: 400px;" id="map"></div>
       </div>
     </div>
-    <div class="section bg-gray">
+    <div class="section section-what bg-gray">
       <div class="container grid-lg">
         <div class="text-center">
-          <h2>Get Involved!</h2>
+          <h2>Get involved!</h2>
           <p>As an open-source software community, Leap thrives from the efforts of its members. Whatever your interests and skills are, there is ample opportunity to make the life of Dapps better!</p>
         </div>
         <div class="columns">
-          <div class="column">
+          <div class="column col-md-12">
             <div class="card">
               <div class="card-header">
-                <div class="card-title h5">Contribute Code</div>
+                <div class="card-title h3">Contribute code:</div>
               </div>
               <div class="card-body">
                 <ul>
@@ -159,16 +177,16 @@
                 </ul>
               </div>
               <div class="card-footer">
-                <button class="btn">Github</button>
-                <button class="btn">Bounties</button>
+                <a class="btn btn-lg mr-2" href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Join</a>
+                <a class="btn btn-lg mr-2" href="https://github.com/leapdao/leapdao-bounties">Github</a>
               </div>
             </div>
           </div>
           <div class="divider-vert" data-content="OR"></div>
-          <div class="column">
+          <div class="column col-md-12">
             <div class="card">
               <div class="card-header">
-                <div class="card-title h5">Contribute Support</div>
+                <div class="card-title h3">Contribute support:</div>
               </div>
               <div class="card-body">
                 <ul>
@@ -176,9 +194,10 @@
                   <li>Propose new tasks and projects.</li>
                   <li>Answer questions and help others to deliver bounties.</li>
                 </ul>
+                <br/>
               </div>
               <div class="card-footer">
-                <button class="btn">Get in Contact</button>
+                <a class="btn btn-lg mr-2" href="mailto:hi@leapdao.org">Contact</a>
               </div>
             </div>
           </div>
