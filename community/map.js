@@ -32,11 +32,24 @@ var prague = [50.08861, 14.42139];
 var seva = [44.6054, 33.5221];
 var pet = [52.38333, 8.96667];
 
-L.imageOverlay(sunify, imageBounds(bratsk)).addTo(map);
-L.imageOverlay(zobro, imageBounds(grandRap)).addTo(map);
-L.imageOverlay(anton, imageBounds(moscow)).addTo(map);
-L.imageOverlay(kosta, imageBounds(seva)).addTo(map);
-L.imageOverlay(johann, imageBounds(pet)).addTo(map);
-L.imageOverlay(helge, imageBounds(berlin)).addTo(map);
-L.imageOverlay(evgeni, imageBounds(prague)).addTo(map);
-L.imageOverlay(jan, imageBounds(ljubljana)).addTo(map);
+function addPeep(avatar, coords) {
+  var icon = L.icon({
+    iconUrl: avatar,
+    iconSize: [20, 20], // size of the icon
+    shadowSize: [0, 0], // size of the shadow
+    iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 0], // the same for the shadow
+    popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+  });
+
+  L.marker(coords, { icon: icon }).addTo(map);
+}
+
+addPeep(sunify, bratsk);
+addPeep(zobro, grandRap);
+addPeep(anton, moscow);
+addPeep(kosta, seva);
+addPeep(johann, pet);
+addPeep(helge, berlin);
+addPeep(evgeni, prague);
+addPeep(jan, ljubljana);
