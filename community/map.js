@@ -9,7 +9,8 @@
   // Set up the OSM layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
-    maxZoom: 18
+    maxZoom: 18,
+    detectRetina: true
   }).addTo(map);
 
   var sunify = {
