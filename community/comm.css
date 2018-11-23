@@ -121,7 +121,7 @@ h1 {
 
 svg {
   position: absolute;
-  top: calc(50vh - 22rem);
+  top: calc(50vh - 28rem);
   left: 10rem;
   transform: scale(0.8) translateZ(0.01px);
 }
