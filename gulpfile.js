@@ -145,7 +145,11 @@ gulp.task('bounties', () => {
   }
   return pageTask(files.bounties, 'bounties/index.html', {
     title: 'LeapDAO Bounties',
-    menu: [{ url: '/', title: '~' }, { url: '/blog', title: 'Blog' }]
+    menu: [
+      { url: '/', title: '~' },
+      { url: '/community', title: 'Community' },
+      { url: '/blog', title: 'Blog' }
+    ]
   });
 });
 
@@ -158,6 +162,7 @@ gulp.task('coc', () => {
     menu: [
       { url: '/', title: '~' },
       { url: '/blog', title: 'Blog' },
+      { url: '/community', title: 'Community' },
       { url: '/bounties', title: 'Bounties' }
     ]
   });

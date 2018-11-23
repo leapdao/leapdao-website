@@ -50,14 +50,15 @@ body {
 
 .menu {
   font-size: 2rem;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  z-index: 100;
   right: 10rem;
   top: 6rem;
   background-color: #fff;
   padding: 20px;
   margin-top: -10px;
   margin-right: -10px;
+  transform: translate3d(0, 0, 0.1);
 }
 
 .menu ul {
@@ -83,7 +84,7 @@ body {
 
 .page {
   max-width: 110rem;
-  padding: 45vh 5rem 0 10rem;
+  padding: 30vh 5rem 0 10rem;
 }
 
 *::selection {
@@ -130,8 +131,12 @@ h1 {
 }
 
 .content p {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  width: 80%;
+}
+
+.content p {
+  font-size: 2rem;
+  line-height: 3rem;
   margin-top: 3.5rem;
 }
 
@@ -152,29 +157,22 @@ h1 {
   font-weight: bold;
 
   margin-top: 5rem;
-  margin-bottom: -2rem;
+  margin-bottom: -1rem;
 }
 
 .content h3 {
-  font-size: 4rem;
-  margin-top: 6rem;
-  margin-bottom: -4rem;
-}
-
-.content h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
 
-  line-height: 5rem;
-  margin-top: 6rem;
-  margin-bottom: -3rem;
+  line-height: 4rem;
+  margin-top: 5rem;
 }
 
 .content ul,
 .content ol {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-  margin-top: 3.5rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 2rem;
 }
 
 .content ol ol,
@@ -182,11 +180,11 @@ h1 {
 .content ul ul,
 .content ol ul {
   margin-top: 1rem;
-  margin-left: 6rem;
+  margin-left: 4rem;
 }
 
 .content li + li {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .content img {
@@ -236,7 +234,7 @@ h1 {
 
 svg {
   position: absolute;
-  top: calc(50vh - 25rem);
+  top: calc(30vh - 25rem);
   left: 8rem;
   transform: translateZ(0.01px);
 }
@@ -276,8 +274,7 @@ svg {
 
 .subscribe {
   position: relative;
-  min-height: 80vh;
-  padding: 10rem 0;
+  padding: 8rem 0 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,7 +327,7 @@ input:focus {
   border-bottom-color: #4cfbab;
 }
 
-button {
+.button {
   background: 0;
   font: inherit;
 
@@ -338,15 +335,35 @@ button {
   display: inline-block;
   padding: 0.5em 2rem;
   outline: none;
-  border-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  transition: background 0.2s;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
   background-color: #4cfbab;
 }
 
-.subscribe button {
+.button-primary {
+  background-color: #4cfbab;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #ebfd5a;
+}
+
+.button-wide {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.button-compact {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+}
+
+.subscribe .button {
   margin-top: 2rem;
 }
 
@@ -355,11 +372,20 @@ button:focus {
   max-width: 100%;
 }
 
+.footer {
+  border-top: 1px solid #ccc;
+  padding-left: 10rem;
+  width: 100vw;
+  margin-left: -10rem;
+  margin-top: 15rem;
+}
+
 @media screen and (max-width: 900px) {
   .page {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: calc(20vh - 6rem);
+    padding-top: calc(20vh);
+    overflow: hidden;
   }
 
   h1 {
@@ -376,6 +402,18 @@ button:focus {
 
   .content h3 {
     font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  .content p {
+    width: 100%;
+  }
+
+  .content header p {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    line-height: 4rem;
   }
 
   .content p,
@@ -418,8 +456,8 @@ button:focus {
 
   svg {
     position: absolute;
-    top: calc(20vh - 32rem);
-    left: -11.5rem;
+    top: calc(20vh - 23rem);
+    left: -15rem;
     transform: scale(0.5) translateZ(0.01px);
   }
 
@@ -454,6 +492,8 @@ button:focus {
 
   .subscribe {
     height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .subscribe h3 {
@@ -479,12 +519,19 @@ button:focus {
     padding: 0.5rem 0;
   }
 
-  button {
+  .button {
     font-size: 2rem;
   }
 
-  .subscribe button {
+  .subscribe .button {
     margin-top: 0;
+  }
+
+  .footer {
+    margin-top: 5rem;
+    margin-left: -3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
