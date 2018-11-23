@@ -23,7 +23,7 @@
   };
   var zobro = {
     avatar: 'https://avatars2.githubusercontent.com/u/61939',
-    url: ''
+    url: 'https://github.com/VonIobro'
   };
   var anton = {
     avatar: 'https://avatars1.githubusercontent.com/u/1623033',
