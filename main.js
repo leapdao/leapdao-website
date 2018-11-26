@@ -1,8 +1,8 @@
 (function() {
   const circles = [
-    { color: [0, 255, 170], radius: 120, x: 231, y: 220, dir: 1 },
-    { color: [0, 255, 170], radius: 120, x: 236, y: 230, dir: 1 },
-    { color: [0, 255, 170], radius: 120, x: 256, y: 250, dir: -1 },
+    { color: [42, 255, 134], radius: 120, x: 231, y: 220, dir: 1 },
+    { color: [42, 255, 134], radius: 120, x: 236, y: 230, dir: 1 },
+    { color: [42, 255, 134], radius: 120, x: 256, y: 250, dir: -1 },
     { color: [255, 255, 0], radius: 120, x: 226, y: 260, dir: 1 },
     { color: [255, 255, 0], radius: 120, x: 290, y: 330, dir: 1 }
   ];

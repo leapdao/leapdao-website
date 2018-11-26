@@ -234,7 +234,7 @@ h1 {
   text-decoration: none;
 }
 
-svg {
+#amoebe {
   position: absolute;
   top: calc(30vh - 20rem);
   left: 8rem;
@@ -459,7 +459,7 @@ input:focus {
     margin-top: 3rem;
   }
 
-  svg {
+  #amoebe {
     position: absolute;
     top: -10rem;
     left: -15rem;
