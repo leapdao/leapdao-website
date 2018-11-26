@@ -140,15 +140,33 @@
         if (xhr.readyState === xhr.DONE) {
           const html = xhr.responseText;
           const dom = new DOMParser().parseFromString(html, 'text/html');
-          const assingContent = selector => {
-            document.querySelector(selector).innerHTML = dom.querySelector(
-              selector
-            ).innerHTML;
-          };
-
-          assingContent('.page');
-          assingContent('title');
+          document.querySelector('.page').innerHTML = dom.querySelector(
+            '.page'
+          ).innerHTML;
+          document
+            .querySelector('.page')
+            .setAttribute(
+              'class',
+              dom.querySelector('.page').getAttribute('class')
+            );
+          document.querySelector('title').innerHTML = dom.querySelector(
+            'title'
+          ).innerHTML;
           window.scrollTo(0, 0);
+
+          Array.from(
+            document.querySelectorAll('head script.page-script')
+          ).forEach(el => {
+            document.head.removeChild(el);
+          });
+          Array.from(dom.querySelectorAll('.page script')).forEach(
+            oldScript => {
+              const script = document.createElement('script');
+              script.src = oldScript.src;
+              script.className = 'page-script';
+              document.head.appendChild(script);
+            }
+          );
         }
       };
       xhr.send();

@@ -50,11 +50,10 @@ body {
 
 .menu {
   font-size: 2rem;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  z-index: 100;
   right: 10rem;
   top: 6rem;
-  background-color: #fff;
   padding: 20px;
   margin-top: -10px;
   margin-right: -10px;
@@ -84,7 +83,7 @@ body {
 
 .page {
   max-width: 110rem;
-  padding: 45vh 5rem 0 10rem;
+  padding: 30vh 5rem 0 10rem;
 }
 
 *::selection {
@@ -107,6 +106,8 @@ h1 {
   font-weight: 900;
   font-size: 10rem;
   position: relative;
+  z-index: 1;
+  margin-bottom: -2rem;
   transform: translateZ(0.01px);
   z-index: 100;
   margin-bottom: -2rem;
@@ -122,10 +123,23 @@ h1 {
   transform: translateZ(0.01px);
 }
 
+.content header {
+  /* margin-left: 5rem; */
+  margin-bottom: 5rem;
+}
+
 .content p {
+  width: 80%;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 3.5rem;
+}
+
+.content header p {
   font-size: 3.5rem;
   line-height: 5rem;
   margin-top: 6rem;
+  width: 100%;
 }
 
 .content a {
@@ -140,37 +154,39 @@ h1 {
 }
 
 .content h2 {
-  font-size: 5rem;
-  line-height: 6rem;
+  font-size: 4rem;
+  line-height: 5rem;
   font-weight: bold;
 
-  margin-top: 6rem;
-  margin-bottom: -4rem;
+  margin-top: 5rem;
+  margin-bottom: -1rem;
 }
 
 .content h3 {
-  font-size: 4rem;
-  margin-top: 6rem;
-  margin-bottom: -4rem;
+  font-size: 3rem;
+  font-weight: bold;
+
+  line-height: 4rem;
+  margin-top: 5rem;
 }
 
 .content ul,
 .content ol {
-  font-size: 3.5rem;
-  line-height: 5rem;
-  margin-top: 6rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 2rem;
 }
 
 .content ol ol,
 .content ul ol,
 .content ul ul,
 .content ol ul {
-  margin-top: 2rem;
-  margin-left: 6rem;
+  margin-top: 1rem;
+  margin-left: 4rem;
 }
 
 .content li + li {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .content img {
@@ -220,7 +236,7 @@ h1 {
 
 svg {
   position: absolute;
-  top: calc(50vh - 25rem);
+  top: calc(30vh - 20rem);
   left: 8rem;
   transform: translateZ(0.01px);
 }
@@ -260,8 +276,7 @@ svg {
 
 .subscribe {
   position: relative;
-  min-height: 80vh;
-  padding: 10rem 0;
+  padding: 8rem 0 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,7 +329,7 @@ input:focus {
   border-bottom-color: #4cfbab;
 }
 
-button {
+.button {
   background: 0;
   font: inherit;
 
@@ -322,21 +337,49 @@ button {
   display: inline-block;
   padding: 0.5em 2rem;
   outline: none;
-  border-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  transition: background 0.2s;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
   background-color: #4cfbab;
 }
 
-.subscribe button {
+.button-primary {
+  background-color: #4cfbab !important;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #ebfd5a !important;
+}
+
+.button-wide {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.button-compact {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+}
+
+.subscribe .button {
   margin-top: 2rem;
 }
 
 .subscribe input {
   width: 60rem;
   max-width: 100%;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  padding-left: 10rem;
+  width: 100vw;
+  margin-left: -10rem;
+  margin-top: 15rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -346,7 +389,8 @@ button:focus {
     transform: translateZ(0.01px);
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: calc(20vh - 6rem);
+    padding-top: 14rem;
+    overflow: hidden;
   }
 
   h1 {
@@ -363,6 +407,18 @@ button:focus {
 
   .content h3 {
     font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  .content p {
+    width: 100%;
+  }
+
+  .content header p {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    line-height: 4rem;
   }
 
   .content p,
@@ -405,8 +461,8 @@ button:focus {
 
   svg {
     position: absolute;
-    top: calc(20vh - 32rem);
-    left: -11.5rem;
+    top: -10rem;
+    left: -15rem;
     transform: scale(0.5) translateZ(0.01px);
   }
 
@@ -441,6 +497,8 @@ button:focus {
 
   .subscribe {
     height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .subscribe h3 {
@@ -466,12 +524,19 @@ button:focus {
     padding: 0.5rem 0;
   }
 
-  button {
+  .button {
     font-size: 2rem;
   }
 
-  .subscribe button {
+  .subscribe .button {
     margin-top: 0;
+  }
+
+  .footer {
+    margin-top: 5rem;
+    margin-left: -3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -481,4 +546,203 @@ button:focus {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+/* community */
+.stats {
+  margin: 10rem 0;
+}
+
+.stats-list {
+  display: flex;
+
+  margin-top: 2rem;
+}
+
+.stat {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.stat strong {
+  font-size: 4rem;
+  line-height: 1;
+  display: block;
+}
+
+.stats .stat + .stat {
+  margin-left: 4rem;
+}
+
+.stats-repos {
+  display: flex;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.stats-repos h5 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.stats-repo + .stats-repo {
+  margin-left: 2rem;
+}
+
+.map {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  margin-top: 5rem;
+  margin-left: -10rem;
+}
+
+.map h2 {
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  z-index: 1000;
+  text-align: center;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.with-note {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+.with-note-main {
+  flex: 2;
+  padding-right: 1rem;
+}
+
+.with-note-side {
+  flex: 1;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  width: calc(50% - 4rem);
+}
+
+.content header .subtitle {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.community h1 {
+  font-size: 8rem;
+}
+
+@media screen and (max-width: 900px) {
+  .with-note {
+    width: 100%;
+  }
+
+  .map {
+    margin-left: -3rem;
+    height: 250px;
+  }
+
+  .map h2 {
+    font-size: 3rem;
+  }
+
+  .with-note {
+    flex-direction: column-reverse;
+  }
+
+  .with-note-side {
+    border: 0;
+    text-align: left;
+    padding: 0;
+  }
+
+  .cols {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5rem 0;
+  }
+
+  .stats img {
+    width: 100vw;
+    max-width: none;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    flex-shrink: 0;
+    order: 1;
+  }
+
+  .stats-list,
+  .stats-repos {
+    width: calc(50% - 2rem);
+  }
+
+  .stats-list {
+    flex-direction: column;
+    order: 3;
+    margin-top: 0;
+  }
+
+  .stats-list br {
+    display: none;
+  }
+
+  .stat {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-left: 0 !important;
+    margin-top: 2rem;
+  }
+
+  .stat strong {
+    font-size: 2rem;
+  }
+
+  .stats-repos {
+    margin-top: 0;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .stats-repo {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .community h1 {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: -1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .community header h1 {
+    font-size: 4rem !important;
+  }
 }
