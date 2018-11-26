@@ -82,11 +82,8 @@ body {
 }
 
 .page {
-  position: relative;
   max-width: 110rem;
   padding: 45vh 5rem 0 10rem;
-  z-index: 1;
-  transform: translateZ(0.01px);
 }
 
 *::selection {
@@ -108,10 +105,17 @@ a:hover {
 h1 {
   font-weight: 900;
   font-size: 10rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
   font-family: 'ChivoLogo';
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .content p {
@@ -213,8 +217,13 @@ h1 {
 svg {
   position: absolute;
   top: calc(50vh - 25rem);
-  left: 10rem;
+  left: 8rem;
   transform: translateZ(0.01px);
+}
+
+.blog-index {
+  position: relative;
+  z-index: 1;
 }
 
 .blog-item {

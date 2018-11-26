@@ -130,4 +130,41 @@
       register2(e.target);
     });
   }
+
+  if (window.onpopstate === null) {
+    // browser supports onpopstate
+    function loadPage(pathname) {
+      const xhr = new XMLHttpRequest();
+      xhr.open('get', pathname);
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === xhr.DONE) {
+          const html = xhr.responseText;
+          const dom = new DOMParser().parseFromString(html, 'text/html');
+          const assingContent = selector => {
+            document.querySelector(selector).innerHTML = dom.querySelector(
+              selector
+            ).innerHTML;
+          };
+
+          assingContent('.page');
+          assingContent('title');
+          window.scrollTo(0, 0);
+        }
+      };
+      xhr.send();
+    }
+    document.addEventListener('click', e => {
+      if (
+        e.target.tagName === 'A' &&
+        e.target.getAttribute('href').startsWith('/')
+      ) {
+        e.preventDefault();
+        loadPage(e.target.getAttribute('href'));
+        window.history.pushState(null, null, e.target.getAttribute('href'));
+      }
+    });
+    window.addEventListener('popstate', e => {
+      loadPage(window.location.pathname);
+    });
+  }
 })();
