@@ -731,13 +731,17 @@ input:focus {
     margin-left: 0 !important;
     margin-top: 2rem;
   }
+
+  .content header .subtitle {
+    line-height: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .community h1 {
     font-size: 6rem;
     line-height: 1;
-    margin-bottom: -1rem;
+    margin-bottom: 0;
   }
 }
 
