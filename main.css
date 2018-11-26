@@ -108,6 +108,8 @@ h1 {
   font-size: 10rem;
   position: relative;
   transform: translateZ(0.01px);
+  z-index: 100;
+  margin-bottom: -2rem;
 }
 
 .logo {
@@ -339,6 +341,9 @@ button:focus {
 
 @media screen and (max-width: 900px) {
   .page {
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0.01px);
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: calc(20vh - 6rem);
