@@ -58,6 +58,7 @@ body {
   padding: 20px;
   margin-top: -10px;
   margin-right: -10px;
+  transform: translateZ(0.01px);
 }
 
 .menu ul {
@@ -106,7 +107,7 @@ h1 {
   font-weight: 900;
   font-size: 10rem;
   position: relative;
-  z-index: 1;
+  transform: translateZ(0.01px);
 }
 
 .logo {
@@ -116,6 +117,7 @@ h1 {
 .content {
   position: relative;
   z-index: 1;
+  transform: translateZ(0.01px);
 }
 
 .content p {
