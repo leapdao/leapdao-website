@@ -57,7 +57,7 @@ body {
   padding: 20px;
   margin-top: -10px;
   margin-right: -10px;
-  transform: translate3d(0, 0, 0.1);
+  transform: translateZ(0.01px);
 }
 
 .menu ul {
@@ -108,6 +108,7 @@ h1 {
   position: relative;
   z-index: 1;
   margin-bottom: -2rem;
+  transform: translateZ(0.01px);
 }
 
 .logo {
@@ -117,6 +118,7 @@ h1 {
 .content {
   position: relative;
   z-index: 1;
+  transform: translateZ(0.01px);
 }
 
 .content header {
