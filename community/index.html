@@ -23,25 +23,17 @@
     <meta name="twitter:image" content="http://leapdao.org/img/og.jpg" />
 
     <link rel="stylesheet" href="/main.css" />
-    <link rel="stylesheet" href="/community/comm.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
-      disabled
-    />
   </head>
 
   <body>
-    <menu class="menu">
-      <ul>
-        <li><a href="/">~</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/bounties">Bounties</a></li>
-      </ul>
-    </menu>
-
-    <div class="page">
+    <div class="page community">
+      <menu class="menu">
+        <ul>
+          <li><a href="/">~</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/bounties">Bounties</a></li>
+        </ul>
+      </menu>
       <div class="content">
         <header>
           <h1>The Leap Community</h1>
@@ -314,6 +306,19 @@
           </div>
         </form>
       </footer>
+
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
+      />
+
+      <script async src="https://buttons.github.io/buttons.js"></script>
+      <script
+        defer
+        src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"
+      ></script>
+      <script src="/community/map.js" defer></script>
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -343,12 +348,6 @@
       </g>
     </svg>
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script
-      defer
-      src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"
-    ></script>
-    <script src="/community/map.js" defer></script>
     <script src="/main.js" async></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
