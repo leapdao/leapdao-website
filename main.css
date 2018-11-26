@@ -254,6 +254,7 @@ h1 {
   font-size: 5rem;
   line-height: 5rem;
   line-height: 1.15;
+  margin-bottom: 1rem;
 }
 
 .blog-item h2 a {
@@ -270,7 +271,7 @@ h1 {
 }
 
 .blog-post header p {
-  margin: 0;
+  margin: 2rem 0 0;
   font-size: 2.5rem;
 }
 
@@ -472,6 +473,7 @@ input:focus {
 
   .blog-post header p {
     font-size: 2rem;
+    margin-top: 1.5rem;
   }
 
   .blog-item {
