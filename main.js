@@ -156,7 +156,9 @@
     document.addEventListener('click', e => {
       if (
         e.target.tagName === 'A' &&
-        e.target.getAttribute('href').startsWith('/')
+        e.target.getAttribute('href').startsWith('/') &&
+        e.which === 1 &&
+        !e.metaKey
       ) {
         e.preventDefault();
         loadPage(e.target.getAttribute('href'));
