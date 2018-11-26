@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -22,16 +22,13 @@
     />
     <meta name="twitter:image" content="http://leapdao.org/img/og.jpg" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Chivo:400,700,900"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/community/comm.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
+      disabled
     />
   </head>
 
@@ -69,7 +66,12 @@
         </header>
 
         <div class="stats">
-          <img src="/img/contrubitons.png" width="761" height="98" />
+          <img
+            src="/img/contrubitons.png"
+            width="761"
+            height="98"
+            alt="Contributions chart"
+          />
           <div class="stats-list">
             <div class="stat">
               <strong>2000</strong> monthly active <br />UTXOs
@@ -290,7 +292,9 @@
             We will notify you only about important <br />things, like a mainnet
             launch
           </p>
+          <label for="email" class="visually-hidden">Email address</label>
           <input
+            id="email"
             type="email"
             value=""
             name="EMAIL"
