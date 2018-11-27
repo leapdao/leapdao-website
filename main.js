@@ -7,9 +7,8 @@
     { color: [255, 255, 0], radius: 120, x: 290, y: 330, dir: 1 }
   ];
 
-  const svgCircles = Array.from(document.querySelectorAll('circle'));
-  const check = document.getElementById('check');
   const svgRoot = document.getElementById('amoebe');
+  const svgCircles = Array.from(svgRoot.querySelectorAll('circle'));
 
   const speed = 1.1;
 
@@ -132,8 +131,10 @@
   }
 
   if (window.onpopstate === null) {
+    const loader = document.querySelector('.loader');
     // browser supports onpopstate
     function loadPage(pathname) {
+      loader.style.display = 'block';
       const xhr = new XMLHttpRequest();
       xhr.open('get', pathname);
       xhr.onreadystatechange = () => {
@@ -167,6 +168,8 @@
               document.head.appendChild(script);
             }
           );
+
+          loader.style.display = 'none';
         }
       };
       xhr.send();

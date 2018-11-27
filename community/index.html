@@ -27,13 +27,6 @@
 
   <body>
     <div class="page community">
-      <menu class="menu">
-        <ul>
-          <li><a href="/">~</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/bounties">Bounties</a></li>
-        </ul>
-      </menu>
       <div class="content">
         <header>
           <h1>The Leap Community</h1>
@@ -175,7 +168,7 @@
           with Leap peeps at its core.
         </p>
 
-        <h2>The Leap community values</h2>
+        <h3>The Leap community values</h3>
         <ul>
           <li>Running code</li>
           <li>Self-management over hierarchy</li>
@@ -240,6 +233,14 @@
           </div>
         </div>
       </div>
+
+      <menu class="menu">
+        <ul>
+          <li><a href="/">~</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/bounties">Bounties</a></li>
+        </ul>
+      </menu>
 
       <footer class="footer">
         <ul class="links">
@@ -341,6 +342,24 @@
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
+      </g>
+    </svg>
+
+    <svg width="115" height="50" class="loader">
+      <defs>
+        <filter id="loader-goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            result="mat"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -15"
+          />
+        </filter>
+      </defs>
+      <g filter="url(#loader-goo)">
+        <circle r="20" class="loader-c1" />
+        <circle r="20" class="loader-c2" />
       </g>
     </svg>
 

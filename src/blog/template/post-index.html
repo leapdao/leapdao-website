@@ -36,13 +36,6 @@
 
   <body>
     <div class="page">
-      <menu class="menu">
-        <ul>
-          <li><a href="/">~</a></li>
-          <li><a href="/bounties">Bounties</a></li>
-          <li><a href="/community">Community</a></li>
-        </ul>
-      </menu>
       <h1>LeapDAO Blog</h1>
 
       <ul class="blog-index">
@@ -58,6 +51,14 @@
         </div>
         {% endfor %}
       </ul>
+
+      <menu class="menu">
+        <ul>
+          <li><a href="/">~</a></li>
+          <li><a href="/bounties">Bounties</a></li>
+          <li><a href="/community">Community</a></li>
+        </ul>
+      </menu>
 
       <footer class="footer">
         <ul class="links">
@@ -147,6 +148,24 @@
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
+      </g>
+    </svg>
+
+    <svg width="115" height="50" class="loader">
+      <defs>
+        <filter id="loader-goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            result="mat"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -15"
+          />
+        </filter>
+      </defs>
+      <g filter="url(#loader-goo)">
+        <circle r="20" class="loader-c1" />
+        <circle r="20" class="loader-c2" />
       </g>
     </svg>
 

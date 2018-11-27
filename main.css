@@ -48,6 +48,36 @@ body {
   color: #000;
 }
 
+@keyframes loader-animation {
+  0% {
+    cx: 25;
+    cy: 25;
+  }
+
+  100% {
+    cx: 90;
+    cy: 25;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 100;
+  left: 10rem;
+  top: 6rem;
+  display: none;
+}
+
+.loader-c1 {
+  fill: rgb(66, 253, 137);
+  animation: loader-animation 1s infinite ease-in-out alternate;
+}
+
+.loader-c2 {
+  fill: rgb(255, 253, 56);
+  animation: loader-animation 1s infinite ease-in-out alternate-reverse;
+}
+
 .menu {
   font-size: 2rem;
   position: absolute;
@@ -488,6 +518,13 @@ input:focus {
   .blog-item p {
     font-size: 1.5rem;
     margin-top: 1rem;
+  }
+
+  .loader {
+    top: 1.5rem;
+    left: 2.5rem;
+    transform: scale(0.4);
+    transform-origin: 0 0;
   }
 
   .menu {

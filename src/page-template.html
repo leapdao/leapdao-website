@@ -26,6 +26,13 @@
 
   <body>
     <div class="page">
+      <article class="content">
+        <header class="blog-post-header">
+          <h1>{{ page.title }}</h1>
+        </header>
+
+        {{ page.body | markdown }}
+      </article>
       <menu class="menu">
         <ul>
           {% for item in page.menu %}
@@ -35,13 +42,6 @@
           {% endfor %}
         </ul>
       </menu>
-      <article class="content">
-        <header class="blog-post-header">
-          <h1>{{ page.title }}</h1>
-        </header>
-
-        {{ page.body | markdown }}
-      </article>
 
       <footer class="footer">
         <ul class="links">
@@ -127,6 +127,24 @@
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
         <circle cx="0" cy="0" r="30" />
+      </g>
+    </svg>
+
+    <svg width="115" height="50" class="loader">
+      <defs>
+        <filter id="loader-goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            result="mat"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -15"
+          />
+        </filter>
+      </defs>
+      <g filter="url(#loader-goo)">
+        <circle r="20" class="loader-c1" />
+        <circle r="20" class="loader-c2" />
       </g>
     </svg>
 
