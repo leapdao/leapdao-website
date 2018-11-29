@@ -789,3 +789,13 @@ input:focus {
     font-size: 4rem !important;
   }
 }
+
+.peeps-cluster div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.peeps-cluster img:not(:first-child) {
+  margin-left: -10px;
+}

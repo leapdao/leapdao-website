@@ -16,34 +16,42 @@
     }).addTo(map);
 
     var sunify = {
+      name: 'Alexander Lunyov',
       avatar: 'https://avatars3.githubusercontent.com/u/1477583',
       url: 'https://github.com/sunify'
     };
     var helge = {
+      name: 'Helge Wieding',
       avatar: 'https://avatars3.githubusercontent.com/u/754426',
       url: 'https://github.com/HelgeWieding'
     };
     var zobro = {
+      name: 'Jonathan',
       avatar: 'https://avatars2.githubusercontent.com/u/61939',
       url: 'https://github.com/VonIobro'
     };
     var anton = {
+      name: 'Anthony Akentiev',
       avatar: 'https://avatars1.githubusercontent.com/u/1623033',
       url: 'https://github.com/AnthonyAkentiev'
     };
     var jan = {
+      name: 'Jan Kremser',
       avatar: 'https://avatars2.githubusercontent.com/u/41610198',
       url: 'https://github.com/eezcjkr'
     };
     var evgeni = {
+      name: 'Evgeni',
       avatar: 'https://avatars3.githubusercontent.com/u/28968492',
       url: 'https://github.com/eshavkun'
     };
     var kosta = {
+      name: 'Kosta Korenkov',
       avatar: 'https://avatars2.githubusercontent.com/u/163447',
       url: 'https://github.com/troggy'
     };
     var johann = {
+      name: 'Johan Barbie',
       avatar: 'https://avatars1.githubusercontent.com/u/659301',
       url: 'https://github.com/johannbarbie'
     };
@@ -58,7 +66,23 @@
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
-      maxClusterRadius: 10
+      maxClusterRadius: 10,
+      iconCreateFunction: function(cluster) {
+        const childMarkers = cluster.getAllChildMarkers().reverse();
+        const peepIcons = childMarkers
+          .map(e => {
+            const icon = e.options.icon.options;
+            return `<img src="${icon.iconUrl}" width="${
+              icon.iconSize[0]
+            }" height="${icon.iconSize[1]}" />`;
+          })
+          .join('');
+        const names = childMarkers.map(e => e.options.title).join(', ');
+        return L.divIcon({
+          html: `<div title="${names}">${peepIcons}</div>`,
+          className: 'peeps-cluster'
+        });
+      }
     });
     function addPeep(peep, coords) {
       var icon = L.icon({
@@ -72,7 +96,8 @@
 
       markers.addLayer(
         L.marker(coords, {
-          icon: icon
+          icon: icon,
+          title: peep.name
         }).on('click', () => {
           window.open(peep.url);
         })
@@ -82,7 +107,8 @@
     addPeep(sunify, bratsk);
     addPeep(zobro, grandRap);
     addPeep(anton, moscow);
-    addPeep(kosta, seva);
+    // addPeep(kosta, seva);
+    addPeep(kosta, berlin);
     addPeep(johann, berlin);
     addPeep(helge, berlin);
     addPeep(evgeni, prague);
