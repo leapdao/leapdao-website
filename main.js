@@ -165,6 +165,7 @@
               const script = document.createElement('script');
               script.src = oldScript.src;
               script.className = 'page-script';
+              script.async = false;
               document.head.appendChild(script);
             }
           );
