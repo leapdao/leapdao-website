@@ -1,10 +1,10 @@
 (() => {
   function initMap() {
     // center of the map
-    var center = [20, 0];
+    var center = [45, 10];
 
     // Create the map
-    var map = L.map('map').setView(center, 2);
+    var map = L.map('map').setView(center, 3);
     map.scrollWheelZoom.disable();
 
     // Set up the OSM layer
@@ -55,8 +55,11 @@
     var ljubljana = [46.05, 14.51667];
     var prague = [50.08861, 14.42139];
     var seva = [44.6054, 33.5221];
-    var pet = [52.38333, 8.96667];
 
+    const markers = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      maxClusterRadius: 10
+    });
     function addPeep(peep, coords) {
       var icon = L.icon({
         iconUrl: peep.avatar,
@@ -67,23 +70,25 @@
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
       });
 
-      L.marker(coords, {
-        icon: icon
-      })
-        .addTo(map)
-        .on('click', () => {
+      markers.addLayer(
+        L.marker(coords, {
+          icon: icon
+        }).on('click', () => {
           window.open(peep.url);
-        });
+        })
+      );
     }
 
     addPeep(sunify, bratsk);
     addPeep(zobro, grandRap);
     addPeep(anton, moscow);
     addPeep(kosta, seva);
-    addPeep(johann, pet);
+    addPeep(johann, berlin);
     addPeep(helge, berlin);
     addPeep(evgeni, prague);
     addPeep(jan, ljubljana);
+
+    map.addLayer(markers);
   }
 
   const mapEl = document.getElementById('map');
