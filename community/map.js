@@ -26,7 +26,7 @@
       url: 'https://github.com/HelgeWieding'
     };
     var zobro = {
-      name: 'Jonathan',
+      name: 'Jonathan Zobro',
       avatar: 'https://avatars2.githubusercontent.com/u/61939',
       url: 'https://github.com/VonIobro'
     };
@@ -41,7 +41,7 @@
       url: 'https://github.com/eezcjkr'
     };
     var evgeni = {
-      name: 'Evgeni',
+      name: 'Evgeni Shavkunov',
       avatar: 'https://avatars3.githubusercontent.com/u/28968492',
       url: 'https://github.com/eshavkun'
     };
@@ -111,8 +111,10 @@
     addPeep(kosta, berlin);
     addPeep(johann, berlin);
     addPeep(helge, berlin);
-    addPeep(evgeni, prague);
-    addPeep(jan, ljubljana);
+    // addPeep(evgeni, prague);
+    addPeep(evgeni, berlin);
+    // addPeep(jan, ljubljana);
+    addPeep(jan, berlin);
 
     map.addLayer(markers);
   }
