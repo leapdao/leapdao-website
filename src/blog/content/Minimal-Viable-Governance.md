@@ -1,8 +1,7 @@
 ---
 template: post.html
 title: 'Introducing Minimal Viable Governance'
-date: 2018-10-08 10:50:00
-image: PARSECRocket.jpg
+date: 2018-12-25 10:50:00
 author:
   name: '@johba'
   twitter: '@johba'
@@ -41,15 +40,22 @@ Minimal Viable Governance assumes an open source development community or simila
 
 In the screenshot you see a page with the possible governance proposals that might be registered. The following governance parameters exist:
 
-<img src="/img/blog/MVG.jpg" alt="Governance Proposals">
+<img src="/img/blog/MVG.png" alt="Governance Proposals">
 
 **Upgrade block submission logic -** The logic that governs the submissions of blocks into the Plasma contract is defined here and can be changed.i.e., single operator Plasma chain could be updated to a set of PoS operators.
+
 **Minimum Transaction Gas -** The Plasma chain has its own fee market where gas is paid in ERC20 tokens instead of in Ether.
+
 **Epoch Length -** The amount of blocks that comprise an Epoch. Epochs are relevant for the operator of the Plasma chain.
+
 **Parent Block Interval -** The minimum distance of Plasma blocks in terms of Ethereum blocks.
 **Register Token -** The Plasma chain can color its transactions in any ERC20 token that exists on the main-net. The token must be registered before in can be deposited to the chain.
+
 **Upgrade Plasma Bridge -** This function switches out the implementation logic of the Bridge itself. This way new features or bug-fixes can be introduced.
+
 **Change Governance Process -** This function allows to switch to another governance process all together. This could be governance by token vote or holographic consensus.
+
+## Limitation and Outlook
 
 The LeapDAO community strives to launch a network with the governance process described above on the Ethereum main-net in January 2019. Once the network is established updates will be processed through Minimal Viable Governance to add features to the network.
 
