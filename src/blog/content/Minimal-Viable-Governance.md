@@ -17,6 +17,7 @@ description: An explainer of governance requirements for a public utility Plasma
  - **High transaction volume -** Dapps that require a transaction or user amount in the millions to be economically viable, like credit networks or social networks, are not feasible today.
  - **High deposit size on sidechains -** Decentralized exchanges hold considerable value as deposits and in their order books. These deposits would easily exceed the resource allocation of smaller sidechains, and hence a bribing attack would put the funds at risk. On the main-net decentralized exchanges are considerably hindered by the high cost of trade execution. 
 
+
  Helping the Ethereum network to onboard more use-cases and scale is our passion, and that is why we strive to deliver scalability as a public utility.
 
 
@@ -64,6 +65,7 @@ description: An explainer of governance requirements for a public utility Plasma
 
  - The proposal page is currently hosted, and hence needs to be trusted by the users. Instructions how to operate your own node and connect it to a local version of the proposals page will be published soon.
  - In later milestones, we will extend the only-transfer capabilities of the network to also run smart contracts. While exiting smart contract to the main-net follows the same process as for funds, it carries a higher cost for Dapps and users of the Dapps.
+
 
  Later versions of the Governance process will give users more choice to affect the proposals or even switch to another organization making proposals altogether. Read more about the roadmap in the upcoming blog posts and don’t hesitate to give feedback.
 

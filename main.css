@@ -202,6 +202,7 @@ h1 {
 
 .content ul,
 .content ol {
+  width: 80%;
   font-size: 2rem;
   line-height: 3rem;
   margin-top: 2rem;
