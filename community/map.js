@@ -74,7 +74,7 @@
     var prague = [50.08861, 14.42139];
     var seva = [44.6054, 33.5221];
     var hochi = [10.8231, 106.6297];
-    var offen = [48.4735, 7.9498];
+    var hanover = [52.3750, 9.7348];
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -123,7 +123,7 @@
     // addPeep(kosta, berlin);
     addPeep(johann, berlin);
     addPeep(helge, berlin);
-    addPeep(pinkiebell, offen);
+    addPeep(pinkiebell, hanover);
     addPeep(peara, hochi);
     addPeep(evgeni, prague);
     // addPeep(evgeni, berlin);
