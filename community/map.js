@@ -1,7 +1,7 @@
 (() => {
   function initMap() {
     // center of the map
-    var center = [45, 10];
+    var center = [35, 15];
 
     // Create the map
     var map = L.map('map').setView(center, 3);
