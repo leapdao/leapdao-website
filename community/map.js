@@ -55,6 +55,16 @@
       avatar: 'https://avatars1.githubusercontent.com/u/659301',
       url: 'https://github.com/johannbarbie'
     };
+    var pinkiebell = {
+      name: 'Pinkiebell',
+      avatar: 'https://avatars2.githubusercontent.com/u/40266861',
+      url: 'https://github.com/pinkiebell'
+    }
+    var peara = {
+      name: 'Vu Ngoc Quang',
+      avatar: 'https://avatars2.githubusercontent.com/u/24425403',
+      url: 'https://github.com/peara'
+    }
 
     var berlin = [52.504043, 13.393236];
     var grandRap = [42.9632, -85.6679];
@@ -63,6 +73,8 @@
     var ljubljana = [46.05, 14.51667];
     var prague = [50.08861, 14.42139];
     var seva = [44.6054, 33.5221];
+    var hochi = [10.8231, 106.6297];
+    var offen = [48.4735, 7.9498];
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -107,14 +119,16 @@
     addPeep(sunify, bratsk);
     addPeep(zobro, grandRap);
     addPeep(anton, moscow);
-    // addPeep(kosta, seva);
-    addPeep(kosta, berlin);
+    addPeep(kosta, seva);
+    // addPeep(kosta, berlin);
     addPeep(johann, berlin);
     addPeep(helge, berlin);
-    // addPeep(evgeni, prague);
-    addPeep(evgeni, berlin);
-    // addPeep(jan, ljubljana);
-    addPeep(jan, berlin);
+    addPeep(pinkiebell, offen);
+    addPeep(peara, hochi);
+    addPeep(evgeni, prague);
+    // addPeep(evgeni, berlin);
+    addPeep(jan, ljubljana);
+    // addPeep(jan, berlin);
 
     map.addLayer(markers);
   }
