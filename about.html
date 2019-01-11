@@ -2,52 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{{ page.title }} | LeapDAO</title>
-    <meta name="description" content="{{ page.description }}" />
-    <meta
-      name="keywords"
-      content="leap, blockchain, ethereum, plasma, scalability"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LeapDAO</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
     <meta
       property="og:title"
-      content="Leap DAO: delivering scalability as global public utility"
+      content="LeapDAO: delivering scalability as global public utility"
+    />
+    <meta
+      property="og:description"
+      content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://leapdao.org/" />
     <meta property="og:image" content="http://leapdao.org/img/og.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@leapdao" />
+    <meta
+      name="twitter:title"
+      content="delivering scalability as global public utility."
+    />
+    <meta
+      name="twitter:description"
+      content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
+    />
     <meta name="twitter:image" content="http://leapdao.org/img/og.jpg" />
-    {% if page.author %}
-    <meta name="twitter:creator" content="{{ page.author.twitter }}" />
-    {% endif %}
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta property="og:title" content="{{ page.title }}" />
-    {% if page.description %}
-    <meta name="twitter:description" content="{{ page.description }}" />
-    <meta property="og:description" content="{{ page.description }}" />
-    {% endif %}
 
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
     <div class="page">
-      <div class="blog-post">
-        <article class="content">
-          <header class="blog-post-header">
-            <h1>{{ page.title }}</h1>
-            <p>
-              {{ page.date | formatdate }} {% if page.authorLink %} by
-              {{ page.authorLink | safe }} {% elseif page.authorName %} by
-              {{ page.authorName }} {% endif %}
-            </p>
-          </header>
-
-          {{ page.body | markdown }}
-        </article>
+      <div class="content">
+        <header>
+          <h1 class="logo">LeapDAO</h1>
+          <p>
+            Ethereum, being the first world computer, has spurred
+            a&nbsp;cambrian explosion of
+            <span title="decentralized apps" style="cursor: help">dApps</span>.
+            Yet its capacity is limited&nbsp;&mdash; when gas prices surge,
+            high-transaction-volume use-cases and low-value transactions are
+            pushed off&nbsp;the&nbsp;chain.
+          </p>
+          <p>
+            LeapDAO exist to create and maintain an execution environment to
+            host these use-cases, by this increasing the capacity of Ethereum
+            and widening the scope of&nbsp;possible Dapps in the Ethereum
+            ecosystem.
+          </p>
+          <p>
+            As a Decentralized Adaptive Organization, we&nbsp;combine Holacracy
+            and Decentralized Organizations to&nbsp;build a&nbsp;global,
+            self-managing and purpose-driven community. We&nbsp;reward
+            contribution using bounties.
+          </p>
+        </header>
       </div>
+
       <menu class="menu">
         <ul>
           <li><a href="/">~</a></li>
@@ -76,6 +95,7 @@
           </li>
         </ul>
       </menu>
+
       <footer class="footer">
         <form
           id="mc-embedded-subscribe-form"
@@ -111,7 +131,6 @@
         </form>
       </footer>
     </div>
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -121,7 +140,7 @@
     >
       <defs>
         <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="35" result="blur" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
           <feColorMatrix
             in="blur"
             mode="matrix"
@@ -132,11 +151,11 @@
       </defs>
 
       <g filter="url(#goo)">
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
+        <circle cx="-30" cy="-30" r="30" />
+        <circle cx="-30" cy="-30" r="30" />
+        <circle cx="-30" cy="-30" r="30" />
+        <circle cx="-30" cy="-30" r="30" />
+        <circle cx="-30" cy="-30" r="30" />
       </g>
     </svg>
 
@@ -158,7 +177,7 @@
       </g>
     </svg>
 
-    <script src="/main.js" async></script>
+    <script src="main.js" async></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

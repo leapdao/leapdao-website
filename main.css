@@ -93,7 +93,7 @@ body {
 .menu ul {
   list-style: none;
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .menu li {
@@ -172,6 +172,10 @@ h1 {
   width: 100%;
 }
 
+.community .content header p {
+  margin-top: 4rem;
+}
+
 .content a {
   color: inherit;
   text-decoration: none;
@@ -217,6 +221,11 @@ h1 {
 }
 
 .content li + li {
+  margin-top: 1rem;
+}
+
+.content ol p,
+.content ul p {
   margin-top: 1rem;
 }
 
@@ -677,12 +686,12 @@ input:focus {
 }
 
 .content header .subtitle {
-  margin-top: 1rem;
+  margin-top: 2rem !important;
   font-weight: bold;
 }
 
 .community h1 {
-  font-size: 8rem;
+  /* font-size: 8rem; */
 }
 
 @media screen and (max-width: 900px) {
@@ -799,4 +808,11 @@ input:focus {
 
 .peeps-cluster img:not(:first-child) {
   margin-left: -10px;
+}
+
+.menu-icon-link {
+  border-bottom: 0 !important;
+}
+.menu-icon-link:hover {
+  background: none !important;
 }
