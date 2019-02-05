@@ -33,5 +33,5 @@ No matter if you are a cryptocurrency user or a developer, there is something fo
 - Check out [the documentation](http://docs.leapdao.org) on how to query the chain and send transactions. 
 
 
-If you are curious to know more about the project, read more about us at the [website](https://leapdao.org/) and our [twitter](https://twitter.com/leapdao). If you want to become involved in the project, [join our Slack](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform) — we are looking for like-minded people (not only developers ;)).
+If you are curious to know more about the project, read more about us on the [website](https://leapdao.org/) and our [twitter](https://twitter.com/leapdao). If you want to become involved in the project, [join our Slack](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform) — we are looking for like-minded people (not only developers ;)).
 
