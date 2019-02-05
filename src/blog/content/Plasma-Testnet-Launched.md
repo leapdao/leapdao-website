@@ -29,7 +29,7 @@ No matter if you are a cryptocurrency user or a developer, there is something fo
 
 ### For developers:
 - Request your [token to be registered](http://testnet.leapdao.org/registerToken) on the network. The token will receive a “color” and deposits and exits will be enabled for it.
-- Download and [synchronize a Plasma node](https://github.com/leapdao/leap-node), or use our infrastructure at http://node1.testnet.leapdao.org to query the API.
+- Download and [synchronize a Plasma node](https://github.com/leapdao/leap-node), or use our infrastructure at `http://node1.testnet.leapdao.org:8645` to query the [JSON RPC](https://docs.leapdao.org/json-rpc/overview/).
 - Check out [the documentation](http://docs.leapdao.org) on how to query the chain and send transactions. 
 
 
