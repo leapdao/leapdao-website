@@ -6,7 +6,7 @@ author:
   name: '@johba'
   twitter: '@johba'
   link: https://github.com/johannbarbie/
-description: Plasma Testnet Zeta launched on Rinkeby running Driftwood release.
+description: Our Plasma Testnet launched on Rinkeby running the Driftwood release. 🎉
 ---
 
 Today we are proud to reveal our first public deployment of a Plasma Network. Testnet Zeta has anchored its first Plasma block in the Rinkeby network on Friday and is since then available for the public to use and test. It runs the [0.5 Driftwood Release](https://test.leapdao.org/blog/Plasma-Roadmap/) of the leap-contracts and leap-node code and brings the following features:
