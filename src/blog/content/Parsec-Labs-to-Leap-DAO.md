@@ -2,7 +2,7 @@
 template: post.html
 title: 'From Parsec Labs to LeapDAO'
 date: 2018-10-31 10:50:00
-image: SpaceBlure.jpg
+emoji: 🥚
 author:
   name: '@johba'
   twitter: '@johba'
