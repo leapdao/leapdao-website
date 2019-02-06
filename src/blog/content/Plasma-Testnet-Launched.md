@@ -2,7 +2,7 @@
 template: post.html
 title: 'Plasma Testnet Launched'
 date: 2019-02-06 00:23:00
-image: testnet-og.png
+image: /img/testnet-og.png
 author:
   name: '@johba'
   twitter: '@johba'
