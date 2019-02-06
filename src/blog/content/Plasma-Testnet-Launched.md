@@ -10,16 +10,16 @@ author:
 description: Our Plasma Testnet launched on Rinkeby running the Driftwood release. 🎉
 ---
 
-Today we are proud to reveal our first public deployment of a Plasma Network. Testnet Zeta has anchored its first Plasma block in the Rinkeby network on Friday and is since then available for the public to use and test. It runs the [0.5 Driftwood Release](https://test.leapdao.org/blog/Plasma-Roadmap/) of the leap-contracts and leap-node code and brings the following features:
+We are proud to reveal our first public deployment of a Plasma Network. Testnet Zeta has anchored its first Plasma block in the Rinkeby network on Friday and is since then available for the public to use and test. It runs the [0.5 Driftwood Release](https://test.leapdao.org/blog/Plasma-Roadmap/) of the [leap-contracts](https://github.com/leapdao/leap-contracts/releases/tag/v0.2.2) and [leap-node](https://github.com/leapdao/leap-node) code and brings the following features:
 
-- A More Viable Plasma network built on Tendermint.
+- A [More Viable Plasma](https://www.learnplasma.org/en/learn/mvp.html) network built on [Tendermint](https://tendermint.com/).
 - Single Plasma operator run by LeapDAO community.
 - Ability to transfer ERC20/ERC721 tokens.
-- Contract upgrades secured by Minimal Viable Governance.
+- Contract upgrades secured by [Minimal Viable Governance](/blog/Minimal-Viable-Governance/).
 
-The 0.5 Driftwood Release is the first step on the LeapDAO roadmap to launch a public Plasma network supporting provable computations. You can read more about our development proposition in [the whitepaper](https://docs.google.com/document/d/1vStTjqvqZGyiI5AVtpwCIMlHFnzC_4bbixsCfs27-M8).
+The 0.5 Driftwood Release is the first step on the [LeapDAO roadmap](https://test.leapdao.org/blog/Plasma-Roadmap/) to launch a public Plasma network supporting provable computations. You can read more about our development proposition in [the whitepaper](https://docs.google.com/document/d/1vStTjqvqZGyiI5AVtpwCIMlHFnzC_4bbixsCfs27-M8).
 
-No matter if you are a cryptocurrency user or a developer, there is something for you in this release:
+The release is packed with goodies for blockchain users and Dapp developers. Here is a short list of features:
 
 ### For users:
 - Get some tokens from the [testnet faucet](http://testnet.leapdao.org/faucet).
