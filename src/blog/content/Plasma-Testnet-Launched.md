@@ -24,7 +24,7 @@ The release is packed with goodies for blockchain users and dApp developers. Her
 ### For users:
 - Get some tokens from the [testnet faucet](http://testnet.leapdao.org/faucet).
 - [Deposit and transfer](http://testnet.leapdao.org/wallet) your tokens. Transfers will take place on the Leap Network, in a free and fast manner. You can also try out our [mobile wallet alpha](https://github.com/leapdao/mobile-plasma-wallet).
-- Download and [synchronize a Plasma node](https://github.com/leapdao/leap-node) to check the validity of the chain and security of your funds.
+- Download and [synchronize a Plasma node](https://github.com/leapdao/leap-node) to check the validity of the chain and the security of your funds.
 - Keep an eye on [recent governance proposals](http://testnet.leapdao.org/governance) that may change security assumptions.
 - [Exit](http://testnet.leapdao.org/wallet) your tokens back to the root chain.
 
