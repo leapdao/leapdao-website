@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'Plasma Testnet Launched'
+title: 'Plasma Testnet Launched!'
 date: 2019-02-06 00:23:00
 image: /img/testnet-og.png
 author:
