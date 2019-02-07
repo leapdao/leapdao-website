@@ -15,10 +15,15 @@
       content="Leap DAO: delivering scalability as global public utility"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://leapdao.org/img/og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@leapdao" />
-    <meta name="twitter:image" content="http://leapdao.org/img/og.jpg" />
+    {% if page.image %}
+    <meta property="og:image" content="https://leapdao.org{{ page.image }}" />
+    <meta name="twitter:image" content="https://leapdao.org{{ page.image }}" />
+    {% else %}
+    <meta property="og:image" content="https://leapdao.org/img/og.jpg" />
+    <meta name="twitter:image" content="https://leapdao.org/img/og.jpg" />
+    {% endif %}
     {% if page.author %}
     <meta name="twitter:creator" content="{{ page.author.twitter }}" />
     {% endif %}
