@@ -13,7 +13,7 @@ description: Our Plasma Testnet launched on Rinkeby running the Driftwood releas
 We are proud to reveal our first public deployment of a Plasma Network. Testnet Zeta has anchored its first Plasma block in the Rinkeby network on Friday, and since then has become available for the public use and testing. It runs the [0.5 Driftwood Release](https://test.leapdao.org/blog/Plasma-Roadmap/) of the [leap-contracts](https://github.com/leapdao/leap-contracts/releases/tag/v0.2.2) and [leap-node](https://github.com/leapdao/leap-node) code, and brings the following features:
 
 - A [More Viable Plasma](https://www.learnplasma.org/en/learn/mvp.html) network built on [Tendermint](https://tendermint.com/).
-- Single Plasma operator run by LeapDAO community.
+- Single Plasma operator run by the LeapDAO community.
 - Ability to transfer ERC20/ERC721 tokens.
 - Contract upgrades secured by [Minimal Viable Governance](/blog/Minimal-Viable-Governance/).
 
