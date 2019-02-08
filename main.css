@@ -78,6 +78,25 @@ body {
   animation: loader-animation 1s infinite ease-in-out alternate-reverse;
 }
 
+.medals {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.medals a,
+.medals a:hover {
+  margin-right: 50px;
+  margin-top: 30px;
+  flex-shrink: 0;
+  background: 0 !important;
+  border: 0 !important;
+}
+
+.medals a:last-child {
+  margin-right: 0;
+}
+
 .menu {
   font-size: 2rem;
   position: absolute;
