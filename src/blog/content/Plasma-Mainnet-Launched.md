@@ -2,7 +2,7 @@
 template: post.html
 title: 'Plasma Mainnet Launched!'
 date: 2019-02-13 16:23:00
-image: /img/testnet-og.png
+image: /img/mainnet-og.png
 author:
   name: '@kohola'
   twitter: '@kohola71'
