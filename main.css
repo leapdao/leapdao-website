@@ -256,7 +256,7 @@ h1 {
 
 .content table {
   font-size: 2rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
   border-collapse: collapse;
 }
 
@@ -478,7 +478,7 @@ input:focus {
 
   .content header p {
     font-size: 2.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     line-height: 4rem;
   }
 
@@ -487,7 +487,7 @@ input:focus {
   .content ol {
     font-size: 2rem;
     line-height: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .content ol ol,
@@ -504,7 +504,7 @@ input:focus {
 
   .content table {
     font-size: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     border-collapse: collapse;
   }
 
