@@ -61,3 +61,10 @@ We’d like to take this opportunity to introduce ourselves. You might have hear
 Aspiring to work as a Decentralized Adaptive Organization, we combine the holacracy and decentralized organizations models to build a global, self-managing and purpose-driven community. We reward contribution using bounties. You can find out more about the way we collaborate [here](https://leapdao.org/blog/PARSEC-Labs-Holacracy-Structure/) (slightly outdated). In 2018 we were lucky to receive some external funding to sustain the project, including a $50,000 grant from the [Ethereum Foundation](/blog/ethereum-foundation-scaling-grant/). We also joined [Status Incubate](https://our.status.im/leapdao-to-join-incubate-family-as-our-fourth-incubatee/) as one of the accelerated projects. 
 
 We would love 💛to see more of you getting involved in LeapDAO. We are looking for like-minded people (not only developers!). To get started, [join our Slack community](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform).
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform" target="_blank" rel="noopener noreferrer" class="button button-primary button-compact">
+  Join our Slack community
+</a><br/><br/>
+<a href="https://github.com/orgs/leapdao/projects/6/" target="_blank" rel="noopener noreferrer" class="button button-primary button-compact">
+  View open bounties
+</a><br/>
