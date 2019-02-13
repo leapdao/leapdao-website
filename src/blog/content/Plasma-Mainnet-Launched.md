@@ -14,6 +14,12 @@ description: LeapDAO took a leap to the Ethereum mainnet. 🎉
 
 We’ve been on a roll lately and are super happy to announce that LeapDAO took a leap to the mainnet! Our community is now operating a More Viable Plasma chain on the Ethereum mainnet 🎉. If you are a project creating digital assets, we invite you to [register your ERC20 or ERC721](https://mainnet.leapdao.org/registerToken), which will be transferable faster and cheaper on the Plasma chain. For developers, we provide a [token faucet](https://mainnet.leapdao.org/faucet) so that you can test transfers, exits and deposits.
 
+<p>
+  <a href="https://mainnet.leapdao.org" target="_blank" rel="noopener noreferrer" class="button button-primary">
+    Try it out
+  </a>
+</p>
+
 ## The Plasma Ecosystem
 
 The More Viable Plasma design is one of the dialects introduced by the research community organized around the Plasma implementers call, lead by Karl Floersch. It is a non-custodial sidechain that offers security of funds - under the assumption that users constantly monitor the chain, and exit their funds within a specific duration if they see irregularities. If you want to learn how MoreVP compares to Plasma Cash and Plasma Prime, please have a look at [learnplasma](https://learnplasma.org).
