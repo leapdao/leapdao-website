@@ -11,7 +11,7 @@ description: LeapDAO took a leap to the Ethereum mainnet. 🎉
 ---
 
 
-We’ve been on a roll lately and are super happy to announce that LeapDAO took a leap to the mainnet! Our community is now operating a More Viable Plasma chain on the Ethereum mainnet 🎉. If you are a project creating digital assets, we invite you to [register your ERC20 or ERC721](https://mainnet.leapdao.org/registerToken), which will be transferable faster and cheaper on the Plasma chain. For developers we provide a [token faucet](https://mainnet.leapdao.org/faucet) so that you can test transfers, exits and deposits.
+We’ve been on a roll lately and are super happy to announce that LeapDAO took a leap to the mainnet! Our community is now operating a More Viable Plasma chain on the Ethereum mainnet 🎉. If you are a project creating digital assets, we invite you to [register your ERC20 or ERC721](https://mainnet.leapdao.org/registerToken), which will be transferable faster and cheaper on the Plasma chain. For developers, we provide a [token faucet](https://mainnet.leapdao.org/faucet) so that you can test transfers, exits and deposits.
 
 ## The Plasma Ecosystem
 
