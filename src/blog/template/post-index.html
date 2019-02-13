@@ -45,8 +45,8 @@
             <a href="/blog{{ post.path }}/">{{ post.title }}</a>
           </h2>
           <p>
-            {{ post.date | formatdate }} {% if post.authorName %} by
-            {{ post.authorName }} {% endif %}
+            {{ post.date | formatdate }} 
+            {% if post.authors %} by {{ post.authors | safe }} {% endif %}
           </p>
         </div>
         {% endfor %}

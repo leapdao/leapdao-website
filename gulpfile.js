@@ -107,28 +107,31 @@ gulp.task('blog', () => {
             return collection.sort((a, b) => b.date - a.date);
           });
 
-          const authorLink = function(pageData) {
-            if (typeof pageData.author === 'string') return '';
-            const name = authorName(pageData);
-            if (!name) return '';
-            const link = pageData.author.twitter
-              ? `https://twitter.com/${pageData.author.twitter}`
-              : pageData.author.link;
-            if (!link) return '';
-
-            return `<a href=\"${link}\">${name}</a>`;
+          const authorLink = (author) => {
+            if (author.twitter) return `https://twitter.com/${author.twitter}`;
+            return author.link;
           };
 
-          const authorName = function(pageData) {
+          const authorToString = (author) => {
+            const link = authorLink(author);
+            if (!link) return author.name;
+            
+            return `<a href=\"${link}\">${author.name}</a>`;
+          };
+
+          const authors = (pageData) => {
             if (!pageData.author) return '';
-            return typeof pageData.author === 'string'
-              ? pageData.author
-              : pageData.author.name;
-          };
+            if (typeof pageData.author === 'string') {
+              return pageData.author;
+            }
+            if (pageData.author.length) {
+              return pageData.author.map(authorToString).join(', ');
+            }
+            return authorToString(pageData.author);
+          }
 
           if (tmplData.page.template == 'post.html') {
-            tmplData.page.authorName = authorName(tmplData.page);
-            tmplData.page.authorLink = authorLink(tmplData.page);
+            tmplData.page.authors = authors(tmplData.page);
           }
 
           return env.render(tmplName, tmplData);
