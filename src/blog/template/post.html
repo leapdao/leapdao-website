@@ -44,9 +44,8 @@
           <header class="blog-post-header">
             <h1>{{ page.title }}</h1>
             <p>
-              {{ page.date | formatdate }} {% if page.authorLink %} by
-              {{ page.authorLink | safe }} {% elseif page.authorName %} by
-              {{ page.authorName }} {% endif %}
+              {{ page.date | formatdate }}
+              {% if page.authors %} by {{ page.authors | safe }} {% endif %}
             </p>
           </header>
 
