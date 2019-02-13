@@ -42,7 +42,7 @@ The mainnet deployment is operating [the Driftwood release](/blog/Plasma-Roadmap
 - **CHALLENGE_DURATION -** The minimum time that an exit 
 - **PROPOSAL_TIME -**  The duration of the governance proposals before applying to the network. 
 
-In the future the community will introduce contract upgrades through [Minimal Viable Governance](/blog/Minimal-Viable-Governance/). Users not agreeing with governance proposals will have 3.5 days to exit the chain before these proposals become active. Please have a look at [our roadmap](/blog/Plasma-Roadmap/) to see where the journey is going.
+In the future, the community will introduce contract upgrades through [Minimal Viable Governance](/blog/Minimal-Viable-Governance/). Users not agreeing with governance proposals will have 3.5 days to exit the chain before these proposals become active. Please have a look at [our roadmap](/blog/Plasma-Roadmap/) to see where the journey is going.
 
 ## The LeapDAO Community
 
