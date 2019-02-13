@@ -22,7 +22,7 @@ We’ve been on a roll lately and are super happy to announce that LeapDAO took 
 
 ## The Plasma Ecosystem
 
-The More Viable Plasma design is one of the dialects introduced by the research community organized around the Plasma implementers call, lead by Karl Floersch. It is a non-custodial sidechain that offers security of funds - under the assumption that users constantly monitor the chain, and exit their funds within a specific duration if they see irregularities. If you want to learn how MoreVP compares to Plasma Cash and Plasma Prime, please have a look at [learnplasma](https://learnplasma.org).
+The More Viable Plasma design is one of the dialects introduced by the research community organized around the Plasma implementers call, lead by Karl Floersch. It is a non-custodial child chain that offers security of funds - under the assumption that users constantly monitor the chain, and exit their funds within a specific duration if they see irregularities. If you want to learn how MoreVP compares to Plasma Cash and Plasma Prime, please have a look at [learnplasma](https://learnplasma.org).
 
 We sometimes find our Plasma implementation compared to other projects like [OmiseGo](https://github.com/omisego/plasma-mvp), [The Matter](https://github.com/matterinc) and others in a competitive manner. It is crucial to understand that the designs are used for different purposes and stand in no competition to each other. 
 - OmiseGo is utilizing Plasma in a single dApp setup - they create an environment to operate their own transfer network and a decentralized exchange, and are not targeting independent developers. 
