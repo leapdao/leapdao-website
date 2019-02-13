@@ -40,8 +40,8 @@ The mainnet deployment is operating [the Driftwood release](/blog/Plasma-Roadmap
 
 - **EXIT_STAKE -** A stake that needs to be paid on the mainnet to register a UTXO (tokens on Plasma) for exit.
 - **EXIT_DURATION -** The maximum duration that exits are held for challenge before being paid out.
-- **CHALLENGE_DURATION -** The minimum time that an exit 
-- **PROPOSAL_TIME -**  The duration of the governance proposals before applying to the network. 
+- **CHALLENGE_DURATION -** The minimum time that an exit held for challenge before being paid out.
+- **PROPOSAL_TIME -**  The duration of the governance proposals hold off before applying to the network. 
 
 In the future, the community will introduce contract upgrades through [Minimal Viable Governance](/blog/Minimal-Viable-Governance/). Users not agreeing with governance proposals will have 3.5 days to exit the chain before these proposals become active. Please have a look at [our roadmap](/blog/Plasma-Roadmap/) to see where the journey is going.
 
@@ -54,10 +54,10 @@ We’d like to take this opportunity to introduce ourselves. You might have hear
 
 [LeapDAO GitHub Organization](https://github.com/leapdao)
 - 40+ repositories 
-- 8 fulltime contributors
+- 8 regular contributors
 - 10+ additional developers in the extended circle
 - 60+ members in #d_for_development channel in [Slack](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform)
 
-Aspiring to work as a Decentralized Adaptive Organization, we combine the holacracy and decentralized organizations models to build a global, self-managing and purpose-driven community. We reward contribution using bounties. You can find out more about the way we collaborate [here](https://leapdao.org/blog/PARSEC-Labs-Holacracy-Structure/). In 2018 we were lucky to receive some external funding to sustain the project, including a EUR 50,000 grant from the [Ethereum Foundation](/blog/ethereum-foundation-scaling-grant/). We also joined [Status Incubate](https://our.status.im/leapdao-to-join-incubate-family-as-our-fourth-incubatee/) as one of the accelerated projects. 
+Aspiring to work as a Decentralized Adaptive Organization, we combine the holacracy and decentralized organizations models to build a global, self-managing and purpose-driven community. We reward contribution using bounties. You can find out more about the way we collaborate [here](https://leapdao.org/blog/PARSEC-Labs-Holacracy-Structure/) (slightly outdated). In 2018 we were lucky to receive some external funding to sustain the project, including a €50,000 grant from the [Ethereum Foundation](/blog/ethereum-foundation-scaling-grant/). We also joined [Status Incubate](https://our.status.im/leapdao-to-join-incubate-family-as-our-fourth-incubatee/) as one of the accelerated projects. 
 
 We would love 💛to see more of you getting involved in LeapDAO. We are looking for like-minded people (not only developers!). To get started, [join our Slack community](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform).
