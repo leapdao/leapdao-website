@@ -4,9 +4,8 @@ title: 'Plasma Mainnet Launched!'
 date: 2019-02-13 16:23:00
 image: /img/mainnet-og.png
 author:
-  name: '@kohola'
-  twitter: '@kohola71'
-  link: https://github.com/kohola71/
+  name: '@kohola, @johba'
+  twitter: '@koholaa'
 description: LeapDAO took a leap to the Ethereum mainnet. 🎉
 ---
 
