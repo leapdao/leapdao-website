@@ -5,9 +5,9 @@ date: 2019-02-13 16:23:00
 image: /img/mainnet-og.png
 author:
   - name: '@kohola'
-    twitter: '@koholaa'
+    twitter: 'koholaa'
   - name: '@johba'
-    twitter: '@johba'
+    twitter: 'johba'
 description: LeapDAO took a leap to the Ethereum mainnet. 🎉
 ---
 
