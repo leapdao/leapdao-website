@@ -1,10 +1,11 @@
 (() => {
   function initMap() {
     // center of the map
-    var center = [35, 15];
+    var center = [35, 4];
 
     // Create the map
-    var map = L.map('map').setView(center, 2);
+    var zoomLevel = (window.innerWidth < 900) ? 1 : 3;
+    var map = L.map('map').setView(center, zoomLevel);
     map.scrollWheelZoom.disable();
 
     // Set up the OSM layer
@@ -124,7 +125,7 @@
         iconUrl: peep.avatar,
         iconSize: [25, 25], // size of the icon
         shadowSize: [0, 0], // size of the shadow
-        iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
+        iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0], // the same for the shadow
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
       });

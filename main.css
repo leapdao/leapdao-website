@@ -661,7 +661,7 @@ input:focus {
 .map {
   position: relative;
   width: 100vw;
-  height: 400px;
+  height: 450px;
   margin-top: 5rem;
   margin-left: -10rem;
 }
