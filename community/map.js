@@ -75,11 +75,15 @@
       avatar: 'https://avatars1.githubusercontent.com/u/22390515',
       url: 'https://github.com/sounak98'
     }
-
     var kohola71 = {
       name: 'Ola',
       avatar: 'https://avatars3.githubusercontent.com/u/4106590',
       url: 'https://github.com/kohola71'
+    }
+    var nanspro = {
+      name: 'nanspro',
+      avatar: 'https://avatars0.githubusercontent.com/u/24641089',
+      url: 'https://github.com/nanspro'
     }
 
     var berlin = [52.504043, 13.393236];
@@ -149,6 +153,7 @@
     // addPeep(jan, berlin);
     addPeep(stevenPearce, travel);
     addPeep(sounakPradhan, hyderabad);
+    addPeep(nanspro, hyderabad);
     addPeep(kohola71, berlin);
 
     map.addLayer(markers);
