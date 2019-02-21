@@ -70,6 +70,17 @@
       avatar: 'https://avatars0.githubusercontent.com/u/36509712',
       url: 'https://github.com/StevenJNPearce'
     }
+    var sounakPradhan = {
+      name: 'Sounak Pradhan',
+      avatar: 'https://avatars1.githubusercontent.com/u/22390515',
+      url: 'https://github.com/sounak98'
+    }
+
+    var kohola71 = {
+      name: 'Ola',
+      avatar: 'https://avatars3.githubusercontent.com/u/4106590',
+      url: 'https://github.com/kohola71'
+    }
 
     var berlin = [52.504043, 13.393236];
     var grandRap = [42.9632, -85.6679];
@@ -81,6 +92,7 @@
     var hochi = [10.8231, 106.6297];
     var hanover = [52.3750, 9.7348];
     var travel = [5.9788, 116.0753];
+    var hyderabad = [17.4481570, 78.3489480];
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -136,6 +148,8 @@
     addPeep(jan, ljubljana);
     // addPeep(jan, berlin);
     addPeep(stevenPearce, travel);
+    addPeep(sounakPradhan, hyderabad);
+    addPeep(kohola71, berlin);
 
     map.addLayer(markers);
   }
