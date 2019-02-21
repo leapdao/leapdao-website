@@ -90,7 +90,8 @@
     var grandRap = [42.9632, -85.6679];
     var bratsk = [56.16667, 101.61667];
     var moscow = [55.75583, 37.61778];
-    var ljubljana = [36.1699, -115.1398];
+    var ljubljana = [46.05, 14.51667];
+    var vegas = [36.1699, -115.1398];
     var prague = [50.08861, 14.42139];
     var seva = [44.6054, 33.5221];
     var hochi = [10.8231, 106.6297];
@@ -149,7 +150,8 @@
     addPeep(peara, hochi);
     addPeep(evgeni, prague);
     // addPeep(evgeni, berlin);
-    addPeep(jan, ljubljana);
+    addPeep(jan, vegas);
+    //addPeep(jan, ljubljana);
     // addPeep(jan, berlin);
     addPeep(stevenPearce, travel);
     addPeep(sounakPradhan, hyderabad);
