@@ -76,7 +76,7 @@
       url: 'https://github.com/sounak98'
     }
     var kohola71 = {
-      name: 'Ola',
+      name: 'Ola Kohut',
       avatar: 'https://avatars3.githubusercontent.com/u/4106590',
       url: 'https://github.com/kohola71'
     }
