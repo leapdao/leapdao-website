@@ -4,7 +4,7 @@
     var center = [35, 15];
 
     // Create the map
-    var map = L.map('map').setView(center, 3);
+    var map = L.map('map').setView(center, 2);
     map.scrollWheelZoom.disable();
 
     // Set up the OSM layer
@@ -65,16 +65,39 @@
       avatar: 'https://avatars2.githubusercontent.com/u/24425403',
       url: 'https://github.com/peara'
     }
+    var stevenPearce = {
+      name: 'Steven Pearce',
+      avatar: 'https://avatars0.githubusercontent.com/u/36509712',
+      url: 'https://github.com/StevenJNPearce'
+    }
+    var sounakPradhan = {
+      name: 'Sounak Pradhan',
+      avatar: 'https://avatars1.githubusercontent.com/u/22390515',
+      url: 'https://github.com/sounak98'
+    }
+    var kohola71 = {
+      name: 'Ola Kohut',
+      avatar: 'https://avatars3.githubusercontent.com/u/4106590',
+      url: 'https://github.com/kohola71'
+    }
+    var nanspro = {
+      name: 'nanspro',
+      avatar: 'https://avatars0.githubusercontent.com/u/24641089',
+      url: 'https://github.com/nanspro'
+    }
 
     var berlin = [52.504043, 13.393236];
     var grandRap = [42.9632, -85.6679];
     var bratsk = [56.16667, 101.61667];
     var moscow = [55.75583, 37.61778];
     var ljubljana = [46.05, 14.51667];
+    var vegas = [36.1699, -115.1398];
     var prague = [50.08861, 14.42139];
     var seva = [44.6054, 33.5221];
     var hochi = [10.8231, 106.6297];
     var hanover = [52.3750, 9.7348];
+    var travel = [5.9788, 116.0753];
+    var hyderabad = [17.4481570, 78.3489480];
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -99,7 +122,7 @@
     function addPeep(peep, coords) {
       var icon = L.icon({
         iconUrl: peep.avatar,
-        iconSize: [20, 20], // size of the icon
+        iconSize: [25, 25], // size of the icon
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [10, 10], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0], // the same for the shadow
@@ -127,8 +150,13 @@
     addPeep(peara, hochi);
     addPeep(evgeni, prague);
     // addPeep(evgeni, berlin);
-    addPeep(jan, ljubljana);
+    addPeep(jan, vegas);
+    //addPeep(jan, ljubljana);
     // addPeep(jan, berlin);
+    addPeep(stevenPearce, travel);
+    addPeep(sounakPradhan, hyderabad);
+    addPeep(nanspro, hyderabad);
+    addPeep(kohola71, berlin);
 
     map.addLayer(markers);
   }
