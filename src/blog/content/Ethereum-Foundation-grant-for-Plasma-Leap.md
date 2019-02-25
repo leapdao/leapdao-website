@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'Ethereum Foundation grant for "Plasma Leap"'
+title: 'EF grant for Plasma Leap'
 date: 2019-02-25 16:23:00
 emoji: 💰
 author:
