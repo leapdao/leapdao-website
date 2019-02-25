@@ -2,7 +2,7 @@
 template: post.html
 title: 'Ethereum Foundation grant for "Plasma Leap"'
 date: 2019-02-25 16:23:00
-image: /img/grant-og.png
+emoji: 💰
 author:
   - name: '@kohola'
     twitter: 'koholaa'
