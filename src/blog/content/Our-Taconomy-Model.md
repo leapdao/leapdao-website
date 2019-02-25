@@ -1,8 +1,8 @@
 ---
 template: post.html
 title: 'Our Taconomy Model'
+emoji: 🌮
 date: 2018-05-31 00:23:00
-image: SoMuchTacos.jpg
 description: PARSEC Labs internal economy model using HeyTaco chat bot
 ---
 

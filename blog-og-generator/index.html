@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @font-face {
+        font-family: 'emo';
+        src: url('apple-emoji.ttf') format('truetype');
+      }
+
+      @font-face {
+        font-family: 'chi';
+        src: url('chivo-regular.ttf') format('truetype');
+      }
+
+      @font-face {
+        font-family: 'chi';
+        font-weight: 900;
+        src: url('chivo-black.ttf') format('truetype');
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: 'chi';
+        text-align: center;
+      }
+
+      header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 55%;
+        transform: translate(0, -50%);
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1,
+      h2,
+      .emoji {
+        position: relative;
+        z-index: 1;
+      }
+
+      .emoji {
+        font-family: 'emo';
+        font-size: 130px;
+        line-height: 1;
+        text-align: center;
+        margin-top: -120px;
+      }
+
+      h1 {
+        font-weight: 900;
+        font-size: 164px;
+      }
+
+      h2 {
+        font-size: 60px;
+        font-weight: normal;
+        padding: 0 100px;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="emoji"></div>
+      <h1>LeapDAO</h1>
+      <h2></h2>
+      <img src="logo.svg" width="450" alt="" />
+    </header>
+    <script>
+      const hash = location.hash.replace('#', '');
+      const params = hash
+        .split('&')
+        .map(s => s.split('='))
+        .reduce(
+          (o, [key, value]) =>
+            Object.assign(o, {
+              [key]: decodeURIComponent(value)
+            }),
+          {}
+        );
+      document.querySelector('.emoji').innerHTML = params.emoji || '&nbsp;';
+      document.querySelector('h2').innerHTML = params.title || '';
+    </script>
+  </body>
+</html>

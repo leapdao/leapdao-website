@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="246px" height="249px" viewBox="0 0 246 249" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M89.5476787,0.0756367448 C112.099383,0.0756367448 130.301878,9.85321223 158.827333,25.2410386 C187.352789,40.628865 225.07323,51.0488701 238.884902,87.4449351 C252.696574,123.841 245.755196,151.964557 218.455866,192.335965 C191.156536,232.707372 167.102143,248.612347 130.301878,248.612347 C93.5016128,248.612347 76.9440904,232.789837 41.8114326,192.335965 C6.67877477,151.882093 2.14563786,133.021308 0.515289248,100.833213 C-1.11505937,68.6451188 14.092119,40.5340247 29.5115587,23.925695 C44.9309985,7.31736529 66.9959747,0.0756367448 89.5476787,0.0756367448 Z" id="path-1"></path>
+        <filter x="-37.9%" y="-37.9%" width="175.8%" height="175.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="30.0139509" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-37.9%" y="-37.9%" width="175.8%" height="175.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="30.0139509" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-39.1%" y="-39.1%" width="178.2%" height="178.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="30.0139509" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-37.9%" y="-37.9%" width="175.8%" height="175.8%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="30.0139509" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-39.1%" y="-39.1%" width="178.2%" height="178.2%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="30.0139509" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="leapdao" mask="url(#mask-2)" fill-rule="nonzero">
+                <g transform="translate(-63.000000, -61.000000)" id="Oval">
+                    <circle fill="#00FFAA" filter="url(#filter-3)" cx="119.589484" cy="118.836117" r="118.750138"></circle>
+                    <circle fill="#00FFAA" filter="url(#filter-4)" cx="251.410516" cy="231.163883" r="118.750138"></circle>
+                    <circle fill="#FFFF00" filter="url(#filter-5)" cx="144.589484" cy="208.836117" r="115.158735"></circle>
+                    <circle fill="#FFFF00" filter="url(#filter-6)" cx="208.589484" cy="288.836117" r="118.750138"></circle>
+                    <circle fill="#00FFAA" filter="url(#filter-7)" cx="334.589484" cy="148.836117" r="115.158735"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
