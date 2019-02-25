@@ -193,11 +193,11 @@ gulp.task('bounties', () => {
   });
 });
 
-gulp.task('coc', () => {
+gulp.task('coc', (cb) => {
   if (!fs.existsSync('coc')) {
     fs.mkdirSync('coc');
   }
-  return pageTask(files.coc, 'coc/index.html', {
+  cb(pageTask(files.coc, 'coc/index.html', {
     title: 'LeapDAO Code Of Conduct',
     menu: [
       { url: '/', title: '~' },
@@ -205,7 +205,7 @@ gulp.task('coc', () => {
       { url: '/community', title: 'Community' },
       { url: '/bounties', title: 'Bounties' }
     ]
-  });
+  }));
 });
 
 // gulp.task('critical:blog', (cb) => {
@@ -227,7 +227,7 @@ gulp.task('coc', () => {
 //   }, 100);
 // });
 
-gulp.task('dev', ['blog'], () => {
+gulp.task('dev', gulp.parallel(['blog'], () => {
   watching = true;
   livereload.listen();
 
@@ -235,6 +235,6 @@ gulp.task('dev', ['blog'], () => {
   watch(files.js, batch((events, done) => gulp.start('js', done)));
   watch(files.html, batch((events, done) => gulp.start('html', done)));
   watch(files.blog, batch((events, done) => gulp.start('blog', done)));
-});
+}));
 
-gulp.task('default', ['blog', 'blog:og', 'bounties', 'coc']);
+gulp.task('default', gulp.series('blog', 'blog:og', 'coc'));
