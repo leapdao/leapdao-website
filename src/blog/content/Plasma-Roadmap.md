@@ -10,7 +10,9 @@ author:
 description: The Roadmap from More Viable Plasma to Plasma Leap.
 ---
 
-LeapDAO’s purpose is to deliver layer-2 blockchain scalability as a global public utility. Specifically, we want layer-2 scaling infrastructure to be as easily and openly usable for developers as the mainnet is today. Developing and using dApps on Plasma, a framework for incentivized and enforced smart contract execution, should be fast and seamless.
+LeapDAO’s purpose is to deliver layer-2 blockchain scalability as a global public utility.
+
+Specifically, we want layer-2 scaling infrastructure to be as easily and openly usable for developers as the mainnet is today. Developing and using dApps on Plasma, a framework for incentivized and enforced smart contract execution, should be fast and seamless.
 
 Achieving such an ambitious goal with the [tiny development community](https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform) that composes LeapDAO today requires effective coordination and small incremental steps to get there. This post will introduce the milestones that we defined: from launching Plasma on mainnet to a fully-fledged censorship resistant, smart contract executing child chain that is supposed to scale Ethereum and increase its usability.
 
