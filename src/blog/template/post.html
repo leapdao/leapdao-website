@@ -43,13 +43,15 @@
         <article class="content">
           <header class="blog-post-header">
             <h1>{{ page.title }}</h1>
+          </header>
+
+          {{ page.body | markdown }}
+          <footer>
             <p>
               {{ page.date | formatdate }}
               {% if page.authors %} by {{ page.authors | safe }} {% endif %}
             </p>
-          </header>
-
-          {{ page.body | markdown }}
+          </footer>
         </article>
       </div>
       <menu class="menu">
