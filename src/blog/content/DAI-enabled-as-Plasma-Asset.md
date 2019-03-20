@@ -17,7 +17,7 @@ The Ethereum community could experience the potential of DAI first hand during E
 
 Being big fans of DAI token ourselves, last week we enabled running DAI on Plasma chain, and the [first plasma DAI transaction occurred on our mainnet](https://twitter.com/leapdao/status/1105791584531087360).
 
-<img src="/img/blog/daiTx.png" alt="Plasma Roadmap">
+<img src="/img/blog/daiTx.png" alt="First ever Plasma DAI transfer on LeapDAO mainnet">
 
 Layer 2 scalability solutions create greater network security than sidechain solutions. Moreover, the advantage of executing the DAI transactions on a layer 2 solution such as Plasma - unlike in the case of simple sidechains such as POA’s xDAI chain - is the fact that wallet operators can benefit from the market making opportunity and create exit markets thanks to fast withdrawals. Even though in layer 2 exit duration is longer than on sidechains, wallet operators can think of business models to provide services to the users as they off board them to the mainnet. In general, utilisation of layer 2 solutions could prove essential in achieving mass adoption, as users will find a fast and more seamless experience when enrolling in decentralized services.
 
