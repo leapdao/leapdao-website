@@ -17,7 +17,8 @@ Being big fans of DAI token ourselves, last week we enabled running DAI on Plasm
 
 <img src="/img/blog/daiTx.png" alt="Plasma Roadmap">
 
-The advantage of executing these DAI transactions on a layer 2 solutions like Plasma - unlike in the case of simple sidechains such as POA’s xDAI chain - is the fact that wallet operators can benefit from the market making opportunity and create exit markets thanks to fast withdrawals. Even though in layer 2 exit duration is longer than on sidechains, wallet operators can think of business models to provide services to the users as they off board them to the mainnet. Moreover, layer 2 scalability solutions create greater network security than sidechain solutions. Utilisation of layer 2 solutions could prove essential in achieving mass adoption, as users will find a fast and more seamless experience when enrolling in decentralized services. 
+Layer 2 scalability solutions create greater network security than sidechain solutions. Moreover, the advantage of executing the DAI transactions on a layer 2 solution such as Plasma - unlike in the case of simple sidechains such as POA’s xDAI chain - is the fact that wallet operators can benefit from the market making opportunity and create exit markets thanks to fast withdrawals. Even though in layer 2 exit duration is longer than on sidechains, wallet operators can think of business models to provide services to the users as they off board them to the mainnet. In general, utilisation of layer 2 solutions could prove essential in achieving mass adoption, as users will find a fast and more seamless experience when enrolling in decentralized services. 
+
 
 We’d like to invite hackers and wallet operators to build on top of Plasma DAI or pDAI with our simple [Ethereum compatible RPC](https://docs.leapdao.org/json-rpc/web3.eth/) and our running [testnet](https://testnet.leapdao.org) and [mainnet](https://mainnet.leapdao.org). 
 
