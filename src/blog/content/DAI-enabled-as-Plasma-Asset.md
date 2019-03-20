@@ -8,6 +8,7 @@ author:
     twitter: 'koholaa'
 description: DAI stablecoin registered on the Leap Plasma chain
 ---
+...and why you should build on top of Plasma DAI. 
 
 DAI, the first decentralized stablecoin on the Ethereum blockchain has been a real game changer for the Ethereum ecosystem, especially in the midst of ETH price crash. DAI is pegged to the value of USD which means that every DAI is worth $1, regardless of how much DAI is in existence. Moreover, due to the fact that DAI is backed by Ether and locked in smart contracts called Collateralized Debt Positions (CDP), it cannot be shut down like other centralized stable coins, and can be freely traded and exchanged without middlemen like any other ERC20 token. 
 
