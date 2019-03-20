@@ -1,7 +1,7 @@
 ---
 template: post.html
 title: 'DAI enabled as Plasma Asset'
-date: 2019-02-25 16:23:00
+date: 2019-03-20 16:23:00
 emoji: ✅
 author:
   - name: '@kohola'
