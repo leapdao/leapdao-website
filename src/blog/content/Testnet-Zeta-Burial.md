@@ -3,6 +3,7 @@ template: post.html
 title: 'Requiem for Testnet Zeta'
 date: 2019-03-26 10:50:00
 emoji: ζ
+image: /img/blog/zeta.jpg
 author:
   name: '@kosta'
   twitter: '@troggo'
@@ -19,7 +20,7 @@ Born on February 1th, Zeta was the first of our testnetworks we challenged inval
 
 Zeta survived extortion by Steven's watchtower and Evgenii's performance tests.
 
-One minute, Zeta was the warm center that the life of LeapDAO crowded around, and the next moment, it was a pile of code. After Pinkiebell's spending condition shot, the amazing miracle of consensus failure manifested.
+One minute, Zeta was the warm center that the life of LeapDAO crowded around, and the next moment, it was a pile of code. After Pinkiebell's spending condition shot, the amazing miracle of consensus failure.
 
 ## What had happened before
 
