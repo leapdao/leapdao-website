@@ -98,6 +98,9 @@ gulp.task('blog', () => {
             { noCache: true }
           );
 
+          const isMainSite = !process.env.TRAVIS_PULL_REQUEST || process.env.TRAVIS_PULL_REQUEST === 'false';
+          tmplData.siteHost = isMainSite ? 'https://leapdao.org' : 'https://test.leapdao.org';
+
           env.addFilter('markdown', function(str) {
             if (!str) return str;
             return new nunjucks.runtime.SafeString(marked(str));

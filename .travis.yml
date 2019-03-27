@@ -11,7 +11,7 @@ before_script:
   - cd leapdao-bounties && git pull origin master && cd ..
   - yarn global add gulp-cli
 
-script: gulp
+script: env TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST gulp
 
 cache: yarn
 
