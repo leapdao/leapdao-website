@@ -9,7 +9,7 @@ author:
   link: https://github.com/troggy/
 description: It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks forever.
 ---
-
+<br>
 
 <img src="/img/blog/zeta.jpg" height="560" width="480" alt="LeapDAO's Testnet Zeta gone for good">
 
@@ -26,14 +26,14 @@ One minute, Zeta was the warm center that the life of LeapDAO crowded around, an
 Few days before Kosta had launched a second validator on the network. One validator was running leap-node 4.1.0 while the other validator was running leap-node 4.1.1 being different in these [few lines](https://github.com/leapdao/leap-node/commit/f38cfa0fd2d552942d0927832c53b50e79d36789) that seemed not consensus critical. 
 
 On the given day Pinkiebell tested [Spending Condition](https://www.youtube.com/watch?v=cB5T0buF8GI) transactions which caused this little error in the second validator:
-
+<br><br>
 
 ```
 2019-03-14T09:18:17.212Z leap-node:error Cannot read property 'forEach' of undefined
 ```
 
 Spending conditions use a mappnig from colors to addresses to run contracts and the mapping has been different in the two validators. The first validator accepted the spending condition as valid and included it in the block. When the second validator tried to verify the block the mapping was undefined, leading to rejecting the block.
-
+<br><br>
 
 ```
 2019-03-14T09:18:36.159Z tendermint I[14036-03-14|09:18:36.159] Executed block
