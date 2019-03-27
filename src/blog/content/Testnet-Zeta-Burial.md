@@ -12,7 +12,7 @@ description: It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks 
 ---
 <br>
 
-<img src="/img/blog/zeta.jpg" height="560" width="480" alt="LeapDAO's Testnet Zeta gone for good">
+<img src="/img/blog/zeta.jpg" height="560" width="480" alt="Peeps gather around dead Testnet Zeta">
 
 It's name is Testnet Zeta and it is a Plasma chain with 57002 blocks. It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks forever.
 
