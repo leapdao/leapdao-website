@@ -5,9 +5,10 @@ date: 2019-03-26 10:50:00
 emoji: ζ
 image: /img/blog/zeta.jpg
 author:
-  name: '@kosta'
-  twitter: '@troggo'
-  link: https://github.com/troggy/
+  - name: '@kosta'
+    twitter: 'troggo'
+  - name: '@johba'
+    twitter: 'johba'
 description: It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks forever.
 ---
 <br>
