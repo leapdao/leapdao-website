@@ -45,4 +45,4 @@ module=state height=57001 validTxs=1 invalidTxs=1
 module=state height=57001 txs=2 appHash=114D7401A65959935AD6BC46E9B9C6EE0B78BA0558651636E385508FF7524E93
 ```
 
-Various attempts to revive the network stayed without success. 😭 Don't despair, stay tuned for "testnet Eta".
+Various attempts to revive the network stayed without success. Don't despair, stay tuned for "testnet Eta".
