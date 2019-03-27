@@ -17,7 +17,7 @@ It's name is Testnet Zeta and it is a Plasma chain with 57002 blocks. It's name 
 
 Born on February 1th, Zeta was the first of our testnetworks we challenged invalid plasma exit on, the first testnet we claimed period rewards from. It was the first to operate a fast exit market maker, buying back plasma exits. It was the first we publicly announced. Some folks even registered their tokens on it — sorry guys, you should have really used them.
 
-Zeta survived extortion by Steven Pearce's watchtower and Evgenii's performance tests.
+Zeta survived extortion by Steven's watchtower and Evgenii's performance tests.
 
 One minute, Zeta was the warm center that the life of LeapDAO crowded around, and the next moment, it was a pile of code. After Pinkiebell's spending condition shot, the amazing miracle of consensus failure manifested.
 
@@ -32,7 +32,7 @@ On the given day Pinkiebell tested [Spending Condition](https://www.youtube.com/
 2019-03-14T09:18:17.212Z leap-node:error Cannot read property 'forEach' of undefined
 ```
 
-Spending conditions use a mappnig from colors to addresses to run contracts and the mapping has been different in the two validators. The first validator accepted the spending condition as valid and included it in the block. When the second validator tried to verify the block the mapping was undefined, leading to rejecting the block.
+Spending conditions use a mapping from colors to addresses to run contracts and the mapping has been different in the two validators. The first validator accepted the spending condition as valid and included it in the block. When the second validator tried to verify the block the mapping was undefined, leading to rejecting the block.
 <br><br>
 
 ```
@@ -44,4 +44,4 @@ module=state height=57001 validTxs=1 invalidTxs=1
 module=state height=57001 txs=2 appHash=114D7401A65959935AD6BC46E9B9C6EE0B78BA0558651636E385508FF7524E93
 ```
 
-Various attempts to revive the network stayed witout success. 😭 Don't despair, stay tuned for "testnet Eta".
+Various attempts to revive the network stayed without success. 😭 Don't despair, stay tuned for "testnet Eta".
