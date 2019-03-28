@@ -83,6 +83,14 @@ const pageTask = (src, dest, options) => {
   fs.writeFileSync(dest, env.render('page-template.html', tmplData));
 };
 
+const siteHost = () => {
+  console.log('Travis', process.env.TRAVIS_PULL_REQUEST);
+  if (!process.env.TRAVIS_PULL_REQUEST || process.env.TRAVIS_PULL_REQUEST === 'false') {
+    return 'https://leapdao.org';
+  }
+  return 'https://test.leapdao.org';
+};
+
 gulp.task('blog', () => {
   return gulp
     .src('src/blog/content/**/*')
@@ -98,8 +106,7 @@ gulp.task('blog', () => {
             { noCache: true }
           );
 
-          const isMainSite = !process.env.TRAVIS_PULL_REQUEST || process.env.TRAVIS_PULL_REQUEST === 'false';
-          tmplData.siteHost = isMainSite ? 'https://leapdao.org' : 'https://test.leapdao.org';
+          tmplData.siteHost = siteHost();
 
           env.addFilter('markdown', function(str) {
             if (!str) return str;
