@@ -84,8 +84,8 @@ const pageTask = (src, dest, options) => {
 };
 
 const siteHost = () => {
-  console.log('Travis', process.env.TRAVIS_PULL_REQUEST);
-  if (!process.env.TRAVIS_PULL_REQUEST || process.env.TRAVIS_PULL_REQUEST === 'false') {
+  console.log('Travis', process.env.TRAVIS_BRANCH, !process.env.TRAVIS_BRANCH || process.env.TRAVIS_BRANCH === 'master');
+  if (!process.env.TRAVIS_BRANCH || process.env.TRAVIS_BRANCH === 'master') {
     return 'https://leapdao.org';
   }
   return 'https://test.leapdao.org';
