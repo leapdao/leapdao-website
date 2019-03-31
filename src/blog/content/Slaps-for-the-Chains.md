@@ -5,7 +5,7 @@ date: 2019-04-01 16:20:00
 image: /img/blog/slaps.jpg
 author:
   - name: '@pinkiebell'
-    twitter: 'pinkiebell'
+    github: 'pinkiebell'
   - name: '@johba'
     twitter: 'johba'
 description: PoS to lead Ethereum to mass-adoption.
