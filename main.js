@@ -141,18 +141,21 @@
         if (xhr.readyState === xhr.DONE) {
           const html = xhr.responseText;
           const dom = new DOMParser().parseFromString(html, 'text/html');
-          document.querySelector('.page').innerHTML = dom.querySelector(
-            '.page'
-          ).innerHTML;
-          document
-            .querySelector('.page')
-            .setAttribute(
-              'class',
-              dom.querySelector('.page').getAttribute('class')
-            );
+          const targetPage = document.querySelector('.page');
+          const sourcePage = dom.querySelector('.page');
+          targetPage.innerHTML = sourcePage.innerHTML;
+          targetPage.setAttribute('class', sourcePage.getAttribute('class'));
           document.querySelector('title').innerHTML = dom.querySelector(
             'title'
           ).innerHTML;
+          const scripts = Array.from(sourcePage.querySelectorAll('script'))
+            .filter(s => !s.src)
+            .map(s => s.innerHTML);
+          if (scripts) {
+            const scriptTag = document.createElement('script');
+            scriptTag.innerHTML = scripts.join(';\n');
+            targetPage.appendChild(scriptTag);
+          }
           window.scrollTo(0, 0);
 
           Array.from(
