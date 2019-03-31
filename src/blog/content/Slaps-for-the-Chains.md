@@ -16,9 +16,11 @@ We are proud to announce a new consensus algorithm, Proof of Slaps. This consens
 
 Learn all details in the following short video:
 
-<video id='slap-player' class='video-js vjs-default-skin' style='width:720px;max-width:100%;height:auto;' controls>
-	<source type='application/x-mpegURL' src="/media/slaps/forTheChains.m3u8">
-</video>
-<link href='https://vjs.zencdn.net/7.4.1/video-js.css' rel='stylesheet'>
-<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+<div style='width:720px;max-width:100%;height:auto;'>
+  <video id='slap-player' class='video-js vjs-default-skin vjs-fluid' controls>
+	  <source type='application/x-mpegURL' src="/media/slaps/forTheChains.m3u8">
+  </video>
+</div>
+<link href='https://vjs.zencdn.net/7.5.3/video-js.css' rel='stylesheet'>
+<script src='https://vjs.zencdn.net/7.5.3/video.js'></script>
 <script type='application/javascript'>videojs('slap-player');</script>
