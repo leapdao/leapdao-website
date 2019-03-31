@@ -7,12 +7,12 @@ author:
     twitter: 'pinkiebell'
   - name: '@johba'
     twitter: 'johba'
-description: a new PoS algorithm to lead the layer-2 community to mass-adoption.
+description: PoS to lead Ethereum to mass-adoption.
 ---
 
+PoS to lead the Ethereum to mass-adoption.
 
-
-We are proud to announce a new PoS algorithm to lead the layer-2 community to mass-adoption.
+We are proud to announce a new consensus algorithm, Proof of Slaps. This consensus algorithm intgrates Plasma to unite the blockchain community and achieve mass-adoption.
 
 Learn all details in the following short video:
 
