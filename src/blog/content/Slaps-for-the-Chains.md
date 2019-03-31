@@ -23,4 +23,4 @@ Learn all details in the following short video:
 </div>
 <link href='https://vjs.zencdn.net/7.4.1/video-js.css' rel='stylesheet'>
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-<script type='application/javascript'>window.addEventListener('load', function() {videojs('slap-player')}, false);</script>
+<script type='application/javascript'>videojs('slap-player');</script>
