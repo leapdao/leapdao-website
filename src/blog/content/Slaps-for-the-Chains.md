@@ -2,6 +2,7 @@
 template: post.html
 title: 'Slaps for the chains!'
 date: 2019-04-01 16:20:00
+image: /img/blog/slaps.png
 author:
   - name: '@pinkiebell'
     twitter: 'pinkiebell'
