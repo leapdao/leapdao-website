@@ -106,7 +106,6 @@ body {
   padding: 20px;
   margin-top: -10px;
   margin-right: -10px;
-  transform: translateZ(0.01px);
 }
 
 .menu ul {
@@ -157,7 +156,6 @@ h1 {
   position: relative;
   z-index: 1;
   margin-bottom: -2rem;
-  transform: translateZ(0.01px);
   z-index: 100;
   margin-bottom: -2rem;
 }
@@ -169,7 +167,6 @@ h1 {
 .content {
   position: relative;
   z-index: 1;
-  transform: translateZ(0.01px);
 }
 
 .content header {
@@ -298,7 +295,6 @@ h1 {
   position: absolute;
   top: calc(30vh - 20rem);
   left: 8rem;
-  transform: translateZ(0.01px);
 }
 
 .blog-index {
@@ -463,7 +459,6 @@ input:focus {
   .page {
     position: relative;
     z-index: 1;
-    transform: translateZ(0.01px);
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 14rem;
@@ -540,7 +535,7 @@ input:focus {
     position: absolute;
     top: -10rem;
     left: -15rem;
-    transform: scale(0.5) translateZ(0.01px);
+    transform: scale(0.5);
   }
 
   .blog-post header h1 {
