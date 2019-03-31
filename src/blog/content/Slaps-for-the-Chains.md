@@ -16,7 +16,7 @@ We are proud to announce a new PoS algorithm to lead the layer-2 community to ma
 
 Learn all details in the following short video:
 
-<video id='slap-player' class='video-js vjs-default-skin' controls>
+<video id='slap-player' class='video-js vjs-default-skin' width='720' style='max-width:100%' controls>
 	<source type='application/x-mpegURL' src="/media/slaps/forTheChains.m3u8">
 </video>
 <link href='https://vjs.zencdn.net/7.4.1/video-js.css' rel='stylesheet'>
