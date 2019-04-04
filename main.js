@@ -73,7 +73,7 @@
     )
       .then(response => response.json())
       .then(data => {
-        document.getElementById("contributors").innerHTML = data.length;
+        document.getElementById("contributors").innerHTML = '<strong>'+ data.length +'</strong> contributors';
       });
   };
 
@@ -83,7 +83,7 @@
     )
       .then(response => response.json())
       .then(data => {
-        document.getElementById("members").innerHTML = data.members.length;
+        document.getElementById("members").innerHTML = '<strong>' + data.members.length + '</strong> members';
       });
   };
 
