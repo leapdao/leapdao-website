@@ -79,7 +79,7 @@
 
   const fetchMembers = () => {
     fetch(
-      `https://slack.com/api/users.list?token=xoxp-87747703936-87760969057-600746013413-23755154305bda47b1f2dabab77b670b`
+      `https://c0c33kpdae.execute-api.us-east-1.amazonaws.com/prod/slack`
     )
       .then(response => response.json())
       .then(data => {
