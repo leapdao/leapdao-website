@@ -86,6 +86,11 @@
       avatar: 'https://avatars0.githubusercontent.com/u/24641089',
       url: 'https://github.com/nanspro'
     }
+    var iamonuwa = {
+      name: 'Onuwa Nnachi Isaac',
+      avatar: 'https://avatars1.githubusercontent.com/u/6551094',
+      url: 'https://github.com/iamonuwa'
+    }
 
     var berlin = [52.504043, 13.393236];
     var grandRap = [42.9632, -85.6679];
@@ -99,6 +104,7 @@
     var hanover = [52.3750, 9.7348];
     var travel = [5.9788, 116.0753];
     var hyderabad = [17.4481570, 78.3489480];
+    var uyo = [7.93, 5.03]
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -158,6 +164,7 @@
     addPeep(sounakPradhan, hyderabad);
     addPeep(nanspro, hyderabad);
     addPeep(kohola71, berlin);
+    addPeep(iamonuwa, uyo);
 
     map.addLayer(markers);
   }
