@@ -68,35 +68,51 @@
   };
 
   const fetchContributors = () => {
-    fetch(
-      "https://api.github.com/repos/leapdao/leapdao-website/stats/contributors"
-    )
+    const organizationRepositories = [];
+    fetch("https://api.github.com/orgs/leapdao/repos")
       .then(response => response.json())
-      .then(data => {
-        document.getElementById("contributors").innerHTML = '<strong>'+ data.length +'</strong> contributors';
+      .then(repos => {
+        repos.map((repo, index) => {
+          fetch(`${repo.contributors_url}`)
+            .then(response => response.json())
+            .then(repositories => {
+              organizationRepositories.push(repositories);
+              const contributors = organizationRepositories.reduce(
+                (previousValue, currentValue) => {
+                  return previousValue + currentValue.length;
+                },
+                0
+              );
+              document.getElementById("contributors").innerHTML =
+                "<strong>" + contributors + "</strong> contributors";
+            });
+        });
       });
   };
 
   const fetchMembers = () => {
-    fetch(
-      `https://c0c33kpdae.execute-api.us-east-1.amazonaws.com/prod/slack`
-    )
+    fetch(`https://nplrpwwfw1.execute-api.eu-west-1.amazonaws.com/prod/slack`)
       .then(response => response.json())
       .then(data => {
-        document.getElementById("members").innerHTML = '<strong>' + data.members.length + '</strong> members';
+        document.getElementById("members").innerHTML =
+          "<strong>" + data + "</strong> members";
       });
   };
 
   const fetchUTXO = () => {
     const url = window.location.pathname.split(".")[0];
     if (url === "test") {
-      fetch('./mocks/testnet.json')
+      fetch("./mocks/testnet.json")
         .then(response => response.json())
-        .then(data => document.getElementById('utxos').innerHTML = `~${data.data}`)
+        .then(
+          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
+        );
     } else {
-      fetch('./mocks/mainnet.json')
+      fetch("./mocks/mainnet.json")
         .then(response => response.json())
-        .then(data => document.getElementById('utxos').innerHTML = `~${data.data}`);
+        .then(
+          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
+        );
     }
   };
 
