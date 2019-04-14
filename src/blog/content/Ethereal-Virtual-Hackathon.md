@@ -9,9 +9,11 @@ author:
 description: LeapDAO sponsoring the Ethereal Virtual Hackathon.
 ---
 
-We’re happy to announce that LeapDAO will sponsor and contribute bounties to the Ethereal Hackathon.
+<br>
 
-The hackathon is a joint production between Gitcoin and Microsoft’s blockchain group, taking place in the run up to the [Ethereal Summit](https://etherealsummit.com/) in NYC. This virtual hackathon runs from April 15th to April 29th bringing together +400 hackers to work on projects crucial to making decentralized web a reality - including LeapDAO! 
+<img src="/img/blog/ethereal.png" alt="LeapDAO x Ethereal">
+
+We’re happy to announce that LeapDAO will sponsor and contribute bounties to the Ethereal Hackathon, a joint production between Gitcoin and Microsoft’s blockchain group, taking place in the run up to the [Ethereal Summit](https://etherealsummit.com/) in NYC. This virtual hackathon runs from April 15th to April 29th bringing together +400 hackers to work on projects crucial to making decentralized web a reality - including LeapDAO! 
 
 You can still register to participate in the hackathon [here](https://gitcoin.typeform.com/to/j7CSbV).
 
