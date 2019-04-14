@@ -68,25 +68,22 @@
   };
 
   const fetchContributors = () => {
-    const organizationRepositories = [];
+    let allContributors = [];
     fetch("https://api.github.com/orgs/leapdao/repos")
       .then(response => response.json())
       .then(repos => {
-        repos.map((repo, index) => {
-          fetch(`${repo.contributors_url}`)
+        repos.forEach(repo => {
+          if (repo.fork) return;
+          fetch(repo.contributors_url)
             .then(response => response.json())
-            .then(repositories => {
-              organizationRepositories.push(repositories);
-              const contributors = organizationRepositories.reduce(
-                (previousValue, currentValue) => {
-                  return previousValue + currentValue.length;
-                },
-                0
-              );
+            .then(contributors => {
+              allContributors = [
+                ...new Set(allContributors.concat(contributors.map(c => c.login)))
+              ];
               document.getElementById("contributors").innerHTML =
-                "<strong>" + contributors + "</strong> contributors";
-            });
-        });
+                "<strong>" + allContributors.length + "</strong> contributors";
+            })
+          });
       });
   };
 
