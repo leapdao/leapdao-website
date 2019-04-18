@@ -2,12 +2,16 @@
 template: post.html
 title: 'Croatia bound for Blocksplit 2019'
 date: 2019-04-18 10:50:00
-emoji: 🏖
+image: /img/blog/sunDai.png
 author:
   - name: '@kohola'
     twitter: 'koholaa'
 description: Croatia bound for Blocksplit 2019 to power SunDAI transactions
 ---
+
+<br>
+
+<img src="/img/blog/sunDai.png" alt="Blocksplit Croatia">
 
 Next week we’re heading to Split, Croatia for the upcoming [Blocksplit Conference](https://blocksplit.org/) to power the local conference cryptomarket with our Plasma chain - Leap Network -  focused on providing a transaction highway for merchant operations.
 
