@@ -73,7 +73,7 @@ Offboarding in the Plasma design takes unconvenient 3,5 to 7 days. To keep merch
 
 ## Summary
 
-In **total 1135 SunDAI transfers** have been made during the 2 days of the conference. In this time the Plasma chain has submitted 140 anchors to the Ethereum mainnet paying a **total of USD 8.96 in transaction fees**.
+In **total 1135 SunDAI transfers** have been made during the 2 days of the conference. In this time the Plasma chain has submitted 106 anchors to the Ethereum mainnet paying a **total of USD 7.23 in transaction fees**.
 
 
 We want to thank Antea, Lorena and Luka, our enthusiastic volunteers helping with the burner Wallet as well as to Tomo and Bruno for inviting us to the event and giving us the opportunity demo the tech.
