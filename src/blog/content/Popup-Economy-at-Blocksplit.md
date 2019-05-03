@@ -33,7 +33,7 @@ From there the attendees could approach the different vendors, scan a QR code an
 
 <img src="/img/blog/bsMerchant.jpg" alt=" Merchant flow">
 
-In case of running or of SunDAI, Attendees could also recharge their wallets with DAI or Ether by using the exchange view. The SunDAI contract was set up in a way that it would pull DAI in as a collateral to mint new SunDAI, and users that had topped up with DAI where also whitelisted to offboard SunDAI into DAI.
+In case of running or of SunDAI, attendees could also recharge their wallets with DAI or Ether by using the exchange view. The SunDAI contract was set up in a way that it would pull DAI in as a collateral to mint new SunDAI, and users that had topped up with DAI where also whitelisted to offboard SunDAI into DAI.
 <br>
 <br>
 
