@@ -2,6 +2,7 @@
 template: post.html
 title: 'Burner wallet driving Blocksplit'
 date: 2019-05-02 10:50:00
+image: /img/blog/Popup-Economy-at-Blocksplit-og.png
 author:
   - name: '@johba'
     twitter: 'johba'
