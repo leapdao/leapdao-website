@@ -98,33 +98,7 @@
       </footer>
     </div>
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      width="530"
-      height="545"
-      id="amoebe"
-    >
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            result="mat"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -19"
-          />
-        </filter>
-      </defs>
-
-      <g filter="url(#goo)">
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-        <circle cx="0" cy="0" r="30" />
-      </g>
-    </svg>
+    <canvas id="amoebe"></canvas>
 
     <svg width="115" height="50" class="loader">
       <defs>
@@ -145,6 +119,7 @@
     </svg>
 
     <script src="/main.js" async></script>
+    <script src="/amoebe.js" async></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
