@@ -2,7 +2,7 @@
 
 	const urgentOnly = false;
 	const useAuth = false;
-	const token = 'c7fe8835417fc0d60229b3983c1a076240e9bca0';
+	const token = '';	// github token in case of useAuth = true
 	const cacheTTL = 3600000;	// one hour
 	const bountiesHolder = document.getElementById('bounties');
 	const bountiesOverlayHolder = document.getElementById('bounties-overlay');
