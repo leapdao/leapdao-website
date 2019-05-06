@@ -157,7 +157,6 @@ h1 {
   z-index: 1;
   margin-bottom: -2rem;
   z-index: 100;
-  margin-bottom: -2rem;
 }
 
 .logo {
@@ -170,7 +169,6 @@ h1 {
 }
 
 .content header {
-  /* margin-left: 5rem; */
   margin-bottom: 5rem;
 }
 
@@ -293,13 +291,14 @@ h1 {
 
 #amoebe {
   position: absolute;
-  top: calc(30vh - 20rem);
-  left: 8rem;
+  top: calc(30vh - 14rem);
+  left: 10rem;
 }
 
 .blog-index {
   position: relative;
   z-index: 1;
+  transform: translateZ(0.01px);
 }
 
 .blog-item {
@@ -533,8 +532,8 @@ input:focus {
 
   #amoebe {
     position: absolute;
-    top: -10rem;
-    left: -15rem;
+    top: -5rem;
+    left: -10rem;
     transform: scale(0.5);
   }
 
@@ -727,10 +726,6 @@ input:focus {
 .content header .subtitle {
   margin-top: 2rem !important;
   font-weight: bold;
-}
-
-.community h1 {
-  /* font-size: 8rem; */
 }
 
 @media screen and (max-width: 900px) {

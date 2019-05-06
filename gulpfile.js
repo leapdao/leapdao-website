@@ -16,7 +16,7 @@ const generateBlogOG = require('./blog-og-generator/card');
 let watching = false;
 
 const files = {
-  js: ['main.js'],
+  js: ['main.js', 'amoebe.js'],
   css: ['main.css'],
   html: '*/*.html',
   blog: 'src/blog/**/*',
@@ -202,19 +202,21 @@ gulp.task('bounties', () => {
   });
 });
 
-gulp.task('coc', (cb) => {
+gulp.task('coc', cb => {
   if (!fs.existsSync('coc')) {
     fs.mkdirSync('coc');
   }
-  cb(pageTask(files.coc, 'coc/index.html', {
-    title: 'LeapDAO Code Of Conduct',
-    menu: [
-      { url: '/', title: '~' },
-      { url: '/blog', title: 'Blog' },
-      { url: '/community', title: 'Community' },
-      { url: '/bounties', title: 'Bounties' }
-    ]
-  }));
+  cb(
+    pageTask(files.coc, 'coc/index.html', {
+      title: 'LeapDAO Code Of Conduct',
+      menu: [
+        { url: '/', title: '~' },
+        { url: '/blog', title: 'Blog' },
+        { url: '/community', title: 'Community' },
+        { url: '/bounties', title: 'Bounties' }
+      ]
+    })
+  );
 });
 
 // gulp.task('critical:blog', (cb) => {
@@ -236,14 +238,17 @@ gulp.task('coc', (cb) => {
 //   }, 100);
 // });
 
-gulp.task('dev', gulp.parallel(['blog'], () => {
-  watching = true;
-  livereload.listen();
+gulp.task(
+  'dev',
+  gulp.parallel(['blog'], () => {
+    watching = true;
+    livereload.listen();
 
-  watch(files.css, batch((events, done) => gulp.start('css', done)));
-  watch(files.js, batch((events, done) => gulp.start('js', done)));
-  watch(files.html, batch((events, done) => gulp.start('html', done)));
-  watch(files.blog, batch((events, done) => gulp.start('blog', done)));
-}));
+    watch(files.css, batch((events, done) => gulp.start('css', done)));
+    watch(files.js, batch((events, done) => gulp.start('js', done)));
+    watch(files.html, batch((events, done) => gulp.start('html', done)));
+    watch(files.blog, batch((events, done) => gulp.start('blog', done)));
+  })
+);
 
 gulp.task('default', gulp.series('blog', 'blog:og', 'coc'));
