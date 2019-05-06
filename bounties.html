@@ -22,8 +22,8 @@
       content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://leapdao.org/" />
-    <meta property="og:image" content="https://leapdao.org/img/og.jpg" />
+    <meta property="og:url" content="http://leapdao.org/" />
+    <meta property="og:image" content="http://leapdao.org/img/og.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@leapdao" />
     <meta
@@ -34,7 +34,7 @@
       name="twitter:description"
       content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
     />
-    <meta name="twitter:image" content="https://leapdao.org/img/og.jpg" />
+    <meta name="twitter:image" content="http://leapdao.org/img/og.jpg" />
 
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -43,69 +43,32 @@
     <div class="page">
       <div class="content">
         <header>
-          <h1>LeapDAO Resources</h1>
-          <p>
-            Everything you might need to contribute or build
-            <nobr>a cool dApp</nobr>
-          </p>
+          <h1 class="logo">LeapDAO</h1>
+          <h2>Bounties</h2>
+          <div class="orderselectors">
+            <span>Order by </span>
+            <select id="orderkey">
+              <option value="date">Date</option>
+              <option value="size">Size</option>
+              <option value="number">Number</option>
+              <option value="repository">Repository</option>
+              <option value="gardener">Gardener</option>
+              <option value="worker">Worker</option>
+              <option value="reviewer">Reviewer</option>
+              <option value="worker_share">Worker Share</option>
+              <option value="reviewer_share">Reviewer Share</option>
+            </select>
+            <select id="orderdir">
+              <option value="-1">Desc</option>
+              <option value="1">Asc</option>
+            </select>
+            <small>Cached until <span id="until"></span></small>
+          </div>
         </header>
-
-        <ul>
-          <li>
-            <h3>
-              <a
-                href="https://docs.google.com/document/d/1vStTjqvqZGyiI5AVtpwCIMlHFnzC_4bbixsCfs27-M8/edit"
-                >White paper</a
-              >
-            </h3>
-            <p>Design document about Plasma Leap architecture</p>
-          </li>
-          <li>
-            <h3>
-              <a href="https://app.glassfrog.com/organizations/14849"
-                >GlassFrog Organization</a
-              >
-            </h3>
-            <p>
-              Our holacracy organization page. A place when we do meetings and
-              make decisions
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://testnet.leapdao.org">Bridge UI</a></h3>
-            <p>
-              A set of tools for interacting with our chain including:
-              governance page, validator slots auction, wallet, block explorer
-              and network status page
-            </p>
-            <p>
-              <a href="https://github.com/leapdao/bridge-ui">leapdao/bridge-ui repo</a><br/>
-              <a href="http://testnet.leapdao.org">Testnet</a><br/>
-              <a href="http://mainnet.leapdao.org">Mainnet</a>
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://docs.leapdao.org">Documentation</a></h3>
-            <p>
-              Articles and tutorials about using our chain to build something
-              cool
-            </p>
-            <p>
-              <a href="https://github.com/leapdao/leapdao-docs"
-                >leapdao/leapdao-docs</a
-              >
-            </p>
-          </li>
-          <li>
-            <h3>Bounties</h3>
-            <p>A list of available, ongoing and finished bounties</p>
-            <p>
-              <a href="https://github.com/orgs/leapdao/projects/6"
-                >bounty board</a
-              >
-            </p>
-          </li>
-        </ul>
+        <div id="bounties">
+            <p>Loading...</p>
+        </div>
+		<div class="clear"></div>
       </div>
 
       <menu class="menu">
@@ -173,6 +136,10 @@
         </form>
       </footer>
     </div>
+	<div id="bounties-overlay">
+		<div id="bounties-overlay-content" class="content"></div>
+		<a href="#" id="bounties-overlay-close" title="Use ESC key">Close [ESC]</a>
+	</div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -219,7 +186,8 @@
       </g>
     </svg>
 
-    <script src="main.js" async></script>
+    <script src="scripts/markdown-it.min.js"></script>
+    <script src="scripts/bounties.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

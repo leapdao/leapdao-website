@@ -267,6 +267,69 @@ h1 {
   border-bottom: 1px solid #efefef;
 }
 
+.orderselectors {
+  margin-top: -3rem;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.orderselectors small {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bounty {
+	float: left;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	width: 30rem;
+	height: 26rem;
+	font-size: 2rem;
+	line-height: 3rem;
+	margin: 0 1rem 1rem 0;
+	padding: 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.bounty:hover {
+	border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+#bounties-overlay {
+	width: 90%;
+	position: fixed;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 16px;
+	z-index: 100;
+	padding: 2rem;
+	overflow: auto;
+	display: none;
+}
+
+#bounties-overlay.shown {
+	display: block;
+}
+
+#bounties-overlay-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	background: none;
+	
+}
+
+.clear {
+	clear: both;
+}
+
 .links {
   font-size: 2.5rem;
   margin-top: 6rem;
@@ -476,6 +539,10 @@ input:focus {
     margin-top: 3rem;
     margin-bottom: -2rem;
   }
+  
+  .orderselectors {
+    margin-top: -3rem;
+  }
 
   .content h3 {
     font-size: 2rem;
@@ -625,6 +692,16 @@ input:focus {
     margin-left: -3rem;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .orderselectors {
+    margin-top: 2rem;
+  }
+  
+  .bounty {
+    width: 100%;
   }
 }
 
