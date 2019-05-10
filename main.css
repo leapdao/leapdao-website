@@ -352,6 +352,10 @@ h1 {
   width: 100%;
 }
 
+.blog-post header + p img:first-child:last-child {
+  margin-top: 6rem;
+}
+
 .subscribe {
   position: relative;
   padding: 8rem 0 10rem;

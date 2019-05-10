@@ -8,7 +8,7 @@ author:
     twitter: 'koholaa'
 ---
 
-&nbsp;
+<img src="/img/blog/ethereal-results.png" alt="Ethereal results banner" />
 
 In the last 2 weeks of April a bunch of hackers joined forces at the [Ethereal Virtual Hackathon](https://gitcoin.co/hackathon/ethereal-virtual-hackathon/), working on projects crucial to making decentralized web a reality — including on our proposed bounties. We were very happy with the overall level of submitted projects and the enthusiasm of participants. Read on to find out more about what was being hacked and who are the golden winners.
 
