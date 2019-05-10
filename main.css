@@ -322,6 +322,12 @@ h1 {
   margin: 0;
 }
 
+.blog-post hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 4rem;
+}
+
 .blog-post header {
   display: flex;
   flex-direction: column-reverse;
@@ -729,6 +735,10 @@ input:focus {
 }
 
 @media screen and (max-width: 900px) {
+  .blog-post hr {
+    margin-top: 3rem;
+  }
+
   .with-note {
     width: 100%;
   }

@@ -8,13 +8,15 @@ author:
     twitter: 'koholaa'
 ---
 
-In the last 2 weeks of April a bunch of hackers joined forces at the [Ethereal Virtual Hackathon](https://gitcoin.co/hackathon/ethereal-virtual-hackathon/), working on projects crucial to making decentralized web a reality - including on our proposed bounties. We were very happy with the overall level of submitted projects and the enthusiasm of participants. Read on to find out more about what was being hacked and who are the golden winners.
+&nbsp;
+
+In the last 2 weeks of April a bunch of hackers joined forces at the [Ethereal Virtual Hackathon](https://gitcoin.co/hackathon/ethereal-virtual-hackathon/), working on projects crucial to making decentralized web a reality — including on our proposed bounties. We were very happy with the overall level of submitted projects and the enthusiasm of participants. Read on to find out more about what was being hacked and who are the golden winners.
 
 In the first bounty, we asked people to build some simple but functional Plasma dApps, which demonstrate the advantages of Plasma, using the documentation and resources we provided. We received some great submissions for this challenge.
 
 ## Burner Bot
 
-<img src="/img/blog/burner-bot.png" alt="Discord Burner Bot screenshot" />
+<img src="/img/blog/burner-bot.png" alt="Discord Burner Bot screenshot" width="400" />
 
 John built the [Burner Bot](https://github.com/johngrantuk/burnerbot/tree/leap_plasma) - an easy way to transfer xDai or LEAP (from LeapDAO). This bot was inspired by [Burner Wallet](https://github.com/austintgriffith/burner-wallet) and built using [autom8](https://gitlab.com/autom8.network/docs).
 
