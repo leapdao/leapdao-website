@@ -14,7 +14,7 @@ The first pop-up economy powered by Plasma!
 <img src="/img/blog/blocksplit.jpg" alt="Blocksplit Croatia">
 
 ## Burner Wallet on Leap Network
-The Burner wallet works in any mobile web browser so no app download or wallet setup are required. It was first used on during ETHDenver conference and had big success. What is new for the [SunDAI instance](https://sundai.io) instance created for BlockSplit conference is Plasma support. It is running on the [Leap Network](https://mainnet.leapdao.org), a Plasma chain created by the [LeapDAO community](https://leapdao.org) and providing block times of 2-4 seconds. SunDAI is pegged to the dollar so there is low cognitive overhead. The best part is on-boarding is as easy as opening your camera.
+The Burner wallet works in any mobile web browser so no app download or wallet setup are required. It was first used on during ETHDenver conference and had big success. What is new for the [SunDAI instance](https://sundai.io) created for BlockSplit conference is Plasma support. It is running on the [Leap Network](https://mainnet.leapdao.org), a Plasma chain created by the [LeapDAO community](https://leapdao.org) and providing block times of 2-4 seconds. SunDAI is pegged to the dollar so there is low cognitive overhead. The best part is on-boarding is as easy as opening your camera.
 
 ## User Flow 
 
