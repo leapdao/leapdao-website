@@ -26,11 +26,6 @@
       avatar: 'https://avatars3.githubusercontent.com/u/754426',
       url: 'https://github.com/HelgeWieding'
     };
-    var zobro = {
-      name: 'Jonathan Zobro',
-      avatar: 'https://avatars2.githubusercontent.com/u/61939',
-      url: 'https://github.com/VonIobro'
-    };
     var anton = {
       name: 'Anthony Akentiev',
       avatar: 'https://avatars1.githubusercontent.com/u/1623033',
