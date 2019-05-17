@@ -20,7 +20,7 @@ In the first challenge, we asked people to build some simple but functional Plas
 
 <img src="/img/blog/dungeon-riches.png" alt="Dungeon Riches screenshot" />
 
-[Max](https://github.com/MaxStalker) built [Dungeon Riches](https://github.com/MaxStalker/dungeon-riches-react-basic), a dungeon runner game featuring battles with simple mechanics based on rock-paper-scissors.
+[Max](https://github.com/MaxStalker) built [Dungeon Riches](https://leap.dungeonriches.com/), a dungeon runner game featuring battles with simple mechanics based on rock-paper-scissors.
 
 In mini-games players are presented with an ability to make quick bets, with all their balance always at their disposal. Utilizing spending conditions, the Leap Network's inherent way to run smart contracts, he was able to realize a provably fair game, where each round is escrowed on-chain. Dungeon Riches' beautiful graphics and animations make it fun to play. 
 
