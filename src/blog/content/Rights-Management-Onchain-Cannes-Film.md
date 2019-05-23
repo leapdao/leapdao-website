@@ -17,13 +17,19 @@ Until recently, applying Plasma solutions to real life problems seemed like a fa
 
 Last week the LeapDAO team has joined two other blockchain projects - [Cinemarket](https://www.cinemarket.io/) and [White Rabbit](https://whiterabbit.one/) at the Cannes Film Festival (yes.. the famous annual red carpet situation) to demonstrate the potential of utilizing blockchain to professionalize peer-to-peer streaming, while capturing value in the film industry and distributing it to producers and rights holders. The presented solution enabled film rights holders to maximize the exploitation of their assets in more territories and allows streaming sites to open new revenue streams.
 
+<img src="/img/blog/motion.jpg" alt="Motion Banner">
+
 
 Our project partners propose to embrace and professionalize peer-to-peer streaming with blockchain. Cinemarket is a secure online transaction platform enabling license owners to sell their film directly to distributors and exhibitors, while White Rabbit provides a browser plug-in which recognizes streamed content. Their founders realize that we are at a crucial point in time for the future of film, and it is vital to have a film industry that owns its digital distribution through technology, rather than the tech industry pushing the film industry to one side, and monopolizing the production space. 
 
 
+<img src="/img/blog/cannesFlow.png" alt="Demo Flow">
+
 At the Cannes Film Festival last week, we wanted to test in action a market connecting movie producers and right owners with their audience in a peer-to-peer manner. To that purpose, we prepared a demo in which movie rightowners could register the film rights and licenses on the blockchain as NFTs.  Tokens were minted on a plasma chain and they could be moved to mainnet later (ERC 1949), while spending conditions (smart contracts on Plasma) were used to distribute payments according to token data (ERC 1948).
 
 Rights holders were able to register their right to an existing production and set their addresses by scanning QR code. They scanned a private key to launch rightsholder wallet (adapted Burner Wallet) and provide an address for payment. 
+
+<img src="/img/blog/cannesPhone.png" alt="Rightsholder wallet">
 
 From the streamers perspective, the demo featured a streaming site working with the decentralized rights registry and a movie browser. After 10 seconds of streaming a browser plugin popped up asking the viewer to contribute to the rights holders of the particular movie. The plugin had a prefunded wallet and allowed the user to pay for the stream ($2). When the transfer was sent, the streamer was able to continue to watch the movie while the wallet of the rights holder received the payment within 2-3 seconds. You can view the entire demo flowin this [presentation deck](https://docs.google.com/presentation/d/1QabUcFLZQLx3VS9e-QRiF-EmTk5tYjbiII-zlROVC4Q). 
 
