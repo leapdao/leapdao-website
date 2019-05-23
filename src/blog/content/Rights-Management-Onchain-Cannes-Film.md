@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'LeapDAO’s first red carpet moment - an attempt at revolutionizing film in Cannes '
+title: 'LeapDAO’s first red carpet moment: revolutionizing film industry with Plasma in Cannes'
 date: 2019-05-23 10:50:00
 image: /img/blog/rightsOnChain.png
 author:
