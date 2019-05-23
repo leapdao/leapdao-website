@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'First steps to revolutionize the film industry at the Cannes Film Festival'
+title: 'LeapDAO’s first red carpet moment - an attempt at revolutionizing film in Cannes '
 date: 2019-05-23 10:50:00
 image: /img/blog/rightsOnChain.png
 author:
