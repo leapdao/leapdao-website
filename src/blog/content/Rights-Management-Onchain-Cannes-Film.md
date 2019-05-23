@@ -1,7 +1,7 @@
 ---
 template: post.html
 title: 'First steps to revolutionize the film industry at the Cannes Film Festival'
-date: 2019-04-18 10:50:00
+date: 2019-05-23 10:50:00
 image: /img/blog/rightsOnChain.png
 author:
   - name: '@kohola'
