@@ -776,10 +776,26 @@ input:focus {
 .cols {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.cols h4 + p {
+  margin-top: 3rem;
+}
+.cols p + p {
+  margin-top: 0.5rem;
 }
 
 .col {
-  width: calc(50% - 4rem);
+  flex: 1;
+}
+
+.col + .col {
+  margin-left: 4rem;
+}
+
+.col p {
+  width: 100%;
 }
 
 .content header .subtitle {
@@ -943,4 +959,46 @@ input:focus {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.section {
+  position: relative;
+  padding-top: 7rem;
+  margin-top: 7rem;
+}
+
+.section::before {
+  top: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100vw;
+  margin-left: -10rem;
+}
+
+.section header h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.section .cols h4 {
+  margin-top: 3rem;
+}
+
+.section header p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 1rem !important;
+}
+
+.section .cols p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.section footer {
+  margin-top: 5rem;
 }
