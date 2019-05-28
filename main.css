@@ -696,7 +696,7 @@ input:focus {
 
 /* community */
 .stats {
-  margin: 10rem 0;
+  margin: 5rem 0;
 }
 
 .stats-list {
@@ -847,7 +847,7 @@ input:focus {
     margin: 5rem 0;
   }
 
-  .stats img {
+  .medals img {
     width: 100vw;
     max-width: none;
     margin-left: -3rem;
