@@ -338,6 +338,10 @@ p.grand {
   text-decoration: none;
 }
 
+.col + .col {
+  margin-left: 4rem;
+}
+
 #amoebe {
   position: absolute;
   top: calc(30vh - 14rem);
@@ -525,6 +529,10 @@ input:focus {
 
   h1 {
     font-size: 4rem;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .content h2 {
@@ -790,10 +798,6 @@ input:focus {
   flex: 1;
 }
 
-.col + .col {
-  margin-left: 4rem;
-}
-
 .col p {
   width: 100%;
 }
@@ -810,6 +814,10 @@ input:focus {
 
   .with-note {
     width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .map {
@@ -905,11 +913,19 @@ input:focus {
     line-height: 1;
     margin-bottom: 0;
   }
+
+  .col + .col {
+    margin-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .community header h1 {
     font-size: 4rem !important;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 }
 
