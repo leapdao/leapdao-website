@@ -517,6 +517,10 @@ input:focus {
   margin-top: 15rem;
 }
 
+.partner {
+  border-bottom: 0 !important;
+}
+
 @media screen and (max-width: 900px) {
   .page {
     position: relative;
