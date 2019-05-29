@@ -1039,7 +1039,6 @@ input:focus {
 
 .section--disabled h2::after {
   content: 'Not yet available';
-  color: #000;
   font-size: 2rem;
   padding-left: 1rem;
 }
