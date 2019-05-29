@@ -1,23 +1,30 @@
 (function() {
   const fetchContributors = () => {
-    let allContributors = [];
     fetch('https://api.github.com/orgs/leapdao/repos')
       .then(response => response.json())
-      .then(repos => {
-        repos.forEach(repo => {
-          if (repo.fork) return;
-          fetch(repo.contributors_url)
-            .then(response => response.json())
-            .then(contributors => {
-              allContributors = [
-                ...new Set(
-                  allContributors.concat(contributors.map(c => c.login))
-                )
-              ];
-              document.getElementById('contributors').innerHTML =
-                '<strong>' + allContributors.length + '</strong> contributors';
-            });
-        });
+      .then(repos =>
+        Promise.all(
+          repos
+            .filter(r => !r.fork)
+            .map(repo =>
+              fetch(repo.contributors_url).then(response => response.json())
+            )
+        )
+      )
+      .then(
+        reposContributors =>
+          new Set(
+            reposContributors.reduce(
+              (allContributors, contributors) =>
+                allContributors.concat(contributors.map(c => c.login)),
+              []
+            )
+          )
+      )
+      .then(allContributors => {
+        document.getElementById('contributors').innerHTML = `<strong>${
+          allContributors.size
+        }</strong> contributors`;
       });
   };
 
