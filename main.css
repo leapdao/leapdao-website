@@ -61,15 +61,15 @@ body {
 }
 
 .border-lime {
-  border-color: rgb(180, 255, 50)
+  border-color: rgb(180, 255, 50);
 }
 
 .border-green {
-  border-color: rgb(0, 255, 140)
+  border-color: rgb(0, 255, 140);
 }
 
 .border-yellow {
-  border-color: rgb(255, 255, 0)
+  border-color: rgb(255, 255, 0);
 }
 
 .loader {
@@ -142,7 +142,7 @@ body {
 }
 
 .page {
-  max-width: 110rem;
+  max-width: 120rem;
   padding: 30vh 5rem 0 10rem;
 }
 
@@ -522,6 +522,10 @@ input:focus {
 }
 
 @media screen and (max-width: 900px) {
+  .section::before {
+    margin-left: -3rem !important;
+  }
+
   .page {
     position: relative;
     z-index: 1;
@@ -811,7 +815,104 @@ input:focus {
   font-weight: bold;
 }
 
+.section {
+  position: relative;
+  padding-top: 7rem;
+  margin-top: 7rem;
+}
+
+.section::before {
+  top: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100vw;
+  margin-left: -10rem;
+}
+
+.section header h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.section .cols h4 {
+  margin-top: 3rem;
+}
+
+.section header p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 1rem !important;
+}
+
+.section .cols p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.section footer {
+  margin-top: 5rem;
+}
+
+.partners {
+  margin-top: 8rem;
+}
+
+.partners h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+.partners a:hover {
+  background: 0 !important;
+}
+
+.partners ul {
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.partners ul {
+  flex-shrink: 0;
+}
+
+.partners li {
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+}
+
+.partners li:first-child {
+  margin-left: 0;
+}
+
+.partners li img {
+  width: auto;
+}
+
 @media screen and (max-width: 900px) {
+  .section header h2 {
+    font-size: 4rem;
+    padding-top: 1rem;
+  }
+  .partners {
+    margin-top: 4rem;
+  }
+
+  .partners li {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
   .blog-post hr {
     margin-top: 3rem;
   }
@@ -856,11 +957,12 @@ input:focus {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 5rem 0;
+    margin: 3rem 0 1rem;
   }
 
   .medals img {
     width: 100vw;
+    height: auto;
     max-width: none;
     margin-left: -3rem;
     margin-right: -3rem;
@@ -870,7 +972,7 @@ input:focus {
 
   .stats-list,
   .stats-repos {
-    width: calc(50% - 2rem);
+    width: 100%;
   }
 
   .stats-list {
@@ -979,46 +1081,4 @@ input:focus {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
-
-.section {
-  position: relative;
-  padding-top: 7rem;
-  margin-top: 7rem;
-}
-
-.section::before {
-  top: 0;
-  content: '';
-  position: absolute;
-  left: 0;
-  background-color: #ccc;
-  height: 1px;
-  width: 100vw;
-  margin-left: -10rem;
-}
-
-.section header h2 {
-  font-size: 5rem;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.section .cols h4 {
-  margin-top: 3rem;
-}
-
-.section header p {
-  font-size: 2.5rem;
-  line-height: 1.5;
-  margin-top: 1rem !important;
-}
-
-.section .cols p {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
-}
-
-.section footer {
-  margin-top: 5rem;
 }
