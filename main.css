@@ -984,7 +984,7 @@ input:focus {
 .section {
   position: relative;
   padding-top: 7rem;
-  margin-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .section::before {
@@ -1021,4 +1021,25 @@ input:focus {
 
 .section footer {
   margin-top: 5rem;
+}
+
+.section--disabled {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.section--disabled::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(100, 100, 100, 0.1);
+}
+
+.section--disabled h2::after {
+  content: 'Not yet available';
+  color: #000;
+  font-size: 2rem;
+  padding-left: 1rem;
 }
