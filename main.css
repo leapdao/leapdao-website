@@ -60,6 +60,18 @@ body {
   }
 }
 
+.border-lime {
+  border-color: rgb(180, 255, 50)
+}
+
+.border-green {
+  border-color: rgb(0, 255, 140)
+}
+
+.border-yellow {
+  border-color: rgb(255, 255, 0)
+}
+
 .loader {
   position: fixed;
   z-index: 100;
@@ -168,10 +180,6 @@ h1 {
   z-index: 1;
 }
 
-.content header {
-  margin-bottom: 5rem;
-}
-
 .content p {
   width: 80%;
   font-size: 2rem;
@@ -183,6 +191,13 @@ h1 {
   font-size: 3.5rem;
   line-height: 5rem;
   margin-top: 6rem;
+  width: 100%;
+}
+
+p.grand {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: 3rem;
   width: 100%;
 }
 
@@ -206,8 +221,18 @@ h1 {
   line-height: 5rem;
   font-weight: bold;
 
-  margin-top: 5rem;
+  margin-top: 7rem;
   margin-bottom: -1rem;
+}
+
+.content h2.marked {
+  border-left-width: 6px;
+  border-left-style: solid;
+  padding-left: 6px;
+}
+
+.content h2 i {
+  font-weight: normal;
 }
 
 .content h3 {
@@ -216,6 +241,22 @@ h1 {
 
   line-height: 4rem;
   margin-top: 5rem;
+}
+
+.content h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  line-height: 3rem;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
+  margin-right: 2rem;
+}
+
+.content h4.marked {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
 }
 
 .content ul,
@@ -265,6 +306,14 @@ h1 {
   border-bottom: 1px solid #efefef;
 }
 
+.logo-icon {
+  background-image: url('favicon-32x32.png');
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  background-size: 8px;
+  background-position: left center;
+}
+
 .links {
   font-size: 2.5rem;
   margin-top: 6rem;
@@ -287,6 +336,10 @@ h1 {
 .links a {
   padding: 5px;
   text-decoration: none;
+}
+
+.col + .col {
+  margin-left: 4rem;
 }
 
 #amoebe {
@@ -464,6 +517,10 @@ input:focus {
   margin-top: 15rem;
 }
 
+.partner {
+  border-bottom: 0 !important;
+}
+
 @media screen and (max-width: 900px) {
   .page {
     position: relative;
@@ -476,6 +533,10 @@ input:focus {
 
   h1 {
     font-size: 4rem;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .content h2 {
@@ -647,7 +708,7 @@ input:focus {
 
 /* community */
 .stats {
-  margin: 10rem 0;
+  margin: 5rem 0;
 }
 
 .stats-list {
@@ -727,14 +788,26 @@ input:focus {
 .cols {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.cols h4 + p {
+  margin-top: 3rem;
+}
+.cols p + p {
+  margin-top: 0.5rem;
 }
 
 .col {
-  width: calc(50% - 4rem);
+  flex: 1;
+}
+
+.col p {
+  width: 100%;
 }
 
 .content header .subtitle {
-  margin-top: 2rem !important;
+  margin-top: 1rem !important;
   font-weight: bold;
 }
 
@@ -745,6 +818,10 @@ input:focus {
 
   .with-note {
     width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .map {
@@ -782,7 +859,7 @@ input:focus {
     margin: 5rem 0;
   }
 
-  .stats img {
+  .medals img {
     width: 100vw;
     max-width: none;
     margin-left: -3rem;
@@ -840,11 +917,19 @@ input:focus {
     line-height: 1;
     margin-bottom: 0;
   }
+
+  .col + .col {
+    margin-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .community header h1 {
     font-size: 4rem !important;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 }
 
@@ -894,4 +979,46 @@ input:focus {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.section {
+  position: relative;
+  padding-top: 7rem;
+  margin-top: 7rem;
+}
+
+.section::before {
+  top: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100vw;
+  margin-left: -10rem;
+}
+
+.section header h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.section .cols h4 {
+  margin-top: 3rem;
+}
+
+.section header p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 1rem !important;
+}
+
+.section .cols p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.section footer {
+  margin-top: 5rem;
 }
