@@ -989,7 +989,7 @@ input:focus {
 .section {
   position: relative;
   padding-top: 7rem;
-  margin-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .section::before {
@@ -1026,4 +1026,18 @@ input:focus {
 
 .section footer {
   margin-top: 5rem;
+}
+
+.section--disabled {
+}
+
+.section--disabled header::before {
+  font-size: 2rem;
+  content: 'Not yet available';
+  bottom: 2rem;
+  left: -10px;
+  position: relative;
+  background: yellow;
+  font-weight: bold;
+  padding: 5px 10px;
 }
