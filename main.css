@@ -201,8 +201,13 @@ p.grand {
   width: 100%;
 }
 
-.community .content header p {
+.community header p {
   margin-top: 4rem;
+}
+
+.community .subtitle + p {
+  width: 80%;
+  margin-top: 1rem;
 }
 
 .content a {
