@@ -743,8 +743,13 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-.stats-repo + .stats-repo {
-  margin-left: 2rem;
+.stats-repo-data + span {
+  margin-right: 2rem;
+}
+
+.stats-repo-data:empty + span {
+  display: none;
+  margin-right: 0;
 }
 
 .map {
@@ -809,10 +814,6 @@ input:focus {
 .content header .subtitle {
   margin-top: 1rem !important;
   font-weight: bold;
-}
-
-.stats-repo-data:empty + span {
-  display: none;
 }
 
 @media screen and (max-width: 900px) {
