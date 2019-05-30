@@ -56,7 +56,7 @@
 
   fetchContributors();
   fetchMembers();
-  fetchUTXO();
+  //fetchUTXO();
 })();
 
 (function() {
