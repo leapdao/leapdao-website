@@ -1028,21 +1028,15 @@ input:focus {
 }
 
 .section--disabled {
-  color: rgba(0, 0, 0, 0.4);
 }
 
-.section--disabled::before {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-  background-color: rgba(100, 100, 100, 0.1);
-}
-
-.section--disabled h2::after {
-  content: 'Not yet available';
+.section--disabled header::before {
   font-size: 2rem;
-  padding-left: 1rem;
+  content: 'Not yet available';
+  bottom: 2rem;
+  left: -10px;
+  position: relative;
+  background: yellow;
+  font-weight: bold;
+  padding: 5px 10px;
 }
