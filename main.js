@@ -22,9 +22,7 @@
           )
       )
       .then(allContributors => {
-        document.getElementById('contributors').innerHTML = `<strong>${
-          allContributors.size
-        }</strong> contributors`;
+        document.getElementById('contributors').innerHTML = allContributors.size;
       });
   };
 
@@ -32,8 +30,7 @@
     fetch(`https://nplrpwwfw1.execute-api.eu-west-1.amazonaws.com/prod/slack`)
       .then(response => response.json())
       .then(data => {
-        document.getElementById('members').innerHTML =
-          '<strong>' + data + '</strong> members';
+        document.getElementById('members').innerHTML = data;
       });
   };
 
@@ -56,7 +53,7 @@
 
   fetchContributors();
   fetchMembers();
-  fetchUTXO();
+  //fetchUTXO();
 })();
 
 (function() {

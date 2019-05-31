@@ -8,7 +8,7 @@ before_install:
   - export PATH=$PATH:$HOME/.local/bin
 
 before_script:
-  - cd leapdao-bounties && git pull origin master && cd ..
+  - cd meta && git pull origin master && cd ..
   - yarn global add gulp-cli
 
 script: env TRAVIS_BRANCH=$TRAVIS_BRANCH gulp

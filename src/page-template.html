@@ -35,9 +35,9 @@
       </article>
       <menu class="menu">
         <ul>
-          <li><a href="/">~</a></li>
-          <li><a href="/whitepaper/">Whitepaper</a></li>
-          <li><a href="/blog">Blog</a></li>
+          {% for nav in page.menu %}
+          <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+          {% endfor %}
           <li>
             <a
               class="menu-icon-link"
