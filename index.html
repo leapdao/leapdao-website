@@ -54,10 +54,14 @@
         <div class="stats">
           <div class="stats-repos">
             <div class="stats-repo">
-              <strong id="utxos"></strong> monthly active UTXOs
+              <strong id="utxos" class="stats-repo-data"></strong><span> monthly active UTXOs</span>
             </div>
-            <div class="stats-repo" id="members"></div>
-            <div class="stats-repo" id="contributors"></div>
+            <div class="stats-repo">
+              <strong id="members" class="stats-repo-data"></strong><span> members</span>
+            </div>
+            <div class="stats-repo">
+              <strong id="contributors" class="stats-repo-data"></strong><span> contributors</span>
+            </div>
           </div>
         </div>
 
@@ -224,7 +228,7 @@
           </footer>
         </section>
 
-        <section class="section">
+        <section class="section section--disabled">
           <header>
             <h2>Validate</h2>
           </header>
@@ -258,15 +262,6 @@
               </p>
             </div>
           </div>
-
-          <footer>
-            <a
-              href="http://validator.leapdao.org"
-              target="_blank"
-              class="button button-primary"
-              >Become a validator</a
-            >
-          </footer>
         </section>
 
         <section class="section">

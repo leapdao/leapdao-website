@@ -752,8 +752,13 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-.stats-repo + .stats-repo {
-  margin-left: 2rem;
+.stats-repo-data + span {
+  margin-right: 2rem;
+}
+
+.stats-repo-data:empty + span {
+  display: none;
+  margin-right: 0;
 }
 
 .map {
@@ -861,6 +866,17 @@ input:focus {
 
 .section footer {
   margin-top: 5rem;
+}
+
+.section--disabled header::before {
+  font-size: 2rem;
+  content: 'Not yet available';
+  bottom: 2rem;
+  left: -10px;
+  position: relative;
+  background: yellow;
+  font-weight: bold;
+  padding: 5px 10px;
 }
 
 .partners {

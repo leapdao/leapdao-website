@@ -20,8 +20,7 @@ const files = {
   css: ['main.css'],
   html: '*/*.html',
   blog: 'src/blog/**/*',
-  coc: 'leapdao-bounties/CODE_OF_CONDUCT.md',
-  bounties: 'leapdao-bounties/README.md'
+  coc: 'meta/CODE_OF_CONDUCT.md'
 };
 
 gulp.task('js', () =>
@@ -188,20 +187,6 @@ gulp.task('blog:og', async () => {
   }
 });
 
-gulp.task('bounties', () => {
-  if (!fs.existsSync('bounties')) {
-    fs.mkdirSync('bounties');
-  }
-  return pageTask(files.bounties, 'bounties/index.html', {
-    title: 'LeapDAO Bounties',
-    menu: [
-      { url: '/', title: '~' },
-      { url: '/community', title: 'Community' },
-      { url: '/blog', title: 'Blog' }
-    ]
-  });
-});
-
 gulp.task('coc', cb => {
   if (!fs.existsSync('coc')) {
     fs.mkdirSync('coc');
@@ -211,9 +196,7 @@ gulp.task('coc', cb => {
       title: 'LeapDAO Code Of Conduct',
       menu: [
         { url: '/', title: '~' },
-        { url: '/blog', title: 'Blog' },
-        { url: '/community', title: 'Community' },
-        { url: '/bounties', title: 'Bounties' }
+        { url: '/blog', title: 'Blog' }
       ]
     })
   );
