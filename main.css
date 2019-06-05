@@ -60,6 +60,18 @@ body {
   }
 }
 
+.border-lime {
+  border-color: rgb(180, 255, 50);
+}
+
+.border-green {
+  border-color: rgb(0, 255, 140);
+}
+
+.border-yellow {
+  border-color: rgb(255, 255, 0);
+}
+
 .loader {
   position: fixed;
   z-index: 100;
@@ -130,7 +142,7 @@ body {
 }
 
 .page {
-  max-width: 110rem;
+  max-width: 120rem;
   padding: 30vh 5rem 0 10rem;
 }
 
@@ -157,7 +169,6 @@ h1 {
   z-index: 1;
   margin-bottom: -2rem;
   z-index: 100;
-  margin-bottom: -2rem;
 }
 
 .logo {
@@ -167,11 +178,6 @@ h1 {
 .content {
   position: relative;
   z-index: 1;
-}
-
-.content header {
-  /* margin-left: 5rem; */
-  margin-bottom: 5rem;
 }
 
 .content p {
@@ -188,8 +194,20 @@ h1 {
   width: 100%;
 }
 
-.community .content header p {
+p.grand {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.community header p {
   margin-top: 4rem;
+}
+
+.community .subtitle + p {
+  width: 80%;
+  margin-top: 1rem;
 }
 
 .content a {
@@ -208,8 +226,18 @@ h1 {
   line-height: 5rem;
   font-weight: bold;
 
-  margin-top: 5rem;
+  margin-top: 7rem;
   margin-bottom: -1rem;
+}
+
+.content h2.marked {
+  border-left-width: 6px;
+  border-left-style: solid;
+  padding-left: 6px;
+}
+
+.content h2 i {
+  font-weight: normal;
 }
 
 .content h3 {
@@ -218,6 +246,22 @@ h1 {
 
   line-height: 4rem;
   margin-top: 5rem;
+}
+
+.content h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  line-height: 3rem;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
+  margin-right: 2rem;
+}
+
+.content h4.marked {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
 }
 
 .content ul,
@@ -354,15 +398,20 @@ h1 {
   text-decoration: none;
 }
 
+.col + .col {
+  margin-left: 4rem;
+}
+
 #amoebe {
   position: absolute;
-  top: calc(30vh - 20rem);
-  left: 8rem;
+  top: calc(30vh - 14rem);
+  left: 10rem;
 }
 
 .blog-index {
   position: relative;
   z-index: 1;
+  transform: translateZ(0.01px);
 }
 
 .blog-item {
@@ -384,6 +433,12 @@ h1 {
 .blog-item p {
   font-size: 2rem;
   margin: 0;
+}
+
+.blog-post hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 4rem;
 }
 
 .blog-post header {
@@ -408,6 +463,10 @@ h1 {
   line-height: 5rem;
   margin-top: 6rem;
   width: 100%;
+}
+
+.blog-post header + p img:first-child:last-child {
+  margin-top: 6rem;
 }
 
 .subscribe {
@@ -518,7 +577,15 @@ input:focus {
   margin-top: 15rem;
 }
 
+.partner {
+  border-bottom: 0 !important;
+}
+
 @media screen and (max-width: 900px) {
+  .section::before {
+    margin-left: -3rem !important;
+  }
+
   .page {
     position: relative;
     z-index: 1;
@@ -530,6 +597,10 @@ input:focus {
 
   h1 {
     font-size: 4rem;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .content h2 {
@@ -600,8 +671,8 @@ input:focus {
 
   #amoebe {
     position: absolute;
-    top: -10rem;
-    left: -15rem;
+    top: -5rem;
+    left: -10rem;
     transform: scale(0.5);
   }
 
@@ -715,7 +786,7 @@ input:focus {
 
 /* community */
 .stats {
-  margin: 10rem 0;
+  margin: 5rem 0;
 }
 
 .stats-list {
@@ -750,8 +821,13 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-.stats-repo + .stats-repo {
-  margin-left: 2rem;
+.stats-repo-data + span {
+  margin-right: 2rem;
+}
+
+.stats-repo-data:empty + span {
+  display: none;
+  margin-right: 0;
 }
 
 .map {
@@ -795,24 +871,148 @@ input:focus {
 .cols {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.cols h4 + p {
+  margin-top: 3rem;
+}
+.cols p + p {
+  margin-top: 0.5rem;
 }
 
 .col {
-  width: calc(50% - 4rem);
+  flex: 1;
+}
+
+.col p {
+  width: 100%;
 }
 
 .content header .subtitle {
-  margin-top: 2rem !important;
+  margin-top: 1rem !important;
   font-weight: bold;
 }
 
-.community h1 {
-  /* font-size: 8rem; */
+.section {
+  position: relative;
+  padding-top: 7rem;
+  margin-top: 7rem;
+}
+
+.section::before {
+  top: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100vw;
+  margin-left: -10rem;
+}
+
+.section header h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.section .cols h4 {
+  margin-top: 3rem;
+}
+
+.section header p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 1rem !important;
+}
+
+.section .cols p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.section footer {
+  margin-top: 5rem;
+}
+
+.section--disabled header::before {
+  font-size: 2rem;
+  content: 'Not yet available';
+  bottom: 2rem;
+  left: -10px;
+  position: relative;
+  background: yellow;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.partners {
+  margin-top: 8rem;
+}
+
+.partners h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+.partners a:hover {
+  background: 0 !important;
+}
+
+.partners ul {
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.partners ul {
+  flex-shrink: 0;
+}
+
+.partners li {
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+}
+
+.partners li:first-child {
+  margin-left: 0;
+}
+
+.partners li img {
+  width: auto;
 }
 
 @media screen and (max-width: 900px) {
+  .section header h2 {
+    font-size: 4rem;
+    padding-top: 1rem;
+  }
+  .partners {
+    margin-top: 4rem;
+  }
+
+  .partners li {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .blog-post hr {
+    margin-top: 3rem;
+  }
+
   .with-note {
     width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 
   .map {
@@ -847,11 +1047,12 @@ input:focus {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 5rem 0;
+    margin: 3rem 0 1rem;
   }
 
-  .stats img {
+  .medals img {
     width: 100vw;
+    height: auto;
     max-width: none;
     margin-left: -3rem;
     margin-right: -3rem;
@@ -861,7 +1062,7 @@ input:focus {
 
   .stats-list,
   .stats-repos {
-    width: calc(50% - 2rem);
+    width: 100%;
   }
 
   .stats-list {
@@ -908,11 +1109,19 @@ input:focus {
     line-height: 1;
     margin-bottom: 0;
   }
+
+  .col + .col {
+    margin-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .community header h1 {
     font-size: 4rem !important;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
   }
 }
 
