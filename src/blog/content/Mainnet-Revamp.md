@@ -32,7 +32,7 @@ Most notably, we are upgrading to the latest tendermint version which includes b
 
 Well, for Layer-1 chains it might be true. We are arguing though, that for Layer-2 chains and Plasma chain in particular, immutability may not be that important. Here is why.
 
-Blockchain is a source of truth for the apps build on top of it. Thus it should stay immutable otherwise it cannot be trusted anymore<sup>[1](#s1)</sup>. However, for Plasma chain the supreme source of truth is always the root chain plus data witness. Even if the plasma chain ceases to exist, user still can safely exit his funds using the bridge contract on the root chain<sup>[2](#s2)</sup>. So non-immutability of plasms chain is not leading to undesired value changes.
+Blockchain is a source of truth for the apps build on top of it. Thus it should stay immutable otherwise it cannot be trusted anymore<sup>[1](#s1)</sup>. However, for Plasma chain the supreme source of truth is always the root chain plus data witness. Even if the plasma chain ceases to exist, user still can safely exit his funds using the bridge contract on the root chain<sup>[2](#s2)</sup>. So non-immutability of plasma chain is not leading to undesired value changes.
 
 ## What exactly we are planning to do
 
