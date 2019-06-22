@@ -1,17 +1,22 @@
 (function() {
 
+	var limit = 5;
+	var amount = 0;
 	const urgentOnly = false;
 	const useAuth = false;
 	const token = '';	// github token in case of useAuth = true
-	const cacheTTL = 3600000;	// one hour
+	const cacheTTL = 900000;	// 15 minutes
 	const bountiesHolder = document.getElementById('bounties');
 	const bountiesOverlayHolder = document.getElementById('bounties-overlay');
 	const bountiesOverlayContent = document.getElementById('bounties-overlay-content');
 	const bountiesOverlayClose = document.getElementById('bounties-overlay-close');
 	const orderkey = document.getElementById('orderkey');
 	const orderdir = document.getElementById('orderdir');
-	const untilHolder = document.getElementById('until');
-	const reposUrl = 'https://api.github.com/repos/leapdao/';
+	const filternew = document.getElementById('filternew');
+	const bountySizesHolder = document.getElementById('bounty-sizes');
+	// const untilHolder = document.getElementById('until');
+	const originalReposUrl = 'https://api.github.com/repos/leapdao/';
+	const reposUrl = 'https://r4g94d22ff.execute-api.eu-west-1.amazonaws.com/prod/';
 	const repos = [
 		'bridge-ui',
 		'burner-wallet',
@@ -34,6 +39,14 @@
 		'solEVM-enforcer',
 		'spending-conditions'
 	];
+	const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+	const sizeTitles = {
+		'XS': '~3 hours, 200 DAI',
+		'S': '~5 hours, 350 DAI',
+		'M': '~8 hours, 550 DAI',
+		'L': '~13 hours, 900 DAI',
+		'XL': '~21 hours, 1400 DAI'
+	};
 	
 	const md = window.markdownit({
 		html: true,
@@ -44,12 +57,14 @@
 	
 	
 	// fetch all issues and process them
-	const fetchAllIssues = (repos, urgent, useAuth, order) =>
+	const fetchAllIssues = (repos, urgent, limit, useAuth, order) =>
 		Promise.all(repos.map(fetchIssues(urgent, useAuth)))
 			// flatten results - flat array method has poor support
 			.then(data => [].concat(...data))
 			.then(parseIssues)
+			.then(filterIssues)
 			.then(sortIssues(order))
+			.then(limitIssues(limit))
 			.then(printIssues)
 			.catch(err => {
 				console.log(err);
@@ -77,7 +92,7 @@
 						data: data
 					}));
 					localStorage.setItem('bounty.cached.until', until);
-					untilHolder.innerHTML = (new Date(until)).toLocaleTimeString();
+					// untilHolder.innerHTML = (new Date(until)).toLocaleTimeString();
 				}
 				return data;
 			});
@@ -111,16 +126,33 @@
 		const match = item.body.match(regexp);
 		if (match) {
 			item[type] = {
-				login: match[1],
-				share: match[2],
+				login: match[1] || '',
+				share: match[2] || '',
 				html_url: ''
 			};
-			if (match[1].match(/(name)|(\?+)|(_+)/)) {
-				item[type].login = '?';
+			if (match[1].match(/(name)|(open)|(\?+)|(_+)/)) {
+				item[type].login = '';
 			}
-			else {
+			else if (match[1]) {
 				item[type].html_url = 'https://github.com/' + match[1];
 			}
+		}
+		else if (type === 'worker' && item.assignee) {
+			item[type] = {
+				login: item.assignee.login,
+				share: '',
+				html_url: item.assignee.html_url
+			};
+		}
+		else if (type === 'gardener' && item.user) {
+			item[type] = {
+				login: item.user.login,
+				share: '',
+				html_url: item.user.html_url
+			};
+		}
+		else {
+			item[type] = null;
 		}
 	};
 	
@@ -140,16 +172,48 @@
 				}
 			});
 			// repo
-			item.repository = item.repository_url.replace(reposUrl, '');
+			item.repository = item.repository_url.replace(originalReposUrl, '');
 			// console.log('item', item);
 			return item;
 		});
+
+
+	// filter issues by different keys
+	const filterIssues = data => {
+		return data.filter(item => {
+			var hasSize = false;
+			item.labels.forEach(label => {
+				const sizeMatch = label.name.match(/^size-(\S+)/);
+				if (sizeMatch) {
+					hasSize = true;
+				}
+			});
+			if (!hasSize) return false;
+			if (filternew.checked) {
+				if (!item.worker || !item.worker.login) {
+					return true;
+				}
+			}
+			else {
+				return true;
+			}
+		});
+	};
 	
 	
-	// sort issues by date asc
+	const limitIssues = limit => data => {
+		amount = data.length;
+		return limit ? data.slice(0, limit) : data
+	};
+	
+	
+	// sort issues by different keys
 	const sortIssues = order => data => {
-		const sizes = ['XS', 'S', 'M', 'L', 'XL'];
-		return  data.sort((a, b) => {
+		return	data
+		.sort((a, b) => {
+			return order.dir * (Date.parse(a.created_at) - Date.parse(b.created_at));
+		})
+		.sort((a, b) => {
 			switch(order.key) {
 				case 'size':
 					return order.dir * (sizes.indexOf(a.size) > sizes.indexOf(b.size) ? 1 : -1);
@@ -185,10 +249,6 @@
 						(a.reviewer ? a.reviewer.share : 0)
 						 > (b.reviewer ? b.reviewer.share : 0) ? 1 : -1);
 				break;
-				case 'date':
-				default:
-					return order.dir * (Date.parse(a.created_at) - Date.parse(b.created_at));
-				break;
 			}
 		});
 	};
@@ -204,27 +264,46 @@
 				 : `${item.gardener.login}`)
 			 : '';
 			const worker = item.worker ?
-			 '</br>Worker ' + (item.worker.html_url ?
+			 '</br>Worker: ' + (item.worker.html_url ?
 				 `<a href="${item.worker.html_url}">${item.worker.login}</a>`
-				 : `${item.worker.login}`) + ` ${item.worker.share}%`
+				 : `${item.worker.login}`)
+				 + (item.worker.share ? ` ${item.worker.share}%` : '')
 			 : '';
 			const reviewer = item.reviewer ?
-			 '</br>Reviewer ' + (item.reviewer.html_url ?
+			 ', Reviewer: ' + (item.reviewer.html_url ?
 				 `<a href="${item.reviewer.html_url}">${item.reviewer.login}</a>`
 				 : `${item.reviewer.login}`) + ` ${item.reviewer.share}%`
 			 : '';
-			const size = item.size ? ` - Size ${item.size}` : '';
+			const size = () => {
+				const title = sizeTitles[item.size];
+				return item.size ?
+			  `<span class="bounty-size" title="${title}">${item.size}</span>` : ''
+			};
+			const labels = () => {
+				var out = '';
+				if (!item.worker) {
+					out += `<span class="bounty-label">unassigned</span>`;
+				}
+				item.labels.forEach(label => {
+					if (label.name !== 'bounty' && !label.name.match(/^size-(\S+)/)) {
+						out += `<span class="bounty-label">${label.name}</span>`;
+					}
+				});
+				return out;
+			};
 			const elem = document.createElement('div');
 			elem.className = 'bounty';
 			elem.innerHTML = `
-				<a href="${item.html_url}">#${item.number} - ${item.title}</a>
+				<a href="${item.html_url}">${item.title}</a>
 				<br/>
 				<small>
+					${size()}
 					${(new Date(item.created_at)).toLocaleDateString()}
 					${gardener}
-					<br/>
+					<span class="bounty-github"></span>
 					<a href="${item.repository_url}">${item.repository}</a>
-					${size}
+					#${item.number}
+					${labels()}
 					${worker}
 					${reviewer}
 				</small>`;
@@ -232,13 +311,31 @@
 			// attach click
 			elem.addEventListener('click', e => {
 				if (e.target !== e.currentTarget) return;
-				bountiesOverlayContent.innerHTML = '<p>' + elem.innerHTML
+				bountiesOverlayContent.innerHTML = '<h2>Bounty</h2>'
+				 + '<p class="headline">' + elem.innerHTML
 				 + '</p>' + md.render(item.body);
 				// remove all h1
 				bountiesOverlayContent.querySelectorAll('h1').forEach(h1 => h1.remove());
 				bountiesOverlayHolder.className = 'shown';
 			});
 		});
+		// add 'show all' link
+		if (limit && amount > limit) {
+			const linkHolder = document.createElement('div');
+			linkHolder.id = 'bounties-link-show-all';
+			const link = document.createElement('a');
+			link.href = 'javascript:';
+			link.innerHTML = `Show all ${amount} ${filternew.checked ? ' unassigned' : ''} bounties`;
+			linkHolder.appendChild(link);
+			bountiesHolder.appendChild(linkHolder);
+			// attach click
+			link.addEventListener('click', e => {
+				if (e.target !== e.currentTarget) return;
+				limit = 0;
+				link.parentNode.removeChild(link);
+				run(urgentOnly, limit);
+			});
+		}
 	};
 	
 	
@@ -249,23 +346,24 @@
 			untilHolder.innerHTML = (new Date(until)).toLocaleTimeString();
 		}
 	};
-	showUntil();
+	// showUntil();
 	
 	
 	// run
-	const run = urgent => fetchAllIssues(repos, urgent, useAuth, {
+	const run = (urgent, limit) => fetchAllIssues(repos, urgent, limit, useAuth, {
 		key: orderkey.value,
 		dir: orderdir.value
 	});
-	run(urgentOnly);
+	run(urgentOnly, limit);
 	
 	
 	// attach order selectors
-	const attachSelectors = () => {
-		orderkey.addEventListener('change', () => run());
-		orderdir.addEventListener('change', () => run());
+	const attachControls = () => {
+		orderkey.addEventListener('change', () => run(urgentOnly, limit));
+		orderdir.addEventListener('change', () => run(urgentOnly, limit));
+		filternew.addEventListener('change', () => run(urgentOnly, limit));
 	};
-	attachSelectors();
+	attachControls();
 	
 	// attach overlay events
 	const attachOverlay = () => {
@@ -283,5 +381,21 @@
 		});
 	};
 	attachOverlay();
+	
+	// generate sizes legend
+	const generateSizeLegend = () => {
+		var html = '<table>';
+		sizes.forEach(size => {
+			html += 
+			`<tr>
+				<td><span class="bounty-size">${size}</span></td>
+				<td>${sizeTitles[size].split(',')[0].trim()}</td>
+				<td>${sizeTitles[size].split(',')[1].trim()}</td>
+			</tr>`;
+		});
+		html += '</table>';
+		bountySizesHolder.innerHTML = html;
+	};
+	generateSizeLegend();
 	
 })();

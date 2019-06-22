@@ -45,26 +45,48 @@
         <header>
           <h1 class="logo">LeapDAO</h1>
           <h2>Bounties</h2>
-          <div class="orderselectors">
-            <span>Order by </span>
-            <select id="orderkey">
-              <option value="date">Date</option>
-              <option value="size">Size</option>
-              <option value="number">Number</option>
-              <option value="repository">Repository</option>
-              <option value="gardener">Gardener</option>
-              <option value="worker">Worker</option>
-              <option value="reviewer">Reviewer</option>
-              <option value="worker_share">Worker Share</option>
-              <option value="reviewer_share">Reviewer Share</option>
-            </select>
-            <select id="orderdir">
-              <option value="-1">Desc</option>
-              <option value="1">Asc</option>
-            </select>
-            <small>Cached until <span id="until"></span></small>
-          </div>
         </header>
+        <div class="cols">
+          <div class="col">
+            <p>
+              At LeapDAO we use bounties to reward contributions.
+              Take an available bounty from the list below, complete task and earn money!
+              We pay in DAI stablecoin.
+              <br/>
+              Some of the bounties are free to take on 
+              <a href="https://gitcoin.co/explorer?org=leapdao&idx_status=open&network=mainnet">Gitcoin</a>.
+              <br/>Check the <a href="https://github.com/orgs/leapdao/projects/6">Github Bounty Board</a>
+              to apply directly and join our <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Slack</a>.
+            </p>
+          </div>
+          <div class="col" id="bounty-sizes"></div>
+        </div>
+        <div class="bounty-controls">
+          <div class="cols">
+            <div class="col">
+              <span>Order by </span>
+              <select id="orderkey">
+                <option value="date">Date</option>
+                <option value="size">Size</option>
+                <!-- <option value="number">Number</option> -->
+                <option value="repository">Repository</option>
+                <!-- <option value="gardener">Gardener</option> -->
+                <!-- <option value="worker">Worker</option> -->
+                <!-- <option value="reviewer">Reviewer</option> -->
+                <option value="worker_share">Worker Share</option>
+                <option value="reviewer_share">Reviewer Share</option>
+              </select>
+              <select id="orderdir">
+                <option value="-1">Desc</option>
+                <option value="1">Asc</option>
+              </select>
+            </div>
+            <div class="col">
+              <input type="checkbox" id="filternew" checked="checked" />
+              <label for="filternew">Unassigned only</label>
+            </div>
+          </div>
+        </div>
         <div id="bounties">
             <p>Loading...</p>
         </div>
@@ -140,33 +162,7 @@
 		<div id="bounties-overlay-content" class="content"></div>
 		<a href="#" id="bounties-overlay-close" title="Use ESC key">Close [ESC]</a>
 	</div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      width="530"
-      height="545"
-      id="amoebe"
-    >
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            result="mat"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -19"
-          />
-        </filter>
-      </defs>
-
-      <g filter="url(#goo)">
-        <circle cx="-30" cy="-30" r="30" />
-        <circle cx="-30" cy="-30" r="30" />
-        <circle cx="-30" cy="-30" r="30" />
-        <circle cx="-30" cy="-30" r="30" />
-        <circle cx="-30" cy="-30" r="30" />
-      </g>
-    </svg>
+    <canvas id="amoebe"></canvas>
 
     <svg width="115" height="50" class="loader">
       <defs>
@@ -188,6 +184,9 @@
 
     <script src="scripts/markdown-it.min.js"></script>
     <script src="scripts/bounties.js"></script>
+
+    <script src="main.js" async></script>
+    <script src="amoebe.js" async></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
