@@ -333,17 +333,17 @@ p.grand {
   border-bottom-left-radius: 0;
 /*  width: 30rem;*/
 /*  height: 26rem;*/
-	font-size: 2rem;
-	line-height: 3rem;
-	margin-bottom: 1rem;
-	padding: 1rem;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	cursor: pointer;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .bounty:hover {
-	border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-left-width: 2px;
 }
 
@@ -390,31 +390,31 @@ label[for=filternew],
 }
 
 #bounties-overlay {
-	width: 90%;
-	position: fixed;
-	height: 90%;
-	top: 5%;
-	left: 5%;
-	background: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 16px;
-	z-index: 100;
-	padding: 2rem;
-	overflow: auto;
-	display: none;
+  width: 90%;
+  position: fixed;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  z-index: 100;
+  padding: 2rem;
+  overflow: auto;
+  display: none;
 }
 
 #bounties-overlay.shown {
-	display: block;
+  display: block;
 }
 
 #bounties-overlay-close {
-	position: absolute;
-	top: .5rem;
-	right: 1rem;
-	font-size: 1.5rem;
-	background: none;
-	
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  
 }
 
 #bounties-overlay-content h2:first-child {
@@ -436,7 +436,7 @@ label[for=filternew],
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 .links {
