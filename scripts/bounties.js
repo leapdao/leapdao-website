@@ -277,7 +277,7 @@
       const size = () => {
         const title = sizeTitles[item.size];
         return item.size ?
-        `<span class="bounty-size" title="${title}">${item.size}</span>` : ''
+        `<span class="bounty-size bounty-size-${item.size}" title="${title}">${item.size}</span>` : ''
       };
       const labels = () => {
         var out = '';
@@ -389,7 +389,7 @@
     sizes.forEach(size => {
       html += 
       `<tr>
-        <td><span class="bounty-size">${size}</span></td>
+        <td><span class="bounty-size bounty-size-${size}">${size}</span></td>
         <td>${sizeTitles[size].split(',')[0].trim()}</td>
         <td>${sizeTitles[size].split(',')[1].trim()}</td>
       </tr>`;

@@ -360,13 +360,29 @@ p.grand {
 }
 
 .bounty-size {
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  padding: 2px 6px;
+  padding: 3px 7px;
+  color: #fff;
 }
 
-.bounty:hover .bounty-size {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+.bounty-size-XS {
+  background-color: #aed83b;
+}
+
+.bounty-size-S {
+  background-color: #51ab47;
+}
+
+.bounty-size-M {
+  background-color: #10c788;
+}
+
+.bounty-size-L {
+  background-color: #1396bd;
+}
+
+.bounty-size-XL {
+  background-color: #0a46de;
 }
 
 .bounty-github {
