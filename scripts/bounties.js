@@ -122,34 +122,37 @@
   
   // parse user and share
   const parseUser = (type, item) => {
-    const regexp = new RegExp(type + '\\:\\s*\\@?(\\S+)\\s*\\/\\s*(\\d+)');
+    const regexp = new RegExp(type + ':\\s*@?(\\S+)\\s+/\\s+(\\S+)');
     const match = item.body.match(regexp);
     if (match) {
       item[type] = {
         login: match[1] || '',
-        share: match[2] || '',
+        share: match[2] || 0,
         html_url: ''
       };
       if (match[1].match(/(name)|(open)|(\?+)|(_+)/)) {
         item[type].login = '';
+        if (type === 'worker' && item.assignee) {
+          item[type].login = item.assignee.login;
+          item[type].html_url = item.assignee.html_url;
+        }
+        else if (type === 'gardener' && item.user) {
+          item[type].login = item.user.login;
+          item[type].html_url = item.user.html_url;
+        }
       }
       else if (match[1]) {
         item[type].html_url = 'https://github.com/' + match[1];
       }
-    }
-    else if (type === 'worker' && item.assignee) {
-      item[type] = {
-        login: item.assignee.login,
-        share: '',
-        html_url: item.assignee.html_url
-      };
-    }
-    else if (type === 'gardener' && item.user) {
-      item[type] = {
-        login: item.user.login,
-        share: '',
-        html_url: item.user.html_url
-      };
+      if (match[2].match(/(share)|(\?+)|(_+)/)) {
+        item[type].share = 0;
+      }
+      else {
+        item[type].share = parseInt(item[type].share);
+      }
+      if (!item[type].login && !item[type].share) {
+        item[type] = null;
+      }
     }
     else {
       item[type] = null;
