@@ -436,6 +436,20 @@ label[for=filternew],
   text-align: center;
 }
 
+.glassfrog {
+  background: center left url(/img/glassfrog-logo.png) no-repeat;
+  background-size: 25.5px 21.25px;
+  padding-left: 30px;
+}
+
+.content .nomargin-top {
+  margin-top: 0.5rem;
+}
+
+.content ul.small {
+  font-size: 1.67rem;
+}
+
 .clear {
   clear: both;
 }

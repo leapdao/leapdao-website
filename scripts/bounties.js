@@ -317,6 +317,7 @@
         // remove all h1
         bountiesOverlayContent.querySelectorAll('h1').forEach(h1 => h1.remove());
         bountiesOverlayHolder.className = 'shown';
+        bountiesOverlayHolder.scrollTo(0, 0);
       });
     });
     // add 'show all' link
