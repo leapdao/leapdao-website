@@ -282,11 +282,11 @@
       const labels = () => {
         var out = '';
         if (!item.worker) {
-          out += `<span class="bounty-label">unassigned</span>`;
+          out += `<span class="tag">unassigned</span>`;
         }
         item.labels.forEach(label => {
           if (label.name !== 'bounty' && !label.name.match(/^size-(\S+)/)) {
-            out += `<span class="bounty-label">${label.name}</span>`;
+            out += `<span class="tag">${label.name}</span>`;
           }
         });
         return out;

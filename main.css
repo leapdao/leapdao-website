@@ -351,7 +351,7 @@ p.grand {
   color: #555;
 }
 
-.bounty-label {
+.tag {
   border-radius: 2px;
   padding: 0px 3px;
   margin-right: 6px;
@@ -458,8 +458,10 @@ label[for=filternew],
   padding-left: 30px;
 }
 
-.content .nomargin-top {
-  margin-top: 0.5rem;
+.content .compact,
+.content .compact li {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .content ul.small {

@@ -42,13 +42,13 @@
     }
     return found;
   };
-  const listLinked = (from, ids) => {
-    var out = '<ul class="small nomargin-top">';
+  const listLinked = (from, ids, asTags) => {
+    var out = asTags ? '' : '<ul class="small compact">';
     ids.forEach(id => {
       const found = findById(id, from);
-      if (found) out += `<li>${found.description}</li>`;
+      if (found) out += asTags ? `<span class="tag">${found.description}</span>` : `<li>${found.description}</li>`;
     });
-    out += '</ul>';
+    out += asTags ? '' : '</ul>';
     return out;
   };
   
@@ -61,7 +61,7 @@
         <div>
           <p>
             <span class="glassfrog"></span>
-            ${item.name_with_circle_for_core_roles}
+            <big>${item.name_with_circle_for_core_roles}</big>
             <br/>
             <small>
               <strong>Purpose:</strong> ${item.purpose}
@@ -69,11 +69,11 @@
             </small>
           </p>
             ${listLinked(data.linked.accountabilities, item.links.accountabilities)}
-          <p class="nomargin-top">
+          <p class="compact">
             <small>
               <strong>Domains:</strong>
             </small>
-            ${listLinked(data.linked.domains, item.links.domains)}
+            ${listLinked(data.linked.domains, item.links.domains, true)}
           </p>
         </div>`;
     });
