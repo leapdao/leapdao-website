@@ -390,11 +390,12 @@
   const generateSizeLegend = () => {
     var html = '<table>';
     sizes.forEach(size => {
+      const [title, description] = sizeTitles[size].split(',');
       html += 
       `<tr>
         <td><span class="bounty-size bounty-size-${size}">${size}</span></td>
-        <td>${sizeTitles[size].split(',')[0].trim()}</td>
-        <td>${sizeTitles[size].split(',')[1].trim()}</td>
+        <td>${title.trim()}</td>
+        <td>${description.trim()}</td>
       </tr>`;
     });
     html += '</table>';
