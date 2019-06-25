@@ -221,6 +221,12 @@ p.grand {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 
+.content a.nohighlight,
+.content a.nohighlight:hover {
+  border: none;
+  background-color: transparent !important;
+}
+
 .content h2 {
   font-size: 4rem;
   line-height: 5rem;
