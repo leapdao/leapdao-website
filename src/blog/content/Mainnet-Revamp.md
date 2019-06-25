@@ -5,14 +5,14 @@ date: 2019-06-21 10:50:00
 emoji: 🛄
 image: /img/blog/mainnet-revamp.png
 author:
-  name: '@kosta'
-  twitter: '@troggo'
+ name: '@kosta'
+ twitter: '@troggo'
 description: We plan to revamp the mainnet preserving the balances. Funds are SAFU.
 ---
 
 ## TLDR
 
-We are going to reset the mainnet chain and start a new one preserving all the onchain balances. There won't be any value loss. In case of any objections, you can exit the chain.
+We are going to stop the mainnet chain and start a new one preserving all the onchain balances. There won't be any value loss for user. In case of any objections, you can exit the chain.
 
 What will change:
 
@@ -30,28 +30,26 @@ We have included a number of fixes into our node software which makes it incompa
 
 Most notably, we are upgrading to the latest Tendermint version which includes breaking changes (including changes in a database structure) and thus requires a network reset. Sadly, it also makes a hard fork not possible.
 
-## But aren't blockchains meant to be immutable?
 
-Well, for Layer-1 chains it might be true. We are arguing though, that for Layer-2 chains, and Plasma chain in particular, immutability may not be that important. Here is why.
+Before we go further, it may be useful to recap how the LeapDAO plasma chain is governed. Feel free to skip the next section if you are well aware of our [Minimal Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/).
 
-Blockchain is a source of truth for the apps built on top of it. Thus it should stay immutable otherwise it cannot be trusted anymore<sup>[1](#s1)</sup>. However, for Plasma chain the supreme source of truth is always its root chain plus data witness. Even if a plasma chain ceases to exist, users still can safely exit their funds using the bridge contract on the root chain<sup>[2](#s2)</sup>. So non-immutability of a plasma chain is not leading to undesired value changes.
 
-## What exactly we are planning to do
+## Recap on how LeapDAO plasma chain is governed
 
-We’ve submitted a [governance proposal](https://leapdao.org/blog/Minimal-Viable-Governance/) to disable exits and deposits on the chain. There will be one week period for exiting your funds, if you disagree with what we are doing.
+Apart from the ability to do transfers and invoke contracts, Plasma chains have an additional functionality to deposit and exit funds from it's parent chain. An on-chain contract called Plasma Bridge is used to execute these functions. 
 
-Once exits and deposits are disabled and all pending exits are finalized, we make a snapshot of UTXOs on the mainnet.
+The Leap Network uses [Zeppelin OS](https://zeppelinos.org/) to allow upgrades of its Plasma Bridge. To avoid endangering the security of funds on the chain through upgrades, the Leap Network implements a [Minimal Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/) protocol. It grants all the users enough time to review and react to governance proposals before they are applied.
 
-Then, we deploy a new set of [plasma contracts](https://github.com/leapdao/leap-contracts) and bootstrap a new network of [validators](https://github.com/leapdao/leap-node). The network will be using the same tokens as the previous one.
+## What we are planning to do
 
-We deposit a required number of LEAP tokens on the new network and distribute them according to the snapshot. All other tokens are exited from plasma already, so nothing needs to be done. This way, everyone will retain their plasma balance.
+First, we need to stop the old network safely. To do that we’ve submitted a [governance proposal](https://leapdao.org/blog/Minimal-Viable-Governance/) to upgrade Plasma Bridge disabling exits and deposits on the chain. 
 
-We switch over all the infrastructure (like [Bridge UI](https://github.com/leapdao/bridge-ui)) to use the new network which effectively becomes a mainnet from that moment.
+Once exits and deposits are disabled and all pending exits are finalized, we make a snapshot of UTXOs on the plasma chain.
+
+Next, we deploy a new set of [plasma contracts](https://github.com/leapdao/leap-contracts) and bootstrap a new network of [validators](https://github.com/leapdao/leap-node). The network will be using the same configuration as the previous one including governance parameters and registered root chain tokens.
+
+To replicate account balances on the new chain, we deposit a required number of LEAP tokens on plasma and distribute them according to the snapshot. All other tokens are exited from plasma already, so nothing needs to be done. This way, everyone retains their plasma balance.
+
+We switch over all the infrastructure (like [Bridge UI](https://mainnet.leapdao.org)) to use the new network which effectively becomes a mainnet from that moment.
 
 Meanwhile, we recover tokens from the old bridge contracts to compensate the deposit made into a new network.
-
----
-
-<a name="s1"></a><sup>1</sup> — This is arguable as well. There are valid reasons from both the immutability maximalists (e.g. Ethereum Classic supporters) and "anti-immutabilism" adepts (Zamfirians?). However, it is not that important for our topic today.
-
-<a name="s2"></a><sup>2</sup> — Provided the user has a copy of block data and bridge contract implementation is correct and safe from bad governance (no last minute updates possible).
