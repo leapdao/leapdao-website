@@ -48,7 +48,7 @@ Once exits and deposits are disabled and all pending exits are finalized, we mak
 
 Next, we deploy a new set of [plasma contracts](https://github.com/leapdao/leap-contracts) and bootstrap a new network of [validators](https://github.com/leapdao/leap-node). The network will be using the same configuration as the previous one including governance parameters and registered root chain tokens.
 
-To replicate account balances on the new chain, we deposit a required number of LEAP tokens on plasma and distribute them according to the snapshot. All other tokens are exited from plasma already, so nothing needs to be done. This way, everyone retains their plasma balance.
+To replicate account balances on the new chain, we deposit a required number of tokens on plasma and distribute them according to the snapshot. This way, everyone retains their plasma balance.
 
 We switch over all the infrastructure (like [Bridge UI](https://mainnet.leapdao.org)) to use the new network which effectively becomes a mainnet from that moment.
 
