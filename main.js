@@ -116,70 +116,71 @@
     });
   }
 
-  if (window.onpopstate === null) {
-    const loader = document.querySelector('.loader');
-    // browser supports onpopstate
-    function loadPage(pathname) {
-      loader.style.display = 'block';
-      const xhr = new XMLHttpRequest();
-      xhr.open('get', pathname);
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === xhr.DONE) {
-          const html = xhr.responseText;
-          const dom = new DOMParser().parseFromString(html, 'text/html');
-          const targetPage = document.querySelector('.page');
-          const sourcePage = dom.querySelector('.page');
-          targetPage.innerHTML = sourcePage.innerHTML;
-          targetPage.setAttribute('class', sourcePage.getAttribute('class'));
-          document.querySelector('title').innerHTML = dom.querySelector(
-            'title'
-          ).innerHTML;
-          const scripts = Array.from(sourcePage.querySelectorAll('script'))
-            .filter(s => !s.src)
-            .map(s => s.innerHTML);
-          if (scripts) {
-            const scriptTag = document.createElement('script');
-            scriptTag.innerHTML = scripts.join(';\n');
-            targetPage.appendChild(scriptTag);
-          }
-          window.scrollTo(0, 0);
-
-          Array.from(
-            document.querySelectorAll('head script.page-script')
-          ).forEach(el => {
-            document.head.removeChild(el);
-          });
-          Array.from(dom.querySelectorAll('.page script')).forEach(
-            oldScript => {
-              const script = document.createElement('script');
-              script.src = oldScript.src;
-              script.className = 'page-script';
-              script.async = false;
-              document.head.appendChild(script);
-            }
-          );
-
-          loader.style.display = 'none';
-        }
-      };
-      xhr.send();
-    }
-    document.addEventListener('click', e => {
-      if (
-        e.target.tagName === 'A' &&
-        e.target.getAttribute('href').startsWith('/') &&
-        e.which === 1 &&
-        !e.metaKey
-      ) {
-        e.preventDefault();
-        loadPage(e.target.getAttribute('href'));
-        window.history.pushState(null, null, e.target.getAttribute('href'));
-      }
-    });
-    window.addEventListener('popstate', e => {
-      loadPage(window.location.pathname);
-    });
-  }
+// COMMENTED OUT BECAUSE INTRODUCE BUG #85: Scripts are not running on navigation
+  // if (window.onpopstate === null) {
+  //   const loader = document.querySelector('.loader');
+  //   // browser supports onpopstate
+  //   function loadPage(pathname) {
+  //     loader.style.display = 'block';
+  //     const xhr = new XMLHttpRequest();
+  //     xhr.open('get', pathname);
+  //     xhr.onreadystatechange = () => {
+  //       if (xhr.readyState === xhr.DONE) {
+  //         const html = xhr.responseText;
+  //         const dom = new DOMParser().parseFromString(html, 'text/html');
+  //         const targetPage = document.querySelector('.page');
+  //         const sourcePage = dom.querySelector('.page');
+  //         targetPage.innerHTML = sourcePage.innerHTML;
+  //         targetPage.setAttribute('class', sourcePage.getAttribute('class'));
+  //         document.querySelector('title').innerHTML = dom.querySelector(
+  //           'title'
+  //         ).innerHTML;
+  //         const scripts = Array.from(sourcePage.querySelectorAll('script'))
+  //           .filter(s => !s.src)
+  //           .map(s => s.innerHTML);
+  //         if (scripts) {
+  //           const scriptTag = document.createElement('script');
+  //           scriptTag.innerHTML = scripts.join(';\n');
+  //           targetPage.appendChild(scriptTag);
+  //         }
+  //         window.scrollTo(0, 0);
+  //
+  //         Array.from(
+  //           document.querySelectorAll('head script.page-script')
+  //         ).forEach(el => {
+  //           document.head.removeChild(el);
+  //         });
+  //         Array.from(dom.querySelectorAll('.page script')).forEach(
+  //           oldScript => {
+  //             const script = document.createElement('script');
+  //             script.src = oldScript.src;
+  //             script.className = 'page-script';
+  //             script.async = false;
+  //             document.head.appendChild(script);
+  //           }
+  //         );
+  //
+  //         loader.style.display = 'none';
+  //       }
+  //     };
+  //     xhr.send();
+  //   }
+  //   document.addEventListener('click', e => {
+  //     if (
+  //       e.target.tagName === 'A' &&
+  //       e.target.getAttribute('href').startsWith('/') &&
+  //       e.which === 1 &&
+  //       !e.metaKey
+  //     ) {
+  //       e.preventDefault();
+  //       loadPage(e.target.getAttribute('href'));
+  //       window.history.pushState(null, null, e.target.getAttribute('href'));
+  //     }
+  //   });
+  //   window.addEventListener('popstate', e => {
+  //     loadPage(window.location.pathname);
+  //   });
+  // }
 })();
 
 const amoebeCanvas = document.getElementById('amoebe');

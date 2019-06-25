@@ -221,6 +221,12 @@ p.grand {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 
+.content a.nohighlight,
+.content a.nohighlight:hover {
+  border: none;
+  background-color: transparent !important;
+}
+
 .content h2 {
   font-size: 4rem;
   line-height: 5rem;
@@ -311,12 +317,165 @@ p.grand {
   border-bottom: 1px solid #efefef;
 }
 
-.logo-icon {
-  background-image: url('favicon-32x32.png');
-  background-repeat: no-repeat;
-  padding-left: 16px;
-  background-size: 8px;
-  background-position: left center;
+.bounty-controls {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.bounty-controls small {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bounty {
+/*  float: left;*/
+  border: 1px solid rgba(0, 0, 0, 0.0);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s;
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+/*  width: 30rem;*/
+/*  height: 26rem;*/
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.bounty:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left-width: 2px;
+}
+
+.bounty small {
+  color: #555;
+}
+
+.tag {
+  border-radius: 2px;
+  padding: 0px 3px;
+  margin-right: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.bounty-size {
+  border-radius: 6px;
+  padding: 3px 7px;
+  color: #fff;
+}
+
+.bounty-size-XS {
+  background-color: #aed83b;
+}
+
+.bounty-size-S {
+  background-color: #51ab47;
+}
+
+.bounty-size-M {
+  background-color: #10c788;
+}
+
+.bounty-size-L {
+  background-color: #1396bd;
+}
+
+.bounty-size-XL {
+  background-color: #0a46de;
+}
+
+.bounty-github {
+  background: center left url(/img/github.svg) no-repeat;
+  background-size: 16px 16px;
+  padding-left: 19px;
+}
+
+#filternew,
+label[for=filternew],
+.bounty-controls span,
+.bounty-controls select {
+  vertical-align: middle;
+}
+
+#filternew {
+  margin-right: 6px;
+}
+
+#bounties {
+  margin-top: 3rem;
+}
+
+#bounties-overlay {
+  width: 90%;
+  position: fixed;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  z-index: 100;
+  padding: 2rem;
+  overflow: auto;
+  display: none;
+}
+
+#bounties-overlay.shown {
+  display: block;
+}
+
+#bounties-overlay-close {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  
+}
+
+#bounties-overlay-content h2:first-child {
+  margin-top: 0;
+}
+
+#bounties-overlay-content .headline {
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+
+#bounties-overlay-content p {
+  width: 100%;
+}
+
+#bounties-link-show-all {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.glassfrog {
+  background: center left url(/img/glassfrog-logo.png) no-repeat;
+  background-size: 25.5px 21.25px;
+  padding-left: 30px;
+}
+
+.content .compact,
+.content .compact li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content ul.small {
+  font-size: 1.67rem;
+}
+
+.clear {
+  clear: both;
 }
 
 .links {
@@ -704,6 +863,12 @@ input:focus {
     margin-left: -3rem;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bounty {
+    width: 100%;
   }
 }
 

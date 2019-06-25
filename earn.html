@@ -45,26 +45,104 @@
         <header>
           <h1 class="logo">LeapDAO</h1>
           <p>
-            Ethereum, being the first world computer, has spurred
-            a&nbsp;cambrian explosion of
-            <span title="decentralized apps" style="cursor: help">dApps</span>.
-            Yet its capacity is limited&nbsp;&mdash; when gas prices surge,
-            high-transaction-volume use-cases and low-value transactions are
-            pushed off&nbsp;the&nbsp;chain.
-          </p>
-          <p>
-            LeapDAO exist to create and maintain an execution environment to
-            host these use-cases, by this increasing the capacity of Ethereum
-            and widening the scope of&nbsp;possible Dapps in the Ethereum
-            ecosystem.
-          </p>
-          <p>
-            As a Decentralized Adaptive Organization, we&nbsp;combine Holacracy
-            and Decentralized Organizations to&nbsp;build a&nbsp;global,
-            self-managing and purpose-driven community. We&nbsp;reward
-            contribution using bounties.
+            Earn with LeapDAO by completing a bounty, taking on a role, or applying for a grant.
           </p>
         </header>
+        
+        <h2>Grants</h2>
+        <div class="cols">
+          <div class="col">
+            <p>
+              Mass adaption is the next critical step for the blockchain industry.
+              Scalable and secure decentralized apps can deliver this vision.
+              <br/>Hence we support selected entrepreneurs and teams with grants.
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              If you are an entrepreneur or team delivering a use-case
+              that requires fast and cheap transactions or complex computations,
+              we can support you with mentorship and funding.
+              <br/>Talk to us on <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Slack</a>.
+            </p>
+          </div>
+        </div>
+        
+        <h2>Roles</h2>
+        <div class="cols">
+          <div class="col">
+            <p>
+              LeapDAO is an open community operating on 
+              <a href="https://www.holacracy.org/" target="_blank">Holacracy</a> 
+              – a non-hierarchical governance methodology.
+              There are no job positions, but roles, 
+              and every partner holds one or more of them.
+              Some roles may be vacant from time to time,
+              so if you'd like to join our community and take
+              a role listed below – join our 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Slack</a> 
+              and express your intention.
+              <br/>View our organization <a href="https://app.glassfrog.com/organizations/14849/roles/10883348">Glassfrog</a>.
+            </p>
+          </div>
+          <div class="col">
+            <p>
+              <a class="nohighlight" href="https://app.glassfrog.com/organizations/14849/roles/10883348">
+                <img src="/img/glassfrog-circles.png" width="300" alt="Glassfrog" title="Glassfrog"/>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div id="roles">
+            <p>Loading...</p>
+        </div>
+        
+        <h2>Bounties</h2>
+        <div class="cols">
+          <div class="col">
+            <p>
+              At LeapDAO we use bounties to reward task completion.
+              Take an unassigned bounty from the list, work on it, get reviewed
+               and earn money! We pay in DAI, a stablecoin pegged to the US dollar.
+              <br/>Some bounties are free to take on 
+              <a href="https://gitcoin.co/explorer?org=leapdao&idx_status=open&network=mainnet">Gitcoin</a>.
+              <br/>Check the <a href="https://github.com/orgs/leapdao/projects/6">Github Bounty Board</a>
+              to apply directly and join our <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">Slack</a>.
+              <br/>You can also <a href="http://bounty.leapdao.org/viewform">propose a new bounty</a>.
+            </p>
+          </div>
+          <div class="col" id="bounty-sizes"></div>
+        </div>
+        <div class="bounty-controls">
+          <div class="cols">
+            <div class="col">
+              <span>Order by </span>
+              <select id="orderkey">
+                <option value="date">Date</option>
+                <option value="size">Size</option>
+                <!-- <option value="number">Number</option> -->
+                <option value="repository">Repository</option>
+                <!-- <option value="gardener">Gardener</option> -->
+                <!-- <option value="worker">Worker</option> -->
+                <!-- <option value="reviewer">Reviewer</option> -->
+                <option value="worker_share">Worker Share</option>
+                <option value="reviewer_share">Reviewer Share</option>
+              </select>
+              <select id="orderdir">
+                <option value="-1">Desc</option>
+                <option value="1">Asc</option>
+              </select>
+            </div>
+            <div class="col">
+              <input type="checkbox" id="filternew" checked="checked" />
+              <label for="filternew">Unassigned only</label>
+            </div>
+          </div>
+        </div>
+        <div id="bounties">
+            <p>Loading...</p>
+        </div>
+    <div class="clear"></div>
       </div>
 
       <menu class="menu">
@@ -132,6 +210,10 @@
         </form>
       </footer>
     </div>
+  <div id="bounties-overlay">
+    <div id="bounties-overlay-content" class="content"></div>
+    <a href="#" id="bounties-overlay-close" title="Use ESC key">Close [ESC]</a>
+  </div>
     <canvas id="amoebe"></canvas>
 
     <svg width="115" height="50" class="loader">
@@ -151,6 +233,10 @@
         <circle r="20" class="loader-c2" />
       </g>
     </svg>
+
+    <script src="scripts/markdown-it.min.js"></script>
+    <script src="scripts/roles.js"></script>
+    <script src="scripts/bounties.js"></script>
 
     <script src="main.js" async></script>
     <script src="amoebe.js" async></script>
