@@ -6,6 +6,7 @@ emoji: ⛑
 image: /img/blog/XXXX.png
 author:
   - name: '@pinkiebell'
+    link: 'https://github.com/pinkiebell/'
   - name: '@kosta'
     twitter: '@troggo'
 
@@ -35,6 +36,8 @@ leading to inconsistencies and a fork. After the fork happened, both nodes stopp
 
 At this point we decided to let the mainnet to (R)est(I)n(P)eace and move on with our planned mainnet migration.
 We still played with the old mainnet nodes to try to recover them, which succeeded and we learned more about tendermint's internal workings.
+
+By the way, the mainnet failure had nothing to do with the migration, it was just a coincidence.
 
 ## What we learned
 
