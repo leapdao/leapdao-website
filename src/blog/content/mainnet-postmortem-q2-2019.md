@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'Mainnet postmortem report for incident on 17th June 2019
+title: 'Mainnet postmortem report for incident on 17th June 2019'
 date: 2019-07-02 15:00:00
 emoji: ⛑
 image: /img/blog/XXXX.png
