@@ -40,7 +40,7 @@ We still played with the old mainnet nodes trying to recover them. We succeeded 
 ## Lessons learned
 
 - Valuable insights on Tendermint internals.
-- Never ever operate validators with the same keys, even if you can switch them from active to passive. It better to have a proper ring of at least four different validators, so you can afford one of them to be temporarily offline.
+- Never ever operate validators with the same keys, even if you can switch them from active to passive. It's better to have a proper ring of at least four different validators, so you can afford one of them to be temporarily offline.
 - Operational tricks to avoid or recover bad nodes faster in the future.
 
 ## What happens now
