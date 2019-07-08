@@ -17,7 +17,7 @@ LEAP Mainnet has stopped due to double signing and administration issues and had
 
 ## Our validator setup before the incident
 
-LEAP network is still in its [PoA era](https://leapdao.org/blog/Plasma-Roadmap/) and the mainnet validator is operated by LeapDAO. To ensure better validator uptime, we were running two copies of the same validator (sharing the same signing key): one copy is proposing blocks and the other just passively following the chain. The plan was that in case of the proposing node failure, we should be able to quickly switch over to the backup node making it active. Well, don't try this at home. The setup appeared to be [dangerous](https://twitter.com/zmanian/status/1145072296723275776) — we needed to make sure that at no point both copies are producing blocks at the same time.
+LEAP network is still in its [PoA era](https://leapdao.org/blog/Plasma-Roadmap/) and the mainnet validator is operated by LeapDAO. To ensure better validator uptime, we were running two copies of the same validator (sharing the same signing key): one copy is proposing blocks and the other is just passively following the chain. The plan was that in case of the proposing node failure, we should be able to quickly switch over to the backup node making it active. Well, don't try this at home. The setup appeared to be [dangerous](https://twitter.com/zmanian/status/1145072296723275776) — we needed to make sure that at no point both copies are producing blocks at the same time.
 
 <img src="/img/blog/mainnet-topology.png" height="560" width="480" alt="LEAP Mainnet topology before the incident">
 
@@ -40,7 +40,7 @@ We still played with the old mainnet nodes trying to recover them. We succeeded 
 ## Lessons learned
 
 - Valuable insights on Tendermint internals.
-- Never ever operate validators with the same keys, even if you can switch them from active to passive. It better to have a proper ring of at least four different validators, so you can afford one of them to be temporarily offline.
+- Never ever operate validators with the same keys, even if you can switch them from active to passive. It's better to have a proper ring of at least four different validators, so you can afford one of them to be temporarily offline.
 - Operational tricks to avoid or recover bad nodes faster in the future.
 
 ## What happens now
