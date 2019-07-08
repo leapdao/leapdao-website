@@ -39,8 +39,9 @@
     'solEVM-enforcer',
     'spending-conditions'
   ];
-  const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+  const sizes = ['XXS', 'XS', 'S', 'M', 'L', 'XL'];
   const sizeTitles = {
+    'XXS': '~2 hours, 100 DAI',
     'XS': '~3 hours, 200 DAI',
     'S': '~5 hours, 350 DAI',
     'M': '~8 hours, 550 DAI',
