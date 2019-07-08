@@ -1,51 +1,48 @@
 ---
 template: post.html
-title: 'Mainnet postmortem report for incident on 17th June 2019'
+title: 'Postmortem for the Mainnet incident on 17th June 2019'
 date: 2019-07-02 15:00:00
 emoji: ⛑
-image: /img/blog/XXXX.png
+image: /img/blog/mainnet-postmortem.png
 author:
   - name: '@pinkiebell'
     link: 'https://github.com/pinkiebell/'
   - name: '@kosta'
     twitter: '@troggo'
 
-description: What happened on 17th June 2019 with leapDAO-mainnet? Read on...
+description: Mainnet incident happened on 17 June 2019. Funds are safe.
 ---
 
-## Quick overview of network setup
+LEAP Mainnet has stopped due to double signing and administration issues and had to be restarted. No user funds lost. All the functions are restored now.
 
-```
-validator-a (proposing) <-> validator-b (passive)
-                         ^
-            sentinel-a <-|-> sentinel-b
-      both sentinels serving the 'outer' world
-```
+## Our validator setup before the incident
+
+LEAP network is still in its [PoA era](https://leapdao.org/blog/Plasma-Roadmap/) and the mainnet validator is operated by LeapDAO. To ensure better validator uptime, we were running two copies of the same validator (sharing the same signing key): one copy is proposing blocks and the other just passively following the chain. The plan was that in case of the proposing node failure, we should be able to quickly switch over to the backup node making it active. Well, don't try this at home. The setup appeared to be [dangerous](https://twitter.com/zmanian/status/1145072296723275776) — we needed to make sure that at no point both copies are producing blocks at the same time.
+
+<img src="/img/blog/mainnet-topology.png" height="560" width="480" alt="LEAP Mainnet topology before the incident">
 
 ## What happened on 17th June 2019
 
-We got notifications on Slack that `validator-a` is not producing blocks and therefore no periods anymore.
-Checking the logs revealed that `validator-a` had problems with P2P connections to other nodes.
+We got notifications on Slack that Validator A is stopped producing blocks and therefore not submitting periods anymore.
+The logs revealed that Validator A had problems with P2P connections to other nodes.
 
-We had to restart `validator-a` and making `validator-b` active, however `validator-b` had the same problems so we
-left it as-is in hope it might catch itself.
+We had to restart Validator A and make Validator B active. However, Validator B had the same problems so we left it as-is hoping it might recover.
 
-After nearly ~7 hours, `validator-a` catched up again and producing blocks.
-The problem was that `validator-b` also started to catch itself and the nodes still had connections issues to each other,
-leading to inconsistencies and a fork. After the fork happened, both nodes stopped working per design and mainnet was really dead.
+After nearly 7 hours, Validator A caught up with the network tip and started producing blocks.
+The problem was that Validator B also started to produce blocks and the nodes still had issues connecting to each other, leading to inconsistencies and a fork. After the fork happened, both nodes stopped working per design and mainnet was really dead.
 
-At this point we decided to let the mainnet to (R)est(I)n(P)eace and move on with our planned mainnet migration.
-We still played with the old mainnet nodes to try to recover them, which succeeded and we learned more about tendermint's internal workings.
+## How we resolved the issue
 
-By the way, the mainnet failure had nothing to do with the migration, it was just a coincidence.
+Coincidentally, we were [planning the mainnet migration](https://leapdao.org/blog/mainnet-revamp/) around the same time. So we decided to let the old mainnet rest in peace and move on with the planned migration. The migration went smooth and the mainnet is up and working again.
 
-## What we learned
+We still played with the old mainnet nodes trying to recover them. We succeeded with recovery and learned more about Tendermint's internals.
 
-- Valuable insights on tendermint.
-- Never ever operate validators with the same keys, even if we can switch them from active to passive.
+## Lessons learned
+
+- Valuable insights on Tendermint internals.
+- Never ever operate validators with the same keys, even if you can switch them from active to passive. It better to have a proper ring of at least four different validators, so you can afford one of them to be temporarily offline.
 - Operational tricks to avoid or recover bad nodes faster in the future.
 
 ## What happens now
 
-Our planned mainnet migration to a new leap-node version with dozens of bug fixes are almost done!
-You can read more about the migration at [this blog post](https://leapdao.org/blog/mainnet-revamp/).
+Our planned mainnet migration was successfully completed. The mainnet is running, all the functions are in place. No funds lost because of the incident. You can read more about the migration in our [blog](https://leapdao.org/blog/mainnet-revamp/).
