@@ -22,7 +22,10 @@
           )
       )
       .then(allContributors => {
-        document.getElementById('contributors').innerHTML = allContributors.size;
+        const contributors = document.getElementById('contributors');
+        if (contributors) {
+          contributors.innerHTML = allContributors.size;
+        }
       });
   };
 
@@ -30,7 +33,10 @@
     fetch(`https://nplrpwwfw1.execute-api.eu-west-1.amazonaws.com/prod/slack`)
       .then(response => response.json())
       .then(data => {
-        document.getElementById('members').innerHTML = data;
+        const members = document.getElementById('members');
+        if (members) {
+          members.innerHTML = data;
+        }
       });
   };
 
@@ -116,7 +122,7 @@
     });
   }
 
-// COMMENTED OUT BECAUSE INTRODUCE BUG #85: Scripts are not running on navigation
+  // COMMENTED OUT BECAUSE INTRODUCE BUG #85: Scripts are not running on navigation
   // if (window.onpopstate === null) {
   //   const loader = document.querySelector('.loader');
   //   // browser supports onpopstate
