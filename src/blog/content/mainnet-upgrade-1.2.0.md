@@ -15,7 +15,7 @@ In accordance with our Minimum Viable Governance, changes will become effective 
 
 ## LeapDAO upgradeability governance recap
 
-Leap Network is using upgradeable Plasma contracts, so we can roll out new feature and fix issues. Upgrades made possible with the help of [Zeppelin OS](https://zeppelinos.org/). To make updates safe for the users, we use [Minimum Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/) process. All the contracts are owned by Governance contract which delays all the code changes for 7 days. No code can be changed immediately, so users have enough time to react.
+Leap Network is using upgradeable Plasma contracts, so we can roll out new feature and fix issues. Upgrades made possible with the help of [Zeppelin OS](https://zeppelinos.org/). To make updates safe for the users, we use [Minimum Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/) process: all the contracts are owned by Governance contract which delays all the code changes for 7 days. No code can be changed immediately, so users have enough time to react.
 
 Governance proposals may be observed on [Mainnet Bridge UI](https://mainnet.leapdao.org/governance) or by reading from MinGov contract state/events directly.
 
