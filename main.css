@@ -143,6 +143,7 @@ body {
 
 .page {
   max-width: 120rem;
+  min-height: 100vh;
   padding: 30vh 5rem 0 10rem;
 }
 
@@ -330,15 +331,15 @@ p.grand {
 }
 
 .bounty {
-/*  float: left;*/
-  border: 1px solid rgba(0, 0, 0, 0.0);
+  /*  float: left;*/
+  border: 1px solid rgba(0, 0, 0, 0);
   border-left: 2px solid rgba(0, 0, 0, 0.2);
   transition: border-color 0.2s;
   border-radius: 12px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-/*  width: 30rem;*/
-/*  height: 26rem;*/
+  /*  width: 30rem;*/
+  /*  height: 26rem;*/
   font-size: 2rem;
   line-height: 3rem;
   margin-bottom: 1rem;
@@ -398,7 +399,7 @@ p.grand {
 }
 
 #filternew,
-label[for=filternew],
+label[for='filternew'],
 .bounty-controls span,
 .bounty-controls select {
   vertical-align: middle;
@@ -433,11 +434,10 @@ label[for=filternew],
 
 #bounties-overlay-close {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 1rem;
   font-size: 1.5rem;
   background: none;
-  
 }
 
 #bounties-overlay-content h2:first-child {
@@ -1085,6 +1085,21 @@ input:focus {
   width: auto;
 }
 
+.p404 {
+  padding-bottom: 10rem;
+}
+
+.p404 .content header h1 {
+  font-size: 8rem;
+  margin-bottom: 0;
+}
+
+.p404 .content header p {
+  font-size: 3rem;
+  width: 80%;
+  margin-top: 0;
+}
+
 @media screen and (max-width: 900px) {
   .section header h2 {
     font-size: 4rem;
@@ -1196,6 +1211,17 @@ input:focus {
 
   .content header .subtitle {
     line-height: 3.5rem;
+  }
+
+  .p404 .content header h1 {
+    font-size: 6rem;
+  }
+
+  .p404 .content header p {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 100%;
+    margin-top: 0;
   }
 }
 
