@@ -21,11 +21,11 @@ Governance proposals may be observed on [Mainnet Bridge UI](https://mainnet.leap
 
 ## What's changed with this upgrade
 
-- Added ability to challenge exit which were double spent by [spending condition](https://docs.leapdao.org/spending-conditions/)
-- Added protection against [front-running](https://twitter.com/troggo/status/1143404964326322176)
-- All contracts now expose public `implementation()` function to get the address of implementation contract (so it can be verified)
-- Added preliminary support for Cryptoeconomic Aggregate Signatures. These signatures will be used in a multi-validator setup to prevent validators from submitting dark periods[1] to the root chain
-- Minimum Viable Governance contract was changed to use simplified token registration procedure. It will be possible to onboard new tokens without governance delay.
+- Added ability to challenge exits which were double spent by [spending conditions](https://docs.leapdao.org/spending-conditions/).
+- Added protection against [front-running](https://twitter.com/troggo/status/1143404964326322176).
+- All contracts now expose a public `implementation()` function to get the address of implementation contract (so it can be verified).
+- Added preliminary support for Cryptoeconomic Aggregate Signatures. These signatures will be used in a multi-validator setup to prevent validators from submitting dark periods[1] to the root chain.
+- The Minimum Viable Governance contract was changed to use a simplified token registration procedure. It will be possible to onboard new tokens without governance delay.
 
 All the code changes: [on Github](https://github.com/leapdao/leap-contracts/compare/v1.1.0...v1.2.0)
 
