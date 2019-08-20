@@ -122,14 +122,17 @@
   
   // parse user and share
   const parseUser = (type, item) => {
-    const regexp = new RegExp(type + ':\\s*@?(\\S+)\\s+/\\s+(\\S+)');
+    const regexp = new RegExp(type + ':\\s*@?(\\S+)\\s+/\\s+(\\d+)\\s*(%|[a-zA-Z]+)');
     const match = item.body.match(regexp);
     if (match) {
       item[type] = {
         login: match[1] || '',
         share: match[2] || 0,
+        unit: match[3] || '%',
         html_url: ''
       };
+      console.log(item[type]);
+      console.log(match);
       if (match[1].match(/(name)|(open)|(\?+)|(_+)/)) {
         item[type].login = '';
         if (type === 'worker' && item.assignee) {
@@ -270,12 +273,12 @@
        '</br>Worker: ' + (item.worker.html_url ?
          `<a href="${item.worker.html_url}">${item.worker.login}</a>`
          : `${item.worker.login}`)
-         + (item.worker.share ? ` ${item.worker.share}%` : '')
+         + (item.worker.share ? ` ${item.worker.share} ${item.worker.unit}` : '')
        : '';
       const reviewer = item.reviewer ?
        ', Reviewer: ' + (item.reviewer.html_url ?
          `<a href="${item.reviewer.html_url}">${item.reviewer.login}</a>`
-         : `${item.reviewer.login}`) + ` ${item.reviewer.share}%`
+         : `${item.reviewer.login}`) + ` ${item.reviewer.share}  ${item.reviewer.unit}`
        : '';
       const size = () => {
         const title = sizeTitles[item.size];
