@@ -1,13 +1,13 @@
  ---
 template: post.html
-title: '"Planet A — The Tragedy of the CO₂mmons" recap'
+title: 'Planet A — The Tragedy of the CO₂mmons" recap'
 date: 2019-09-11 15:00:00
 image: /img/blog/planeta-logo.png
 emoji: 🌍
 author:
   - name: 'Herr Müller'
 
-description: Mainnet incident happened on 17 June 2019. Funds are safe.
+description: Herr Müller, your favorite bureaucrat from the future, explains what happened during the last simulation of Planet A.
 ---
 
 # "Planet A — The Tragedy of the CO₂mmons" recap
