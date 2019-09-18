@@ -26,11 +26,6 @@
       avatar: 'https://avatars3.githubusercontent.com/u/754426',
       url: 'https://github.com/HelgeWieding'
     };
-    var anton = {
-      name: 'Anthony Akentiev',
-      avatar: 'https://avatars1.githubusercontent.com/u/1623033',
-      url: 'https://github.com/AnthonyAkentiev'
-    };
     var jan = {
       name: 'Jan Kremser',
       avatar: 'https://avatars2.githubusercontent.com/u/41610198',
@@ -86,6 +81,31 @@
       avatar: 'https://avatars1.githubusercontent.com/u/6551094',
       url: 'https://github.com/iamonuwa'
     };
+    const artico = {
+      name: 'Artico',
+      avatar: 'https://avatars3.githubusercontent.com/u/1811630',
+      url: 'https://github.com/articobandurini'
+    };
+    const maxStalker = {
+      name: 'Maksim Daunarovich',
+      avatar: 'https://avatars3.githubusercontent.com/u/3136647',
+      url: 'https://github.com/MaxStalker'
+    };
+    const maxKuck = {
+      name: 'Max Kuck',
+      avatar: 'https://avatars2.githubusercontent.com/u/45236782',
+      url: 'https://github.com/MaxKuck'
+    };
+    const tim = {
+      name: 'Tim Daubenschütz',
+      avatar: 'https://avatars0.githubusercontent.com/u/2758453',
+      url: 'https://github.com/TimDaub'
+    };
+    const vrde = {
+      name: 'vrde',
+      avatar: 'https://avatars1.githubusercontent.com/u/134680',
+      url: 'https://github.com/vrde'
+    };
 
     var berlin = [52.504043, 13.393236];
     var grandRap = [42.9632, -85.6679];
@@ -100,6 +120,8 @@
     var travel = [5.9788, 116.0753];
     var hyderabad = [17.448157, 78.348948];
     var uyo = [7.93, 5.03];
+    const kiev = [50.4016, 30.2525];
+    const minsk = [53.8845, 27.4532];
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -142,23 +164,28 @@
     }
 
     addPeep(sunify, bratsk);
-    addPeep(anton, moscow);
-    addPeep(kosta, seva);
+    //addPeep(anton, moscow);
+    addPeep(kosta, moscow);
     // addPeep(kosta, berlin);
     addPeep(johann, berlin);
-    addPeep(helge, berlin);
+    //addPeep(helge, berlin);
     addPeep(pinkiebell, hanover);
     addPeep(peara, hochi);
     addPeep(evgeni, prague);
     // addPeep(evgeni, berlin);
-    addPeep(jan, vegas);
-    //addPeep(jan, ljubljana);
+    //addPeep(jan, vegas);
+    addPeep(jan, ljubljana);
     // addPeep(jan, berlin);
-    addPeep(stevenPearce, travel);
-    addPeep(sounakPradhan, hyderabad);
+    //addPeep(stevenPearce, travel);
+    //addPeep(sounakPradhan, hyderabad);
     addPeep(nanspro, hyderabad);
-    addPeep(kohola71, berlin);
+    //addPeep(kohola71, berlin);
     addPeep(iamonuwa, uyo);
+    addPeep(artico, kiev);
+    addPeep(tim, berlin);
+    addPeep(vrde, berlin);
+    addPeep(maxKuck, berlin);
+    addPeep(maxStalker, minsk);
 
     map.addLayer(markers);
   }
