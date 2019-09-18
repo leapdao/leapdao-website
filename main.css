@@ -1100,6 +1100,10 @@ input:focus {
   margin-top: 0;
 }
 
+.projects img {
+  width: 140px;
+}
+
 @media screen and (max-width: 900px) {
   .section header h2 {
     font-size: 4rem;
