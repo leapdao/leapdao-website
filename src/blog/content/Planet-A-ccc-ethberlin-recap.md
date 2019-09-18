@@ -1,16 +1,14 @@
- ---
+---
 template: post.html
-title: 'Planet A — The Tragedy of the CO₂mmons" recap'
-date: 2019-09-11 15:00:00
+title: 'Planet A — "The Tragedy of the CO₂mmons" recap'
+date: 2019-09-18 16:20:00
 image: /img/blog/planeta-logo.png
 emoji: 🌍
 author:
-  - name: 'Herr Müller'
-
+  - name: 'Herr Mueller'
+  - twitter: '@dist0rtionproto'
 description: Herr Müller, your favorite bureaucrat from the future, explains what happened during the last simulation of Planet A.
 ---
-
-# "Planet A — The Tragedy of the CO₂mmons" recap
 
 Greetings Earthlings!
 
