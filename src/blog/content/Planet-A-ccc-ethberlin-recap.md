@@ -5,8 +5,8 @@ date: 2019-09-18 16:20:00
 image: /img/blog/planeta-logo.png
 emoji: 🌍
 author:
-  - name: 'Herr Mueller'
-  - twitter: '@dist0rtionproto'
+  name: 'Herr Mueller'
+  twitter: '@dist0rtionproto'
 description: Herr Müller, your favorite bureaucrat from the future, explains what happened during the last simulation of Planet A.
 ---
 
