@@ -21,7 +21,7 @@ Justin Drake [suggested](https://ethresear.ch/t/cryptoeconomic-signature-aggrega
 
 Once it is time for a new period to be submitted, a committee of all the validators notarise the period submission by creating and broadcasting a special PeriodVote transaction. This transaction contains a period root and is signed by the validator key. Essentially, this tx may be seen as a validator's commitment "I've seen the data for this period". The validator whose turn is to propose the period collects these notarization transactions and once there are enough (the quorum is 2/3+) submits the period along with a signature bitmap. The bitmap has a bit set for each validator who cast a vote on the period.
 
-Plasma contract enforces only the periods with 2/3+ validator votes can get into to the root chain. However, the root contract has no way of checking the signatures by itself. And here comes a "cryptoeconomic" part. If proposer lies about any of the votes, anyone with the data can challenge one of the signatures in a bitmap and delete the contentious period in the end. The network will continue operating once the dark period is deleted.
+Plasma contract enforces only the periods with 2/3+ validator votes can get into to the root chain. However, the root contract has no way of checking the signatures itself. And here comes a "cryptoeconomic" part. If proposer lies about any of the votes, anyone with the data can challenge one of the signatures in a bitmap and delete the contentious period in the end. The network will continue operating once the dark period is deleted.
 
 We think that most likely the challenger in a CAS game will be another validator as it is aware of what he signed and is the most incentivized to keep the network alive.
 
