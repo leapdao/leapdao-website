@@ -23,7 +23,7 @@ Once it is time for a new period to be submitted, a committee of all the validat
 
 Plasma contract enforces only the periods with 2/3+ validator votes can get into to the root chain. However, the root contract has no way of checking the signatures itself. And here comes a "cryptoeconomic" part. If proposer lies about any of the votes, anyone with the data can challenge one of the signatures in a bitmap and delete the contentious period in the end. The network will continue operating once the dark period is deleted.
 
-We think that most likely the challenger in a CAS game will be another validator as it is aware of what he signed and is the most incentivized to keep the network alive.
+We think that most likely the challenger in a CAS game will be another validator as it is aware of what he signed and is the most incentivized to keep the network alive. In CAS setup 2/3+ of validators need to collude to successfully push in a dark period. For such attack to be profitable, some users should't be monitoring the chain and thus shouldn't start an exit once the network is compromised by dark period. Moreover, the sum of non-monitored deposits must outweigh the sum of the stakes of colluded validators — they will lose their stakes and can profit only on stolen deposit. Though in theory it is possible for malicious validators to know if a single user monitoring the chain or not, it not feasible en masse. Therefore, as an additional benfit of CAS setup we may assume that small deposit holders are less required to monitor the chain.
 
 ## What's next
 
