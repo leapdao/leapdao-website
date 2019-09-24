@@ -3,6 +3,7 @@ template: post.html
 title: 'Cryptoeconomic Aggregate Signatures in Leap Network'
 date: 2019-09-23 12:20:00
 emoji: 🐲
+image: /img/blog/cas.png
 author:
  name: '@kosta'
  twitter: '@troggo'
