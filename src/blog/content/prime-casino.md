@@ -10,7 +10,7 @@ author:
 description: The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum limits.
 ---
 
-Welcome to Prime Casino. Here you can bet on whether a number is probably prime or not under the Miller-Rabin test.
+The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum limits.
 
 Large prime numbers play an important role in cryptography. Specifically the difficulty of factorization of large numbers enables RSA and other algorithms. Some contract in the Ethereum ecosystem also depend on primality tests like RSA accumulators and [special Plasma Cash proofs](https://ethresear.ch/t/log-coins-sized-proofs-of-inclusion-and-exclusion-for-rsa-accumulators/3839).
 
@@ -36,9 +36,11 @@ Note that the Prime Casino is simply a demonstration of the EVM Enforcer’s abi
 
 ## The Real Thing!
 
+<img src="/img/blog/primality.png" alt="Prime Casino">
+
 To show you this idea in action, we’ve deployed all the necessary contracts to Görli Testnet. We also running 2 Solvers on Amazon servers, which will wait for computation request and check whether number you provided is prime. You can try it here:
 
-[https://primality.leapdao.org/](https://primality.leapdao.org/)
+**[https://primality.leapdao.org/](https://primality.leapdao.org/)**
 
 The presented solution is open source and it's code can be found [here](https://github.com/leapdao/prime-casino-contracts) and [here](https://github.com/leapdao/prime-casino-frontend).
 
