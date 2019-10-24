@@ -11,7 +11,7 @@ description: Short introduction to Plasma.
 In the interest of making our work more accessible, we wrote a short article explaining the concept behind Plasma.
 
 ### What is plasma?
-Plasma is a proposal to help scale Ethereum network. The main goal of Plasma is to scale Ethereum network so that it can handle a greater number of transactions per second. The core idea is that we could try to relocate some of the transactions that need to be processed by Ethereum to smaller Blockchains called child-chains. That way we would lessen the load Ethereum needs to handle, and since child-chains have less nodes they can process transactions in a faster and cheaper manner.
+Plasma is a proposal to help scale Ethereum network so that it can handle a greater number of transactions per second. The core idea is that we could try to relocate some of the transactions that need to be processed by Ethereum to smaller Blockchains called child-chains. That way we would lessen the load Ethereum needs to handle, and since child-chains have less nodes they can process transactions in a faster and cheaper manner.
 
 The [proposal](https://plasma.io/plasma-deprecated.pdf), which was first presented by Joseph Poon and Vitalik Buterin, was since then developed in different directions by many independent teams and researchers. Therefore while Plasma is a central idea, there are a lot of different variants, each of which having its own set of advantages, disadvantages and quirks. There is even a handy [map](https://ethresear.ch/uploads/default/original/2X/f/fe51381218e40a2d6b38ee4de91e94ef280976ec.png) showing how diverse Plasma research has become.
 
