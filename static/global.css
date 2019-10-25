@@ -912,6 +912,10 @@ input:focus {
   margin-top: 2rem;
 }
 
+.stats-repo + .stats-repo {
+  margin-left: 2rem;
+}
+
 .stats-repos h5 {
   font-weight: normal;
   margin-bottom: 0.5rem;
