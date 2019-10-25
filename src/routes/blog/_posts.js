@@ -1,10 +1,11 @@
-import marked from 'marked';
-import frontMatter from 'front-matter';
+const marked = require('marked');
+const frontMatter = require('front-matter');
 const fs = require('fs');
 const path = require('path');
 
-export function getPosts () {
-  const slugs = fs.readdirSync('src/posts')
+function getPosts() {
+  const slugs = fs
+    .readdirSync('src/posts')
     .filter(file => path.extname(file) === '.md')
     .map(file => file.slice(0, -3));
 
@@ -13,7 +14,7 @@ export function getPosts () {
   });
 }
 
-export function getPost(slug) {
+function getPost(slug) {
   const file = `src/posts/${slug}.md`;
   if (!fs.existsSync(file)) return null;
 
@@ -34,6 +35,9 @@ export function getPost(slug) {
 }
 
 function process_markdown(markdown) {
-  const { attributes, body } = frontMatter(markdown)
+  const { attributes, body } = frontMatter(markdown);
   return { metadata: attributes, content: body };
 }
+
+exports.getPosts = getPosts;
+exports.getPost = getPost;
