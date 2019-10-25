@@ -1,0 +1,129 @@
+<svelte:head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+  />
+
+  <script
+    src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"
+  ></script>
+  <script
+    src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
+  ></script>
+</svelte:head>
+
+<script>
+  import { onMount } from 'svelte';
+  import { peeps } from './peeps';
+  let mapEl;
+
+  function initMap() {
+    // center of the map
+    const center = [35, 40];
+
+    // Create the map
+    const zoomLevel = window.innerWidth < 900 ? 1 : 3;
+    const map = L.map('map').setView(center, zoomLevel);
+    map.scrollWheelZoom.disable();
+
+    // Set up the OSM layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18,
+      detectRetina: true
+    }).addTo(map);
+
+    const markers = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      maxClusterRadius: 10,
+      iconCreateFunction: function(cluster) {
+        const childMarkers = cluster.getAllChildMarkers().reverse();
+        const peepIcons = childMarkers
+          .map(e => {
+            const icon = e.options.icon.options;
+            return `<img src="${icon.iconUrl}" width="${
+              icon.iconSize[0]
+            }" height="${icon.iconSize[1]}" />`;
+          })
+          .join('');
+        const names = childMarkers.map(e => e.options.title).join(', ');
+        return L.divIcon({
+          html: `<div title="${names}">${peepIcons}</div>`,
+          className: 'peeps-cluster'
+        });
+      }
+    });
+
+    function addPeep(peep) {
+      const icon = L.icon({
+        iconUrl: peep.avatar,
+        iconSize: [25, 25], // size of the icon
+        shadowSize: [0, 0], // size of the shadow
+        iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
+        shadowAnchor: [0, 0], // the same for the shadow
+        popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+      });
+
+      markers.addLayer(
+        L.marker(peep.location, {
+          icon: icon,
+          title: peep.name
+        }).on('click', () => {
+          window.open(peep.url);
+        })
+      );
+    }
+
+    peeps.forEach(peep => {
+      addPeep(peep);
+    });
+
+    map.addLayer(markers);
+  }
+
+  function scrollHandler() {
+    const mapRect = mapEl.getBoundingClientRect();
+    if (mapRect.top < window.innerHeight) {
+      initMap();
+
+      Array.from(document.querySelectorAll('link[disabled]')).forEach(link => {
+        link.removeAttribute('disabled');
+      });
+
+      window.removeEventListener('scroll', scrollHandler);
+      window.removeEventListener('resize', scrollHandler);
+    }
+  }
+
+  onMount(() => {
+    window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('resize', scrollHandler);
+
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+      window.removeEventListener('resize', scrollHandler);
+    };
+  });
+</script>
+
+<div class="map">
+  <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl}></div>
+  <h2>
+    Leap peeps <br />
+    around the world
+  </h2>
+</div>
