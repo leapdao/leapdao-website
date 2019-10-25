@@ -1,6 +1,10 @@
+<script>
+  import Logo from "../components/Logo";
+</script>
+
 <div class="content">
   <header>
-    <h1 class="logo">LeapDAO</h1>
+    <Logo />
     <p>
       Ethereum, being the first world computer, has spurred a&nbsp;cambrian
       explosion of

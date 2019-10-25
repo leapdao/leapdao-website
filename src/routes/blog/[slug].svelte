@@ -17,6 +17,65 @@
   export let siteHost;
 </script>
 
+<style>
+  .blog-post :global(hr) {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 4rem;
+  }
+
+  .blog-post header {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: -4rem;
+  }
+
+  .blog-post header h1 {
+    font-size: 7rem;
+  }
+
+  .blog-post :global(header p) {
+    margin: 0;
+    font-size: 2rem;
+    position: absolute;
+    top: calc(-30vh + 6rem);
+  }
+
+  .blog-post header + :global(p) {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    margin-top: 6rem;
+    width: 100%;
+  }
+
+  .blog-post header + :global(p img:first-child:last-child) {
+    margin-top: 6rem;
+  }
+
+  .blog-post :global(hr) {
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    .blog-post header h1 {
+      font-size: 4rem;
+      margin-bottom: 0rem;
+    }
+
+    .blog-post :global(header p) {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      position: relative;
+      top: auto;
+    }
+
+    .blog-post header + :global(p) {
+      font-size: 2.5rem;
+      line-height: 4rem;
+    }
+  }
+</style>
+
 <svelte:head>
   <title>{post.metadata.title} | LeapDAO</title>
 

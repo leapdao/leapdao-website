@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   const fetchContributors = () => {
-    fetch('https://api.github.com/orgs/leapdao/repos')
+    fetch("https://api.github.com/orgs/leapdao/repos")
       .then(response => response.json())
       .then(repos =>
         Promise.all(
@@ -24,18 +24,19 @@
           )
       )
       .then(allContributors => {
-        const contributors = document.getElementById('contributors');
+        const contributors = document.getElementById("contributors");
         if (contributors) {
           contributors.innerHTML = allContributors.size;
         }
-      }).catch(() => {});
+      })
+      .catch(() => {});
   };
 
   const fetchMembers = () => {
     fetch(`https://nplrpwwfw1.execute-api.eu-west-1.amazonaws.com/prod/slack`)
       .then(response => response.json())
       .then(data => {
-        const members = document.getElementById('members');
+        const members = document.getElementById("members");
         if (members) {
           members.innerHTML = data;
         }
@@ -43,18 +44,18 @@
   };
 
   const fetchUTXO = () => {
-    const url = window.location.pathname.split('.')[0];
-    if (url === 'test') {
-      fetch('./mocks/testnet.json')
+    const url = window.location.pathname.split(".")[0];
+    if (url === "test") {
+      fetch("./mocks/testnet.json")
         .then(response => response.json())
         .then(
-          data => (document.getElementById('utxos').innerHTML = `~${data.data}`)
+          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
         );
     } else {
-      fetch('./mocks/mainnet.json')
+      fetch("./mocks/mainnet.json")
         .then(response => response.json())
         .then(
-          data => (document.getElementById('utxos').innerHTML = `~${data.data}`)
+          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
         );
     }
   };
@@ -66,16 +67,30 @@
   });
 </script>
 
+<style>
+  .stats-repo-data + span {
+    margin-right: 2rem;
+  }
+
+  .stats-repo-data:empty + span {
+    display: none;
+    margin-right: 0;
+  }
+</style>
+
 <div class="stats">
   <div class="stats-repos">
     <div class="stats-repo">
-      <strong id="utxos" class="stats-repo-data"></strong><span>&nbsp;monthly active UTXOs</span>
+      <strong id="utxos" class="stats-repo-data" />
+      <span>&nbsp;monthly active UTXOs</span>
     </div>
     <div class="stats-repo">
-      <strong id="members" class="stats-repo-data"></strong><span>&nbsp;members</span>
+      <strong id="members" class="stats-repo-data" />
+      <span>&nbsp;members</span>
     </div>
     <div class="stats-repo">
-      <strong id="contributors" class="stats-repo-data"></strong><span>&nbsp;contributors</span>
+      <strong id="contributors" class="stats-repo-data" />
+      <span>&nbsp;contributors</span>
     </div>
   </div>
 </div>

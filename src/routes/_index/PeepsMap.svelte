@@ -1,33 +1,6 @@
-<svelte:head>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"
-  />
-
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
-  />
-
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
-  />
-
-  <script
-    src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"
-  ></script>
-  <script
-    src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
-  ></script>
-</svelte:head>
-
 <script>
-  import { onMount } from 'svelte';
-  import { peeps } from './peeps';
+  import { onMount } from "svelte";
+  import { peeps } from "./peeps";
   let mapEl;
 
   function initMap() {
@@ -36,11 +9,11 @@
 
     // Create the map
     const zoomLevel = window.innerWidth < 900 ? 1 : 3;
-    const map = L.map('map').setView(center, zoomLevel);
+    const map = L.map("map").setView(center, zoomLevel);
     map.scrollWheelZoom.disable();
 
     // Set up the OSM layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
       maxZoom: 18,
@@ -55,15 +28,13 @@
         const peepIcons = childMarkers
           .map(e => {
             const icon = e.options.icon.options;
-            return `<img src="${icon.iconUrl}" width="${
-              icon.iconSize[0]
-            }" height="${icon.iconSize[1]}" />`;
+            return `<img src="${icon.iconUrl}" width="${icon.iconSize[0]}" height="${icon.iconSize[1]}" />`;
           })
-          .join('');
-        const names = childMarkers.map(e => e.options.title).join(', ');
+          .join("");
+        const names = childMarkers.map(e => e.options.title).join(", ");
         return L.divIcon({
           html: `<div title="${names}">${peepIcons}</div>`,
-          className: 'peeps-cluster'
+          className: "peeps-cluster"
         });
       }
     });
@@ -82,7 +53,7 @@
         L.marker(peep.location, {
           icon: icon,
           title: peep.name
-        }).on('click', () => {
+        }).on("click", () => {
           window.open(peep.url);
         })
       );
@@ -100,30 +71,89 @@
     if (mapRect.top < window.innerHeight) {
       initMap();
 
-      Array.from(document.querySelectorAll('link[disabled]')).forEach(link => {
-        link.removeAttribute('disabled');
+      Array.from(document.querySelectorAll("link[disabled]")).forEach(link => {
+        link.removeAttribute("disabled");
       });
 
-      window.removeEventListener('scroll', scrollHandler);
-      window.removeEventListener('resize', scrollHandler);
+      window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("resize", scrollHandler);
     }
   }
 
   onMount(() => {
-    window.addEventListener('scroll', scrollHandler);
-    window.addEventListener('resize', scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("resize", scrollHandler);
 
     return () => {
-      window.removeEventListener('scroll', scrollHandler);
-      window.removeEventListener('resize', scrollHandler);
+      window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("resize", scrollHandler);
     };
   });
 </script>
 
+<style>
+  .map {
+    position: relative;
+    width: 100vw;
+    height: 450px;
+    margin-top: 5rem;
+    margin-left: -10rem;
+  }
+
+  .map h2 {
+    font-size: 4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    z-index: 1000;
+    text-align: center;
+    font-weight: 900;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .map {
+      margin-left: -3rem;
+      height: 250px;
+    }
+
+    .map h2 {
+      font-size: 3rem;
+    }
+  }
+</style>
+
+<svelte:head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js">
+
+  </script>
+  <script
+    src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js">
+
+  </script>
+</svelte:head>
+
 <div class="map">
-  <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl}></div>
+  <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl} />
   <h2>
-    Leap peeps <br />
+    Leap peeps
+    <br />
     around the world
   </h2>
 </div>
