@@ -7,20 +7,9 @@ before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
 
-before_script:
-  - cd meta && git pull origin master && cd ..
-  - yarn global add gulp-cli
+script: env TRAVIS_BRANCH=$TRAVIS_BRANCH npm run export
 
-script: env TRAVIS_BRANCH=$TRAVIS_BRANCH gulp
-
-cache: yarn
-
-before_deploy:
-  - rm -R node_modules
-  - rm -R src
-  - rm gulpfile.js
-  - rm yarn.lock
-  - rm package.json
+cache: npm
 
 deploy:
   - provider: s3
@@ -28,7 +17,7 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: $PROD_S3_BUCKET
     acl: public_read
-    local_dir: '.'
+    local_dir: '__sapper__/export'
     skip_cleanup: true
     region: 'eu-west-1'
     on:
@@ -38,7 +27,7 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: $TEST_S3_BUCKET
     acl: public_read
-    local_dir: '.'
+    local_dir: '__sapper__/export'
     skip_cleanup: true
     region: 'eu-west-1'
     on:
