@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { peeps } from "./peeps";
   let mapEl;
+  let initialized = false;
 
   function initMap() {
     // center of the map
@@ -69,7 +70,21 @@
   function scrollHandler() {
     const mapRect = mapEl.getBoundingClientRect();
     if (mapRect.top < window.innerHeight) {
-      initMap();
+      if (!initialized) {
+        Promise.all([
+          import("leaflet/dist/leaflet.css"),
+          import("leaflet.markercluster/dist/MarkerCluster.css"),
+          import("leaflet.markercluster/dist/MarkerCluster.Default.css"),
+          import("leaflet/dist/leaflet.js")
+        ])
+          .then((...args) => {
+            return import(
+              "leaflet.markercluster/dist/leaflet.markercluster.js"
+            );
+          })
+          .then(initMap);
+        initialized = true;
+      }
 
       Array.from(document.querySelectorAll("link[disabled]")).forEach(link => {
         link.removeAttribute("disabled");
@@ -98,6 +113,7 @@
     height: 450px;
     margin-top: 5rem;
     margin-left: -10rem;
+    background-color: #aad3df;
   }
 
   .map h2 {
@@ -123,31 +139,6 @@
     }
   }
 </style>
-
-<svelte:head>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
-
-  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js">
-
-  </script>
-  <script
-    src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js">
-
-  </script>
-</svelte:head>
 
 <div class="map">
   <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl} />
