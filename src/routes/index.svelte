@@ -2,6 +2,7 @@
   import Stats from "./_index/Stats.svelte";
   import PeepsMap from "./_index/PeepsMap.svelte";
   import Partners from "./_index/Partners.svelte";
+  import Projects from "./_index/Projects.svelte";
   import GhButtons from "./_index/GhButtons.svelte";
 </script>
 
@@ -84,6 +85,8 @@
       </a>
     </footer>
   </section>
+
+  <Projects />
 
   <section class="section">
     <header>
