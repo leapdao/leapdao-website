@@ -3,6 +3,10 @@
   import SubscribeForm from "../components/SubscribeForm.svelte";
   import Amoebe from "../components/Amoebe.svelte";
 
+  const segmentClasses = {
+    404: "p404"
+  };
+
   export let segment;
 </script>
 
@@ -70,12 +74,16 @@
   }
 </style>
 
-<div class="page {segment ? '' : 'community'}">
+<div class="page {segmentClasses[segment] || 'community'}">
   <slot />
-  <footer class="footer">
-    <SubscribeForm />
-  </footer>
+  {#if segment !== '404'}
+    <footer class="footer">
+      <SubscribeForm />
+    </footer>
+  {/if}
 </div>
 
-<Amoebe />
+{#if segment !== '404'}
+  <Amoebe />
+{/if}
 <Nav {segment} />
