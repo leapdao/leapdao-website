@@ -85,6 +85,13 @@
   {#if post.metadata.image}
     <meta property="og:image" content="{siteHost}{post.metadata.image}" />
     <meta name="twitter:image" content="{siteHost}{post.metadata.image}" />
+  {:else if post.metadata.emoji}
+    <meta
+      property="og:image"
+      content="{siteHost}/img/blog/{post.slug}-og.png" />
+    <meta
+      name="twitter:image"
+      content="{siteHost}/img/blog/{post.slug}-og.png" />
   {:else}
     <meta property="og:image" content="{siteHost}/img/og.jpg" />
     <meta name="twitter:image" content="{siteHost}/img/og.jpg" />
