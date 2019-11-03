@@ -1,19 +1,3 @@
-<script>
-  import { onMount } from "svelte";
-  let amoebeCanvas;
-
-  onMount(() => {
-    const faviconCanvas = document.createElement("canvas");
-    faviconCanvas.width = 32;
-    faviconCanvas.height = 32;
-    const faviconCtx = faviconCanvas.getContext("2d");
-    const favicon = document.createElement("link");
-    favicon.rel = "icon";
-    favicon.type = "image/png";
-    document.head.appendChild(favicon);
-  });
-</script>
-
 <style>
   #amoebe {
     position: absolute;
@@ -36,4 +20,4 @@
 
   </script>
 </svelte:head>
-<canvas id="amoebe" bind:this={amoebeCanvas} />
+<canvas id="amoebe" />
