@@ -9,8 +9,6 @@ author:
 description: Best LeapDAO dApps and game submitted during the Ethereal Virtual Hackathon.
 ---
 
-<p></p>
-
 In the last 2 weeks of April a bunch of hackers joined forces at the [Ethereal Virtual Hackathon](https://gitcoin.co/hackathon/ethereal-virtual-hackathon/), working on projects crucial to making decentralized web a reality.
 
 LeapDAO sponsored the hackathon along with Gitcoin, Microsoft and others. We were very happy with the level of submitted projects targeting our challenges and the enthusiasm of participants. Read on to find out more about what was being hacked and who are the golden winners.
