@@ -70,12 +70,6 @@
     font-size: 2rem;
   }
 
-  .bounty-controls small {
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-
   .bounty {
     /*  float: left;*/
     border: 1px solid rgba(0, 0, 0, 0);
