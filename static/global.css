@@ -1,0 +1,563 @@
+@font-face {
+  font-family: 'Chivo';
+  src: url('fonts/chivo-black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: url('fonts/chivo-bold-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: url('fonts/chivo-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  font-family: 'Chivo', Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+*::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+a {
+  background-color: rgb(64, 253, 169);
+  color: #000;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(163, 253, 143) !important;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 10rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -2rem;
+  z-index: 100;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.content p {
+  width: 80%;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 3.5rem;
+}
+
+.content header p {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+p.grand {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.content a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+.content a.nohighlight,
+.content a.nohighlight:hover {
+  border: none;
+  background-color: transparent !important;
+}
+
+.content h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: bold;
+
+  margin-top: 7rem;
+  margin-bottom: -1rem;
+}
+
+.content h2.marked {
+  border-left-width: 6px;
+  border-left-style: solid;
+  padding-left: 6px;
+}
+
+.content h2 i {
+  font-weight: normal;
+}
+
+.content h3 {
+  font-size: 3rem;
+  font-weight: bold;
+
+  line-height: 4rem;
+  margin-top: 5rem;
+}
+
+.content h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  line-height: 3rem;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
+  margin-right: 2rem;
+}
+
+.content h4.marked {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
+}
+
+.content ul,
+.content ol {
+  width: 80%;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.content ol ol,
+.content ul ol,
+.content ul ul,
+.content ol ul {
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+
+.content li + li {
+  margin-top: 1rem;
+}
+
+.content ol p,
+.content ul p {
+  margin-top: 1rem;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content table {
+  font-size: 2rem;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+.content th,
+.content td {
+  text-align: left;
+  vertical-align: top;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.content .compact,
+.content .compact li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content ul.small {
+  font-size: 1.67rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.col + .col {
+  margin-left: 4rem;
+}
+
+.button {
+  background: 0;
+  font: inherit;
+
+  font-size: 3rem;
+  display: inline-block;
+  padding: 0.5em 2rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  transition: background 0.2s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #4cfbab;
+}
+
+.button-primary {
+  background-color: #4cfbab !important;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #ebfd5a !important;
+}
+
+.button-wide {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.button-compact {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+}
+
+input {
+  font: inherit;
+  font-size: 3rem;
+
+  padding: 0.5rem 0;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+  border-bottom-color: #4cfbab;
+}
+
+@media screen and (max-width: 900px) {
+  .section::before {
+    margin-left: -3rem !important;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  .content p {
+    width: 100%;
+  }
+
+  .content header p {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    line-height: 4rem;
+  }
+
+  .content p,
+  .content ul,
+  .content ol {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 2rem;
+  }
+
+  .content ol ol,
+  .content ul ol,
+  .content ul ul,
+  .content ol ul {
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+
+  .content li + li {
+    margin-top: 2rem;
+  }
+
+  .content table {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    border-collapse: collapse;
+  }
+
+  .content th,
+  .content td {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #efefef;
+  }
+
+  input {
+    font-size: 2rem;
+
+    padding: 0.5rem 0;
+  }
+
+  .button {
+    font-size: 2rem;
+  }
+}
+
+.stats {
+  margin: 5rem 0;
+}
+
+.stats-list {
+  display: flex;
+
+  margin-top: 2rem;
+}
+
+.stats-repos {
+  display: flex;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.stats-repo + .stats-repo {
+  margin-left: 2rem;
+}
+
+.stats-repos h5 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.cols {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cols h4 + p {
+  margin-top: 3rem;
+}
+.cols p + p {
+  margin-top: 0.5rem;
+}
+
+.col {
+  flex: 1;
+}
+
+.col p {
+  width: 100%;
+}
+
+.content header .subtitle {
+  margin-top: 1rem !important;
+  font-weight: bold;
+}
+
+.section {
+  position: relative;
+  padding-top: 7rem;
+  margin-top: 7rem;
+}
+
+.section::before {
+  top: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #ccc;
+  height: 1px;
+  width: 100vw;
+  margin-left: -10rem;
+}
+
+.section header h2 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.section .cols h4 {
+  margin-top: 3rem;
+}
+
+.section header p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 1rem !important;
+}
+
+.section .cols p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.section footer {
+  margin-top: 5rem;
+}
+
+.section--disabled header::before {
+  font-size: 2rem;
+  content: 'Not yet available';
+  bottom: 2rem;
+  left: -10px;
+  position: relative;
+  background: yellow;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.p404 {
+  padding-bottom: 10rem;
+}
+
+.p404 .content header h1 {
+  font-size: 8rem;
+  margin-bottom: 0;
+}
+
+.p404 .content header p {
+  font-size: 3rem;
+  width: 80%;
+  margin-top: 0;
+}
+
+.projects img {
+  width: 140px;
+}
+
+@media screen and (max-width: 900px) {
+  .section header h2 {
+    font-size: 4rem;
+    padding-top: 1rem;
+  }
+
+  .col + .col {
+    margin-left: 0rem;
+  }
+
+  .cols {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 3rem 0 1rem;
+  }
+
+  .stats-list,
+  .stats-repos {
+    width: 100%;
+  }
+
+  .stats-list {
+    flex-direction: column;
+    order: 3;
+    margin-top: 0;
+  }
+
+  .stats-list br {
+    display: none;
+  }
+
+  .stats-repos {
+    margin-top: 0;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .stats-repo {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 2rem;
+  }
+
+  .content header .subtitle {
+    line-height: 3.5rem;
+  }
+
+  .p404 .content header h1 {
+    font-size: 6rem;
+  }
+
+  .p404 .content header p {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col + .col {
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col + .col {
+    margin-left: 0rem;
+  }
+}
+
+.peeps-cluster div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.peeps-cluster img:not(:first-child) {
+  margin-left: -10px;
+}

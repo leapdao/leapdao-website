@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
+
+    %sapper.base%
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LeapDAO</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta
+      property="og:title"
+      content="LeapDAO: delivering scalability as global public utility"
+    />
+    <meta
+      property="og:description"
+      content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leapdao.org/" />
+    <meta property="og:image" content="https://leapdao.org/img/og.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leapdao" />
+    <meta
+      name="twitter:title"
+      content="delivering scalability as global public utility."
+    />
+    <meta
+      name="twitter:description"
+      content="LeapDAO is a decentralized adaptive organization delivering scalability as global public utility."
+    />
+    <meta name="twitter:image" content="https://leapdao.org/img/og.jpg" />
+
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+    %sapper.styles%
+
+    <!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+    %sapper.head%
+  </head>
+  <body>
+    <!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+    <div id="sapper">%sapper.html%</div>
+
+    <!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+    %sapper.scripts%
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-128351135-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-128351135-1');
+    </script>
+  </body>
+</html>

@@ -2,25 +2,20 @@
 
 ## Init
 
-`yarn`
-`git submodule init`
-`git submodule update`
+`npm install`
 
 ## Build
 
-`gulp`
+`npm run build`
 
 ## Running locally
 
-1. `gulp dev`
-2. Start some http server (for [http-server](https://www.npmjs.com/package/http-server) package — `http-server -c-1`)
-3. Open it in the browser (`http://localhost:8080` is default for `http-server`)
-
-You can use [livereload extendsion](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+1. `npm run dev`
+2. Open it in the browser (`http://localhost:3000` is default)
 
 ## Adding blog articles
 
-Add new file `my-super-article.md` to `src/blog/content/`. Content of the file as follows:
+Add new file `my-super-article.md` to `src/posts`. Content of the file as follows:
 
 ```
 ---
@@ -44,7 +39,7 @@ Adjust filename, `title`, `date`, `image` and text.
 - filename - will be used in article URL. E.g. `/blog/my-super-article`.
 - `title` - article name. Shown on the article list page and on the article page.
 - `date` - article publishing date. Shown on the article list page and on the article page.
-Articles on the article list page are sorted by this date (latest first).
+  Articles on the article list page are sorted by this date (latest first).
 - `author` - (optional) either an author name or an object with author details:
   - `name` — name
   - `twitter` — (optional) twitter handle. Will be used in link and in twitter:card
