@@ -80,10 +80,10 @@
 
 <div class="stats">
   <div class="stats-repos">
-    <div class="stats-repo">
+    <!-- <div class="stats-repo">
       <strong id="utxos" class="stats-repo-data" />
       <span>&nbsp;monthly active UTXOs</span>
-    </div>
+    </div> -->
     <div class="stats-repo">
       <strong id="members" class="stats-repo-data" />
       <span>&nbsp;members</span>
