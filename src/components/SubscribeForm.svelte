@@ -58,6 +58,13 @@
       e.preventDefault();
       register2(e.target);
     });
+
+    if (window.location.hash === "#subscribe") {
+      window.scrollTo(
+        0,
+        subscribeForm.getBoundingClientRect().top + window.scrollY
+      );
+    }
   });
 </script>
 
