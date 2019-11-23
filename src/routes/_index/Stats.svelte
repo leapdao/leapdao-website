@@ -44,26 +44,20 @@
   };
 
   const fetchUTXO = () => {
-    const url = window.location.pathname.split(".")[0];
-    if (url === "test") {
-      fetch("./mocks/testnet.json")
-        .then(response => response.json())
-        .then(
-          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
-        );
-    } else {
-      fetch("./mocks/mainnet.json")
-        .then(response => response.json())
-        .then(
-          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
-        );
-    }
+    fetch(`https://n70fngzq9b.execute-api.us-east-1.amazonaws.com/dev/stats/get`)
+      .then(response => response.json())
+      .then(data => {
+        const utxos = document.getElementById("utxos");
+        if (utxos) {
+            utxos.innerHTML = data.count;
+        }
+      });
   };
 
   onMount(() => {
     fetchContributors();
     fetchMembers();
-    //fetchUTXO();
+    fetchUTXO();
   });
 </script>
 
@@ -80,10 +74,10 @@
 
 <div class="stats">
   <div class="stats-repos">
-    <!-- <div class="stats-repo">
+    <div class="stats-repo">
       <strong id="utxos" class="stats-repo-data" />
-      <span>&nbsp;monthly active UTXOs</span>
-    </div> -->
+      <span> monthly active UTXOs</span>
+    </div>
     <div class="stats-repo">
       <strong id="members" class="stats-repo-data" />
       <span>&nbsp;members</span>
