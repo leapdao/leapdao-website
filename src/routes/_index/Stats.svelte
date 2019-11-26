@@ -38,7 +38,7 @@
   };
 
   const fetchUTXO = () => {
-    fetch(`https://n70fngzq9b.execute-api.us-east-1.amazonaws.com/dev/stats/get`)
+    fetch(`https://zy2mo76rd6.execute-api.eu-west-1.amazonaws.com/mainnet/stats/get`)
       .then(response => response.json())
       .then(data => utxos = data.count);
   };
