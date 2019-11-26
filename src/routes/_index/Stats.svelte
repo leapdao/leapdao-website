@@ -1,6 +1,10 @@
 <script>
   import { onMount } from "svelte";
 
+  let contributors = 0;
+  let members = 0;
+  let utxos = 0;
+
   const fetchContributors = () => {
     fetch("https://api.github.com/orgs/leapdao/repos")
       .then(response => response.json())
@@ -23,47 +27,26 @@
             )
           )
       )
-      .then(allContributors => {
-        const contributors = document.getElementById("contributors");
-        if (contributors) {
-          contributors.innerHTML = allContributors.size;
-        }
-      })
+      .then(allContributors => contributors = allContributors.size)
       .catch(() => {});
   };
 
   const fetchMembers = () => {
     fetch(`https://nplrpwwfw1.execute-api.eu-west-1.amazonaws.com/prod/slack`)
       .then(response => response.json())
-      .then(data => {
-        const members = document.getElementById("members");
-        if (members) {
-          members.innerHTML = data;
-        }
-      });
+      .then(data => members = data);
   };
 
   const fetchUTXO = () => {
-    const url = window.location.pathname.split(".")[0];
-    if (url === "test") {
-      fetch("./mocks/testnet.json")
-        .then(response => response.json())
-        .then(
-          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
-        );
-    } else {
-      fetch("./mocks/mainnet.json")
-        .then(response => response.json())
-        .then(
-          data => (document.getElementById("utxos").innerHTML = `~${data.data}`)
-        );
-    }
+    fetch(`https://zy2mo76rd6.execute-api.eu-west-1.amazonaws.com/mainnet/stats/get`)
+      .then(response => response.json())
+      .then(data => utxos = data.count);
   };
 
   onMount(() => {
     fetchContributors();
     fetchMembers();
-    //fetchUTXO();
+    fetchUTXO();
   });
 </script>
 
@@ -80,16 +63,16 @@
 
 <div class="stats">
   <div class="stats-repos">
-    <!-- <div class="stats-repo">
-      <strong id="utxos" class="stats-repo-data" />
-      <span>&nbsp;monthly active UTXOs</span>
-    </div> -->
     <div class="stats-repo">
-      <strong id="members" class="stats-repo-data" />
+      <strong id="utxos" class="stats-repo-data">{utxos}</strong>
+      <span> monthly active UTXOs</span>
+    </div>
+    <div class="stats-repo">
+      <strong id="members" class="stats-repo-data">{members}</strong>
       <span>&nbsp;members</span>
     </div>
     <div class="stats-repo">
-      <strong id="contributors" class="stats-repo-data" />
+      <strong id="contributors" class="stats-repo-data">{contributors}</strong>
       <span>&nbsp;contributors</span>
     </div>
   </div>
