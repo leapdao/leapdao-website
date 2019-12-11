@@ -194,11 +194,7 @@
         </a>
         .
         <br />
-        Check the
-        <a href="https://github.com/orgs/leapdao/projects/6">
-          Github Bounty Board
-        </a>
-        to apply directly and join our
+        Apply directly on Github and join our
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform">
           Slack
