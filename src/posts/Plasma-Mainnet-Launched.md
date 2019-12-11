@@ -70,6 +70,6 @@ We would love 💛to see more of you getting involved in LeapDAO. We are looking
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform" target="_blank" rel="noopener noreferrer" class="button button-primary button-compact">
   Join our Slack community
 </a><br/><br/>
-<a href="https://github.com/orgs/leapdao/projects/6/" target="_blank" rel="noopener noreferrer" class="button button-primary button-compact">
+<a href="https://leapdao.org/earn/" target="_blank" rel="noopener noreferrer" class="button button-primary button-compact">
   View open bounties
 </a><br/>

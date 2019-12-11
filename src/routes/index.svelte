@@ -219,7 +219,7 @@
         </p>
         <p>
           <a
-            href="https://github.com/orgs/leapdao/projects/6"
+            href="https://leapdao.org/earn/"
             target="_blank"
             rel="noopener noreferrer">
             Available bounties
