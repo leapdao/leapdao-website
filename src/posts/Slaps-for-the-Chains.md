@@ -1,13 +1,13 @@
 ---
 template: post.html
-title: 'Slaps for the chains!'
+title: "Slaps for the chains!"
 date: 2019-04-01 16:20:00
 image: /img/blog/slaps.jpg
 author:
-  - name: '@pinkiebell'
-    github: 'pinkiebell'
-  - name: '@johba'
-    twitter: 'johba'
+  - name: "@pinkiebell"
+    github: "pinkiebell"
+  - name: "@johba"
+    twitter: "johba"
 description: PoS to lead Ethereum to mass-adoption.
 ---
 
@@ -22,6 +22,3 @@ Learn all details in the following short video:
 	  <source type='application/x-mpegURL' src="/media/slaps/forTheChains.m3u8">
   </video>
 </div>
-<link href='https://vjs.zencdn.net/7.4.1/video-js.css' rel='stylesheet'>
-<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
-<script src='/slaps.js'></script>
