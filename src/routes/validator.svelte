@@ -1,5 +1,38 @@
 <script>
   import Logo from "../components/Logo";
+  import { onMount } from "svelte";
+  console.log("bla")
+
+  function submitGForm(form) {
+    const emailEl = form.querySelector(".email");
+    const userEmail = encodeURI(emailEl.value);
+    
+    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_vnZHwHdDSm-YS7rKu3P7fFktBQL1U9i39mTdFNiGHZ_ULQ/formResponse', {
+    method: 'POST',
+    body: 'entry.2079258498=' + userEmail + '&fvv=1', // string or object
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  });
+  }
+
+  let applyForm;
+  onMount(() => {
+    console.log('mount')
+    applyForm.addEventListener("submit", e => {
+      console.log('Hallo2')
+      e.preventDefault();
+      submitGForm(e.target);
+    });
+
+    if (window.location.hash === "#subscribe") {
+      window.scrollTo(
+        0,
+        applyForm.getBoundingClientRect().top + window.scrollY
+      );
+    }
+  });
+
 </script>
 
 <style>
@@ -62,15 +95,16 @@
        use cases enabling blockchain mass-adoption.</p>
 
     <form
-      id="mc-embedded-subscribe-form"
+      bind:this={applyForm}
+      id="embededLeadForm"
       action=""
       method="post"
       class="subscribe">
-    <h3>Register as a Validator</h3>
-    <p style="padding-bottom: 20px;";>
-      You will recive an email with detailed information on how  to become a Validator.
+    <h3>Apply as a Validator</h3>
+    <p style="padding-bottom: 20px;">
+      We will get back to recive an email with detailed information on how  to become a Validator.
     </p>
-    <label for="email" class="visually-hidden"; ></label>
+    <label for="email" class="visually-hidden" ></label>
     <input
       id="email"
       type="email"
@@ -80,7 +114,7 @@
       class="email" />
     <p class="alert" />
 
-    <button class="submit button">Register now</button>
+    <button class="submit button">apply now</button>
     </form>
 
 </div>
