@@ -1,26 +1,40 @@
 <script>
   import Logo from "../components/Logo";
   import { onMount } from "svelte";
-  console.log("bla")
 
-  function submitGForm(form) {
+  async function submitGForm(form) {
     const emailEl = form.querySelector(".email");
     const userEmail = encodeURI(emailEl.value);
-    
-    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_vnZHwHdDSm-YS7rKu3P7fFktBQL1U9i39mTdFNiGHZ_ULQ/formResponse', {
+    const submitEl = form.querySelector(".submit");
+    const origin = window.location.protocol + '//' + window.location.host;
+    const alertEl = form.querySelector(".alert");
+
+
+    alertEl.innerText = "Sending...";
+    submitEl.setAttribute("disabled", true);
+
+    const rsp = await fetch('https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_vnZHwHdDSm-YS7rKu3P7fFktBQL1U9i39mTdFNiGHZ_ULQ/formResponse', {
     method: 'POST',
     body: 'entry.2079258498=' + userEmail + '&fvv=1', // string or object
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded', 
+      origin,
+      'x-requested-with': 'some browser'
     }
   });
-  }
+
+    if (rsp.status === 200) {
+      alertEl.innerHTML = 'Your application was send sucessfully';
+    } else {
+      alertEl.innerHTML = rsp.statusText;
+    };
+  
+  console.log(rsp)
+}
 
   let applyForm;
   onMount(() => {
-    console.log('mount')
     applyForm.addEventListener("submit", e => {
-      console.log('Hallo2')
       e.preventDefault();
       submitGForm(e.target);
     });
@@ -86,14 +100,14 @@
        The LeapTestnet has already transitioned to multiple operators and will be used as a testbed to launch the token-staked 
        operator Plasma on the LeapNetwork in the following three steps. 
     </p>
-    <img src="../img/roadmap.jpg" alt="Roadmap" class="images" />
+    <img src="../img/roadmap.jpg" alt="Roadmap" class="images" style="margin-bottom: -30px;"/>
     <h2>Become a key stakeholder</h2>
     <p> 
        By participating in the early stage of the LeapNetwork PoS launch, validators have a chance to become key stakeholders
        in a network that will later require higher financial efforts to claim a similar role. The described unique properties 
        of the LeapNetwork positioned it as one of the key driving forces for real life projects and give access to various 
-       use cases enabling blockchain mass-adoption.</p>
-
+       use cases enabling blockchain mass-adoption.
+    </p>
     <form
       bind:this={applyForm}
       id="embededLeadForm"
@@ -102,7 +116,7 @@
       class="subscribe">
     <h3>Apply as a Validator</h3>
     <p style="padding-bottom: 20px;">
-      We will get back to recive an email with detailed information on how  to become a Validator.
+      We will get back to you with detailed information.
     </p>
     <label for="email" class="visually-hidden" ></label>
     <input
@@ -113,8 +127,16 @@
       placeholder="Email address"
       class="email" />
     <p class="alert" />
+    <button class="submit button" name="applyButton">Apply now</button>
+ 
+     <div style="position: absolute; left: -5000px;" aria-hidden="true">
+       <input
+         type="text"
+         name="b_6a1b0204c404c1a1c4b498537_f12a24a1f3"
+         tabindex="-1"
+         value="" />
+     </div>
 
-    <button class="submit button">apply now</button>
     </form>
 
 </div>
