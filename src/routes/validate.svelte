@@ -9,8 +9,14 @@
     const origin = window.location.protocol + '//' + window.location.host;
     const alertEl = form.querySelector(".alert");
 
+    if (userEmail === "") {
+      alertEl.innerHTML = 'Please enter email';
+    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail.value)) {
+      alertEl.innerText = "Sending...";
+    } else {
+      alertEl.innerHTML = "This is not a valid email"
+    };
 
-    alertEl.innerText = "Sending...";
     submitEl.setAttribute("disabled", true);
 
     const rsp = await fetch('https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_vnZHwHdDSm-YS7rKu3P7fFktBQL1U9i39mTdFNiGHZ_ULQ/formResponse', {
@@ -28,8 +34,6 @@
     } else {
       alertEl.innerHTML = rsp.statusText;
     };
-  
-  console.log(rsp)
 }
 
   let applyForm;
@@ -118,7 +122,7 @@
     <p style="padding-bottom: 20px;">
       We will get back to you with detailed information.
     </p>
-    <label for="email" class="visually-hidden" ></label>
+    <label for="email" type="email"class="visually-hidden" ></label>
     <input
       id="email"
       type="email"
@@ -128,14 +132,6 @@
       class="email" />
     <p class="alert" />
     <button class="submit button" name="applyButton">Apply now</button>
- 
-     <div style="position: absolute; left: -5000px;" aria-hidden="true">
-       <input
-         type="text"
-         name="b_6a1b0204c404c1a1c4b498537_f12a24a1f3"
-         tabindex="-1"
-         value="" />
-     </div>
 
     </form>
 

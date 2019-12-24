@@ -185,7 +185,7 @@
       </div>
     </div>
     <a
-        href="https://leapdao.org/validators/"
+        href="https://leapdao.org/validate/"
         target="_blank"
         class="button button-primary"
         style="margin-top: 40px;">
