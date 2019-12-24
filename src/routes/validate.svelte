@@ -30,7 +30,7 @@
   });
 
     if (rsp.status === 200) {
-      alertEl.innerHTML = 'Your application was send sucessfully';
+      alertEl.innerHTML = 'Your application was sent successfully';
     } else {
       alertEl.innerHTML = rsp.statusText;
     };
