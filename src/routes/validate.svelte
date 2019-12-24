@@ -6,7 +6,7 @@
     const emailEl = form.querySelector(".email");
     const userEmail = encodeURI(emailEl.value);
     const submitEl = form.querySelector(".submit");
-    const origin = window.location.protocol + '//' + window.location.host;
+    const { origin } = window.location
     const alertEl = form.querySelector(".alert");
 
     if (userEmail === "") {
