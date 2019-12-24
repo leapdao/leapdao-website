@@ -150,7 +150,7 @@
     </footer>
   </section>
 
-  <section class="section section--disabled">
+  <section class="section">
     <header>
       <h2>Validate</h2>
     </header>
@@ -159,12 +159,12 @@
         <h4>Become a validator</h4>
         <p>
           Run a node and stay in sync with the network, stake a lot of tokens,
-          and earn more.
+          and earn more. 
         </p>
         <p>
           <a
-            href="https://docs.google.com/presentation/d/1f4mX6Ui0YYAy2zfiPoLvKS8Owo9Ps8eGLMwHrqpu6zs">
-            LeapDAO Proof-of-Stake Presentation
+            href="https://docs.google.com/presentation/d/e/2PACX-1vTZj5bBhYUObaWtrtOvoIq6SGJG-oAYh-C1QUFsEwETOWkRRSWI1sDKpvVI-MTbciVAPhiaQPNwx2aI/pub?start=false&loop=false&delayms=3000&slide=id.g6c57165488_0_0" target="_blank">
+            Validator Introduction Presentation
           </a>
         </p>
       </div>
@@ -184,6 +184,13 @@
         </p>
       </div>
     </div>
+    <a
+        href="/validate"
+        target="_blank"
+        class="button button-primary"
+        style="margin-top: 40px;">
+        Apply now
+      </a>
   </section>
 
   <section class="section">
