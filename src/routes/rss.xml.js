@@ -1,5 +1,6 @@
 import { Feed } from "feed";
 import { getPosts } from "./blog/_posts.js";
+import { siteHost } from "../server";
 
 function makeAuthor(author) {
   const result = {
@@ -14,7 +15,16 @@ function makeAuthor(author) {
   return result;
 }
 
+function blogPostImage({ slug, metadata }, siteHost = "") {
+  if (!metadata.image && metadata.emoji) {
+    return `${siteHost}/img/blog/${slug}-og.png`;
+  }
+
+  return `${siteHost}${metadata.image}`;
+}
+
 export function get(req, res) {
+  console.log(req);
   const posts = getPosts();
 
   res.writeHead(200, {
@@ -22,10 +32,10 @@ export function get(req, res) {
   });
   const feed = new Feed({
     title: "LeapDAO Blog",
-    id: "https://leapdao.org/blog",
-    link: "https://leapdao.org/blog",
-    image: "https://leapdao.org/img/og.jpg",
-    favicon: "https://leapdao.org/favicon-32x32.png",
+    id: `${siteHost()}/blog`,
+    link: `${siteHost()}/blog`,
+    image: `${siteHost()}/img/og.jpg`,
+    favicon: `${siteHost()}/favicon-32x32.png`,
     description:
       "LeapDAO blog. Articles on blockchains, ethereum scaling and plasma"
   });
@@ -34,18 +44,18 @@ export function get(req, res) {
     // console.log(post.metadata);
     const item = {
       id: post.slug,
-      url: `https://leapdao.org/blog/${post.slug}`,
+      url: `${siteHost()}/blog/${post.slug}`,
       title: post.metadata.title,
       description: post.metadata.description,
       date: post.metadata.date,
       content: post.html.replace(
         /src="\/img\/blog\//g,
-        'src="https://leapdao.org/img/blog/'
+        `src="${siteHost()}/img/blog/`
       )
     };
 
-    if (post.metadata.image) {
-      item.image = `https://leapdao.org/img/blog${post.metadata.image}`;
+    if (post.metadata.image || post.metadata.emoji) {
+      item.image = blogPostImage(post, siteHost());
     }
 
     if (post.metadata.author) {
