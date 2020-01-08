@@ -1,18 +1,22 @@
-import { Feed } from "feed";
+import RSS from "rss";
 import { getPosts } from "./blog/_posts.js";
 import { siteHost } from "../server";
 
 function makeAuthor(author) {
   const result = {
     name: author.name,
-    email: author.link
+    link: author.link
   };
 
   if (author.twitter) {
-    result.email = `https://twitter.com/${author.twitter}`;
+    result.link = `https://twitter.com/${author.twitter}`;
   }
 
-  return result;
+  if (result.link) {
+    return `${result.name} (${result.link})`;
+  }
+
+  return result.name;
 }
 
 function blogPostImage({ slug, metadata }, siteHost = "") {
@@ -24,31 +28,33 @@ function blogPostImage({ slug, metadata }, siteHost = "") {
 }
 
 export function get(req, res) {
-  console.log(req);
   const posts = getPosts();
 
   res.writeHead(200, {
     "Content-Type": "text/xml"
   });
-  const feed = new Feed({
+  const feed = new RSS({
     title: "LeapDAO Blog",
-    id: `${siteHost()}/blog`,
-    link: `${siteHost()}/blog`,
-    image: `${siteHost()}/img/og.jpg`,
-    favicon: `${siteHost()}/favicon-32x32.png`,
     description:
-      "LeapDAO blog. Articles on blockchains, ethereum scaling and plasma"
+      "LeapDAO blog. Articles on blockchains, ethereum scaling and plasma",
+    site_url: `${siteHost()}/blog`,
+    feed_url: `${siteHost()}/rss.xml`,
+    image_url: `${siteHost()}/img/og.jpg`,
+    language: "en",
+    pubDate: new Date().toISOString(),
+    ttl: "60",
+    custom_namespaces: {
+      itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd"
+    }
   });
 
   posts.forEach(post => {
-    // console.log(post.metadata);
     const item = {
-      id: post.slug,
-      link: `${siteHost()}/blog/${post.slug}`,
+      guid: post.slug,
+      url: `${siteHost()}/blog/${post.slug}`,
       title: post.metadata.title,
-      description: post.metadata.description,
       date: post.metadata.date,
-      content: post.html.replace(
+      description: post.html.replace(
         /src="\/img\/blog\//g,
         `src="${siteHost()}/img/blog/`
       )
@@ -60,14 +66,14 @@ export function get(req, res) {
 
     if (post.metadata.author) {
       if (Array.isArray(post.metadata.author)) {
-        item.author = post.metadata.author.map(makeAuthor);
+        item.author = post.metadata.author.map(makeAuthor).join(", ");
       } else {
-        item.author = [makeAuthor(post.metadata.author)];
+        item.author = makeAuthor(post.metadata.author);
       }
     }
 
-    feed.addItem(item);
+    feed.item(item);
   });
 
-  res.end(feed.rss2());
+  res.end(feed.xml());
 }
