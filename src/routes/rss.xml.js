@@ -4,11 +4,11 @@ import { getPosts } from "./blog/_posts.js";
 function makeAuthor(author) {
   const result = {
     name: author.name,
-    link: author.link
+    email: author.link
   };
 
   if (author.twitter) {
-    result.link = `https://twitter.com/${author.twitter}`;
+    result.email = `https://twitter.com/${author.twitter}`;
   }
 
   return result;
@@ -23,7 +23,11 @@ export function get(req, res) {
   const feed = new Feed({
     title: "LeapDAO Blog",
     id: "https://leapdao.org/blog",
-    link: "https://leapdao.org/blog"
+    link: "https://leapdao.org/blog",
+    image: "https://leapdao.org/img/og.jpg",
+    favicon: "https://leapdao.org/favicon-32x32.png",
+    description:
+      "LeapDAO blog. Articles on blockchains, ethereum scaling and plasma"
   });
 
   posts.forEach(post => {
