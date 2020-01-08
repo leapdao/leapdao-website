@@ -44,7 +44,7 @@ export function get(req, res) {
     // console.log(post.metadata);
     const item = {
       id: post.slug,
-      url: `${siteHost()}/blog/${post.slug}`,
+      link: `${siteHost()}/blog/${post.slug}`,
       title: post.metadata.title,
       description: post.metadata.description,
       date: post.metadata.date,
