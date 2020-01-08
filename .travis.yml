@@ -12,31 +12,14 @@ script: env TRAVIS_BRANCH=$TRAVIS_BRANCH npm run build
 cache: npm
 
 deploy:
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $PROD_S3_BUCKET
-    acl: public_read
-    local_dir: '__sapper__/export'
+  - provider: script
+    script: ./scripts/deploy-prod.sh
     skip_cleanup: true
-    region: 'eu-west-1'
     on:
       branch: master
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $TEST_S3_BUCKET
-    acl: public_read
-    local_dir: '__sapper__/export'
+  - provider: script
+    script: ./scripts/deploy-test.sh
     skip_cleanup: true
-    region: 'eu-west-1'
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH != "master"
-
-after_deploy:
-  - aws configure set preview.cloudfront true
-  - "echo \"User-agent: *\n\rDisallow: /\n\r\" > robots.txt"
-  - "if [ \"$TRAVIS_BRANCH\" != \"master\" ]; then aws s3 cp robots.txt s3://$TEST_S3_BUCKET/ --acl public-read; fi"
-  - aws cloudfront create-invalidation --distribution-id $PROD_CLOUDFRONT_DISTRIBUTION --paths "/*"
-  - aws cloudfront create-invalidation --distribution-id $TEST_CLOUDFRONT_DISTRIBUTION --paths "/*"
