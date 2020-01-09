@@ -1,7 +1,7 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`blog.json`)
-      .then(r => r.json())
+    return Promise.all([this.fetch(`blog.json`), this.fetch(`rss.xml`)])
+      .then(([r]) => r.json())
       .then(posts => {
         return { posts };
       });
