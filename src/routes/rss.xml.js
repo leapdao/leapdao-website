@@ -1,6 +1,6 @@
 import RSS from "rss";
-import { getPosts } from "../blog/_posts.js";
-import { siteHost } from "../../server";
+import { getPosts } from "./blog/_posts.js";
+import { siteHost } from "../server";
 
 function makeAuthor(author) {
   const result = {
@@ -9,7 +9,7 @@ function makeAuthor(author) {
   };
 
   if (author.twitter) {
-    result.link = `https://twitter.com/${author.twitter.replace('@', '')}`;
+    result.link = `https://twitter.com/${author.twitter.replace("@", "")}`;
   }
 
   if (result.link) {
