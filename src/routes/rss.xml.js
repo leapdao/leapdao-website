@@ -1,6 +1,6 @@
 import RSS from "rss";
-import { getPosts } from "./blog/_posts.js";
-import { siteHost } from "../server";
+import { getPosts } from "../blog/_posts.js";
+import { siteHost } from "../../server";
 
 function makeAuthor(author) {
   const result = {
@@ -9,7 +9,7 @@ function makeAuthor(author) {
   };
 
   if (author.twitter) {
-    result.link = `https://twitter.com/${author.twitter}`;
+    result.link = `https://twitter.com/${author.twitter.replace('@', '')}`;
   }
 
   if (result.link) {
@@ -36,16 +36,13 @@ export function get(req, res) {
   const feed = new RSS({
     title: "LeapDAO Blog",
     description:
-      "LeapDAO blog. Articles on blockchains, ethereum scaling and plasma",
+      "LeapDAO blog - articles on DAOs, Ethereum scaling and Plasma.",
     site_url: `${siteHost()}/blog`,
-    feed_url: `${siteHost()}/rss.xml`,
+    feed_url: `${siteHost()}/blog/rss.xml`,
     image_url: `${siteHost()}/img/og.jpg`,
     language: "en",
     pubDate: new Date().toISOString(),
-    ttl: "60",
-    custom_namespaces: {
-      itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd"
-    }
+    ttl: "60"
   });
 
   posts.forEach(post => {
