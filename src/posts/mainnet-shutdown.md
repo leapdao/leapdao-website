@@ -4,12 +4,12 @@ title:    "LeapDAO Mainnet Shutdown"
 date:     2020-02-20 15:00:00
 image:    image-to-be-used-for-preview.png
 author:
-  name: Victor
+  name: zschavi
   twitter: "@zschavi"
   link: https://github.com/zschavi/
-description: short summary of the article and will be shown in twitter preview.
+description: Leap Mainnet on hold, here is why...
 ---
-In August 2017 Vitalik Buterin and Joseph Poon proposed "Plasma", a scaling solution that enables Ethereum to reach a higher transaction output. When the Ethereum mainnet is busy, the execution speed for transactions is limited.
+The leap network is restructuring, we explore new technologies & upgrade the testnet.
 
 Plasma is here to bundle up transactions, and submit them to the mainnet in the form of periods, rather than blocks. Plasma enables fast transactions at a fraction of the cost.
 
@@ -36,7 +36,7 @@ The testnet is ready to get some traffic, and all products can be tested, before
 
 Soon, there will be a return of the mainnet with improved features and a variety of new updates. Maintaining a mainnet demands various resources: effort, money & manpower. All of these are rare and hard to obtain...
 
-## Hard facts & The next steps
+## Hard facts & the next steps
 The official mainnet shutdown is expected for the 1st of March 2020. Until then, the Leap Plasma chain is in operation and working. In full [holacracy fashion](https://leapdao.org/blog/Minimal-Viable-Governance/), a governance proposal will be submitted, to enable the next proceedings.
 
 Leap Plasma contracts will be upgraded and unclaimed funds are recovered, in order to distribute them to their respective owners via root-chain. Further deposits are not allowed.
@@ -44,6 +44,7 @@ Leap Plasma contracts will be upgraded and unclaimed funds are recovered, in ord
 Once the contract upgrades are finalized, the actual shutdown is done by stopping all the Leap Mainnet validator nodes and all the related infrastructure. Funds are withdrawn & returned.
 
 **--> If you have any funds on Leap Mainnet, please make sure to withdraw them. <--**
+
 As our mainnet pause is starting on the 01.03.2020, we advise you to take action before that date.
 
 You can do that very easy over here: https://mainnet.leapdao.org
