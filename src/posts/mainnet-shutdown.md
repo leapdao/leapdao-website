@@ -18,14 +18,14 @@ The Ethereum Foundation awarded LeapDAO a grant to design and launch a working p
 Next to it, LeapDAO grew as a fully distributed team. Organised and equipped with holacratic principles, the team managed to realise a fully working plasma chain in 2 years.
 
 ## Restructuring LeapDAO
-After successfully implementing Plasma on Layer2, the team recognised a trend towards new and exciting technologies and decided to move one step forward.
+After working hard on implementing Plasma on Layer2, the team recognised a trend towards new and exciting technologies and decided to move one step forward.
 
 Let's focus on DApp development and provide the infrastructure for all DApp projects willing to work on Ethereum. Next to Plasma there are other second layer solutions which offer a wide range of solutions already.
 
 The new approach is finding the right solution for the right project.
 
 ## Research in Rollups
-LeapDAO made their homework and has done extensive research in optimistic roll-ups & zK roll-ups. After getting familiar with the "new kids on the block", the team checked how to combine roll-ups with plasma knowledge and create a new powerful dark matter to scale Ethereum even further!
+LeapDAO made their homework and has started to research in optimistic roll-ups & zK roll-ups. After getting familiar with the "new kids on the block", the team explores how to combine roll-ups with plasma knowledge and create a new powerful dark matter to scale Ethereum even further!
 
 During the research it became obvious that every protocol is special and needs a custom solution in order to gain traction. Therefore the plasma chain will still be an interesting approach for specific scalable zero-knowledge proofs.
 
