@@ -7,7 +7,7 @@ author:
   name: zschavi
   twitter: "@zschavi"
   link: https://github.com/zschavi/
-description: Leap Mainnet on hold, here is why...
+description: Plasma Mainnet on hold, here is why...
 ---
 The leap network is restructuring, we explore new technologies & upgrade the testnet.
 
