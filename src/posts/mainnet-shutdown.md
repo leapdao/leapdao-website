@@ -48,6 +48,7 @@ Once the contract upgrades are finalized, the actual shutdown is done by stoppin
 As our mainnet pause is starting within the next 2 weeks, we advise you to take action and exit your funds.
 
 You can do that very easy over here: https://mainnet.leapdao.org
+
 Please remember: the exit takes 7 days to finalize.
 
 ## Following our purpose and driving for mass adaption
