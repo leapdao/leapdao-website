@@ -27,7 +27,7 @@ The new approach is finding the right solution for the right project.
 ## Research in Rollups
 LeapDAO made their homework and has started to research in optimistic roll-ups & ZK-rollups. After getting familiar with the "new kids on the block", the team explores how to combine roll-ups with Plasma knowledge and create a new powerful dark matter to scale Ethereum even further!
 
-During the research it became obvious that every protocol is special and needs a custom solution in order to gain traction. Therefore the plasma chain will still be an interesting approach for specific scalable zero-knowledge proofs.
+During the research it became obvious that every application is special and needs a custom solution in order to gain traction. Therefore the Plasma chain will still be an interesting approach for specific applications, including zero-knowledge proofs on layer-2.
 
 ## Improved development, on the testnet
 At the moment the leap mainnet is under construction. We concentrate our efforts on the functionality and reliability of the testnet.
