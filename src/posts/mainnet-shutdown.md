@@ -1,6 +1,6 @@
 ---
 template: post.html
-title:    "LeapDAO Mainnet Shutdown"
+title:    "Plasma Mainnet Shutdown"
 date:     2021-02-20 15:00:00
 image:    image-to-be-used-for-preview.png
 author:
