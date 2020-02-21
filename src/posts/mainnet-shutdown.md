@@ -9,7 +9,7 @@ author:
   link: https://github.com/zschavi/
 description: Plasma Mainnet on hold, here is why...
 ---
-The leap network is restructuring, we explore new technologies & upgrade the testnet.
+The leap organization is restructuring, we explore new technologies & upgrade the testnet.
 
 Plasma is here to bundle up transactions, and submit them to the mainnet in the form of periods, rather than blocks. Plasma enables fast transactions at a fraction of the cost.
 
