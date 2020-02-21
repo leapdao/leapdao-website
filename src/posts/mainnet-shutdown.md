@@ -15,7 +15,7 @@ Plasma bundles up transactions in blocks and anchors them on the mainnet as hash
 
 The Ethereum Foundation awarded LeapDAO a grant to design and launch a working plasma chain, in order to tool up Ethereum with scalability.
 
-Next to it, LeapDAO grew as a fully distributed team. Organised and equipped with holacratic principles, the team managed to realise a fully working plasma chain in 2 years.
+Next to it, LeapDAO grew as a fully distributed team. Organised and equipped with holacratic principles, the team managed to realise a fully working Plasma chain in 2 years.
 
 ## Restructuring LeapDAO
 After working hard on implementing Plasma on Layer2, the team recognised a trend towards new and exciting technologies and decided to move one step forward.
