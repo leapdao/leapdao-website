@@ -11,7 +11,7 @@ description: Plasma Mainnet on hold, here is why...
 ---
 The leap organization is restructuring, we explore new technologies & upgrade the testnet.
 
-Plasma is here to bundle up transactions, and submit them to the mainnet in the form of periods, rather than blocks. Plasma enables fast transactions at a fraction of the cost.
+Plasma bundles up transactions in blocks and anchors them on the mainnet as hashes. Through this compression Plasma enables fast transactions at a fraction of the cost.
 
 The Ethereum Foundation awarded LeapDAO a grant to design and launch a working plasma chain, in order to tool up Ethereum with scalability.
 
