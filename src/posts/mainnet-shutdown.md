@@ -29,15 +29,8 @@ LeapDAO made their homework and has started to research in optimistic roll-ups &
 
 During the research it became obvious that every application is special and needs a custom solution in order to gain traction. Therefore the Plasma chain will still be an interesting approach for specific applications, including zero-knowledge proofs on layer-2.
 
-## Improved development, on the testnet
-At the moment the leap mainnet is under construction. We concentrate our efforts on the functionality and reliability of the testnet.
-
-The testnet is ready to get some traffic, and all products can be tested, before getting launched on main. It will all fall into place, once the brain/code work is done.
-
-Soon, there will be a return of the mainnet with improved features and a variety of new updates. Maintaining a mainnet demands various resources: effort, money & manpower. All of these are rare and hard to obtain...
-
 ## Hard facts & the next steps
-The official mainnet shutdown is expected for the 7st of March 2020. Until then, the Leap Plasma chain is in operation and working. In full [holacracy fashion](https://leapdao.org/blog/Minimal-Viable-Governance/), a governance proposal will be submitted, to enable the next proceedings.
+The official mainnet shutdown is expected for the 7st of March 2020. Until then, the Leap Plasma chain is in operation and working. Applying [Minimal Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/), a on-chain governance proposal will be submitted, to enable the next proceedings.
 
 Leap Plasma contracts will be upgraded and unclaimed funds are recovered, in order to distribute them to their respective owners via root-chain. Further deposits are not allowed.
 
@@ -52,6 +45,8 @@ You can do that very easy over here: [mainnet.leapdao.org](https://mainnet.leapd
 Please remember: the exit takes 7 days to finalize.
 
 ## Following our purpose and driving for mass adaption
+Soon, there will be a return of the mainnet with improved features and a variety of new updates. Maintaining a mainnet demands various resources: effort, money & manpower. All of these are rare and hard to obtain...
+
 Whatever is the way we go and which technologies we adopt, the team is motivated to work towards our common purpose:
 
 "Help collectives of people to collaborate on things they care about and achieve sovereignty in a non-violent and fulfilling way."
