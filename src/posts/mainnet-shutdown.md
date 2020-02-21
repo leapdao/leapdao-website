@@ -1,7 +1,7 @@
 ---
 template: post.html
 title:    "LeapDAO Mainnet Shutdown"
-date:     2020-02-20 15:00:00
+date:     2021-02-20 15:00:00
 image:    image-to-be-used-for-preview.png
 author:
   name: zschavi
@@ -37,7 +37,7 @@ The testnet is ready to get some traffic, and all products can be tested, before
 Soon, there will be a return of the mainnet with improved features and a variety of new updates. Maintaining a mainnet demands various resources: effort, money & manpower. All of these are rare and hard to obtain...
 
 ## Hard facts & the next steps
-The official mainnet shutdown is expected for the 1st of March 2020. Until then, the Leap Plasma chain is in operation and working. In full [holacracy fashion](https://leapdao.org/blog/Minimal-Viable-Governance/), a governance proposal will be submitted, to enable the next proceedings.
+The official mainnet shutdown is expected for the 7st of March 2020. Until then, the Leap Plasma chain is in operation and working. In full [holacracy fashion](https://leapdao.org/blog/Minimal-Viable-Governance/), a governance proposal will be submitted, to enable the next proceedings.
 
 Leap Plasma contracts will be upgraded and unclaimed funds are recovered, in order to distribute them to their respective owners via root-chain. Further deposits are not allowed.
 
@@ -45,9 +45,10 @@ Once the contract upgrades are finalized, the actual shutdown is done by stoppin
 
 **--> If you have any funds on Leap Mainnet, please make sure to withdraw them. <--**
 
-As our mainnet pause is starting on the 01.03.2020, we advise you to take action before that date.
+As our mainnet pause is starting within the next 2 weeks, we advise you to take action and exit your funds.
 
 You can do that very easy over here: https://mainnet.leapdao.org
+Please remember: the exit takes 7 days to finalize.
 
 ## Following our purpose and driving for mass adaption
 Whatever is the way we go and which technologies we adopt, the team is motivated to work towards our common purpose:
