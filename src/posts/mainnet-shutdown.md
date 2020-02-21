@@ -25,7 +25,7 @@ Let's focus on DApp development and provide the infrastructure for all DApp proj
 The new approach is finding the right solution for the right project.
 
 ## Research in Rollups
-LeapDAO made their homework and has started to research in optimistic roll-ups & zK roll-ups. After getting familiar with the "new kids on the block", the team explores how to combine roll-ups with plasma knowledge and create a new powerful dark matter to scale Ethereum even further!
+LeapDAO made their homework and has started to research in optimistic roll-ups & ZK-rollups. After getting familiar with the "new kids on the block", the team explores how to combine roll-ups with Plasma knowledge and create a new powerful dark matter to scale Ethereum even further!
 
 During the research it became obvious that every protocol is special and needs a custom solution in order to gain traction. Therefore the plasma chain will still be an interesting approach for specific scalable zero-knowledge proofs.
 
