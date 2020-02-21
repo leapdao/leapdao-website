@@ -13,7 +13,7 @@ The leap organization is restructuring, we explore new technologies & upgrade th
 
 Plasma bundles up transactions in blocks and anchors them on the mainnet as hashes. Through this compression Plasma enables fast transactions at a fraction of the cost.
 
-The Ethereum Foundation awarded LeapDAO a grant to design and launch a working plasma chain, in order to tool up Ethereum with scalability.
+The Ethereum Foundation awarded LeapDAO a grant to design and launch a working Plasma chain, in order to tool up Ethereum with scalability.
 
 Next to it, LeapDAO grew as a fully distributed team. Organised and equipped with holacratic principles, the team managed to realise a fully working Plasma chain in 2 years.
 
