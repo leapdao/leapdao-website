@@ -90,9 +90,6 @@
       <a rel="prefetch" href="/blog">Blog</a>
     </li>
     <li>
-      <a rel="prefetch" href="/validate">Validate</a>
-    </li>
-    <li>
       <a href="/resources" rel="prefetch">Resources</a>
     </li>
     <li>
