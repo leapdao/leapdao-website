@@ -14,8 +14,8 @@ We will make organizations modern again.
 
 ## How we work
 
-As a developer cooperative [LeapDAO](https://leapdao.org "LeapDAO's website") uses the holacracy governance model to structure teams and budgets in alignment with its purpose and roadmap.
-Holacracy is an extremely dynamic framework which serves us well, a model which gives responsibility to every single developer. We are structured in circles and regular meetings help us stay aligned to our goals. Circles are teams such as the dev circle or independent projects such as [Deora](https://www.deora.earth/). The structure is constantly evolving, [Glassfrog](https://app.glassfrog.com/organizations/14849/orgnav/roles/10883348) is the software of our choice to keep track of it.
+LeapDAO is a distributed team and strives to be truly decentralized. As a developer cooperative [LeapDAO](https://leapdao.org "LeapDAO's website") uses the holacracy governance model to structure teams and budgets in alignment with its purpose and roadmap.
+Holacracy is an extremely dynamic framework which serves us well, a model which gives responsibility to every single developer. It encourages every member to work as a enterpreneur within a company, always working for the benefit of himself, the others and the collective. LeapDAO is structured in circles, you can imagine them as departments or domains. Regular meetings and calls help us stay aligned with our strategies and purpose. Circles are teams such as the "dev" circle or independent ecosystem projects such as [Deora](https://www.deora.earth/). The structure is constantly evolving, [Glassfrog](https://app.glassfrog.com/organizations/14849/orgnav/roles/10883348) is the software of our choice to keep track of it.
 
 <img src="/img/blog/holacracy-glassfrog-circle.jpg" alt="Current organizational overview of LeapDAO">
 
@@ -37,9 +37,9 @@ Bounties are structured into different sizes with increasing payout, all of whic
 
 Colony is an exciting project promising to deliver solutions for digital companies with a great range of solutions and a plentiful of smart contracts.
 
-For us, maintaining reputation was the most important aspect. [Colony reputation](https://blog.colony.io/the-colony-reputation-system-5616293c3949/) is a way to keep track of merit, how much an individual has contributed to the success of an organization by clear metrics. Reputation is added by serving a role or contributing in the form of working on a bounty and slowly decays over time. Since colony has switched to the mainnet we deployed [our own implementation](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/IColony.sol).
+Next to distributing and managing money, LeapDAO keeps track of reputation as the important measurement within the organisation. [Colony reputation](https://blog.colony.io/the-colony-reputation-system-5616293c3949/) is a way to keep track of merit, how much an individual has contributed to the success of an organization by clear metrics. Reputation is added by serving a role or contributing in the form of working on a bounty and slowly decays over time. Since colony has switched to the mainnet we deployed [our own implementation](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/IColony.sol).
 
-To use the colony-task feature we created a [bounty payout contract](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/BountyPayout.sol) utilizing Colony payment. As a user interface we [forked](https://github.com/leapdao/MultiSigWallet) the Gnosis multi-sig. The funds of every circle are managed by a separate Escrow council.
+To use the colony-task feature we created a [bounty payout contract](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/BountyPayout.sol) utilizing Colony payment. As a user interface LeapDAO [forked](https://github.com/leapdao/MultiSigWallet) the Gnosis multi-sig. The funds of every circle are managed by a separate Escrow council.
 
 Deployed at [wallet.leapdao.org](https://wallet.leapdao.org/) this allows every circle to easily reward and payout contributors. The workflow goes as following:
 
@@ -57,7 +57,7 @@ Deployed at [wallet.leapdao.org](https://wallet.leapdao.org/) this allows every 
 
 ## How reputation benefits every developer
 
-We reward reputation by distributing funds accumulated through our Plasma-bridge contract. Every month reputation turns into money when Leap tokens are distributed. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
+Reputation is rewarded by distributing funds accumulated through our Plasma-bridge contract. Every month reputation turns into Leap tokens. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
 
 <br>
 
