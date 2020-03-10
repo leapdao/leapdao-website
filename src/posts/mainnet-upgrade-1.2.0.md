@@ -5,7 +5,7 @@ date: 2019-08-10 10:50:00
 emoji: 🍃
 author:
  name: '@kosta'
- twitter: '@troggo'
+ twitter: '@KostaKorenkov'
 description: Summary of the new Leap Mainnet governance proposals
 ---
 

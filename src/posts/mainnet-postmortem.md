@@ -8,7 +8,7 @@ author:
   - name: '@pinkiebell'
     link: 'https://github.com/pinkiebell/'
   - name: '@kosta'
-    twitter: '@troggo'
+    twitter: '@KostaKorenkov'
 
 description: Mainnet incident happened on 17 June 2019. Funds are safe.
 ---
