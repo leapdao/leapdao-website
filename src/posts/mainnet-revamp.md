@@ -6,7 +6,7 @@ emoji: 🛄
 image: /img/blog/mainnet-revamp.png
 author:
  name: '@kosta'
- twitter: '@troggo'
+ twitter: '@KostaKorenkov'
 description: We plan to revamp the mainnet preserving the balances. Funds are SAFU.
 ---
 
