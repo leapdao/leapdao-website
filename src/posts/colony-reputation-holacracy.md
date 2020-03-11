@@ -10,16 +10,16 @@ author:
 description: explanation of our integration of holacracy with colony reputation.
 ---
 
-We will make organizations modern again.
+Building on reputation and flat hierarchies, for the organizations of tomorrow.
 
 ## How we work
 
 LeapDAO is a distributed team and strives to be truly decentralized. As a developer cooperative [LeapDAO](https://leapdao.org "LeapDAO's website") uses the holacracy governance model to structure teams and budgets in alignment with its purpose and roadmap.
-Holacracy is an extremely dynamic framework which serves us well, a model which gives responsibility to every single developer. It encourages every member to work as a enterpreneur within a company, always working for the benefit of himself, the others and the collective. LeapDAO is structured in circles, you can imagine them as departments or domains. Regular meetings and calls help us stay aligned with our strategies and purpose. Circles are teams such as the "dev" circle or independent ecosystem projects such as [Deora](https://www.deora.earth/). The structure is constantly evolving, [Glassfrog](https://app.glassfrog.com/organizations/14849/orgnav/roles/10883348) is the software of our choice to keep track of it.
+Holacracy is an extremely dynamic framework which serves us well, a model which gives responsibility to every single developer. It encourages every member to work like an entrepreneur within a company, always working for the benefit of himself, the others and the collective. LeapDAO is structured in circles, you can imagine them as departments or domains. Regular meetings and calls help us stay aligned with our strategies and purpose. Circles are teams such as the "dev" circle or independent ecosystem projects such as [Deora](https://www.deora.earth/). The structure is constantly evolving, [Glassfrog](https://app.glassfrog.com/organizations/14849/orgnav/roles/10883348) is the software of our choice to keep track of it.
 
 <img src="/img/blog/holacracy-glassfrog-circle.jpg" alt="Current organizational overview of LeapDAO">
 
-The same person might have multiple roles within the organization and be a part of multiple circles, just like someone might juggle multiple responsibilities in a more traditional enterprise. We are truly decentralized and having structures which continually change for the better is crucial for us.
+One person can have multiple roles within the organization and be a part of multiple circles, just like someone might juggle multiple responsibilities in a more traditional enterprise. We are truly decentralized and having structures which continually change for the better is crucial for us.
 
 Every circle manages their own multi-sig wallet with individual budgets and is responsible for all tasks in their area of expertise.
 
@@ -57,7 +57,7 @@ Deployed at [wallet.leapdao.org](https://wallet.leapdao.org/) this allows every 
 
 ## How reputation benefits every developer
 
-Reputation is rewarded by distributing funds accumulated through our Plasma-bridge contract. Every month reputation turns into Leap tokens. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
+Reputation is rewarded by distributing funds accumulated through our Plasma-bridge contract. Bimonthly, reputation turns into Leap tokens. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
 
 <br>
 
@@ -78,4 +78,4 @@ Using the root hash a simple GET request to the colony API  is sufficient to rec
 
 <img src="/img/blog/cute-pie.png" alt="reputation pie chart">
 
-If you are interested in what we are doing, join the conversation on our [Slack](http://join.leapdao.org) or follow us on [Twitter](https://twitter.com/leapdao). LeapDAO is a very small independent team incubated by [Status.im](https://incubate.status.im/projects/) and running on the Ethereum Foundation grant. We are looking for active people to join our core research and development.
+If you are interested in what we are doing, join the conversation on our [Slack](http://join.leapdao.org) or follow us on [Twitter](https://twitter.com/leapdao). LeapDAO is a small independent team incubated by [Status.im](https://our.status.im/leapdao-to-join-incubate-family-as-our-fourth-incubatee/) and running on the Ethereum Foundation grant. We are looking for active people to join our core research and development.
