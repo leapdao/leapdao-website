@@ -37,7 +37,7 @@ Bounties are structured into different sizes with increasing payout, all of whic
 
 Colony is an exciting project promising to deliver solutions for digital companies with a great range of solutions and a plentiful of smart contracts.
 
-Next to distributing and managing money, LeapDAO keeps track of reputation as the important measurement within the organisation. [Colony reputation](https://blog.colony.io/the-colony-reputation-system-5616293c3949/) is a way to keep track of merit, how much an individual has contributed to the success of an organization by clear metrics. Reputation is added by serving a role or contributing in the form of working on bounties.  Reputation is designed to decay over time, so that only active participants have a high level of reputation within the organisation. This way, we avoid plutocratic structures and only reward individuals who contribute to common good. Since colony has switched to the mainnet we deployed [our own implementation](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/IColony.sol).
+Next to distributing and managing money, LeapDAO keeps track of reputation as the important measurement within the organisation. [Colony reputation](https://blog.colony.io/the-colony-reputation-system-5616293c3949/) is a way to keep track of merit, how much an individual has contributed to the success of an organization by clear metrics. At the moment reputation is added by being involved in the completion of bounties.  Reputation is designed to decay over time, so that only active participants have a high level of reputation within the organisation. This way, we avoid plutocratic structures and only reward individuals who contribute to common good. Since colony has switched to the mainnet we deployed [our own implementation](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/IColony.sol).
 
 To use the colony-task feature we created a [bounty payout contract](https://github.com/leapdao/leap-contracts/blob/master/contracts/misc/BountyPayout.sol) utilizing Colony payment. As a user interface LeapDAO [forked](https://github.com/leapdao/MultiSigWallet) the Gnosis multi-sig. The funds of every circle are managed by a separate Escrow council.
 
@@ -57,7 +57,9 @@ Deployed at [wallet.leapdao.org](https://wallet.leapdao.org/) this allows every 
 
 ## How reputation benefits every developer
 
-Reputation is rewarded by distributing funds accumulated through our Plasma-bridge contract. Bimonthly, reputation turns into Leap tokens. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
+Please note: At the moment our [mainnet is shutdown](https://leapdao.org/blog/mainnet-shutdown). The described setup was working for us, and will get a improved revival with added features like token governance, once our software is updated and the mainnet is resurrected.
+
+Reputation was rewarded by distributing funds accumulated through our Plasma-bridge contract. Bimonthly, reputation turned into Leap tokens. To achieve this we query our [Colony contract](https://etherscan.io/address/0x24f861f8356fa8d18b6adea07ac59719f42012b1) for the reputation root hash:  
 
 <br>
 
