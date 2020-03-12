@@ -1,7 +1,7 @@
 ---
 template: post.html
 title: 'How we integrated colony reputation with holacracy'
-date: 2020-02-09 10:00:00
+date: 2020-03-12 10:00:00
 image: holacracy-glassfrog-circle.jpg
 author:
   name: '@KenoBudde'
