@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: 'How we integrated colony reputation with holacracy'
+title: 'How we integrated Colony reputation with Holacracy and bounties'
 date: 2020-03-12 10:00:00
 image: holacracy-glassfrog-circle.jpg
 author:
