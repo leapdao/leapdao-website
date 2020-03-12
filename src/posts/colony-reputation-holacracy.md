@@ -23,7 +23,7 @@ One person can have multiple roles within the organization and be a part of mult
 
 Every circle manages their own multi-sig wallet with individual budgets and is responsible for all tasks in their area of expertise.
 
-All work is done through [bounties](https://app.glassfrog.com/organizations/14849/orgnav/policies/10912780 "Bounty policy") which anyone can propose similarly to colony tasks. Proposed bounties can be objected to through our Slack or the associated Github issue. Similarly, bounties without any progress can be challenged by other developers.
+Most of the work is done through [bounties](https://app.glassfrog.com/organizations/14849/orgnav/policies/10912780 "Bounty policy") which anyone can propose similarly to colony tasks. Proposed bounties can be objected to through our Slack or the associated Github issue. Similarly, bounties without any progress can be challenged by other developers.
 
 According to the concept proposed by colony each bounty has three roles:
 
