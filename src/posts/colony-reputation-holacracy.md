@@ -7,7 +7,7 @@ author:
   name: '@KenoBudde'
   twitter: '@KenoBudde'
   link: https://github.com/clearwood/
-description: explanation of our integration of holacracy with colony reputation.
+description: How we integrate bounties, Holacracy and Colony reputation
 ---
 
 Building on reputation and flat hierarchies, for the organizations of tomorrow.
