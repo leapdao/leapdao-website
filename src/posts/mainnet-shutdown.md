@@ -1,7 +1,7 @@
 ---
 template: post.html
 title:    "Plasma Mainnet Shutdown"
-date:     2021-02-20 15:00:00
+date:     2020-02-20 15:00:00
 image:    image-to-be-used-for-preview.png
 author:
   name: zschavi
