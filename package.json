@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper export --entry=\"/ /404\" && npm run move404",
+    "build": "sapper export --entry=\"/ /404\" && npm run move404 && npm run walk",
     "move404": "mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -r __sapper__/export/404",
+    "walk": "node walk __sapper__/export",
     "test": "exit 0",
     "og:images": "node blog-og-generator/index.js"
   },

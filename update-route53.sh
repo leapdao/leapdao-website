@@ -17,11 +17,11 @@ echo Path is: $PATH
 echo User is: $USER
 
 # AWS Hosted Zone ID
-ZONEID="Z10133842383KQ1FU57GV"
+
 echo Zone Id: $ZONEID
 
 # The CNAME you want to update e.g. hello.example.com
-RECORDSET="_dnslink.leapdao.callashopper.com"
+
 echo Record Set: $RECORDSET
 
 # More advanced options below
