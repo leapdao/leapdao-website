@@ -1,13 +1,13 @@
 ---
 template: post.html
-title: 'How we integrated colony reputation with holacracy'
-date: 2020-02-09 10:00:00
+title: 'How we integrated Colony reputation with Holacracy and bounties'
+date: 2020-03-12 10:00:00
 image: holacracy-glassfrog-circle.jpg
 author:
   name: '@KenoBudde'
   twitter: '@KenoBudde'
   link: https://github.com/clearwood/
-description: explanation of our integration of holacracy with colony reputation.
+description: How we integrate bounties, Holacracy and Colony reputation
 ---
 
 Building on reputation and flat hierarchies, for the organizations of tomorrow.

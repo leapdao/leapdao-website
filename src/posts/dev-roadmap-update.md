@@ -6,7 +6,7 @@ emoji: 🚴‍♂️
 image: /img/blog/dev-roadmap-update.png
 author:
   - name: '@kosta'
-    twitter: '@troggo'
+    twitter: '@KostaKorenkov'
 
 description: We've published an updated development roadmap. Check out what we are doing and jump on board
 ---

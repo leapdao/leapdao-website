@@ -6,7 +6,7 @@ emoji: 🐲
 image: /img/blog/cas.png
 author:
  name: '@kosta'
- twitter: '@troggo'
+ twitter: '@KostaKorenkov'
 description: How CAS will enable a multi-validator setup of the Leap Network.
 ---
 
