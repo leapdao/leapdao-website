@@ -15,7 +15,6 @@ cache: npm
 deploy:
   - provider: script
     script: ./scripts/deploy-prod.sh
-    script: ./scripts/update-route53.sh
     skip_cleanup: true
     on:
       branch: master
