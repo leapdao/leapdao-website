@@ -19,7 +19,7 @@ deploy:
     on:
       branch: master
   - provider: script
-    script: ./scripts/deploy-test.sh
+    script: ./scripts/deploy-prod.sh
     skip_cleanup: true
     on:
       all_branches: true

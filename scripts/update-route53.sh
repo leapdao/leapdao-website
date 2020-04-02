@@ -11,7 +11,7 @@
 ### END INIT INFO
 
 # troubleshooting file
-exec > /tmp/debug-my-script.txt 2>&1
+# exec > /tmp/debug-my-script.txt 2>&1
 
 echo Path is: $PATH
 echo User is: $USER
@@ -70,6 +70,8 @@ cat > ${TMPFILE} << EOF
       ]
     }
 EOF
+
+cat $TMPFILE
 
 # Update the Hosted Zone record
 aws route53 change-resource-record-sets --hosted-zone-id $ZONEID --change-batch file://"$TMPFILE" >> "$LOGFILE"
