@@ -21,7 +21,9 @@ The following article will especially focus on the pros and cons of Plasma and R
 
 The overarching goal of all Layer 2 solutions are to increase scalability, by reducing the size of transactions and the cost of submitting these. Plasma only submits the merkle root hash of the included transactions to the mainnet, the gas costs per transaction scale linearly, with a growing number of included transactions per block these converge to zero. It is like riding a bus, the more people join, the cheaper each passenger is moving forward... 
 
-Differently the costs for simple and contract transactions as Roll-Ups scale not as well, as contract data or a zk-proof is still submitted on-chain. With a higher number of included transactions per block through the Roll-Up, the individual costs per transaction will decrease but converge to a still substantial gas fee. We considered two cases: Simple transactions of ERC20 tokens as well as transactions with a higher data payload (e.g zk-proof).  The following graphic illustrates this problem:
+Differently the costs for simple and contract transactions as Roll-Ups scale not as well, as contract data or a zk-proof is still submitted on-chain. With a higher number of included transactions per block through the Roll-Up, the individual costs per transaction will decrease but converge to a still substantial gas fee (exact amount).
+
+We considered two cases: Simple transactions of ERC20 tokens as well as transactions with a higher data payload (e.g zk-proof).  The following graphic illustrates this problem:
 
 <img src="/img/blog/plasma-rollup-chart.png" alt="Comparison chart between cost of transactions on Plasma and with Roll-Ups">
 
