@@ -6,6 +6,7 @@ node_js:
 before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
+  - npm install -g ipfs-deploy
 
 script: env TRAVIS_BRANCH=$TRAVIS_BRANCH npm run build
 

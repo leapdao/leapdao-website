@@ -4,12 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper export --entry=\"/ /404\" && npm run move404",
+    "build": "sapper export --entry=\"/ /404\" && npm run move404 && npm run unpin",
     "move404": "mv __sapper__/export/404/index.html __sapper__/export/404.html && rm -r __sapper__/export/404",
+    "unpin": "node unpin",
     "test": "exit 0",
     "og:images": "node blog-og-generator/index.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "compression": "^1.7.1",
     "file-loader": "^4.2.0",
     "front-matter": "^3.0.2",
