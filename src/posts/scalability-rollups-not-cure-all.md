@@ -7,7 +7,7 @@ author:
   name: '@KenoBudde'
   twitter: '@KenoBudde'
   link: https://github.com/clearwood/
-description: comparison of Layer 2 scaling solutions.
+description: A comparison of Layer 2 scaling solutions.
 ---
 
 Providing an overview of the current state of Layer 2 solutions.
