@@ -59,7 +59,7 @@
       <h3>Bounties</h3>
       <p>A list of available, ongoing and finished bounties</p>
       <p>
-        <a href="https://leapdao.org/earn/"
+        <a href="earn/"
           >bounty board</a
         >
       </p>
