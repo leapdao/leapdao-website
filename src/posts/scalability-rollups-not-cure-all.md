@@ -63,7 +63,7 @@ Both solutions offer significant pros and cons, the requirements of an intended 
 
 To have an overview of all pros and cons of the different options here's a table.
 
-|--|**Plasma**|**Optimistic Rollups**|**ZK-Rollups**
+--|**Plasma**|**Optimistic Rollups**|**ZK-Rollups**
 :-----:|:-----:|:-----:|:-----:
 Data Model|UTXO|UTXO / Account|Account
 Exec. env.|SolEVM|OVM / Nutberry / SolEVM / AVM|SyncVM
