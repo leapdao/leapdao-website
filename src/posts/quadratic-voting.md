@@ -41,11 +41,11 @@ Since the event happened in a closed environment with limited time and physical 
 
 <img src="/img/blog/volt-qv.jpg" class="centered" alt="Volt Quadratic Voting">
 
-Initially we wanted to provide a very similar solution for the [ETHTurin](https://ethturin.com/) hackathon. But the difficult circumstances which made it necessary for the hackathon to become virtual created the need to innovate. We could not distribute paper wallets which lead us to develop a [faucet](https://github.com/leapdao/token-faucet/tree/ethTurin) distributing voice credits depending on whether the user had the ERC-721 token of the conference in his Web3 Wallet.
-
-After signing an API request to our Faucet, the user would then receive a QR-Code for an account pre-funded with our voting credits.
+Initially we wanted to provide a very similar solution for the [ETHTurin](https://ethturin.com/) hackathon. But the difficult circumstances which made it necessary for the hackathon to become virtual created the need to innovate.
 
 <img src="/img/blog/turin-combined.png" class="centered" alt="Request tokens & Pre-funded QR @ETHTurin">
+
+We could not distribute paper wallets which lead us to develop a [faucet](https://github.com/leapdao/token-faucet/tree/ethTurin) distributing voice credits depending on whether the user had the ERC-721 token of the conference in his Web3 Wallet. After signing an API request to our Faucet, the user would then receive a QR-Code for an account pre-funded with our voting credits.
 
 ### Results
 
