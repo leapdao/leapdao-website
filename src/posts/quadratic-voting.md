@@ -15,7 +15,9 @@ Providing an overview of the current state of Quadratic Voting at LeapDAO.
 ## What is Quadratic Voting
 
 The most commonly used form of voting is one where each voter gets one vote per issue. This however relies on one underlying assumption: That every voter cares the same amount for each issue, an assumption which rarely coincidences with reality.
-A world where only the views of the majority count may know another problem: the so-called "tyranny of the majority". ([John Stuart Mill: On Liberty](https://socialsciences.mcmaster.ca/econ/ugcm/3ll3/mill/liberty.pdf)) Minorities are better represented in a system where voters may not only express a binary opinion but also how strongly they feel about it.
+A world where only the views of the majority count may know another problem: the so-called "tyranny of the majority". ([John Stuart Mill: On Liberty](https://socialsciences.mcmaster.ca/econ/ugcm/3ll3/mill/liberty.pdf))
+
+Minorities are better represented in a system where voters may not only express a binary opinion but also how strongly they feel about it.
 Quadratic voting (QV) tries to be such a solution. In QV each participant is given an allocation of credits which they can use to cast votes on an issue. The cost for a vote does not scale linearly however but quadratically.
 Imagine that a vote generally costs 1 Voice Credit (VC) and you have 10 credits. You could either spend one VC for one vote. Two votes however would already cost you four credits.
 
