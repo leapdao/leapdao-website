@@ -1,12 +1,12 @@
 ---
 template: post.html
-title: 'Introducing the Prime Casino'
+title: "Introducing the Prime Casino"
 date: 2019-10-04 16:40:00
 emoji: ℧
-image: /img/blog/primality.png
+image: primality.png
 author:
- name: '@johba'
- twitter: '@johba'
+  name: "@johba"
+  twitter: "@johba"
 description: The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum limits.
 ---
 
@@ -15,6 +15,7 @@ The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum
 Large prime numbers play an important role in cryptography. Specifically the difficulty of factorization of large numbers enables RSA and other algorithms. Some contract in the Ethereum ecosystem also depend on primality tests like RSA accumulators and [special Plasma Cash proofs](https://ethresear.ch/t/log-coins-sized-proofs-of-inclusion-and-exclusion-for-rsa-accumulators/3839).
 
 How can you verify that a large number is prime on chain? Known algorithms can be converted to Solidity code. The following have already been realized:
+
 - [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 - [Miller Rabin Test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
 
@@ -43,6 +44,5 @@ To show you this idea in action, we’ve deployed all the necessary [contracts t
 **[https://primality.leapdao.org/](https://primality.leapdao.org/)**
 
 The presented solution is open source and it's code can be found [here](https://github.com/leapdao/prime-casino-contracts) and [here](https://github.com/leapdao/prime-casino-frontend).
-
 
 If you are interested in what we are doing, join the conversation on our [Slack](http://join.leapdao.org) or follow us on [Twitter](https://twitter.com/leapdao). LeapDAO is a very small independent team incubated by [Status.im](https://incubate.status.im/projects/) and running on the Ethereum Foundation grant. We are looking for active people to join our core research and development.

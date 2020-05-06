@@ -1,11 +1,11 @@
 ---
 template: post.html
-title: 'Burner wallet driving Blocksplit'
+title: "Burner wallet driving Blocksplit"
 date: 2019-05-02 10:50:00
-image: /img/blog/Popup-Economy-at-Blocksplit-og.png
+image: Popup-Economy-at-Blocksplit-og.png
 author:
-  - name: '@johba'
-    twitter: 'johba'
+  - name: "@johba"
+    twitter: "johba"
 description: The first pop-up economy powered by Plasma!
 ---
 
@@ -14,11 +14,12 @@ The first pop-up economy powered by Plasma!
 <img src="/img/blog/blocksplit.jpg" alt="Blocksplit Croatia">
 
 ## Burner Wallet on Leap Network
+
 The Burner wallet works in any mobile web browser so no app download or wallet setup are required. It was first used on during ETHDenver conference and had big success. What is new for the [SunDAI instance](https://sundai.io) created for BlockSplit conference is Plasma support. It is running on the [Leap Network](https://mainnet.leapdao.org), a Plasma chain created by the [LeapDAO community](https://leapdao.org) and providing block times of 2-4 seconds. SunDAI is pegged to the dollar so there is low cognitive overhead. The best part is on-boarding is as easy as opening your camera.
 
-## User Flow 
+## User Flow
 
-The Blocksplit conference ran over 2 days on April 25 to 26 and hosted ~150 participants in the beautiful town of Split, Croatia. Attendees received a paper wallet at registration with an amount of SunDAI according to their ticket type. 
+The Blocksplit conference ran over 2 days on April 25 to 26 and hosted ~150 participants in the beautiful town of Split, Croatia. Attendees received a paper wallet at registration with an amount of SunDAI according to their ticket type.
 
 <img src="/img/blog/bsUser1.jpg" alt="Paper Wallets">
 
@@ -30,7 +31,7 @@ The scan does both, load the wallet website and import the key that is pre-loade
 
 <img src="/img/blog/bsUser5.jpg" alt="On and Offboarding">
 
-From there the attendees could approach the different vendors, scan a QR code and pay. The payment arrived seconds later and could be verified by the vendors on the tablets. 
+From there the attendees could approach the different vendors, scan a QR code and pay. The payment arrived seconds later and could be verified by the vendors on the tablets.
 
 <img src="/img/blog/bsMerchant.jpg" alt=" Merchant flow">
 
@@ -54,9 +55,9 @@ In case of running or of SunDAI, attendees could also recharge their wallets wit
          |                 |  transfer      |
          |                 | ------------>  |
          |                 |                |
-  ```
+```
 
-If attendees did not bring any of their own crypto then [Bitcoin Store](https://www.bitcoin-store.hr/) provided a fiat exchange right at the event. 
+If attendees did not bring any of their own crypto then [Bitcoin Store](https://www.bitcoin-store.hr/) provided a fiat exchange right at the event.
 
 ## Merchant Stats
 
@@ -75,14 +76,14 @@ Off-boarding in the Plasma design takes inconvenient 3,5 to 7 days. To keep merc
 ## Issues
 
 Transaction flow on the Leap Network side during the event went smoothly still some issues were identified where improvements can be done:
- - Network (Internet connection) requirements are pretty high. A lot of user paying for goods at the same time on the same WiFi network generate quite high load resulting in bad connection and delays sending transactions and getting response and sometimes the need to reload the wallet.
- - Also active wallet usage generates quite high traffic as the wallet reloads a lot of its parts. To improve it, wallets needs to be lighten up and reload only necessary minimum of it's elements during and after sending the transaction.
- - Browser support should be improved as some browser/OS combinations didn't work as well as others. The biggest issue here was QR code scanning and camera access issues within browser.
+
+- Network (Internet connection) requirements are pretty high. A lot of user paying for goods at the same time on the same WiFi network generate quite high load resulting in bad connection and delays sending transactions and getting response and sometimes the need to reload the wallet.
+- Also active wallet usage generates quite high traffic as the wallet reloads a lot of its parts. To improve it, wallets needs to be lighten up and reload only necessary minimum of it's elements during and after sending the transaction.
+- Browser support should be improved as some browser/OS combinations didn't work as well as others. The biggest issue here was QR code scanning and camera access issues within browser.
 
 ## Summary
 
 In **total 1135 SunDAI transfers** have been made during the 2 days of the conference. In this time the Plasma chain has submitted 106 anchors to the Ethereum mainnet paying a **total of USD 7.23 in transaction fees**. The fees per transaction should go even lower with higher load as more transactions will be included in each block.
-
 
 We want to thank Antea, Lorena and Luka, our enthusiastic volunteers helping with the burner Wallet as well as to Tomo and Bruno for inviting us to the event and giving us the opportunity demo the tech.
 

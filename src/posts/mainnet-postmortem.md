@@ -1,14 +1,14 @@
 ---
 template: post.html
-title: 'Postmortem for the Mainnet incident on 17th June 2019'
+title: "Postmortem for the Mainnet incident on 17th June 2019"
 date: 2019-07-02 15:00:00
 emoji: ⛑
-image: /img/blog/mainnet-postmortem.png
+image: mainnet-postmortem.png
 author:
-  - name: '@pinkiebell'
-    link: 'https://github.com/pinkiebell/'
-  - name: '@kosta'
-    twitter: '@KostaKorenkov'
+  - name: "@pinkiebell"
+    link: "https://github.com/pinkiebell/"
+  - name: "@kosta"
+    twitter: "@KostaKorenkov"
 
 description: Mainnet incident happened on 17 June 2019. Funds are safe.
 ---

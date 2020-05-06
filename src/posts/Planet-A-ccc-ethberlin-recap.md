@@ -2,11 +2,11 @@
 template: post.html
 title: 'Planet A — "The Tragedy of the CO₂mmons" recap'
 date: 2019-09-18 16:20:00
-image: /img/blog/planeta-logo.png
+image: planeta-logo.png
 emoji: 🌍
 author:
-  name: 'Herr Mueller'
-  twitter: '@dist0rtionproto'
+  name: "Herr Mueller"
+  twitter: "@dist0rtionproto"
 description: Herr Müller, your favorite bureaucrat from the future, explains what happened during the last simulation of Planet A.
 ---
 
@@ -14,7 +14,7 @@ Greetings Earthlings!
 
 This is your extra-terrestrial and time-traveling bureaucrat Herr Müller speaking. I'm contacting you today to inform you about the work you and your fellow terrestrials have done on "Planet A" during [EthBerlinZwei](https://ethberlinzwei.com/) and [Chaos Communication Camp 2019](https://events.ccc.de/camp/2019/wiki/Main_Page).
 
-As it took me quite some effort to perambulate my time dimension's administrative processes to send this message via *quantum-mail* to you, I'd like to ask your full attention when reading the following paragraphs. I'd like to draw particular emphasis on the brief introduction of this quantum-mail, as it's meant as the whole message's checksum in the improbable event of the quantum-mail screwing up!
+As it took me quite some effort to perambulate my time dimension's administrative processes to send this message via _quantum-mail_ to you, I'd like to ask your full attention when reading the following paragraphs. I'd like to draw particular emphasis on the brief introduction of this quantum-mail, as it's meant as the whole message's checksum in the improbable event of the quantum-mail screwing up!
 
 ## Introduction
 
@@ -67,6 +67,7 @@ In Ziegeleipark Mildenberg, Social Dist0rtion Protocol set up a geodesic dome de
 Sadly, the two big events didn't go as smooth as the Ethereum Meetup in July. A very chaotic few days before the launch caused some major bugs to creep into the code base which initially bricked on-boarding for two out of six countries. As the team had done only minor promotion, consisting of [a single blog post](https://medium.com/ethberlin/introducing-planet-a-the-tragedy-of-the-co%E2%82%82mmons-90e35c229475), most conference attendees weren't even aware of the simulation's launch. Though fully featured, it also lacked tutorials, making on-boarding a tiresome one to one process for game masters and players alike. Moreover, there was no deep integration in the pop-up economy of the conferences: players, having only a small choice of non-indispensable goods to buy, preferred to use their Göllars to plant trees, lowering the level of CO₂. This caused the game mechanics to incentivize a really altruistic and eco-friendy behavior, comically saving "Planet A" from its prophesied destruction. Even though significant business was conducted, instead of goods becoming more expensive, the CO₂ concentration in the air dropped to an unseen low, undermining the more apocaliptic (and planned) tragedy of the commons scenario.
 
 Yes, Planet A could have gone better. Everyone did what they could at the events to promote and on-board new players. In the end, LeapDAO's Plasma testnet recorded a total of 1182 transactions, with 187 active passports sending at least one transaction, with an average of six transactions per passport. One kilogram of popcorn was sold. Some notebooks too. Without surprises though, Berliner Luft was the best-seller. Some additional wins for the team were that:
+
 - [Vitalik had been spotted playing the game 😱](https://twitter.com/dist0rtionproto/status/1165268646387752961).
 - A Cccamp19 attendee developed a [card10 badge app to signal "business-readiness to fellow players"](https://twitter.com/dist0rtionproto/status/1165219430894321666).
 - And finally that I, Herr Müller, was asked to give an interview on the game to a podcast (link will be provided once the interview is online).

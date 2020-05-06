@@ -1,11 +1,11 @@
 ---
 template: post.html
-title: 'Best hacks from the Ethereal Virtual Hackathon'
+title: "Best hacks from the Ethereal Virtual Hackathon"
 date: 2019-05-10 14:08:00
-image: /img/blog/ethereal-results.png
+image: ethereal-results.png
 author:
-  - name: '@kohola'
-    twitter: 'koholaa'
+  - name: "@kohola"
+    twitter: "koholaa"
 description: Best LeapDAO dApps and game submitted during the Ethereal Virtual Hackathon.
 ---
 
