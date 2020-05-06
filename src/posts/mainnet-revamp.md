@@ -1,12 +1,12 @@
 ---
 template: post.html
-title: 'Upcoming mainnet revamp'
+title: "Upcoming mainnet revamp"
 date: 2019-06-21 10:50:00
 emoji: 🛄
-image: /img/blog/mainnet-revamp.png
+image: mainnet-revamp.png
 author:
- name: '@kosta'
- twitter: '@KostaKorenkov'
+  name: "@kosta"
+  twitter: "@KostaKorenkov"
 description: We plan to revamp the mainnet preserving the balances. Funds are SAFU.
 ---
 
@@ -28,19 +28,17 @@ We have included a number of fixes into our node software which makes it incompa
 
 Most notably, we are upgrading to the latest Tendermint version which includes breaking changes (including changes in a database structure) and thus requires a network reset. Sadly, it also makes a hard fork not possible.
 
-
 Before we go further, it may be useful to recap how the LeapDAO plasma chain is governed. Feel free to skip the next section if you are well aware of our [Minimal Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/).
-
 
 ## Recap on how LeapDAO plasma chain is governed
 
-Apart from the ability to do transfers and invoke contracts, Plasma chains have an additional functionality to deposit and exit funds from it's parent chain. An on-chain contract called Plasma Bridge is used to execute these functions. 
+Apart from the ability to do transfers and invoke contracts, Plasma chains have an additional functionality to deposit and exit funds from it's parent chain. An on-chain contract called Plasma Bridge is used to execute these functions.
 
 The Leap Network uses [Zeppelin OS](https://zeppelinos.org/) to allow upgrades of its Plasma Bridge. To avoid endangering the security of funds on the chain through upgrades, the Leap Network implements a [Minimal Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/) protocol. It grants all the users enough time to review and react to governance proposals before they are applied.
 
 ## What we are planning to do
 
-First, we need to stop the old network safely. To do that we’ve submitted a [governance proposal](https://leapdao.org/blog/Minimal-Viable-Governance/) to upgrade Plasma Bridge disabling exits and deposits on the chain. 
+First, we need to stop the old network safely. To do that we’ve submitted a [governance proposal](https://leapdao.org/blog/Minimal-Viable-Governance/) to upgrade Plasma Bridge disabling exits and deposits on the chain.
 
 Once exits and deposits are disabled and all pending exits are finalized, we make a snapshot of UTXOs on the plasma chain.
 
