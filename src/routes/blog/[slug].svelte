@@ -83,8 +83,8 @@
   <meta name="twitter:site" content="@leapdao" />
 
   {#if post.metadata.image}
-    <meta property="og:image" content="{siteHost}{post.metadata.image}" />
-    <meta name="twitter:image" content="{siteHost}{post.metadata.image}" />
+    <meta property="og:image" content="{siteHost}/img/blog/{post.metadata.image}" />
+    <meta name="twitter:image" content="{siteHost}/img/blog/{post.metadata.image}" />
   {:else if post.metadata.emoji}
     <meta
       property="og:image"
