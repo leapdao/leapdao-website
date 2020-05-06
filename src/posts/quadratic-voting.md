@@ -2,7 +2,7 @@
 template: post.html
 title: "Quadratic Voting: Ending the tyranny."
 date: 2020-05-02 18:00:00
-image: voting-qv.png
+image: /img/blog/voting-qv.png
 author:
   name: "@KenoBudde"
   twitter: "@KenoBudde"
