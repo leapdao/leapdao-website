@@ -1,11 +1,10 @@
 ---
 template: post.html
-title: 'Plasma Testnet Launched!'
+title: "Plasma Testnet Launched!"
 date: 2019-02-07 16:23:00
-image: /img/testnet-og.png
 author:
-  name: '@johba'
-  twitter: '@johba'
+  name: "@johba"
+  twitter: "@johba"
   link: https://github.com/johannbarbie/
 description: Our Plasma Testnet launched on Rinkeby running the Driftwood release. 🎉
 ---

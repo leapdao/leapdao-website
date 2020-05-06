@@ -66,9 +66,9 @@
   <meta
     name="keywords"
     content="leap, blockchain, plasma, ethereum, scaling, proof of stake" />
-  <meta property="og:url" content="https://leapdao.org/blog" />
+  <meta property="og:url" content="https://ipfs.leapdao.org/blog" />
   <meta name="twitter:title" content="Blog | LeapDAO" />
-  <link rel="canonical" href="https://leapdao.org/blog/" />
+  <link rel="canonical" href="https://ipfs.leapdao.org/blog/" />
 </svelte:head>
 
 <h1>LeapDAO Blog</h1>
@@ -85,6 +85,11 @@
           by
           {@html authors(post)}
         {/if}
+      </p>
+      <p>
+      {#if post.metadata.description}
+      {@html post.metadata.description}
+      {/if}
       </p>
     </div>
   {/each}

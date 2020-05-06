@@ -1,16 +1,17 @@
 ---
 template: post.html
-title: 'Requiem for Testnet Zeta'
+title: "Requiem for Testnet Zeta"
 date: 2019-03-26 10:50:00
 emoji: ζ
-image: /img/blog/zeta.jpg
+image: zeta.jpg
 author:
-  - name: '@kosta'
-    twitter: 'troggo'
-  - name: '@johba'
-    twitter: 'johba'
+  - name: "@kosta"
+    twitter: "troggo"
+  - name: "@johba"
+    twitter: "johba"
 description: It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks forever.
 ---
+
 <br>
 
 <img src="/img/blog/zeta.jpg" height="560" width="480" alt="Peeps gather around dead Testnet Zeta">
@@ -25,7 +26,7 @@ One minute, Zeta was the warm center that the life of LeapDAO crowded around, an
 
 ## What had happened before
 
-Few days before Kosta had launched a second validator on the network. One validator was running leap-node 4.1.0 while the other validator was running leap-node 4.1.1 being different in these [few lines](https://github.com/leapdao/leap-node/commit/f38cfa0fd2d552942d0927832c53b50e79d36789) that seemed not consensus critical. 
+Few days before Kosta had launched a second validator on the network. One validator was running leap-node 4.1.0 while the other validator was running leap-node 4.1.1 being different in these [few lines](https://github.com/leapdao/leap-node/commit/f38cfa0fd2d552942d0927832c53b50e79d36789) that seemed not consensus critical.
 
 On the given day Pinkiebell tested [Spending Condition](https://www.youtube.com/watch?v=cB5T0buF8GI) transactions which caused this little error in the second validator:
 <br><br>
