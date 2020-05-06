@@ -9,7 +9,7 @@ const dev = NODE_ENV === "development";
 export function siteHost() {
   if (process.env.TRAVIS_BRANCH) {
     if (process.env.TRAVIS_BRANCH === "master") {
-      return "https://leapdao.org";
+      return "https://ipfs.leapdao.org";
     }
 
     return "https://test.leapdao.org";
