@@ -111,21 +111,9 @@
     position: relative;
     width: 100vw;
     height: 450px;
-    margin-top: 5rem;
+    margin-top: -50px;
     margin-left: -10rem;
     background-color: #aad3df;
-  }
-
-  .map h2 {
-    font-size: 4rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20%;
-    z-index: 1000;
-    text-align: center;
-    font-weight: 900;
-    pointer-events: none;
   }
 
   @media screen and (max-width: 900px) {
@@ -142,9 +130,4 @@
 
 <div class="map">
   <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl} />
-  <h2>
-    Leap peeps
-    <br />
-    around the world
-  </h2>
 </div>

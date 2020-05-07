@@ -96,6 +96,9 @@
       <a rel="prefetch" href="/earn">Earn</a>
     </li>
     <li>
+      <a rel="prefetch" href="/interspace">Interspace</a>
+    </li>
+    <li>
       <a
         class="menu-icon-link"
         href="https://twitter.com/leapdao"

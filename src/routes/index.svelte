@@ -1,6 +1,5 @@
 <script>
   import Stats from "./_index/Stats.svelte";
-  import PeepsMap from "./_index/PeepsMap.svelte";
   import Partners from "./_index/Partners.svelte";
   import Projects from "./_index/Projects.svelte";
   import GhButtons from "./_index/GhButtons.svelte";
@@ -159,7 +158,7 @@
         <h4>Become a validator</h4>
         <p>
           Run a node and stay in sync with the network, stake a lot of tokens,
-          and earn more. 
+          and earn more.
         </p>
         <p>
           <a
@@ -244,8 +243,6 @@
       </a>
     </footer>
   </section>
-
-  <PeepsMap />
 
   <h2>Get involved!</h2>
   <p>

@@ -83,7 +83,7 @@
   {/if}
 </div>
 
-{#if segment !== '404'}
+{#if segment !== '404' && segment !== 'interspace'}
   <Amoebe />
 {/if}
 <Nav {segment} />
