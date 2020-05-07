@@ -9,7 +9,7 @@
 
   export let segment;
 </script>
-
+{#if segment !== 'interspace'}
 <style>
   .page {
     max-width: 120rem;
@@ -76,13 +76,14 @@
 
 <div class="page {segmentClasses[segment] || 'community'}">
   <slot />
-  {#if segment !== '404'}
+  {#if segment !== '404' && segment !== 'interspace'}
     <footer class="footer">
       <SubscribeForm />
     </footer>
   {/if}
 </div>
-
+{/if}
+<slot />
 {#if segment !== '404' && segment !== 'interspace'}
   <Amoebe />
 {/if}
