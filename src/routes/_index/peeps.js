@@ -14,6 +14,7 @@ export const locations = {
   uyo: [7.93, 5.03],
   kyiv: [50.4016, 30.2525],
   minsk: [53.8845, 27.4532],
+  nairobi: [-1.289733, 36.8070],
 };
 
 export const peeps = [
@@ -47,7 +48,7 @@ export const peeps = [
     location: locations.moscow,
   },
   {
-    name: 'Johan Barbie',
+    name: 'johba',
     avatar: 'https://avatars1.githubusercontent.com/u/659301',
     url: 'https://github.com/johannbarbie',
     location: locations.berlin,
@@ -110,6 +111,12 @@ export const peeps = [
     location: locations.berlin,
   },
   {
+    name: 'Mwaa Joseph',
+    avatar: 'https://avatars3.githubusercontent.com/u/5112468]',
+    url: 'https://github.com/mwaa',
+    location: locations.nairobi,
+  },
+  {
     name: 'Tim Daubenschütz',
     avatar: 'https://avatars0.githubusercontent.com/u/2758453',
     url: 'https://github.com/TimDaub',
@@ -120,5 +127,5 @@ export const peeps = [
     avatar: 'https://avatars1.githubusercontent.com/u/134680',
     url: 'https://github.com/vrde',
     location: locations.berlin,
-  },
+  }
 ];
