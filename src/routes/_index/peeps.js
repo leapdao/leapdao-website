@@ -112,7 +112,7 @@ export const peeps = [
   },
   {
     name: 'Mwaa Joseph',
-    avatar: 'https://avatars3.githubusercontent.com/u/5112468]',
+    avatar: 'https://avatars3.githubusercontent.com/u/5112468',
     url: 'https://github.com/mwaa',
     location: locations.nairobi,
   },
