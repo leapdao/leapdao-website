@@ -76,14 +76,16 @@
 
 <div class="page {segmentClasses[segment] || 'community'}">
   <slot />
-  {#if segment !== '404' && segment !== 'interspace'}
+  {#if segment !== '404'}
     <footer class="footer">
       <SubscribeForm />
     </footer>
   {/if}
 </div>
 {/if}
+{#if segment === 'interspace'}
 <slot />
+{/if}
 {#if segment !== '404' && segment !== 'interspace'}
   <Amoebe />
 {/if}
