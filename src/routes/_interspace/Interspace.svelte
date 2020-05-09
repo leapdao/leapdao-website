@@ -17,9 +17,12 @@
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18,
+        minZoom: 2,
+      maxZoom: 7,
       detectRetina: true
     }).addTo(map);
+
+
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -39,7 +42,7 @@
         });
       }
     });
-
+    
     function addPeep(peep) {
       const icon = L.icon({
         iconUrl: peep.avatar,
