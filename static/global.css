@@ -52,6 +52,10 @@ a {
   text-decoration: none;
 }
 
+.leaflet-marker-icon{
+  border-radius: 15%;
+  }
+
 a:hover {
   background-color: rgb(163, 253, 143) !important;
 }

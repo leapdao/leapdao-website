@@ -165,7 +165,7 @@
   <p>
     We will notify you only about important
     <br />
-    things, like a mainnet launch
+    things.
   </p>
   <label for="email" class="visually-hidden">Email address</label>
   <input

@@ -10,16 +10,19 @@
 
     // Create the map
     const zoomLevel = window.innerWidth < 900 ? 1 : 3;
-    const map = L.map("map").setView(center, zoomLevel);
-    map.scrollWheelZoom.disable();
+    const map = L.map("map", {zoomControl: false}).setView(center, zoomLevel);
+    //map.scrollWheelZoom.disable();
 
     // Set up the OSM layer
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18,
+        minZoom: 2,
+      maxZoom: 7,
       detectRetina: true
     }).addTo(map);
+
+
 
     const markers = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -39,13 +42,13 @@
         });
       }
     });
-
+    
     function addPeep(peep) {
       const icon = L.icon({
         iconUrl: peep.avatar,
-        iconSize: [25, 25], // size of the icon
+        iconSize: [55, 55], // size of the icon
         shadowSize: [0, 0], // size of the shadow
-        iconAnchor: [12, 12], // point of the icon which will correspond to marker's location
+        iconAnchor: [27, 27], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0], // the same for the shadow
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
       });
@@ -96,6 +99,7 @@
   }
 
   onMount(() => {
+    scrollHandler();
     window.addEventListener("scroll", scrollHandler);
     window.addEventListener("resize", scrollHandler);
 
@@ -108,43 +112,13 @@
 
 <style>
   .map {
-    position: relative;
-    width: 100vw;
-    height: 450px;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background-color: #aad3df;
-  }
-
-  .map h2 {
-    font-size: 4rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20%;
-    z-index: 1000;
-    text-align: center;
-    font-weight: 900;
-    pointer-events: none;
-  }
-
-  @media screen and (max-width: 900px) {
-    .map {
-      margin-left: -3rem;
-      height: 250px;
-    }
-
-    .map h2 {
-      font-size: 3rem;
-    }
   }
 </style>
 
 <div class="map">
   <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl} />
-  <h2>
-    Leap peeps
-    <br />
-    around the world
-  </h2>
 </div>
