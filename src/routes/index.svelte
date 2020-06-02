@@ -25,9 +25,10 @@
   }
 </style>
 
-<svelte:head>
+<!-- <svelte:head>
   <title>LeapDAO</title>
-</svelte:head>
+</svelte:head> -->
+
 <div class="content">
   <header>
     <h1>LeapDAO</h1>
@@ -83,113 +84,6 @@
         White paper
       </a>
     </footer>
-  </section>
-
-  <Projects />
-
-  <section class="section">
-    <header>
-      <h2>Build</h2>
-    </header>
-    <div class="cols">
-      <div class="col">
-        <h4>Beginners guide</h4>
-        <p>
-          It is easy and straightforward to start using the Leap&nbsp;Network.
-          Learn how to run smart contracts on Plasma with Spending Conditions.
-        </p>
-        <p>
-          <a
-            href="https://docs.leapdao.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            Docs
-          </a>
-        </p>
-      </div>
-      <div class="col">
-        <h4>Your dApp on the Leap&nbsp;Network</h4>
-        <p>
-          No matter if you want to create a new dApp or already have one: check
-          out simple use case examples.
-        </p>
-        <p>
-          <a
-            href="https://github.com/leapdao/spending-conditions/tree/master/contracts"
-            target="_blank"
-            rel="noopener noreferrer">
-            Spending conditions examples
-          </a>
-        </p>
-      </div>
-      <div class="col">
-        <h4>Give feedback, request&nbsp;features</h4>
-        <p>
-          We work for the developers, so your feedback is very valuable. Request
-          new features and suggest improvements.
-        </p>
-        <p>
-          <a
-            href="https://github.com/search?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Aleapdao"
-            target="_blank"
-            rel="noopener noreferrer">
-            Github issues
-          </a>
-        </p>
-      </div>
-    </div>
-
-    <footer>
-      <a
-        href="https://docs.leapdao.org/recipes/send-transfer/"
-        target="_blank"
-        class="button button-primary">
-        Get started
-      </a>
-    </footer>
-  </section>
-
-  <section class="section">
-    <header>
-      <h2>Validate</h2>
-    </header>
-    <div class="cols">
-      <div class="col">
-        <h4>Become a validator</h4>
-        <p>
-          Run a node and stay in sync with the network, stake a lot of tokens,
-          and earn more.
-        </p>
-        <p>
-          <a
-            href="https://docs.google.com/presentation/d/e/2PACX-1vTZj5bBhYUObaWtrtOvoIq6SGJG-oAYh-C1QUFsEwETOWkRRSWI1sDKpvVI-MTbciVAPhiaQPNwx2aI/pub?start=false&loop=false&delayms=3000&slide=id.g6c57165488_0_0" target="_blank">
-            Validator Introduction Presentation
-          </a>
-        </p>
-      </div>
-      <div class="col">
-        <h4>Strenghten the chain</h4>
-        <p>
-          If there is only one operator, then he can censor transactions. With
-          multiple operators the chain becomes more censorship resistant.
-        </p>
-      </div>
-      <div class="col">
-        <h4>Improve Ethereum</h4>
-        <p>
-          Help Ethereum scale on Layer 2 and achieve mass adoption.
-          <br />
-          Do PoS on Ethereum before Ethereum does PoS.
-        </p>
-      </div>
-    </div>
-    <a
-        href="/validate"
-        target="_blank"
-        class="button button-primary"
-        style="margin-top: 40px;">
-        Apply now
-      </a>
   </section>
 
   <section class="section">
