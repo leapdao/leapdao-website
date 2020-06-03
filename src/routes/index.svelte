@@ -25,10 +25,6 @@
   }
 </style>
 
-<!-- <svelte:head>
-  <title>LeapDAO</title>
-</svelte:head> -->
-
 <div class="content">
   <header>
     <h1>LeapDAO</h1>
@@ -80,6 +76,7 @@
       <a
         href="https://leapdao.org/whitepaper/"
         target="_blank"
+        rel="noreferrer noopener"
         class="button button-primary">
         White paper
       </a>
@@ -131,6 +128,7 @@
     <footer>
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform"
+        rel="noreferrer noopener"
         target="_blank"
         class="button button-primary">
         Join now
