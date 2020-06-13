@@ -96,9 +96,6 @@
       <a rel="prefetch" href="/blog">Blog</a>
     </li>
     <li>
-      <a href="/resources" rel="prefetch">Resources</a>
-    </li>
-    <li>
       <a rel="prefetch" href="/earn">Earn</a>
     </li>
     <li>

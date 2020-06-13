@@ -175,36 +175,14 @@
   <header>
     <Logo />
     <p>
-      Earn with LeapDAO by completing a bounty, taking on a role, or applying
-      for a grant
+      Want to work with an open source community that is focused on a network combining scalability,
+      ease of use and security — all in one?
+      <br>
+      Want to get rewarded for your efforts while contributing to an open source initiative, join us and
+      earn with LeapDAO by completing a bounty, taking on a role, or applying
+      for a grant.
     </p>
   </header>
-
-  <h2>Grants</h2>
-  <div class="cols">
-    <div class="col">
-      <p>
-        Mass adoption is the next critical step for the blockchain industry.
-        Scalable and secure decentralized apps can deliver this vision.
-        <br />
-        Hence we support selected entrepreneurs and teams with grants.
-      </p>
-    </div>
-    <div class="col">
-      <p>
-        If you are an entrepreneur or team delivering a use-case that requires
-        fast and cheap transactions or complex computations, we can support you
-        with mentorship and funding.
-        <br />
-        Fill out the form to
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeN9N96hkwyuKSR_QF7O_CSfG7gUQ_rA57y9DZjIk7XZEybyg/viewform">
-          apply for a grant
-        </a>
-        .
-      </p>
-    </div>
-  </div>
 
   <h2>Roles</h2>
   <div class="cols">
