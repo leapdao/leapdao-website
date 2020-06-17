@@ -19,7 +19,10 @@ function unPinExceptLast() {
       response.data.rows.forEach(function(item){
         deletePin(item.ipfs_pin_hash)
       });
-    });
+    })
+    .catch(function (err) {
+      console.log(err);
+  });
 }
 
 unPinExceptLast();
