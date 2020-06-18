@@ -81,7 +81,7 @@
     /*  width: 30rem;*/
     /*  height: 26rem;*/
     font-size: 2rem;
-    line-height: 3rem;
+    line-height:3rem;
     margin-bottom: 1rem;
     padding: 1rem;
     overflow: hidden;
@@ -158,6 +158,10 @@
     text-align: center;
   }
 
+  #content-header-less-top-margin {
+    margin-top: 2rem;
+  }
+
   .glassfrog {
     background: center left url(/img/glassfrog-logo.png) no-repeat;
     background-size: 25.5px 21.25px;
@@ -174,14 +178,33 @@
 <div class="content">
   <header>
     <Logo />
-    <p>
-      Want to work with an open source community that is focused on a network combining scalability,
-      ease of use and security — all in one?
-      <br>
-      Want to get rewarded for your efforts while contributing to an open source initiative, join us and
-      earn with LeapDAO by completing a bounty, taking on a role, or applying
-      for a grant.
-    </p>
+      <p>
+        Are you a developer who is
+      </p>
+
+      <ul>
+        <li>
+          Looking to get started with blockchain technology and want to work with an
+          open source community that is focused on a network combining scalability, ease of use and security — all in one
+        </li>
+        <li>
+          Currently working with an unmotivated team and with an organisation that is hierarchy based
+        </li>
+        <li>
+          Looking for a highly motivated team and the companions who believe in you and realize your ideas
+        </li>
+        <li>
+          Willing to work on cutting edge technology
+        </li>
+      </ul>
+
+      <p id="content-header-less-top-margin">
+        then LeapDAO is the right place for you.
+      </p>
+
+      <p>
+        Join us and earn with LeapDAO by taking on a role or completing a bounty here.
+      </p>
   </header>
 
   <h2>Roles</h2>
