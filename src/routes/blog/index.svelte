@@ -56,6 +56,17 @@
       margin-top: 1rem;
     }
   }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .width-85 {
+    width: 85%;
+  }
+  .width-15 {
+    width: 15%;
+  }
 </style>
 
 <svelte:head>
@@ -72,25 +83,37 @@
 </svelte:head>
 
 <h1>LeapDAO Blog</h1>
+<div class="flex-container">
+  <div class="width-85">
+      <ul class="blog-index">
+        {#each posts as post}
+          <div class="blog-item">
+            <h2>
+              <a href="/blog/{post.slug}" rel="prefetch">{post.metadata.title}</a>
+            </h2>
+            <p>
+              {formatDate(post.metadata.date)}
+              {#if post.metadata.author}
+                by {@html authors(post)}
+              {/if}
+            </p>
+            <p>
+              {@html post.extract} <!-- Margins top and bottom -->
+            </p>
+            <!-- TODO make metadescription clickable -->
+            <p>
+            {#if post.metadata.description}
+              {@html post.metadata.description}
+            {/if}
+            </p>
+          </div>
+        {/each}
+      </ul>
+  </div>
+  <div class="width-15">
+    <h2>Tags</h2>
+  </div>
+</div>
 
-<ul class="blog-index">
-  {#each posts as post}
-    <div class="blog-item">
-      <h2>
-        <a href="/blog/{post.slug}" rel="prefetch">{post.metadata.title}</a>
-      </h2>
-      <p>
-        {formatDate(post.metadata.date)}
-        {#if post.metadata.author}
-          by
-          {@html authors(post)}
-        {/if}
-      </p>
-      <p>
-      {#if post.metadata.description}
-      {@html post.metadata.description}
-      {/if}
-      </p>
-    </div>
-  {/each}
-</ul>
+
+

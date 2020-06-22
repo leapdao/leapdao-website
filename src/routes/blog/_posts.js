@@ -2,6 +2,9 @@ const marked = require('marked');
 const frontMatter = require('front-matter');
 const fs = require('fs');
 const path = require('path');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const parse5 = require('parse5');
 
 function getPosts() {
   const slugs = fs
@@ -27,10 +30,14 @@ function getPost(slug) {
 
   const html = marked(content);
 
+  let doc = new JSDOM(html) // use this to get first paragraph
+  let extract = doc.window.document.querySelectorAll("p")[1].textContent; // extract p0, p1, p3
+
   return {
     slug,
     metadata,
-    html
+    html,
+    extract
   };
 }
 
