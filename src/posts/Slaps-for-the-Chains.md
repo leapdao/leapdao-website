@@ -9,6 +9,7 @@ author:
   - name: "@johba"
     twitter: "johba"
 description: PoS to lead Ethereum to mass-adoption.
+tags: [update, dev]
 ---
 
 PoS to lead the Ethereum to mass-adoption.

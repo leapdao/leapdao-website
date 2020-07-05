@@ -10,6 +10,7 @@ author:
   - name: "@johba"
     twitter: "johba"
 description: It's name is Testnet Zeta, and Testnet Zeta will have 57002 blocks forever.
+tags: [update, dev]
 ---
 
 <br>

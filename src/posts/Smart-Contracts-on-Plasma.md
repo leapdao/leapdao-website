@@ -7,6 +7,7 @@ author:
   twitter: '@johba'
   link: https://github.com/johannbarbie/
 description: LeapDAO's Roadmap to enable general computation on Plasma.
+tags: [update, 'smart contracts', plasma]
 ---
 
 Lifting the execution of smart contracts onto a layer-2 blockchain is one of the core goals of the community which holds a huge potential.

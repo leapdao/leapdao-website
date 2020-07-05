@@ -8,6 +8,7 @@ author:
   name: "Herr Mueller"
   twitter: "@dist0rtionproto"
 description: Herr Müller, your favorite bureaucrat from the future, explains what happened during the last simulation of Planet A.
+tags: [ecosystem]
 ---
 
 Greetings Earthlings!

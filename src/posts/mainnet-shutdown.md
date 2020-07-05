@@ -8,6 +8,7 @@ author:
   twitter: "@zschavi"
   link: https://github.com/zschavi/
 description: Plasma Mainnet on hold, here is why...
+tags: [dev, plasma, ecosystem]
 ---
 The leap organization is restructuring, we explore new technologies & upgrade the testnet.
 

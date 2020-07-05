@@ -31,7 +31,7 @@ function getPost(slug) {
   const html = marked(content);
 
   let doc = new JSDOM(html) // use this to get first paragraph
-  let extract = doc.window.document.querySelectorAll("p")[1].textContent; // extract p0, p1, p3
+  let extract = doc.window.document.querySelectorAll("p")[1].textContent;
 
   return {
     slug,

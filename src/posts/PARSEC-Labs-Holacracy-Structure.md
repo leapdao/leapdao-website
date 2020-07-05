@@ -7,6 +7,7 @@ author:
   name: Victor
   link: https://github.com/mateleshkavo
 description: Description Of PARSEC Labs Internal Organization Structure
+tags: [update, dev]
 ---
 
 <img src="/img/blog/MinionsInSpace.jpg" alt="MinionsInSpace">

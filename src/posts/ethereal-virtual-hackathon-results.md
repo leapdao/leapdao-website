@@ -7,6 +7,7 @@ author:
   - name: "@kohola"
     twitter: "koholaa"
 description: Best LeapDAO dApps and game submitted during the Ethereal Virtual Hackathon.
+tags: [plasma, ethereum]
 ---
 
 In the last 2 weeks of April a bunch of hackers joined forces at the [Ethereal Virtual Hackathon](https://gitcoin.co/hackathon/ethereal-virtual-hackathon/), working on projects crucial to making decentralized web a reality.

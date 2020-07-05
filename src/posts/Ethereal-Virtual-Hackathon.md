@@ -7,6 +7,7 @@ author:
   - name: "@kohola"
     twitter: "koholaa"
 description: LeapDAO sponsoring the Ethereal Virtual Hackathon.
+tags: [update, dev, ethereum]
 ---
 
 <br>

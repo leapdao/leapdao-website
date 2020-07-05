@@ -8,6 +8,7 @@ author:
   twitter: '@johba'
   link: https://github.com/johannbarbie/
 description: An explainer of governance requirements for a public utility Plasma chain.
+tags: [plasma, governance, 'smart contracts']
 ---
 
 ## A Plasma network as public utility

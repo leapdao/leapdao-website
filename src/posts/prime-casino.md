@@ -8,6 +8,7 @@ author:
   name: "@johba"
   twitter: "@johba"
 description: The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum limits.
+tags: [update, ecosystem]
 ---
 
 The Prime Casino demonstrates the ability of the EVM Enforcer to exceed Ethereum limits.

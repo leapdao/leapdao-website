@@ -8,6 +8,7 @@ author:
   - name: "@johba"
     twitter: "johba"
 description: LeapDAO took a leap to the Ethereum mainnet. 🎉
+tags: [update, dev, ecosystem]
 ---
 
 We’ve been on a roll lately and are super happy to announce that LeapDAO took a leap to the mainnet! Our community is now operating a More Viable Plasma chain on the Ethereum mainnet 🎉.

@@ -8,6 +8,7 @@ author:
   twitter: '@horizonaut'
   link: https://github.com/oz1127/
 description: PARSEC Labs' Plasma Fraud Proof Challenge Workshop with Cryptokitties rewards
+tags: [update, dev, ecosystem, plasma]
 ---
 
 <img src="/img/blog/PlasmaConcept.jpg" alt="PlasmaConcept">

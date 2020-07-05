@@ -8,6 +8,7 @@ author:
   name: "@kosta"
   twitter: "@KostaKorenkov"
 description: How CAS will enable a multi-validator setup of the Leap Network.
+tags: [update, plasma]
 ---
 
 We've implemented a simple construct for validators to vote on each other's <abbr title="A unit used for anchoring Leap Plasma to the root chain">period</abbr> proposal. We think this should increase the liveness of the network.
