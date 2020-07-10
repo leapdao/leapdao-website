@@ -30,7 +30,7 @@ Interesting for us are especially the [UTXO model employed by Nervos](https://xu
 
 The Nervos Cell model is especially interesting, as it implements a state rent through inflation of CKBytes.
 
-We want to provide a simple entry point for applications to run on Nervos, therefore we will spend our time on developing a second layer for Nervos. As majority of todays smart contract developers are knowledgeable with Ethereum and its dev tools we have set out to create a sidechain where these skills can be applied and eventually existing decentralized applications can easily be migrated.
+We want to provide a simple entry point for applications to run on Nervos, therefore we will spend our time on developing a second layer for Nervos. As majority of todays smart contract developers are knowledgeable with Ethereum and its dev tools. We have set out to create a sidechain where these skills can be applied and eventually existing decentralized applications can easily be migrated.
 
 ## Nervos design philosophy that we jive with
 
