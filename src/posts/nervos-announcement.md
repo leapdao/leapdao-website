@@ -16,7 +16,7 @@ We are excited to announce that we successfully applied for a [grant of the Nerv
 
 The focus of Ethereum has been application development in the past, not necessarily scalability. The first turing-complete chain was a breakthrough but the high costs associated with operating on the main-net at the moment means that some ideas are not viable to be operated on it.
 
-We are and will be working on roll-up based solutions for Ethereum and will apply the same tactic towards Nervos. We find the transaction model interesting and want to apply our findings to a new ecosystem. We have been in contact with the part of the Nervos' team for years and are excited to work together with them.
+We are actively working on roll-up based solutions for Ethereum and will apply the same tactic towards Nervos. We find the transaction model interesting and want to apply our findings to a new ecosystem. We have been in contact with the part of the Nervos' team for years and are excited to work together with them.
 
 Nervos has been created with its primary focus on scalability, it is a layer 1 that is intended to be used by layer 2 networks, similarly to the beacon chain of ETH 2.0.
 
