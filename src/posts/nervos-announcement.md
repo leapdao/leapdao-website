@@ -24,7 +24,7 @@ We became interested in contributing our knowledge of layer 2 scalability to a n
 
 Interesting for us are especially the [UTXO model employed by Nervos](https://xuejie.space/2020_03_20_what_do_we_mean_when_we_say_account_model/)
 
-- UTXO model puts less logic in the chain.
+- it puts less logic in the chain.
 - UTXO model allows parallel execution.
 - Generators can fill in the needed features to enable smart contracts.
 
