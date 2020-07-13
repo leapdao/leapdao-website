@@ -54,6 +54,12 @@
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .menu {
+      font-size: 1.2rem;
+    }
+  }
+
   @media screen and (max-width: 360px) {
     #about{
     display: none;

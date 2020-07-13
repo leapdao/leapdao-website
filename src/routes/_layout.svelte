@@ -11,10 +11,16 @@
 </script>
 {#if segment !== 'interspace'}
 <style>
+  .container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
   .page {
-    max-width: 120rem;
+    max-width: 80vw;
     min-height: 100vh;
-    padding: 30vh 5rem 0 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30vh;
   }
 
   .community :global(header p) {
@@ -38,8 +44,6 @@
     .page {
       position: relative;
       z-index: 1;
-      padding-left: 3rem;
-      padding-right: 3rem;
       padding-top: 14rem;
       overflow: hidden;
     }
@@ -65,16 +69,13 @@
       font-size: 4rem !important;
     }
   }
-
-  @media screen and (max-width: 360px) {
-    .page {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
 </style>
 
+<div class="container">
 <div class="page {segmentClasses[segment] || 'community'}">
+  {#if segment !== '404'}
+    <Amoebe />
+  {/if}
   <slot />
   {#if segment !== '404'}
     <footer class="footer">
@@ -82,11 +83,9 @@
     </footer>
   {/if}
 </div>
+</div>
 {/if}
 {#if segment === 'interspace'}
 <slot />
-{/if}
-{#if segment !== '404' && segment !== 'interspace'}
-  <Amoebe />
 {/if}
 <Nav {segment} />

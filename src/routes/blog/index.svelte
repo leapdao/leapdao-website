@@ -17,7 +17,7 @@
   import { formatDate, authors } from "./_formatters";
   export let tags = [
     'plasma', 'ethereum', 'scaling', 'smart contracts',
-    'update','dev', 'ecosystem', 'governance', 'voting',
+    'nervos', 'update','dev', 'ecosystem', 'governance', 'voting',
   ];
   export let posts;
 </script>
@@ -72,24 +72,30 @@
     }
   }
 
+  @media (max-width: 640px) {
+    .width-side {
+      display: none;
+    }
+  }
+
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .width-80 {
-    width: 80%;
+  .width-main {
+    width: 70%;
   }
 
-  .width-15 {
-    width: 15%;
+  .width-side {
+    width: 25%;
+    margin-top: 20px;
   }
 
   .tag {
     border-radius: 3px 0 0 3px;
     display: inline-block;
-    height: 26px;
     line-height: 26px;
     padding: 0 20px 0 23px;
     position: relative;
@@ -144,7 +150,7 @@
 
 <h1>LeapDAO Blog</h1>
 <div class="flex-container">
-  <div class="width-80">
+  <div class="width-main">
     <ul class="blog-index">
       {#each posts as post}
         <div class="blog-item">
@@ -176,7 +182,7 @@
       {/each}
     </ul>
   </div>
-  <div class="width-15">
+  <div class="width-side">
     {#each tags as tag}
       <a class="tag" href="/blog?tag={tag}">{tag}</a>
     {/each}
