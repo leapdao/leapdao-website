@@ -10,13 +10,13 @@ author:
 description: Announcement, building layer-2 for Nervos CKB
 ---
 
-We are excited to announce that we successfully applied for a [grant of the Nervos foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722) to work on second layer scaling for this blockchain.
+We are proud to announce to have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722) to work on second layer scaling, a method to increase throughput by bundling transactions on a different network, for CKB. Transferring the advancements made in the Ethereum ecosystem will bring Nervos CKB to the next level of their scalability roadmap.
 
 ## A new kind of challenge
 
-The focus of Ethereum has been application development in the past, not necessarily scalability. The first turing-complete chain was a breakthrough but the high costs associated with operating on the main-net at the moment means that some ideas are not viable to be operated on it.
+The focus of Ethereum has been application development in the past, not necessarily scalability. The first turing-complete chain was a breakthrough but the high costs associated with operating on the main-net at the moment means that some ideas are not viable to be realized on it. Ethereum only catering to non-scalable dApps seems like the biggest challenge standing in the way of further decentralization and development of meaningful dApps.
 
-We are actively working on roll-up based solutions for Ethereum and will apply the same tactic towards Nervos. We find the transaction model interesting and want to apply our findings to a new ecosystem. We have been in contact with the part of the Nervos' team for years and are excited to work together with them.
+We are actively working on roll-up based solutions for Ethereum and will apply the same tactic towards Nervos. We find the transaction model interesting and want to apply our expertise to a new ecosystem. We have been in contact with the part of the Nervos' team for years and are excited to work together with them.
 
 Nervos has been created with its primary focus on scalability, it is a layer 1 that is intended to be used by layer 2 networks, similarly to the beacon chain of ETH 2.0.
 
