@@ -3,6 +3,7 @@
   import Partners from "./_index/Partners.svelte";
   import Projects from "./_index/Projects.svelte";
   import GhButtons from "./_index/GhButtons.svelte";
+  import GetInvolved from "./_index/GetInvolved.svelte";
 </script>
 
 <style>
@@ -84,6 +85,10 @@
   </section>
 
   <section class="section">
+    <GetInvolved />
+  </section>
+
+  <!-- <section class="section">
     <header>
       <h2>Contribute</h2>
     </header>
@@ -141,10 +146,10 @@
     As an open-source software community, Leap thrives from the efforts of its
     members. Whatever your interests and skills are, there is ample opportunity
     to make the life of Dapps better!
-  </p>
+  </p> -->
 </div>
 
-<GhButtons />
+<!-- <GhButtons />
 <br />
 <br />
 <div class="medals">
@@ -153,4 +158,4 @@
     width="761"
     height="98"
     alt="Contributions chart" />
-</div>
+</div> -->
