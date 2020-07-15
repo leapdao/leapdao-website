@@ -72,9 +72,12 @@
     }
   }
 
-  @media (max-width: 640px) {
+  @media screen and (max-width: 640px) {
     .width-side {
       display: none;
+    }
+    .width-main {
+      width: 100%;
     }
   }
 
