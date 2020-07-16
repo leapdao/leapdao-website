@@ -13,7 +13,7 @@ function authorToString(author) {
   const link = authorLink(author);
   if (!link) return author.name;
 
-  return `<a href=\"${link}\">${author.name}</a>`;
+  return `<a href=\"${link}\" target="_blank" style="padding: 2px 8px;">${author.name}</a>`;
 };
 
 export function authors(post) {

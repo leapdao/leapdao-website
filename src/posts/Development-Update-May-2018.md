@@ -4,6 +4,7 @@ title: 'Development Update: May 2018'
 date: 2018-06-15 00:23:00
 image: PARSECRocket.jpg
 description: Monthly development update for Pasec Plasma Chain
+tags: [update, dev]
 ---
 
 <img src="/img/blog/DevelopmentUpdateMay.jpg" alt="DevelopmentUpdate">

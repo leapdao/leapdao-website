@@ -9,6 +9,7 @@ author:
     twitter: '@KostaKorenkov'
 
 description: We've published an updated development roadmap. Check out what we are doing and jump on board
+tags: [update, dev]
 ---
 
 We are releasing an updated dev roadmap. The idea is that it should help existing dev team to stay focused on Plasma Leap PoC and Leap Network needs and help newcomers to see what's on the plate.

@@ -8,6 +8,7 @@ author:
   twitter: '@johba'
   link: https://github.com/johannbarbie/
 description: The Roadmap from More Viable Plasma to Plasma Leap.
+tags: [dev, plasma]
 ---
 
 LeapDAO’s purpose is to deliver layer-2 blockchain scalability as a global public utility.

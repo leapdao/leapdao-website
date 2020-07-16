@@ -7,6 +7,7 @@ author:
   - name: '@kohola'
     twitter: 'koholaa'
 description: DAI stablecoin registered on the Leap Plasma chain
+tags: [plasma, scaling]
 ---
 
 ...and why you should build on top of Plasma DAI.

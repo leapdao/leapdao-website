@@ -8,6 +8,7 @@ author:
   twitter: "@KenoBudde"
   link: https://github.com/clearwood/
 description: An overview of Quadratic Voting.
+tags: [scaling, voting]
 ---
 
 Providing an overview of the current state of Quadratic Voting at LeapDAO.

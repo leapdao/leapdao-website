@@ -8,6 +8,7 @@ author:
   twitter: '@johba'
   link: https://github.com/johannbarbie/
 description: Announcement of Plasma Leap Design and release of Testnet with Demo Dapps.
+tags: [plasma, scaling, ethereum]
 ---
 
 Hey Peeps!

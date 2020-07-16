@@ -8,6 +8,7 @@ author:
   twitter: '@KenoBudde'
   link: https://github.com/clearwood/
 description: How we integrate bounties, Holacracy and Colony reputation
+tags: [update, ecosystem, dev]
 ---
 
 Building on reputation and flat hierarchies, for the organizations of tomorrow.

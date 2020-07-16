@@ -7,6 +7,7 @@ author:
   - name: "@johba"
     twitter: "johba"
 description: The first pop-up economy powered by Plasma!
+tags: [ecosystem, dev]
 ---
 
 The first pop-up economy powered by Plasma!

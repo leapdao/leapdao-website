@@ -7,6 +7,7 @@ author:
   - name: "@kohola"
     twitter: "koholaa"
 description: LeapDAO transforming the film industry with on-chain rights management.
+tags: [plasma, scaling, ecosystem]
 ---
 
 Plasma revolutionizing the film industry with on-chain rights management.

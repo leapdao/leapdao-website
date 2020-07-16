@@ -11,6 +11,7 @@ author:
     twitter: "@KostaKorenkov"
 
 description: Mainnet incident happened on 17 June 2019. Funds are safe.
+tags: [update, dev, plasma]
 ---
 
 LEAP Mainnet has stopped due to double signing and administration issues and had to be restarted. No user funds lost. All the functions are restored now.

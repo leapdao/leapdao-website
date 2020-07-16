@@ -7,6 +7,7 @@ author:
   twitter: "@johba"
   link: https://github.com/johannbarbie/
 description: Our Plasma Testnet launched on Rinkeby running the Driftwood release. 🎉
+tags: [update, dev, plasma]
 ---
 
 We are proud to reveal our first public deployment of a Plasma Network.

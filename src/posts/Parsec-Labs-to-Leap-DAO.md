@@ -8,6 +8,7 @@ author:
   twitter: '@johba'
   link: https://github.com/johannbarbie/
 description: A commitment to openness and sovereignty under LeapDAO.
+tags: [update, dev]
 ---
 
 Since the team has started working with Ethereum about 1.5 years ago, it has constantly evolved. We have pivoted from creating games to working on scalability and are proud of the contributions we have made to Plasma [research](https://ethresear.ch/t/plasma-leap-a-state-enabled-computing-model-for-plasma/3539) and [implementation](https://leapdao.org/blog/Announcing-Plasma-Leap-Testnet/).

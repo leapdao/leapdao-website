@@ -7,6 +7,7 @@ author:
   - name: '@kohola'
     twitter: 'koholaa'
 description: Ethereum Foundation grant for "Plasma Leap"
+tags: [plasma, ethereum]
 ---
 
 Last week Ethereum Foundation announced their [fifth wave of grants](https://blog.ethereum.org/2019/02/21/ethereum-foundation-grants-program-wave-5/) - we are happy that LeapDAO was included as one of the recipients.

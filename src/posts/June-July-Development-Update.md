@@ -7,6 +7,7 @@ author:
   name: Victor
   link: https://github.com/mateleshkavo
 description: Status Of PARSEC Labs Plasma-Chain Development
+tags: [update, dev]
 ---
 
 <img src="/img/blog/LatestDevelopmentUpdate.jpg" alt="LatestDevelopmentUpdate">

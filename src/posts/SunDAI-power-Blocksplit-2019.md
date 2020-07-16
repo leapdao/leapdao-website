@@ -7,6 +7,7 @@ author:
   - name: "@kohola"
     twitter: "koholaa"
 description: Croatia bound for Blocksplit 2019 to power SunDAI transactions
+tags: [ecosystem, plasma, update]
 ---
 
 <br>

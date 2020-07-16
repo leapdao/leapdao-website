@@ -7,6 +7,7 @@ author:
  name: '@kosta'
  twitter: '@KostaKorenkov'
 description: Summary of the new Leap Mainnet governance proposals
+tags: [update, governance, plasma]
 ---
 
 We've started a planned Mainnet upgrade via [Minimum Viable Governance](https://leapdao.org/blog/Minimal-Viable-Governance/). Both Plasma and Governance contracts will be updated.

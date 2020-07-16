@@ -8,6 +8,7 @@ author:
   name: "@kosta"
   twitter: "@KostaKorenkov"
 description: We plan to revamp the mainnet preserving the balances. Funds are SAFU.
+tags: [plasma, dev, governance]
 ---
 
 We are going to stop the mainnet chain and start a new one preserving all the onchain balances. There won't be any value loss for user. In case of any objections, you can exit the chain.
