@@ -14,7 +14,7 @@ We are proud to announce to have entered a [grantee relationship with the Nervos
 
 ## A new kind of challenge
 
-The focus of Ethereum has been application development in the past, not necessarily scalability. The first turing-complete chain was a breakthrough but the high costs associated with operating on the main-net at the moment means that some ideas are not viable to be realized on it. Ethereum only catering to non-scalable dApps seems like the biggest challenge standing in the way of further decentralization and development of meaningful dApps.
+The focus of Ethereum has been application development in the past, not necessarily scalability. The first turing-complete chain was a breakthrough but the high costs associated with operating on the main-net at the moment mean that some ideas are not viable to be realized on it. Ethereum only catering to non-scalable dApps seems like the biggest challenge standing in the way of further decentralization and development of meaningful dApps.
 
 We are actively working on roll-up based solutions for Ethereum and will apply the same tactic towards Nervos. We find the transaction model interesting and want to apply our expertise to a new ecosystem. We have been in contact with the part of the Nervos' team for years and are excited to work together with them.
 
@@ -28,9 +28,9 @@ Interesting for us are especially the [UTXO model employed by Nervos](https://xu
 - it allows parallel execution.
 - Generators can fill in the needed features to enable smart contracts.
 
-The Nervos Cell model is especially interesting, as it implements a state rent through inflation of CKBytes.
+The Nervos Cell model is fascinating, as it implements a state rent through inflation of CKBytes.
 
-We want to provide a simple entry point for applications to run on Nervos, therefore we will spend our time on developing a second layer for Nervos. As majority of todays smart contract developers are knowledgeable with Ethereum and its dev tools. We have set out to create a sidechain where these skills can be applied and eventually existing decentralized applications can easily be migrated.
+We want to provide a simple entry point for applications to run on Nervos, therefore we will spend our time on developing a second layer for Nervos. A majority of today's smart contract developers are knowledgeable with Ethereum and its dev tools. We have set out to create a sidechain where these skills can be applied and eventually existing decentralized applications can easily be migrated.
 
 ## Nervos design philosophy that we jive with
 
@@ -43,10 +43,15 @@ We really nerd out about the following Nervos features.
 
 We believe that it should be easy to work with great technology. Therefore using this grant we will not only work on an EVM compatible side-chain but also provide tools Ethereum developers are already comfortable with. These include the following:
 
-1. A WebUI to define UDT or ERC20 token
-2. A CLI tool for deployment to CKB or the sidechain
-3. SDK tools to interact with the sidechain.
+1. A WebUI to define UDT or ERC20 tokens. [UDT](https://talk.nervos.org/t/approach-to-designing-a-user-defined-token-standard-on-ckb-part-1/3855), short for User Defined Token, is a standard developed by the Nervos CKB team suited best for their chain.
+   This WebUI will also provide the functionality to deploy smart contracts to the child chain.
+   Additionally different token economy blueprints will be available to be deployed per mouseclick which allows teams to launch products with short time to market.
+2. SDK tools to interact with the sidechain.
 
-In doing so, releasing to our sidechain will seem very familiar to everyone already working with dApps. Starting from scratch our tools will give you an easy start and decrease time to market for dApps.
+We believe that our tools will feel very familiar to everyone already working with dApps, as well as being intuitive enough to provide an entry-point into decentralized application development.
+
+We have chosen an agile approach on delivering this grant. After 2-4 months the first teams can start using the product. In the remaining time we will convert the product to tightly integrate with [Nervos Consensus](https://docs.nervos.org/docs/basics/concepts/consensus) which will extend the security to the dApps created.
+
+For everyone who is interested on what kind of incentive model we considered for our roll-up network, our current state of research is summarized [here](https://hackmd.io/mx52xPZuQyejWFItbmQmTg).
 
 If you are interested in what we are doing, join the conversation on our [Slack](http://join.leapdao.org) or follow us on [Twitter](https://twitter.com/leapdao). We are looking for active people to join our core research and development.
