@@ -77,7 +77,7 @@
       display: none;
     }
     .width-main {
-      width: 100%;
+      width: 100% !important;
     }
   }
 
@@ -191,6 +191,5 @@
     {/each}
   </div>
 </div>
-
 
 
