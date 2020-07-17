@@ -10,7 +10,9 @@ author:
 description: Announcement, building layer-2 for Nervos CKB
 ---
 
-We are proud to announce to have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722) to work on second layer scaling, a method to increase throughput by bundling transactions on a different network, for CKB. Transferring the advancements made in the Ethereum ecosystem will bring Nervos CKB to the next level of their scalability roadmap.
+We are proud to announce that we have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722). 
+
+We will work on a layer-2 scaling solution for the Nervos ecosystem. Utilizing the concept of Optimistic Rollups,  a method to increase throughput by bundling transactions, we hope to advance Nervos CKB to the next level of its scalability roadmap.
 
 ## A new kind of challenge
 
