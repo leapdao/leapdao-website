@@ -50,7 +50,7 @@ We believe that it should be easy to work with great technology. Therefore using
 
 We believe that our tools will feel very familiar to everyone already working with dApps, as well as being intuitive enough to provide an entry-point into decentralized application development.
 
-We have chosen an agile approach on delivering this grant. After 2-4 months the first teams can start using the product. In the remaining time we will convert the product to tightly integrate with [Nervos Consensus](https://docs.nervos.org/docs/basics/concepts/consensus) which will extend the security to the dApps created.
+We have chosen an agile approach on delivering this grant. After 2-4 months the first teams can start using the product. In the remaining time we will convert the product to tightly integrate with [Nervos Consensus](https://docs.nervos.org/docs/basics/concepts/consensus) which will extend the security to the dApps created. [Ethermint](https://ethermint.zone/), a BFT based EVM chain, that has been launched by [ChainSafe](https://chainsafe.io/) and [operated by Aragon](https://blog.aragon.one/aragon-chain/) is at the core of our architecture. With our modularized development approach parts of our grant might therefore be able to be applied to other projects while our sidechain will similarly benefit from development by other teams.
 
 For everyone who is interested on what kind of incentive model we considered for our roll-up network, our current state of research is summarized [here](https://hackmd.io/mx52xPZuQyejWFItbmQmTg).
 
