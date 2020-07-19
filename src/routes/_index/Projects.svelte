@@ -55,12 +55,12 @@
   <div class="cols">
     <div class="col">
       <p>
-        <img src="/img/logo-motion.png" alt="" />
+        <img src="/img/logo-black.png" alt="" />
         <br />
-        <b>Motion Protocol</b>
+        <b>WhiteRabbit</b>
         – blockchain ecosystem for all transactions arising in film.
         <br />
-        <a href="https://www.motion.ooo/">Motion website</a>
+        <a href="https://www.whiterabbit.one/">WhiteRabbit website</a>
       </p>
     </div>
     <div class="col" />
