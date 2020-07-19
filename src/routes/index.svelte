@@ -33,7 +33,7 @@
     <h1>LeapDAO</h1>
     <p class="subtitle">Scaling for decentralized apps</p>
     <p>
-      We're an open source community enabling scaling solutions.
+      We're an open source community scaling blockchains on layer-2.
     </p>
   </header>
 
