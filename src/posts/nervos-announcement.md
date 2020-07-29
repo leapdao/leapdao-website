@@ -10,9 +10,9 @@ author:
 description: Announcement, building layer-2 for Nervos CKB
 ---
 
-We are proud to announce that we have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722). 
+We are proud to announce that we have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722).
 
-We will work on a layer-2 scaling solution for the Nervos ecosystem. Utilizing the concept of Optimistic Rollups,  a method to increase throughput by bundling transactions, we hope to advance Nervos CKB to the next level of its scalability roadmap.
+We will work on a layer-2 scaling solution for the Nervos ecosystem. Utilizing the concept of Optimistic Rollups, a method to increase throughput by bundling transactions, we hope to advance Nervos CKB to the next level of its scalability roadmap.
 
 ## A new kind of challenge
 
@@ -27,21 +27,14 @@ We became interested in contributing our knowledge of layer 2 scalability to a n
 Interesting for us are especially the [UTXO model employed by Nervos](https://xuejie.space/2020_03_20_what_do_we_mean_when_we_say_account_model/)
 
 - it puts less logic in the chain.
-- it allows parallel execution.
+- it allows [parallel processing](https://medium.com/@sunflora98/utxo-vs-account-balance-model-5e6470f4e0cf)
 - Generators can fill in the needed features to enable smart contracts.
 
 The Nervos Cell model is fascinating, as it implements a state rent through inflation of CKBytes.
 
 We want to provide a simple entry point for applications to run on Nervos, therefore we will spend our time on developing a second layer for Nervos. A majority of today's smart contract developers are knowledgeable with Ethereum and its dev tools. We have set out to create a sidechain where these skills can be applied and eventually existing decentralized applications can easily be migrated.
 
-## Nervos design philosophy that we jive with
-
-We really nerd out about the following Nervos features.
-
-1. We love that the UTXO-model borrows itself to functional programming and is scalable through [parallel processing](https://medium.com/@sunflora98/utxo-vs-account-balance-model-5e6470f4e0cf).
-2. Nervos was built with layer-2 in mind, it lends flexibility to off-chain constructions.
-
-## What will the world get from this Grant?
+## Bringing the best of Ethereum to Nervos
 
 We believe that it should be easy to work with great technology. Therefore using this grant we will not only work on an EVM compatible side-chain but also provide tools Ethereum developers are already comfortable with. These include the following:
 
