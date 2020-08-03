@@ -1,6 +1,6 @@
 ---
 template: post.html
-title: "gas-storms considered harmful: building a layer-2 on top of Nervos CKB"
+title: "Gas-Storms Considered Harmful: Building a Layer-2 on top of Nervos CKB"
 date: 2020-07-09 17:00:00
 image: ckb.png
 author:
