@@ -8,6 +8,7 @@ author:
   twitter: "@KenoBudde"
   link: https://github.com/clearwood/
 description: Announcement, building layer-2 for Nervos CKB
+tags: [nervos, scaling]
 ---
 
 We are proud to announce that we have entered a [grantee relationship with the Nervos Foundation](https://talk.nervos.org/t/ckb-sidechain-framework/4722).
