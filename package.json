@@ -25,6 +25,8 @@
     "tinytime": "^0.2.6"
   },
   "devDependencies": {
+    "@beyonk/svelte-carousel": "^2.8.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "css-loader": "^3.2.0",
     "husky": "^3.0.9",
     "marked": "^0.3.19",
@@ -34,6 +36,8 @@
     "serve-handler": "^6.1.2",
     "style-loader": "^1.0.0",
     "svelte": "^3.0.0",
+    "svelte-fa": "^2.1.1",
+    "svelte-feather-icons": "^3.2.2",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.7.0"
   }
