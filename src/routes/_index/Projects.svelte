@@ -8,8 +8,7 @@
   }
 </style>
 
-<section class="section projects">
-
+<section class="section projects" id="projects">
   <Carousel autoplay={20000} perPage={1}>
     <div>
       <header>
