@@ -81,8 +81,7 @@
         <Fa icon={faCommentDollar} size="6x" secondaryOpacity={1} primaryColor="dodgerblue" secondaryColor="gold" />
         <h4>Support Us</h4>
         <p>
-          Sponsor the DAO on 
-          <a href="https://gitcoin.co/grants/66/leapdao-scaling-for-decentralized-apps" target="_blank">Github</a> or  
+          Sponsor the DAO at   
           <a href="https://gitcoin.co/grants/66/leapdao-scaling-for-decentralized-apps" target="_blank">Gitcoin</a>
         </p>
       </div>
