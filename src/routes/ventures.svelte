@@ -74,7 +74,6 @@
     display: block;
     margin-top: 1em;
     font-size: 2em;
-    color: lightseagreen;
   }
 
   li {
@@ -89,26 +88,29 @@
       <div class="car">
         <Carousel autoplay={10000} perPage={1}>
           <div class="slide-content">
-            <b>Gain sovereignty</b><br />
+            <b>Gain sovereignty</b>
+            <br />
             Custom gas economies shield you from fluctuation of the base layer
           </div>
           <div class="slide-content">
-            <b>Scale instantly</b><br />
+            <b>Scale instantly</b>
+            <br />
             Rollups and state channels give you virtually unlimited throughput
           </div>
           <div class="slide-content">
-            <b>Master onboarding</b><br />
+            <b>Master onboarding</b>
+            <br />
             Seamless user experience enables frictionless on-boarding
           </div>
         </Carousel>
       </div>
-      <div class="cta">
-        <Fa
-          icon={faLaptopCode}
-          size="8x"
-          primaryColor="lightseagreen" />
+      <a
+        href="https://shrtco.de/leap-contact-request"
+        target="_blank"
+        class="cta">
+        <Fa icon={faLaptopCode} size="8x" />
         <span>Request a Demo</span>
-      </div>
+      </a>
     </div>
   </header>
   <section class="section">
@@ -157,12 +159,13 @@
           <li>🚀 launch fast, iterate quickly</li>
         </ul>
       </div>
-      <div class="coll">
-        <div class="cta">
-          <Fa icon={faPhone} size="10x" primaryColor="lightseagreen" />
-          <span>Schedule a Call</span>
-        </div>
-      </div>
+      <a
+        href="https://shrtco.de/leap-contact-request"
+        target="_blank"
+        class="cta col">
+        <Fa icon={faPhone} size="10x" />
+        <span>Get In Touch</span>
+      </a>
     </div>
   </section>
 </div>
