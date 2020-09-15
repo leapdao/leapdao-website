@@ -109,10 +109,8 @@
 <style>
   .map {
     position: relative;
-    width: 100vw;
-    height: 450px;
+    height: 550px;
     margin-top: 5rem;
-    margin-left: -10rem;
     background-color: #aad3df;
   }
 
@@ -143,8 +141,8 @@
 <div class="map">
   <div style="width: 100%; height: 100%;" id="map" bind:this={mapEl} />
   <h2>
-    Leap peeps
+    Click a Peep,
     <br />
-    around the world
+    Discover More
   </h2>
 </div>
