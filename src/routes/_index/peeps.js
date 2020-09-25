@@ -24,15 +24,10 @@ export const locations = {
       url: 'https://github.com/sunify',
       location: locations.bratsk,
     },
-    // {
-    //   name: 'Helge Wieding',
-    //   avatar: 'https://avatars3.githubusercontent.com/u/754426',
-    //   url: 'https://github.com/HelgeWieding'
-    // },
     {
       name: 'Jan Kremser',
-      avatar: 'https://avatars2.githubusercontent.com/u/41610198',
-      url: 'https://github.com/eezcjkr',
+      avatar: 'https://avatars1.githubusercontent.com/u/54618579',
+      url: 'https://github.com/TheReturnOfJan',
       location: locations.ljubljana,
     },
     {
@@ -60,51 +55,6 @@ export const locations = {
       location: locations.hanover,
     },
     {
-      name: 'Vu Ngoc Quang',
-      avatar: 'https://avatars2.githubusercontent.com/u/24425403',
-      url: 'https://github.com/peara',
-      location: locations.hochi,
-    },
-    // {
-    //   name: 'Steven Pearce',
-    //   avatar: 'https://avatars0.githubusercontent.com/u/36509712',
-    //   url: 'https://github.com/StevenJNPearce'
-    // },
-    // {
-    //   name: 'Sounak Pradhan',
-    //   avatar: 'https://avatars1.githubusercontent.com/u/22390515',
-    //   url: 'https://github.com/sounak98'
-    // },
-    // {
-    //   name: 'Ola Kohut',
-    //   avatar: 'https://avatars3.githubusercontent.com/u/4106590',
-    //   url: 'https://github.com/kohola71'
-    // },
-    {
-      name: 'nanspro',
-      avatar: 'https://avatars0.githubusercontent.com/u/24641089',
-      url: 'https://github.com/nanspro',
-      location: locations.hyderabad,
-    },
-    {
-      name: 'Onuwa Nnachi Isaac',
-      avatar: 'https://avatars1.githubusercontent.com/u/6551094',
-      url: 'https://github.com/iamonuwa',
-      location: locations.uyo,
-    },
-    {
-      name: 'Artico',
-      avatar: 'https://avatars3.githubusercontent.com/u/1811630',
-      url: 'https://github.com/articobandurini',
-      location: locations.kyiv,
-    },
-    {
-      name: 'Maksim Daunarovich',
-      avatar: 'https://avatars3.githubusercontent.com/u/3136647',
-      url: 'https://github.com/MaxStalker',
-      location: locations.minsk,
-    },
-    {
       name: 'Max Kuck',
       avatar: 'https://avatars2.githubusercontent.com/u/45236782',
       url: 'https://github.com/MaxKuck',
@@ -123,9 +73,68 @@ export const locations = {
       location: locations.berlin,
     },
     {
-      name: 'vrde',
-      avatar: 'https://avatars1.githubusercontent.com/u/134680',
-      url: 'https://github.com/vrde',
+      name: 'Keno Budde',
+      avatar: 'https://avatars2.githubusercontent.com/u/11144110',
+      url: 'https://github.com/Clearwood',
       location: locations.berlin,
     }
   ];
+
+
+  // Just incase
+      // {
+    //   name: 'Vu Ngoc Quang',
+    //   avatar: 'https://avatars2.githubusercontent.com/u/24425403',
+    //   url: 'https://github.com/peara',
+    //   location: locations.hochi,
+    // },
+    // {
+    //   name: 'Steven Pearce',
+    //   avatar: 'https://avatars0.githubusercontent.com/u/36509712',
+    //   url: 'https://github.com/StevenJNPearce'
+    // },
+    // {
+    //   name: 'Sounak Pradhan',
+    //   avatar: 'https://avatars1.githubusercontent.com/u/22390515',
+    //   url: 'https://github.com/sounak98'
+    // },
+    // {
+    //   name: 'Ola Kohut',
+    //   avatar: 'https://avatars3.githubusercontent.com/u/4106590',
+    //   url: 'https://github.com/kohola71'
+    // },
+    // {
+    //   name: 'nanspro',
+    //   avatar: 'https://avatars0.githubusercontent.com/u/24641089',
+    //   url: 'https://github.com/nanspro',
+    //   location: locations.hyderabad,
+    // },
+    // {
+    //   name: 'Onuwa Nnachi Isaac',
+    //   avatar: 'https://avatars1.githubusercontent.com/u/6551094',
+    //   url: 'https://github.com/iamonuwa',
+    //   location: locations.uyo,
+    // },
+    // {
+    //   name: 'Artico',
+    //   avatar: 'https://avatars3.githubusercontent.com/u/1811630',
+    //   url: 'https://github.com/articobandurini',
+    //   location: locations.kyiv,
+    // },
+    // {
+    //   name: 'Maksim Daunarovich',
+    //   avatar: 'https://avatars3.githubusercontent.com/u/3136647',
+    //   url: 'https://github.com/MaxStalker',
+    //   location: locations.minsk,
+    // },
+    // {
+    //   name: 'vrde',
+    //   avatar: 'https://avatars1.githubusercontent.com/u/134680',
+    //   url: 'https://github.com/vrde',
+    //   location: locations.berlin,
+    // },
+    // {
+    //   name: 'Helge Wieding',
+    //   avatar: 'https://avatars3.githubusercontent.com/u/754426',
+    //   url: 'https://github.com/HelgeWieding'
+    // },
