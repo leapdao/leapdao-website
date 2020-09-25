@@ -5,7 +5,7 @@
 <style>
   .word-logo {
     width: 280px;
-    margin-top: 20px;
+    margin-top: 35px;
   }
   .image-logo {
     width: 150px;
@@ -15,7 +15,8 @@
   }
 </style>
 
-<section class="section projects" id="projects">
+<section class="section projects">
+
   <Carousel autoplay={20000} perPage={1}>
     <div>
       <header>
@@ -97,21 +98,24 @@
       <div class="cols">
         <div class="col">
           <div class="img-wrapper">
-            <img class="word-logo" src="/img/logo-deora.png" alt="" />
+            <img  class="image-logo" src="/img/logo-leap.png" alt="" />
           </div>
           <p>
-            <a href="https://www.deora.earth/">
-              <b>Deora</b>
+            <a target="_blank" href="https://shrtco.de/plasma-leap">
+              <b>Plasma Leap</b>
             </a>
           </p>
-          <p>Decentralized quadratic voting solution for improved democracy.</p>
+          <p>
+            Our layer 2 network based on the plasma protocol for doing
+            off-chain transactions.
+          </p>
         </div>
         <div class="col">
           <div class="img-wrapper">
             <img class="word-logo" src="/img/logo-deora.png" alt="" />
           </div>
           <p>
-            <a href="https://www.deora.earth/">
+            <a target="_blank" href="https://ipfs.leapdao.org/blog/quadratic-voting/">
               <b>Volt Congress</b>
             </a>
           </p>
@@ -120,43 +124,16 @@
             quadratic voting.
           </p>
         </div>
-        <div class="col">
-          <div class="img-wrapper">
-            <img  class="word-logo" src="/img/logo-planeta.png" alt="" />
-          </div>
-          <p>
-            <a href="https://planeta.leap.rocks/">
-              <b>Planet A</b>
-            </a>
-          </p>
-          <p>
-            Was a serious social game created by Social Dist0rtion Protocol and
-            played at CCcamp and Ethberlin on the Leap Testnet.
-          </p>
-        </div>
+
       </div>
 
       <div class="cols">
         <div class="col">
           <div class="img-wrapper">
-            <img class="image-logo" src="/img/logo-peepcash.png" alt="" />
+            <img class="image-logo" src="/img/logo-peepcash-small.png" alt="" />
           </div>
           <p>
-            <a href="https://peep.cash/">
-              <b>Peep.cash</b>
-            </a>
-          </p>
-          <p>
-            Was a burner wallet on Plasma with DAI support and fiat off-ramping
-            without KYC.
-          </p>
-        </div>
-        <div class="col">
-          <div class="img-wrapper">
-            <img class="image-logo" src="/img/logo-burner.png" alt="" />
-          </div>
-          <p>
-            <a href="https://www.deora.earth/">
+            <a target="_blank" href="https://ipfs.leapdao.org/blog/SunDAI-power-Blocksplit-2019/">
               <b>SunDAI</b>
             </a>
           </p>
@@ -167,16 +144,16 @@
         </div>
         <div class="col">
           <div class="img-wrapper">
-            <img  class="image-logo" src="/img/logo-dungeon-riches.png" alt="" />
+            <img  class="word-logo" src="/img/logo-planeta.png" alt="" />
           </div>
           <p>
-            <a href="https://leap.dungeonriches.com/">
-              <b>Dungeon Riches</b>
+            <a target="_blank" href="https://ipfs.leapdao.org/blog/Planet-A-ccc-ethberlin-recap">
+              <b>Planet A</b>
             </a>
           </p>
           <p>
-            A dungeon runner game featuring battles based on
-            rock-paper-scissors.
+            Was a serious social game created by Social Dist0rtion Protocol and
+            played at CCcamp and Ethberlin on the Leap Testnet.
           </p>
         </div>
       </div>

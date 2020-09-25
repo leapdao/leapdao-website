@@ -3,8 +3,14 @@
   import {
     faLaptopCode,
     faPhone,
-    faScroll
+    faScroll,
+    faObjectGroup,
+    faShieldAlt,
+    faCoins,
+    faUsers,
+    faHandshake,
   } from "@fortawesome/free-solid-svg-icons";
+  import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
   import Logo from "../components/Logo";
   import NewsLetter from "../components/NewsLetter.svelte";
   import Carousel from "@beyonk/svelte-carousel";
@@ -34,23 +40,17 @@
     word-wrap: break-word;
   }
 
-  .blocks {
+  .cols {
+    margin-top: 2em;
+  }
+
+  .center-text {
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: center;
-  }
-
-  .blocks p {
-    width: 170px;
-    height: 170px;
-    border: 1px solid rgba(163, 253, 143, 0.2);
-    background-color: rgba(163, 253, 143, 0.2);
-    box-shadow: 5px 5px 6px #888888;
-    margin: 10px;
-    padding: 5px;
     text-align: center;
   }
 
@@ -130,19 +130,55 @@
   <section>
     <h2>What we offer to the open web</h2>
     <div class="flex-container">
-      <div>
         <p>
           Stress-tested under real-world circumstances & approved by real people
           we are providing the tech & the knowledge to build a better web.
         </p>
+    </div>
+    <div class="cols">
+      <div class="col center-text">
+        <Fa icon={faObjectGroup} size="7x" />
+        <p><b>Scaling Playgrounds</b></p>
+        <p>
+          Get your own customized environment to test your transaction through put
+        </p>
       </div>
-      <div class="blocks">
-        <p>Scaling Playgrounds</p>
-        <p>Strategic Consulting</p>
-        <p>Blockchain Engineering</p>
-        <p>Security Audits</p>
-        <p>Token Economy Blueprints</p>
-        <p>Governance Solutions</p>
+      <div class="col center-text">
+        <Fa icon={faHandshake} size="7x" />
+        <p><b>Strategic Consulting</b></p>
+        <p>
+          Give your business the support and expertise it deserves 
+        </p>
+      </div>
+      <div class="col center-text">
+        <Fa icon={faConnectdevelop} size="7x" />
+        <p><b>Blockchain Engineering</b></p>
+        <p>
+          Get the power team you need to release trusted products
+        </p>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="col center-text">
+        <Fa icon={faCoins} size="7x" />
+        <p><b>Token Economy Blueprints</b></p>
+        <p>
+          Get an evaluation on best release plan for your products
+        </p>
+      </div>
+      <div class="col center-text">
+        <Fa icon={faShieldAlt} size="7x" />
+        <p><b>Security Audits</b></p>
+        <p>
+          Give your products a second look to safe guard your assets
+        </p>
+      </div>
+      <div class="col center-text">
+        <Fa icon={faUsers} size="7x" />
+        <p><b>Governance Solutions</b></p>
+        <p>
+          Get to decentralize your products with our voting protocols
+        </p>
       </div>
     </div>
   </section>
