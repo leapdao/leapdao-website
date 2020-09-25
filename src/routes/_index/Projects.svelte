@@ -17,7 +17,7 @@
 
 <section class="section projects">
 
-  <Carousel autoplay={100000} perPage={1}>
+  <Carousel autoplay={20000} perPage={1}>
     <div>
       <header>
         <h2>Current Ventures</h2>
