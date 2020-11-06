@@ -43,9 +43,6 @@
   }
 
   @media screen and (max-width: 900px) {
-  #about{
-  display: none;
-  }
     .menu {
       font-size: 1.5rem;
 
@@ -61,9 +58,6 @@
   }
 
   @media screen and (max-width: 360px) {
-    #about{
-    display: none;
-    }
     .menu {
       left: 0;
       right: 0;
@@ -95,17 +89,14 @@
     <li>
       <a rel="prefetch" href="/">~</a>
     </li>
-    <li id="about">
-      <a rel="prefetch" href="/about">About</a>
+    <li>
+      <a rel="prefetch" href="/ventures">Ventures</a>
+    </li>
+    <li>
+      <a rel="prefetch" href="/earn">Community</a>
     </li>
     <li>
       <a rel="prefetch" href="/blog">Blog</a>
-    </li>
-    <li>
-      <a href="/resources" rel="prefetch">Resources</a>
-    </li>
-    <li>
-      <a rel="prefetch" href="/earn">Earn</a>
     </li>
     <li>
       <a rel="prefetch" href="/interspace">Space</a>

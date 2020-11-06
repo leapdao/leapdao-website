@@ -1,11 +1,13 @@
 <script>
   import Nav from "../components/Nav.svelte";
-  import SubscribeForm from "../components/SubscribeForm.svelte";
+  import NewsLetter from "../components/NewsLetter.svelte";
   import Amoebe from "../components/Amoebe.svelte";
 
   const segmentClasses = {
     404: "p404"
   };
+
+  let year = new Date().getFullYear();
 
   export let segment;
 </script>
@@ -79,7 +81,10 @@
   <slot />
   {#if segment !== '404'}
     <footer class="footer">
-      <SubscribeForm />
+      <NewsLetter />
+      <div class="content">
+        <p>&copy; {year} LeapDAO</p>
+      </div>
     </footer>
   {/if}
 </div>

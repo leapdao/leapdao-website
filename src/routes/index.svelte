@@ -1,27 +1,22 @@
 <script>
-  import Stats from "./_index/Stats.svelte";
-  import Partners from "./_index/Partners.svelte";
-  import Projects from "./_index/Projects.svelte";
-  import GhButtons from "./_index/GhButtons.svelte";
+  import Fa from "svelte-fa";
+  import {
+    faCommentDollar,
+    faHatWizard,
+    faHandshake
+  } from "@fortawesome/free-solid-svg-icons";
+  import PeepsMap from "./_index/PeepsMap.svelte";
 </script>
 
 <style>
-  .medals {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  .margin-top {
+    margin-top: 5em;
   }
-
-  @media screen and (max-width: 900px) {
-    .medals img {
-      width: 100vw;
-      height: auto;
-      max-width: none;
-      margin-left: -3rem;
-      margin-right: -3rem;
-      flex-shrink: 0;
-      order: 1;
-    }
+  .big-p {
+    font-size: 2.5em;
+  }
+  .text-center {
+    text-align: center;
   }
 </style>
 
@@ -29,85 +24,92 @@
   <title>LeapDAO</title>
 </svelte:head>
 <div class="content">
-  <header>
-    <h1>LeapDAO</h1>
-    <p class="subtitle">Scaling for decentralized apps</p>
-    <p>
-      We're an open source community scaling blockchains on layer-2.
-    </p>
-  </header>
-
-  <Stats />
-  <Partners />
-
-  <Projects />
-  <section class="section">
+  <section>
     <header>
-      <h2>Contribute</h2>
+      <h1>LeapDAO</h1>
+      <p class="subtitle">Scaling for decentralized apps</p>
     </header>
+    <p class="big-p">
+      We work together to enable economic intimacy for communities and
+      net-citizens:
+    </p>
     <div class="cols">
       <div class="col">
-        <h4>Contribute code</h4>
+        <h4>Sovereignty</h4>
         <p>
-          All our code is open-source and stored on
-          <a
-            href="https://github.com/leapdao"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub
-          </a>
-          . Check out repos, report bugs, find solutions, propose features.
+          Manage funds and make transparent decisions using on-chain reputation
         </p>
       </div>
       <div class="col">
-        <h4>Contribute support</h4>
+        <h4>More scalability</h4>
         <p>
-          Our aim is to help others build their future. And we also need your
-          help for that. Join open Leap community!
+          Rollups and state channels connect your members at high speed and low
+          cost.
         </p>
       </div>
       <div class="col">
-        <h4>Get rewarded</h4>
+        <h4>Better UX</h4>
+        <p>Enable frictionless on-boarding with a seamless user experience.</p>
+      </div>
+      <div class="col">
+        <h4>Global Community</h4>
+        <p>Our community of leap peeps are located around the world</p>
+      </div>
+    </div>
+  </section>
+
+  <PeepsMap />
+  <section class="section">
+    <header>
+      <h2>We rethink networks</h2>
+    </header>
+    <p>
+      As a Decentralized Adaptive Organization, we&nbsp;combine Holacracy and
+      Decentralized Organizations to&nbsp;build a&nbsp;global, self-managing and
+      purpose-driven community. 
+    </p>
+    <p>Need help build a more decentralized world? Get to know the open source community scaling blockchains on layer-2</p>
+    <div class="cols margin-top">
+      <div class="col text-center">
+        <Fa
+          icon={faHatWizard}
+          size="6x"
+          secondaryOpacity={1}
+          primaryColor="mediumpurple" />
+        <h4>Join Us</h4>
         <p>
-          We aim to reward any contribution to LeapDAO using bounties, salaries
-          and hourly-based compensation.
+          <a href="/earn">Become one with LeapDAO</a>
         </p>
+      </div>
+      <div class="col text-center">
+        <Fa
+          icon={faHandshake}
+          size="6x"
+          secondaryOpacity={1}
+          primaryColor="lightseagreen"
+          secondaryColor="linen" />
+        <h4>Work with Us</h4>
         <p>
+          <a href="/ventures#projects">Leap into partnership</a>
+        </p>
+      </div>
+      <div class="col text-center">
+        <Fa
+          icon={faCommentDollar}
+          size="6x"
+          secondaryOpacity={1}
+          primaryColor="dodgerblue"
+          secondaryColor="gold" />
+        <h4>Support Us</h4>
+        <p>
+          Sponsor the DAO at
           <a
-            href="https://leapdao.org/earn/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Available bounties
+            href="https://gitcoin.co/grants/66/leapdao-scaling-for-decentralized-apps"
+            target="_blank">
+            Gitcoin
           </a>
         </p>
       </div>
     </div>
-
-    <footer>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd8_wDGDAi__HvfYEWNK_bvJzIkxwHHRVL6AFEfJewBd2Vn9A/viewform"
-        target="_blank"
-        class="button button-primary">
-        Join now
-      </a>
-    </footer>
   </section>
-
-  <h2>Get involved!</h2>
-  <p>
-    As an open-source software community, Leap thrives from the efforts of its
-    members. Whatever your interests and skills are, there is ample opportunity
-    to make the life of Dapps better!
-  </p>
-</div>
-
-<GhButtons />
-<br />
-<br />
-<div class="medals">
-  <img
-    src="/img/contrubitons.png"
-    width="761"
-    height="98"
-    alt="Contributions chart" />
 </div>
