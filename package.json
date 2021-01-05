@@ -11,7 +11,7 @@
     "og:images": "node blog-og-generator/index.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "compression": "^1.7.1",
     "file-loader": "^4.2.0",
     "front-matter": "^3.0.2",
