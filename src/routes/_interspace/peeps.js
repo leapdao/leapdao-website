@@ -7,6 +7,7 @@ export const locations = {
   santa: [83.572432, -34.688185],
   ayahuasca: [-4.013424, -74.368989],
   vulcano: [50.931793, 81.90054],
+  library: [31.212641, 29.933941],
 };
 
 export const peeps = [
@@ -15,6 +16,12 @@ export const peeps = [
     avatar: "./img/map/berlin.jpeg",
     url: "https://space.leapdao.org/Berlin",
     location: locations.berlin,
+  },
+  {
+    name: "Library",
+    avatar: "./img/map/library.jpg",
+    url: "https://space.leapdao.org/Library",
+    location: locations.library,
   },
   {
     name: "Cat Town",
